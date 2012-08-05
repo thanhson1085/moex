@@ -58,25 +58,14 @@
 	<div class="content">
 		<div class="left-part-container">
 			<div class="left-part single">
+				<?php
+					get_template_part('loop', 'single');
+				?>
 			</div>
 		</div>
 		<div class="right-part-container">
 			<div class="right-part">
-				<h3>Latest News</h3>
-				<div class="news-item">
-					<a href="#">Lorem ip sum</a>
-					<p class="news-time">(25/02/2012) 11:20 AM</p>
-					<p class="news-intro">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
-					</p>
-				</div>
-				<div class="news-item">
-					<a href="#">Lorem ip sum</a>
-					<p class="news-time">(25/02/2012) 11:20 AM</p>
-					<p class="news-intro">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
-					</p>
-				</div>
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</div>

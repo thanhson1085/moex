@@ -1,6 +1,7 @@
 /**
  * Mon Feb 13, 2012 10:43:38 added by Thanh Son 
  * Email: thanhson1085@gmail.com 
+ * Color: #6A0888, #FF8000
  */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -190,6 +191,9 @@ body {
 .left-part{
 	padding: 10px;
 }
+.left-part.single{
+	padding: 10px 0;
+}
 .left-part > ul{
 	list-style: none;	
 }
@@ -281,3 +285,18 @@ body {
 	color: #BBB;
 }
 /* end footer */
+
+.single-title a{
+	text-decoration: none;
+	color: #6A0888;
+	font-size: 20px;
+}
+.single-title{
+	border-bottom: solid 1px #CCC;
+}
+a.title-edit-link{
+	font-size: small;
+	color: #CCC;
+	padding-left: 10px;
+	text-decoration: none;
+}
