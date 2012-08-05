@@ -1,0 +1,283 @@
+/**
+ * Mon Feb 13, 2012 10:43:38 added by Thanh Son 
+ * Email: thanhson1085@gmail.com 
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+ul, li {
+	background: transparent;
+}
+img{
+	outline: 0;
+	padding:0;
+	margin: 0;
+}
+:focus {
+	outline: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: verdana, arial;
+	font-size: 0.8125em;
+}
+
+/* menu top */
+.menu-top-container{
+	height: 30px;
+	width: 100%;
+	background: #6A0888;
+}
+.menu-top{
+	margin: 0 auto;
+	width: 980px;	
+}
+.menu-top a{
+	color: white;
+	text-decoration: none;
+	padding: 7px;
+	line-height: 30px;
+}
+.menu-top a:hover{
+	background: #FF8000;
+}
+.menu-top-left{
+	float: left;
+}
+.menu-top-left > ul{
+	list-style: none;
+}
+.menu-top-left > ul > li{
+	float: left;
+}
+.menu-top-right{
+	float: right;
+}
+.menu-top-right > ul{
+	list-style: none;
+}
+.menu-top-right > ul > li{
+	float: left;
+}
+/* end menu top */
+
+/* banner top */
+.banner-container{
+	height: 100px;
+	width: 100%;
+}
+.banner{
+	margin: 0 auto;
+	width: 980px;	
+	height: 100px;
+	position: relative;
+}
+.sub-menu-container{
+	float: right;
+	top: -20px;
+	right: 0;
+	position: relative;
+}
+.sub-menu > ul{
+	list-style: none;
+}
+.sub-menu > ul > li{
+	float: left;
+	padding: 0 5px;
+}
+/* end banner top */
+
+/* header */
+.header-container{
+	height: 200px;
+	width: 100%;
+	background: #FF8000;
+}
+.header-container.single{
+	height: 100px;
+}
+.header{
+	margin: 0 auto;
+	width: 980px;	
+}
+.sub-menu a{
+	color: #1B42A6;
+}
+.sub-menu a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.main-form{
+	padding-top: 15px;
+	float: right;
+	right: 0;
+	top: 0;
+	position: relative;
+	width: 400px;
+}
+.main-form p{
+	text-align: right;
+}
+.main-intro{
+	float: left;
+	width: 500px;
+	color: white;
+	padding-top: 30px;
+}
+.main-intro-content{
+	line-height: 20px;
+}
+.main-header{
+	font-size: 30px;
+}
+.txt-main{
+	height: 40px;
+	width: 300px;
+	border-radius: 5px;
+	border: solid 1px #BBB;
+	margin: 3px 0;
+	font-size: 24px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.btn-main{
+	background: #6A0888;
+	padding: 10px;
+	line-height: 40px;
+	border-radius: 5px;
+	color: white;
+}
+/* end header */
+
+/* content */
+.content-container{
+	width: 100%;
+	position: relative;
+}
+.content{
+	margin: 0 auto;
+	width: 980px;	
+	position: relative;
+	overflow: auto;
+}
+/* end header */
+
+
+/* left part */
+.left-part-container{
+	position: relative;
+	width: 730px;
+	float: left;
+	margin-right: -260px;
+}
+.left-part{
+	padding: 10px;
+}
+.left-part > ul{
+	list-style: none;	
+}
+.left-part > ul > li{
+	float: left;
+	padding: 0 5px;
+}
+.idx-item{
+	width: 220px;
+	height: 220px;
+	border: solid 1px #CCC;
+	position: relative;
+}
+.idx-item-header{
+	background: #6A0888;
+	margin-top: 15px;
+	font-size: 14px;
+	padding: 10px 7px;
+	color: white;	
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.idx-item-header.oranger{
+	background: #FF8000;
+}
+.idx-item-readmore{
+	position: absolute;
+	bottom: 0;
+	float: right;
+	padding: 7px;
+	right: 0;
+}
+.idx-item-readmore > a{
+	color: #BBB;
+}
+.idx-item-readmore > a:hover{
+	color: #FF8000;
+}
+.idx-item-content{
+	padding: 7px;
+	text-align: justify;
+}
+/* end left part */
+
+
+/* right part */
+.right-part-container{
+	width: 250px;
+	float: right;
+	top: 0;
+}
+.right-part{
+	margin: 7px;	
+}
+.right-part > h3{
+	color: #BBB;
+	text-transform: uppercase;
+}
+.news-item{
+	border-left: solid 1px #CCC;
+	padding-left: 5px;
+	margin: 5px 0;
+}
+.news-item > a{
+	color: #BA081D;
+	line-height: 20px;
+}
+.news-item > a:hover{
+	text-decoration: none;
+}
+.news-intro{
+	text-align: justify;
+}
+.news-time{
+	color: #BBB;
+	font-size: 12px;
+}
+/* end right part */
+
+/* footer part */
+.footer-container{
+	margin-top: 20px;
+	overflow: auto;
+	border-top: solid 1px #EEE;
+}
+.footer{
+	margin: 0 auto;
+	width: 980px;
+	color: #BBB;
+}
+/* end footer */
