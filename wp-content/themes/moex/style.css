@@ -119,6 +119,7 @@ body {
 	width: 980px;	
 }
 .sub-menu a{
+	text-decoration: none;
 	color: #1B42A6;
 }
 .sub-menu a:hover{
@@ -216,7 +217,7 @@ body {
 	margin-left: -1px;
 	margin-right: -1px;
 }
-.idx-item-header.oranger{
+.idx-item-header.orange{
 	background: #FF8000;
 }
 .idx-item-readmore{

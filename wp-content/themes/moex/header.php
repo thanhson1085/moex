@@ -40,3 +40,37 @@
 </head>
 <body>
 <div class="main">
+<div class="menu-top-container">
+    <div class="menu-top">
+        <div class="menu-top-left">
+            <ul>
+                <li>
+                    <a href="<?php echo get_bloginfo('url');?>">Home</a>
+                </li>
+                <li>
+                    <a href="<?php echo get_bloginfo('url');?>">News</a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-top-right">
+            <ul>
+            <?php if ( is_user_logged_in() ) { ?>
+
+                <li><a><i>Xin chào <?php echo wp_get_current_user()->user_login; ?></i></a></li>
+                <?php if (current_user_can('edit_post')): ?>
+                <li><a href="<?php echo get_admin_url(); ?>">Quản trị</a></li>
+                <?php endif;?>
+                <li> <a href="<?php echo wp_logout_url(); ?>">Đăng xuất</a></li>
+
+            <?php }
+                else{
+            ?>
+                <li><a href="<?php echo wp_login_url(); ?>">Đăng nhập</a></li>
+            <?php
+            }
+            ?>
+            </ul>
+        </div>
+    </div>
+</div>
+

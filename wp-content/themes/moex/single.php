@@ -1,28 +1,4 @@
 <?php get_header();?>
-<div class="menu-top-container">
-	<div class="menu-top">
-		<div class="menu-top-left">
-			<ul>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-			</ul>
-		</div>
-		<div class="menu-top-right">
-			<ul>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
 <div class="banner-container">
 	<div class="banner">
 		<div class="logo-container">

@@ -1,28 +1,4 @@
 <?php get_header();?>
-<div class="menu-top-container">
-	<div class="menu-top">
-		<div class="menu-top-left">
-			<ul>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-			</ul>
-		</div>
-		<div class="menu-top-right">
-			<ul>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-				<li>
-					<a href="">Lorem Ipsum</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
 <div class="banner-container">
 	<div class="banner">
 		<div class="logo-container">
@@ -38,13 +14,13 @@
 			<div class="sub-menu">
 				<ul>
 					<li>
-						<a>consectetur</a>
+						<a href="<?php echo get_bloginfo('url');?>">Home</a>
 					</li>
 					<li>
-						<a>adipisicing</a>
+						<a href="<?php echo get_bloginfo('url');?>">News</a>
 					</li>
 					<li>
-						<a>incididunt</a>
+						<a href="<?php echo get_bloginfo('url');?>">Search</a>
 					</li>
 				</ul>
 			</div>
