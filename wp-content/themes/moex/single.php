@@ -1,32 +1,18 @@
 <?php get_header();?>
-<div class="banner-container">
-	<div class="banner">
-		<div class="logo-container">
-			<div class="logo">
-				<img src="<?php echo get_bloginfo('template_url');?>/images/express_logo.gif"/>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="header-container single">
 	<div class="header">
-		<div class="sub-menu-container">
-			<div class="sub-menu">
-				<ul>
-					<li>
-						<a>consectetur</a>
-					</li>
-					<li>
-						<a>adipisicing</a>
-					</li>
-					<li>
-						<a>incididunt</a>
-					</li>
-				</ul>
-			</div>
-		</div>
 		<div class="main-intro">
-			<p class="main-header">Lorem Ipsum</p>
+		<?php
+			$categories = wp_get_post_categories($post->ID);
+			foreach ($categories as $category_id):
+			$cat_id = $category_id;
+			$cat = get_category($category_id)
+		?>
+			<p class="main-header"><?php echo $cat->name?></p>
+		<?php 
+			break;
+			endforeach;
+		?>
 		</div>
 	</div>
 </div>
@@ -37,6 +23,29 @@
 				<?php
 					get_template_part('loop', 'single');
 				?>
+				<?php
+				$args = array( 'numberposts' => 5, 'post_status'=>'publish', 'category' => $cat_id, 'post_type'=>"post",'orderby'=>"post_date");
+				$postslist = get_posts( $args ); 
+				?>
+				<?php if (count($postslist) > 0):?>
+					<div class="related-news">
+						<h3>Related News</h3>
+						<ul>
+						<?php
+						foreach ($postslist as $key => $post) : 
+							setup_postdata($post); 
+							$li_class = ($key % 2 == 0)?'even':'odd';
+						?>
+		
+							<li class="<?php echo $li_class;?>">
+								<a href="<?php the_permalink()?>"><?php the_title()?></a>
+								<span><?php echo date_i18n( __( 'd/m/Y g:i A' ), strtotime( $post->post_date ) );?></span>
+							</li>
+						<?php endforeach; ?>
+						</ul>
+					</div>
+				<?php endif;?>
+
 			</div>
 		</div>
 		<div class="right-part-container">

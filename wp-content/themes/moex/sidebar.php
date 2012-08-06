@@ -15,3 +15,23 @@ foreach ($postslist as $post) : setup_postdata($post); ?>
 	</p>
 </div>
 <?php endforeach; ?>
+<h3 class="area-header">LIÊN KẾT</h3>
+<?php
+$bookmarks = get_bookmarks( array(
+				'orderby'        => 'name',
+				'order'          => 'ASC',
+                          ));
+
+// Loop through each bookmark and print formatted output
+foreach ( $bookmarks as $bm ) { 
+?>
+<div class="news-item">
+<?php
+    printf( '<a class="relatedlink" href="%s">%s</a><br />', $bm->link_url, __($bm->link_name) );
+?>
+</div>
+<?php
+}
+?>
+
+

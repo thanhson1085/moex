@@ -18,4 +18,4 @@ foreach ($postslist as $key => $post) : setup_postdata($post); ?>
 		</div>
 	</li>
 </ul>
-<?php endforeach; ?>
+<?php endforeach;?>

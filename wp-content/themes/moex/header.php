@@ -33,10 +33,13 @@
     // Add a page number if necessary:
     if ( $paged >= 2 || $page >= 2 )
         echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
-
-    ?></title>
+    ?>
+</title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php
+    wp_head();
+?>
 </head>
 <body>
 <div class="main">
@@ -73,4 +76,34 @@
         </div>
     </div>
 </div>
-
+<div class="banner-container">
+	<div class="banner">
+		<div class="logo-container">
+			<div class="logo">
+				<img src="<?php echo get_bloginfo('template_url');?>/images/logo2.png"/>
+			</div>
+		</div>
+		<div class="sub-menu-container">
+			<div class="sub-menu">
+				<?php wp_nav_menu(array('primary-menu' => __('Moex Menu')));?>
+				<!--ul>
+					<li>
+						<a href="<?php echo get_bloginfo('url');?>">Home</a>
+					</li>
+					<li>
+						<a href="<?php echo get_bloginfo('url');?>">News</a>
+					</li>
+					<li>
+						<a href="<?php echo get_bloginfo('url');?>">Search</a>
+					</li>
+					<li>
+						<a href="<?php echo get_bloginfo('url');?>">About Us</a>
+					</li>
+					<li>
+						<a href="<?php echo get_bloginfo('url');?>?p=30">Contact</a>
+					</li>
+				</ul-->
+			</div>
+		</div>
+	</div>
+</div>

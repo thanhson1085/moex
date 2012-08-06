@@ -1,30 +1,6 @@
 <?php get_header();?>
-<div class="banner-container">
-	<div class="banner">
-		<div class="logo-container">
-			<div class="logo">
-				<img src="<?php echo get_bloginfo('template_url');?>/images/express_logo.gif"/>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="header-container">
 	<div class="header">
-		<div class="sub-menu-container">
-			<div class="sub-menu">
-				<ul>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">Home</a>
-					</li>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">News</a>
-					</li>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">Search</a>
-					</li>
-				</ul>
-			</div>
-		</div>
 		<div class="main-intro">
 			<p class="main-header">Lorem Ipsum</p>
 			<p class="main-intro-content">
