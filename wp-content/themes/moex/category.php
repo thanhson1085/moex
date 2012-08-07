@@ -1,5 +1,18 @@
 <?php 
 get_header();
+?>
+<div class="header-container single">
+    <div class="header">
+        <div class="main-intro">
+			<?php
+				$category = get_category($cat)
+			?>
+            <p class="main-header"><?php echo $category->name?></p>
+        </div>
+    </div>      
+</div> 
+
+<?php
 $args = array( 'numberposts' => 5, 'post_status'=>'publish', 'category' => $cat, 'post_type'=>"post",'orderby'=>"post_date");
 $postslist = get_posts( $args );
 

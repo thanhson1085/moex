@@ -42,6 +42,86 @@ body {
 	font-family: verdana, arial;
 	font-size: 0.8125em;
 }
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
 
 /* menu top */
 .menu-top-container{
@@ -57,7 +137,7 @@ body {
 	width: 980px;	
 }
 .menu-top a{
-	color: white;
+	color: #EEE;
 	text-decoration: none;
 	padding: 7px;
 	line-height: 30px;
@@ -67,6 +147,7 @@ body {
 }
 .menu-top-left{
 	float: left;
+	height: 30px;
 }
 .menu-top-left > ul{
 	list-style: none;
@@ -82,6 +163,11 @@ body {
 }
 .menu-top-right > ul > li{
 	float: left;
+}
+.menu-top-left > ul > li > img{
+	padding-right: 10px;
+	height: 20px;	
+	padding-top: 5px;
 }
 /* end menu top */
 
@@ -116,6 +202,7 @@ body {
 	height: 200px;
 	width: 100%;
 	background: #FF6602;
+	background: url(images/bg_banner.jpg);
 	box-shadow: 0 0 8px;
 	-moz-box-shadow: 0 0 8px;
 	-webkit-box-shadow: 0 0 8px;
@@ -190,6 +277,9 @@ body {
 	position: relative;
 	overflow: auto;
 }
+.content.page{
+	border-top: solid 1px #CCC;
+}
 /* end header */
 
 
@@ -263,6 +353,9 @@ body {
 .right-part > h3{
 	color: #BBB;
 	text-transform: uppercase;
+	padding-top: 12px;
+}
+.right-part > h3.index{
 	padding-top: 6px;
 }
 .news-item{

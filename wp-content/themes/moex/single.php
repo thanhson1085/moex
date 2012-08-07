@@ -39,7 +39,7 @@
 		
 							<li class="<?php echo $li_class;?>">
 								<a href="<?php the_permalink()?>"><?php the_title()?></a>
-								<span><?php echo date_i18n( __( 'd/m/Y g:i A' ), strtotime( $post->post_date ) );?></span>
+								<span class="news-time"><?php echo date_i18n( __( 'd/m/Y g:i A' ), strtotime( $post->post_date ) );?></span>
 							</li>
 						<?php endforeach; ?>
 						</ul>

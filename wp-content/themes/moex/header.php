@@ -46,14 +46,13 @@
 <div class="menu-top-container">
     <div class="menu-top">
         <div class="menu-top-left">
-            <ul>
-                <li>
-                    <a href="<?php echo get_bloginfo('url');?>">Home</a>
-                </li>
-                <li>
-                    <a href="<?php echo get_bloginfo('url');?>">News</a>
-                </li>
-            </ul>
+			<ul>
+				<li><img src="<?php echo get_bloginfo('template_url')?>/images/facebook.png"></li>
+				<li><img src="<?php echo get_bloginfo('template_url')?>/images/twitter.png"></li>
+				<li><img src="<?php echo get_bloginfo('template_url')?>/images/google.png"></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">News</a></li>
+			</ul>
         </div>
         <div class="menu-top-right">
             <ul>

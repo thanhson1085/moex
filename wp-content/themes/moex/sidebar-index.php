@@ -1,4 +1,4 @@
-<h3>Latest News</h3>
+<h3 class="index">Latest News</h3>
 <?php
 $category = get_category_by_slug('news');
 $args = array( 'numberposts' => 2, 'post_status'=>'publish', 'category' => $category->term_id, 'post_type'=>"post",'orderby'=>"post_date");
