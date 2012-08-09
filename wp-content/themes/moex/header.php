@@ -50,9 +50,8 @@
 				<li><img src="<?php echo get_bloginfo('template_url')?>/images/facebook.png"></li>
 				<li><img src="<?php echo get_bloginfo('template_url')?>/images/twitter.png"></li>
 				<li><img src="<?php echo get_bloginfo('template_url')?>/images/google.png"></li>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">News</a></li>
 			</ul>
+			<?php wp_nav_menu(array('theme_location' => ('second-menu'), 'container' => ''));?>
         </div>
         <div class="menu-top-right">
             <ul>
@@ -84,24 +83,7 @@
 		</div>
 		<div class="sub-menu-container">
 			<div class="sub-menu">
-				<?php wp_nav_menu(array('primary-menu' => __('Moex Menu')));?>
-				<!--ul>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">Home</a>
-					</li>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">News</a>
-					</li>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">Search</a>
-					</li>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>">About Us</a>
-					</li>
-					<li>
-						<a href="<?php echo get_bloginfo('url');?>?p=30">Contact</a>
-					</li>
-				</ul-->
+				<?php wp_nav_menu(array('theme_location' => 'primary-menu'));?>
 			</div>
 		</div>
 	</div>

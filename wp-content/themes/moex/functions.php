@@ -33,7 +33,7 @@ if (function_exists('wp_nav_menu'))
 {
   	function wp_moex_menus()
   	{
-    	register_nav_menus(array('primary-menu' => __('Moex Menu')));
+    	register_nav_menus(array('primary-menu' => __('Moex Menu'), 'second-menu' => __('Menu Top')));
   	}
   	add_action('init', 'wp_moex_menus');
 }

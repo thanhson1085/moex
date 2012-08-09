@@ -148,6 +148,7 @@ a img.aligncenter {
 .menu-top-left{
 	float: left;
 	height: 30px;
+	width: 50%;
 }
 .menu-top-left > ul{
 	list-style: none;
@@ -258,6 +259,7 @@ a img.aligncenter {
 	padding-right:5px;
 }
 .btn-main{
+	cursor: pointer;
 	background: #650198;
 	padding: 10px;
 	line-height: 40px;
@@ -402,6 +404,9 @@ a img.aligncenter {
 .single-title{
 	border-bottom: solid 1px #CCC;
 }
+.single-content{
+	text-align: justify;
+}
 a.title-edit-link{
 	font-size: small;
 	color: #CCC;
@@ -442,4 +447,71 @@ a.title-edit-link{
 }
 .related-news > ul > li > a:hover{
 	text-decoration: none;
+}
+#map{
+	width: 960px;
+	height: 600px;
+	margin: 5px auto;
+	border: solid 1px #CCC;
+	box-shadow: 0 0 8px;
+}
+.search-form{
+	display: block;
+	padding: 10px 0;
+}
+.search-form-container{
+	width: 960px;
+	margin: 0 auto;
+}
+.txt-main.page{
+	width: 410px;
+	margin-right: 10px;
+}
+.txt-main:focus{
+	box-shadow: 0 0 8px #FF6602;
+}
+.btn-main.page{
+	padding: 11px 15px;
+	font-size: 15px;
+}
+.btn-search-container{
+	display: inline-block;
+}
+.search-result-container{
+	overflow: auto;
+	margin: 20px auto 10px auto;
+}
+.price-result-container, .from-desc-container, .to-desc-container{
+	float: left;
+	text-align: left;
+	width: 33.33%;
+	height: 74px;
+	position: relative;
+	overflow: hidden;
+}
+.price-result{
+	font-size: 50px;
+	color: #EFF; 
+	padding: 7px;
+	position: relative;
+	height: 100%;
+	background: #3DD033;
+}
+.from-desc{
+	padding: 7px;
+	background: #5D33D0;
+	color: #EEE;
+	position: relative;
+	height: 100%;
+}
+.to-desc{
+	background: #D03333;
+	color: #EEE;
+	padding: 7px;
+	position: relative;
+	height: 100%;
+}
+.search-address{
+	font-size: 18px;
+	color: white;
 }
