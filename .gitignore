@@ -1,3 +1,5 @@
 /wp-config.php
 /*.swp
+*.swp
 /*.tmp
+*.tmp

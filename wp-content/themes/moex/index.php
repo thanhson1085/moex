@@ -9,9 +9,9 @@
 			</p>
 		</div>
 		<div class="main-form">
-			<p><input class="txt-main" name="from" type="text" placeholder="From..."/></p>
-			<p><input class="txt-main" name="to" type="text" placeholder="To..."/></p>
-			<p><span class="btn-main">Submit</span></p>
+			<p><input class="txt-main" id="search-from" name="from" type="text" placeholder="From..."/></p>
+			<p><input class="txt-main" id="search-to" name="to" type="text" placeholder="To..."/></p>
+			<p><span class="btn-main" id="search-submit">Submit</span></p>
 
 		</div>
 	</div>
@@ -31,4 +31,12 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo get_bloginfo('template_url')?>/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#search-submit').click(function(){
+			window.location.href = '<?php echo get_bloginfo('url');?>/?page_id=50&from=' + $('#search-from').attr('value') + '&to=' + $('#search-to').attr('value');
+		});
+	});
+</script>
 <?php get_footer();?>

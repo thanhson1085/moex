@@ -1,5 +1,7 @@
 <?php
 get_header();
+$from = (isset($_GET['from']))?$_GET['from']:'';
+$to = (isset($_GET['to']))?$_GET['to']:'';
 ?>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <div class="content-container">
@@ -8,13 +10,13 @@ get_header();
 		<div class="search-result-container">
 			<div class="from-desc-container">
 				<div class="from-desc">
-					<p><span>Lorem ipsum:</span></p>
+					<p><span class="search-text">From:</span></p>
 					<p class="search-address" id="search-from">dolor sit amet, consectetur, adipisicing elit</p>
 				</div>
 			</div>
 			<div class="to-desc-container">
 				<div class="to-desc">
-					<p><span>Lorem ipsum:</span></p>
+					<p><span class="search-text">To:</span></p>
 					<p class="search-address" id="search-to">dolor sit amet, consectetur, adipisicing elit</p>
 				</div>
 			</div>
@@ -47,8 +49,8 @@ var map = new google.maps.Map(document.getElementById("map"), myOptions);
 directionsDisplay.setMap(map);
 var province = ', Hà Nội, Việt Nam';
 var request = {
-	origin: '219 Khâm Thiên', 
-	destination: '99 Phố Huế',
+	origin: '<?php echo (isset($from) && $from)?$from:'219 Khâm Thiên'?>', 
+	destination: '<?php echo (isset($to) && $to)?$to:'99 Phố Huế';?>',
 	travelMode: google.maps.DirectionsTravelMode.WALKING
 };
 var distance = 0;

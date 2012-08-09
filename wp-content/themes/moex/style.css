@@ -496,6 +496,7 @@ a.title-edit-link{
 	position: relative;
 	height: 100%;
 	background: #3DD033;
+	text-transform: uppercase;
 }
 .from-desc{
 	padding: 7px;
@@ -503,6 +504,7 @@ a.title-edit-link{
 	color: #EEE;
 	position: relative;
 	height: 100%;
+	text-transform: uppercase;
 }
 .to-desc{
 	background: #D03333;
@@ -510,8 +512,14 @@ a.title-edit-link{
 	padding: 7px;
 	position: relative;
 	height: 100%;
+	text-transform: uppercase;
 }
 .search-address{
 	font-size: 18px;
 	color: white;
 }
+.search-text{
+	color: #CCC;
+	text-transform: uppercase;
+}
+	
