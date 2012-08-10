@@ -208,6 +208,20 @@ a img.aligncenter {
 	-moz-box-shadow: 0 0 8px;
 	-webkit-box-shadow: 0 0 8px;
 }
+.page-title{
+	padding: 20px;
+	margin-bottom: 10px;
+	background: url(images/bg_banner.jpg);
+	box-shadow: 0 0 8px;
+	-moz-box-shadow: 0 0 8px;
+	-webkit-box-shadow: 0 0 8px;
+}
+.page-title a{
+	font-size: 30px;
+	color: #EEE;
+	text-shadow: 0 0 4px #DDD;
+	text-decoration: none;
+}
 .header-container.single{
 	height: 100px;
 }
@@ -297,6 +311,9 @@ a img.aligncenter {
 }
 .left-part.single{
 	padding: 10px 0;
+}
+.left-part.page{
+	padding: 10px 5px 10px 5px;
 }
 .left-part > ul{
 	list-style: none;	

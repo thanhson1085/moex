@@ -2,10 +2,16 @@
 <div class="header-container">
 	<div class="header">
 		<div class="main-intro">
-			<p class="main-header">Lorem Ipsum</p>
+			<?php 
+				$slogan_id = 20;
+				$slogan = get_post($slogan_id);?>
+			<p class="main-header"><?php echo $slogan->post_title;?>
+				<?php if (current_user_can('edit_post')):?>
+				<a href="<?php echo admin_url()?>/post.php?post=<?php echo $slogan->ID?>&action=edit" class="title-edit-link" target="_blank">(edit)</a>
+				<?php endif;?>
+			</p>
 			<p class="main-intro-content">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+				<?php echo $slogan->post_content;?>
 			</p>
 		</div>
 		<div class="main-form">
