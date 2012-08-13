@@ -44,6 +44,54 @@
 <body>
 <div class="top-container">
 	<div class="top">
-		<div class="logo"><img src="<?php echo get_bloginfo('template_url')?>/images/logo.png"/></div>
+		<div class="logo">
+			<img src="<?php echo get_bloginfo('template_url')?>/images/logo.png"/>
+		</div>
+	</div>
+</div>
+<div class="top-menu-container">
+	<div class="top-menu">
+		<ul>
+			<li><a href="">lorem ipsum</a></li>
+			<li><a href="">lorem ipsum</a></li>
+			<li><a href="">lorem ipsum</a></li>
+			<li><a href="">lorem ipsum</a></li>
+		</ul>
+	</div>
+</div>
+<div class="nav-container">
+	<div class="nav">
+		<div class="search-container">
+			<div class="nav-filter">
+				<ul>
+					<li><a href="">All</a></li>
+					<li><a href="">lorem ipsum</a></li>
+					<li><a href="">lorem ipsum</a></li>
+					<li><a href="">lorem ipsum</a></li>
+					<li><a href="">lorem ipsum</a></li>
+				</ul>
+			<div>
+			<div class="search">
+				<input type="text" value=""/>
+				<input type="button" value="Search"/>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cat-container">
+	<div class="cat">
+		<ul>
+			<li><span>lorem ipsum</span>
+				<div class="sub-cat">
+					<h3>lorem ipsum</h3>
+					<ul>
+						<li><a href="">lorem ipsum</a></li>
+						<li><a href="">lorem ipsum</a></li>
+						<li><a href="">lorem ipsum</a></li>
+						<li><a href="">lorem ipsum</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
