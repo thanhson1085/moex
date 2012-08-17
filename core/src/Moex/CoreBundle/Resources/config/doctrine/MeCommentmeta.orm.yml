@@ -1,0 +1,26 @@
+Moex\CoreBundle\Entity\MeCommentmeta:
+  type: entity
+  table: me_commentmeta
+  fields:
+    metaId:
+      id: true
+      type: bigint
+      nullable: false
+      column: meta_id
+      generator:
+        strategy: IDENTITY
+    commentId:
+      type: bigint
+      nullable: false
+      column: comment_id
+    metaKey:
+      type: string
+      length: 255
+      fixed: false
+      nullable: true
+      column: meta_key
+    metaValue:
+      type: text
+      nullable: true
+      column: meta_value
+  lifecycleCallbacks: {  }

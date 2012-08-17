@@ -23,6 +23,7 @@ get_header();
 					<?php
 						the_content();
 					?>
+					<div id="admin-area"></div>
 					</div>
 				<?php
 				endwhile;

@@ -1,0 +1,115 @@
+Moex\CoreBundle\Entity\MePosts:
+  type: entity
+  table: me_posts
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      column: ID
+      generator:
+        strategy: IDENTITY
+    postAuthor:
+      type: bigint
+      nullable: false
+      column: post_author
+    postDate:
+      type: datetime
+      nullable: false
+      column: post_date
+    postDateGmt:
+      type: datetime
+      nullable: false
+      column: post_date_gmt
+    postContent:
+      type: text
+      nullable: false
+      column: post_content
+    postTitle:
+      type: text
+      nullable: false
+      column: post_title
+    postExcerpt:
+      type: text
+      nullable: false
+      column: post_excerpt
+    postStatus:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: post_status
+    commentStatus:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: comment_status
+    pingStatus:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: ping_status
+    postPassword:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: post_password
+    postName:
+      type: string
+      length: 200
+      fixed: false
+      nullable: false
+      column: post_name
+    toPing:
+      type: text
+      nullable: false
+      column: to_ping
+    pinged:
+      type: text
+      nullable: false
+    postModified:
+      type: datetime
+      nullable: false
+      column: post_modified
+    postModifiedGmt:
+      type: datetime
+      nullable: false
+      column: post_modified_gmt
+    postContentFiltered:
+      type: text
+      nullable: false
+      column: post_content_filtered
+    postParent:
+      type: bigint
+      nullable: false
+      column: post_parent
+    guid:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    menuOrder:
+      type: integer
+      unsigned: false
+      nullable: false
+      column: menu_order
+    postType:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: post_type
+    postMimeType:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: post_mime_type
+    commentCount:
+      type: bigint
+      nullable: false
+      column: comment_count
+  lifecycleCallbacks: {  }

@@ -1,0 +1,77 @@
+Moex\CoreBundle\Entity\MeLinks:
+  type: entity
+  table: me_links
+  fields:
+    linkId:
+      id: true
+      type: bigint
+      nullable: false
+      column: link_id
+      generator:
+        strategy: IDENTITY
+    linkUrl:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: link_url
+    linkName:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: link_name
+    linkImage:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: link_image
+    linkTarget:
+      type: string
+      length: 25
+      fixed: false
+      nullable: false
+      column: link_target
+    linkDescription:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: link_description
+    linkVisible:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: link_visible
+    linkOwner:
+      type: bigint
+      nullable: false
+      column: link_owner
+    linkRating:
+      type: integer
+      unsigned: false
+      nullable: false
+      column: link_rating
+    linkUpdated:
+      type: datetime
+      nullable: false
+      column: link_updated
+    linkRel:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: link_rel
+    linkNotes:
+      type: text
+      nullable: false
+      column: link_notes
+    linkRss:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: link_rss
+  lifecycleCallbacks: {  }

@@ -17,7 +17,7 @@ function add_edit_link_to_title() {
 	add_filter('the_title', 'edit_link_to_title', 10, 2);
 }
 function edit_link_to_title($title, $id){
-	if (current_user_can('edit_post')):
+	if (current_user_can('level_10')):
 		$title = $title.'<a href="'.get_bloginfo('url').'/wp-admin/post.php?post='.$id.'&action=edit" class="title-edit-link" target="_blank">(edit)</a>';
 	endif;
     return $title;

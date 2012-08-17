@@ -1,0 +1,63 @@
+Moex\CoreBundle\Entity\MeUsers:
+  type: entity
+  table: me_users
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      column: ID
+      generator:
+        strategy: IDENTITY
+    userLogin:
+      type: string
+      length: 60
+      fixed: false
+      nullable: false
+      column: user_login
+    userPass:
+      type: string
+      length: 64
+      fixed: false
+      nullable: false
+      column: user_pass
+    userNicename:
+      type: string
+      length: 50
+      fixed: false
+      nullable: false
+      column: user_nicename
+    userEmail:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: user_email
+    userUrl:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: user_url
+    userRegistered:
+      type: datetime
+      nullable: false
+      column: user_registered
+    userActivationKey:
+      type: string
+      length: 60
+      fixed: false
+      nullable: false
+      column: user_activation_key
+    userStatus:
+      type: integer
+      unsigned: false
+      nullable: false
+      column: user_status
+    displayName:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+      column: display_name
+  lifecycleCallbacks: {  }

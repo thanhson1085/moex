@@ -1,0 +1,20 @@
+Moex\CoreBundle\Entity\MeTermRelationships:
+  type: entity
+  table: me_term_relationships
+  fields:
+    objectId:
+      id: true
+      type: bigint
+      nullable: false
+      column: object_id
+    termTaxonomyId:
+      id: true
+      type: bigint
+      nullable: false
+      column: term_taxonomy_id
+    termOrder:
+      type: integer
+      unsigned: false
+      nullable: false
+      column: term_order
+  lifecycleCallbacks: {  }

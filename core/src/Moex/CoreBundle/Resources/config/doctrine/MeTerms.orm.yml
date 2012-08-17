@@ -1,0 +1,26 @@
+Moex\CoreBundle\Entity\MeTerms:
+  type: entity
+  table: me_terms
+  fields:
+    termId:
+      id: true
+      type: bigint
+      nullable: false
+      column: term_id
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 200
+      fixed: false
+      nullable: false
+    slug:
+      type: string
+      length: 200
+      fixed: false
+      nullable: false
+    termGroup:
+      type: bigint
+      nullable: false
+      column: term_group
+  lifecycleCallbacks: {  }

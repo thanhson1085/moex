@@ -1,0 +1,53 @@
+Moex\CoreBundle\Entity\MeOrders:
+  type: entity
+  table: me_orders
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    userId:
+      type: bigint
+      nullable: false
+      column: user_id
+    orderFrom:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+      column: order_from
+    orderTo:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+      column: order_to
+    orderInfo:
+      type: text
+      nullable: false
+      column: order_info
+    phone:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+    price:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+    createdAt:
+      type: datetime
+      gedmo:
+        timestampable:
+          on: create
+      column: created_at 
+    updatedAt:
+      type: datetime
+      gedmo:
+        timestampable:
+          on: update
+      column: updated_at 
+  lifecycleCallbacks: {  }

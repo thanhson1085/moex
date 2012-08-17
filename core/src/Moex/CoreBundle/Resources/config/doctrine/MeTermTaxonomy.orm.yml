@@ -1,0 +1,30 @@
+Moex\CoreBundle\Entity\MeTermTaxonomy:
+  type: entity
+  table: me_term_taxonomy
+  fields:
+    termTaxonomyId:
+      id: true
+      type: bigint
+      nullable: false
+      column: term_taxonomy_id
+      generator:
+        strategy: IDENTITY
+    termId:
+      type: bigint
+      nullable: false
+      column: term_id
+    taxonomy:
+      type: string
+      length: 32
+      fixed: false
+      nullable: false
+    description:
+      type: text
+      nullable: false
+    parent:
+      type: bigint
+      nullable: false
+    count:
+      type: bigint
+      nullable: false
+  lifecycleCallbacks: {  }

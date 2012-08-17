@@ -1,0 +1,26 @@
+Moex\CoreBundle\Entity\MeUsermeta:
+  type: entity
+  table: me_usermeta
+  fields:
+    umetaId:
+      id: true
+      type: bigint
+      nullable: false
+      column: umeta_id
+      generator:
+        strategy: IDENTITY
+    userId:
+      type: bigint
+      nullable: false
+      column: user_id
+    metaKey:
+      type: string
+      length: 255
+      fixed: false
+      nullable: true
+      column: meta_key
+    metaValue:
+      type: text
+      nullable: true
+      column: meta_value
+  lifecycleCallbacks: {  }

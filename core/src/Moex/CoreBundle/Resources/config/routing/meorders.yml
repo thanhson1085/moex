@@ -1,0 +1,30 @@
+order:
+    pattern:  /
+    defaults: { _controller: "MoexCoreBundle:MeOrders:index" }
+
+order_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MoexCoreBundle:MeOrders:show" }
+
+order_new:
+    pattern:  /new
+    defaults: { _controller: "MoexCoreBundle:MeOrders:new" }
+
+order_create:
+    pattern:  /create
+    defaults: { _controller: "MoexCoreBundle:MeOrders:create" }
+    requirements: { _method: post }
+
+order_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MoexCoreBundle:MeOrders:edit" }
+
+order_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MoexCoreBundle:MeOrders:update" }
+    requirements: { _method: post }
+
+order_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MoexCoreBundle:MeOrders:delete" }
+    requirements: { _method: post }

@@ -1,0 +1,81 @@
+Moex\CoreBundle\Entity\MeComments:
+  type: entity
+  table: me_comments
+  fields:
+    commentId:
+      id: true
+      type: bigint
+      nullable: false
+      column: comment_ID
+      generator:
+        strategy: IDENTITY
+    commentPostId:
+      type: bigint
+      nullable: false
+      column: comment_post_ID
+    commentAuthor:
+      type: text
+      nullable: false
+      column: comment_author
+    commentAuthorEmail:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: comment_author_email
+    commentAuthorUrl:
+      type: string
+      length: 200
+      fixed: false
+      nullable: false
+      column: comment_author_url
+    commentAuthorIp:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+      column: comment_author_IP
+    commentDate:
+      type: datetime
+      nullable: false
+      column: comment_date
+    commentDateGmt:
+      type: datetime
+      nullable: false
+      column: comment_date_gmt
+    commentContent:
+      type: text
+      nullable: false
+      column: comment_content
+    commentKarma:
+      type: integer
+      unsigned: false
+      nullable: false
+      column: comment_karma
+    commentApproved:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: comment_approved
+    commentAgent:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: comment_agent
+    commentType:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+      column: comment_type
+    commentParent:
+      type: bigint
+      nullable: false
+      column: comment_parent
+    userId:
+      type: bigint
+      nullable: false
+      column: user_id
+  lifecycleCallbacks: {  }

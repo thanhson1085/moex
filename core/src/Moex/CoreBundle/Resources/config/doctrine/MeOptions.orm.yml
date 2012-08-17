@@ -1,0 +1,27 @@
+Moex\CoreBundle\Entity\MeOptions:
+  type: entity
+  table: me_options
+  fields:
+    optionId:
+      id: true
+      type: bigint
+      nullable: false
+      column: option_id
+      generator:
+        strategy: IDENTITY
+    optionName:
+      type: string
+      length: 64
+      fixed: false
+      nullable: false
+      column: option_name
+    optionValue:
+      type: text
+      nullable: false
+      column: option_value
+    autoload:
+      type: string
+      length: 20
+      fixed: false
+      nullable: false
+  lifecycleCallbacks: {  }

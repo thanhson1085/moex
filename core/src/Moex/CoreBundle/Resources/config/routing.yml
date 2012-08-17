@@ -1,0 +1,4 @@
+MoexCoreBundle_order:
+    resource: "@MoexCoreBundle/Resources/config/routing/meorders.yml"
+    prefix:   /order
+
