@@ -3,7 +3,6 @@ get_header();
 $from = (isset($_GET['from']))?$_GET['from']:'';
 $to = (isset($_GET['to']))?$_GET['to']:'';
 ?>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <div class="content-container">
     <div class="content page">
         <?php get_template_part('loop','single'); ?>
@@ -36,6 +35,7 @@ $to = (isset($_GET['to']))?$_GET['to']:'';
 		<div id="map"></div> 
 	</div>
 </div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript"> 
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -53,33 +53,6 @@ var request = {
 	destination: '<?php echo (isset($to) && $to)?$to:'99 Phố Huế';?>',
 	travelMode: google.maps.DirectionsTravelMode.WALKING
 };
-var distance = 0;
-function getRoute(){
-	distance = 0;
-	request.origin += province;
-	request.destination += province;
-	directionsService.route(request, function(response, status) {
-	if (status == google.maps.DirectionsStatus.OK) {
-		distance = response.routes[0].legs[0].distance.value;
-		document.getElementById('search-result').innerHTML = countMoney();
-		directionsDisplay.setDirections(response);
-	}
-	});
-}
-
-var price_level = [{distance: 0, price: 12}, {distance: 1, price: 10}, { distance: 5, price: 8}, {distance: 10, price: 7}, {distance:20, price: 6}]
-
-function countMoney(){
-	ret = 0;
-	for ( value in price_level){
-		if (distance > price_level[value].distance*1000){
-			ret = price_level[value].price*distance
-			ret = Math.round(ret/1000)*1000;
-			ret = ret  + ' VND';	
-		}
-	}	
-	return ret;
-}
 </script>
 <script type="text/javascript">
 $(document).ready(function(){

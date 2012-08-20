@@ -547,6 +547,9 @@ h2.page-title a{
 	font-size: 18px;
 	color: white;
 }
+#admin-area .search-address{
+	font-size: 13px;
+}
 .search-text{
 	color: #CCC;
 	text-transform: uppercase;
@@ -592,3 +595,123 @@ a.title-edit-link{
 	color: #F78181;
 	text-decoration: underline;
 }
+#admin-area ul{
+	list-style: none;
+}
+
+#admin-area ul li{
+	float: left;
+	padding: 0 5px;
+}
+
+#admin-area th {
+	font: bold 11px "Verdana", Arial, Helvetica, sans-serif;
+	color: #FFF; 
+	border-right: 1px solid #CCC; 
+	border-bottom: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #650198;
+}
+
+#admin-area th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+#admin-area td.spec {	
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff;
+	color: #650198;
+}
+
+#admin-area th.spec{
+	border-left: 1px solid #C1DAD7;
+}
+
+#admin-area th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	color: #FFF; 
+}
+#admin-area td {
+	border-right: 1px solid #CCC; 
+	border-bottom: 1px solid #CCC; 
+	background: #fff;
+	padding: 7px;
+	vertical-align: top;
+	color: #650198;
+}
+#admin-area td a{
+	color: #FF6600;
+}
+#admin-area td.alt {
+	background: #F5FAFA;
+	color: #B4AA9D;
+}
+#admin-area div label{
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+}
+#admin-area form div input{
+	display: inline-block;
+	outline: 0;
+	width: 382px;
+	border: 1px solid #DDD;
+	padding: 8px 6px;
+	font-size: 20px;
+	background-color: white;
+}
+#admin-area form div textarea{
+	width: 382px;
+	height: 50px;
+	display: inline-block;
+	border: 1px solid #DDD;
+	padding: 8px 6px;
+	font-size: 20px;
+	background-color: white;
+}
+#admin-area button[type="submit"]{
+	cursor: pointer;
+	background: #650198;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	border: 0;
+	font-size: 16px;
+}
+#admin-area button[type="submit"].btn-delete{
+	background: #FF6602;
+}
+
+#admin-area h1{
+	color: #CCC;
+	text-transform: uppercase;
+	line-height: 50px;
+	padding-bottom: 5px;
+}
+table.record-properties{
+	width: 100%;
+}
+.record-actions{
+	margin-top: 10px;
+}
+#loading{
+	background-color: transparent;
+	font-size: 28px;
+	color: black;
+	position: fixed;
+	bottom: .5em;
+	right: 6%;
+	z-index: 1003;
+}
+#loading img{
+	height: 30px;
+}
+

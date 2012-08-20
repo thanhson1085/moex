@@ -1,4 +1,4 @@
-<h1>MeOrders creation</h1>
+<h1>Orders creation</h1>
 
 <form action="{{ path('order_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
@@ -7,10 +7,16 @@
     </p>
 </form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('order') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+<p>
+	<a href="{{ path('order') }}">
+		Back to the list
+	</a>
+</p>
+<div class="search-form-container">
+	<div class="search-form">
+		<input class="txt-main page" id="input-from" name="from" type="text" placeholder="From..."/>
+		<input class="txt-main page" id="input-to" name="to" type="text" placeholder="To..."/>
+		<div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+	</div>
+</div>
+<div id="map"></div>

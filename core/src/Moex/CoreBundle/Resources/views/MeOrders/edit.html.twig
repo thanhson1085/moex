@@ -7,16 +7,38 @@
     </p>
 </form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('order') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('order_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+<form action="{{ path('order_delete', { 'id': entity.id }) }}" method="post">
+	{{ form_widget(delete_form) }}
+	<p><button type="submit" class="btn-delete">Delete</button></p>
+</form>
+<p><a href="{{ path('order') }}">
+	Back to the list
+</a></p>
+<div class="search-result-container">
+    <div class="from-desc-container">
+        <div class="from-desc">
+            <p><span class="search-text">From:</span></p>
+            <p class="search-address" id="search-from"></p>
+        </div>
+    </div>
+    <div class="to-desc-container">
+        <div class="to-desc">
+            <p><span class="search-text">To:</span></p>
+            <p class="search-address" id="search-to"></p>
+        </div>
+    </div>
+    <div class="price-result-container">
+        <div class="price-result" id ="search-result">
+            0
+        </div>
+    </div>
+</div>
+<div class="search-form-container">
+    <div class="search-form">
+        <input class="txt-main page" id="input-from" name="from" type="text" placeholder="From..."/>
+        <input class="txt-main page" id="input-to" name="to" type="text" placeholder="To..."/>
+        <div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+    </div>
+</div>
+<div id="map"></div>
+

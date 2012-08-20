@@ -10,14 +10,11 @@ class MeOrdersType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
-            ->add('userId')
+            ->add('phone')
+            ->add('orderInfo')
             ->add('orderFrom')
             ->add('orderTo')
-            ->add('orderInfo')
-            ->add('phone')
             ->add('price')
-            //->add('createdAt')
-            //->add('updatetedAt')
         ;
     }
 

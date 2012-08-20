@@ -89,8 +89,10 @@ class MeOrdersController extends Controller
             $em = $this->getDoctrine()->getEntityManager();
         	$created_at = new \DateTime();
         	$updated_at = new \DateTime();
+        	$user_id = get_current_user_id();
 			$entity->setCreatedAt($created_at);
 			$entity->setUpdatedAt($updated_at);
+			$entity->setUserId($user_id);
             $em->persist($entity);
             $em->flush();
 
@@ -155,6 +157,8 @@ class MeOrdersController extends Controller
         $editForm->bindRequest($request);
 
         if ($editForm->isValid()) {
+        	$updated_at = new \DateTime();
+			$entity->setUpdatedAt($updated_at);
             $em->persist($entity);
             $em->flush();
 

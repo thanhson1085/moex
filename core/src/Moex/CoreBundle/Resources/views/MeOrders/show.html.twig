@@ -1,47 +1,51 @@
-<h1>MeOrders</h1>
+<h1>Orders</h1>
 
-<table class="record_properties">
+<table class="record-properties" cellspacing="0">
+	<thread>
+		<th class="nobg"></th>
+		<th>Value</th>
+	<thread>
     <tbody>
         <tr>
-            <th>Id</th>
+            <th class="specalt">Id</th>
             <td>{{ entity.id }}</td>
         </tr>
         <tr>
-            <th>Userid</th>
+            <th class="specalt">Userid</th>
             <td>{{ entity.userId }}</td>
         </tr>
         <tr>
-            <th>Orderfrom</th>
+            <th class="specalt">Orderfrom</th>
             <td>{{ entity.orderFrom }}</td>
         </tr>
         <tr>
-            <th>Orderto</th>
+            <th class="specalt">Orderto</th>
             <td>{{ entity.orderTo }}</td>
         </tr>
         <tr>
-            <th>Orderinfo</th>
+            <th class="specalt">Orderinfo</th>
             <td>{{ entity.orderInfo }}</td>
         </tr>
         <tr>
-            <th>Phone</th>
+            <th class="specalt">Phone</th>
             <td>{{ entity.phone }}</td>
         </tr>
         <tr>
-            <th>Price</th>
+            <th class="specalt">Price</th>
             <td>{{ entity.price }}</td>
         </tr>
         <tr>
-            <th>Createdat</th>
+            <th class="specalt">Createdat</th>
             <td>{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
         </tr>
         <tr>
-            <th>Updatedat</th>
+            <th class="specalt">Updatedat</th>
             <td>{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
         </tr>
     </tbody>
 </table>
 
-<ul class="record_actions">
+<ul class="record-actions">
     <li>
         <a href="{{ path('order') }}">
             Back to the list
@@ -55,7 +59,7 @@
     <li>
         <form action="{{ path('order_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
+            <button type="submit" class="btn-delete">Delete</button>
         </form>
     </li>
 </ul>
