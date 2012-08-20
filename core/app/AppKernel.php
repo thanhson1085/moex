@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Moex\CoreBundle\MoexCoreBundle(),
+			new Hypebeast\WordpressBundle\HypebeastWordpressBundle(),
         	//new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         );
 

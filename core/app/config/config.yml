@@ -66,3 +66,11 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+hypebeast_wordpress:
+    wordpress_path: "%kernel.root_dir%/../.."
+
+    # Set short_init to true if you only need the WordpressBundle to read user's login state, 
+    # this will make your application run faster by loading less Wordpress classes. It is 
+    # false by default.
+    short_init: false

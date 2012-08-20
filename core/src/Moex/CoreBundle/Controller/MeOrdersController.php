@@ -89,7 +89,7 @@ class MeOrdersController extends Controller
             $em = $this->getDoctrine()->getEntityManager();
         	$created_at = new \DateTime();
         	$updated_at = new \DateTime();
-        	$user_id = get_current_user_id();
+        	$user_id = $this->get('security.context')->getToken()->getUser()->ID; 
 			$entity->setCreatedAt($created_at);
 			$entity->setUpdatedAt($updated_at);
 			$entity->setUserId($user_id);

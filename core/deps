@@ -69,3 +69,7 @@
 [Stof-DoctrineExtensionsBundle]
    git=https://github.com/stof/StofDoctrineExtensionsBundle.git
    target=/bundles/Stof/DoctrineExtensionsBundle
+
+[HypebeastWordpressBundle]
+   git=git://github.com/kayue/WordpressBundle.git
+   target=/bundles/Hypebeast/WordpressBundle

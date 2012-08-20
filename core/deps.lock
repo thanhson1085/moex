@@ -1,4 +1,4 @@
-symfony ee572b34cf19edc8c3ed0bd1bc8a9d634cfcd197
+symfony 07d108af5ec88b20efd1faf8931e15ec5b89df15
 twig v1.8.2
 monolog 1.0.2
 doctrine-common 2.1.4
@@ -13,5 +13,6 @@ JMSSecurityExtraBundle e752f888c51425f71382c056961f10f2be642102
 SensioDistributionBundle 41a6c5caed65f02bb09c95a90579f047616471fd
 SensioGeneratorBundle c0118ce370f8da20e43051f2dd1ae331a202ab9c
 AsseticBundle 6f15728c1aefa5246caa83730e3dbf70b0d46052
-gedmo-doctrine-extensions v2.3.0
-Stof-DoctrineExtensionsBundle f31a0861de08b6594f09430a4cbaf0618e5e11ad
+gedmo-doctrine-extensions v2.3.1
+Stof-DoctrineExtensionsBundle 63c2aa344bd45ca8cf16d778bb8d382bf18b09e3
+HypebeastWordpressBundle b44c8f07ef904854ef762a2867a96437a4171127

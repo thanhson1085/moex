@@ -1,38 +1,38 @@
-security:
-    encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+# app/config/security.yml
 
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+security:
+
+    # ...
+
+    factories:
+        - "%kernel.root_dir%/../vendor/bundles/Hypebeast/WordpressBundle/Resources/config/security_factories.xml"
 
     providers:
-        in_memory:
-            users:
-                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        wordpress:
+            id: wordpress.security.user.provider
 
     firewalls:
-        dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
         secured_area:
-            pattern:    ^/demo/secured/
-            form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
-            logout:
-                path:   /demo/secured/logout
-                target: /demo/
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
+            pattern:    /.*
+            # Set to true if using WordPress's log out rather than Symfony's
+            stateless:  true
+            wordpress_cookie:
+                # Set to false if you want to use a login form within your Symfony app to 
+                # collect the user's WordPress credentials (see below) or any other
+                # authentication provider. Otherwise, the user will be redirected to your 
+                # WordPress login if they need to authenticate
+                redirect_to_wordpress_on_failure: true
 
-    access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
-        #- { path: ^/_internal, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+            # Because this is based on form_login, it accepts all its parameters as well
+            # See the http://symfony.com/doc/2.0/cookbook/security/form_login.html for more 
+            # details. Omit this if using WordPress's built-in login, as above
+            wordpress_form_login:
+                # This is the name of the POST parameter that can be used to indicate 
+                # whether the user should be remembered via WordPress's remember-me cookie
+                remember_me_parameter: _remember_me
+
+            # You want your users to be able to log out, right? See Symfony docs for options
+            logout: ~
+            logout: true
+            security: true
+            anonymous: true
