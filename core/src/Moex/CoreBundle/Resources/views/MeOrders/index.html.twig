@@ -1,36 +1,35 @@
-<h1>Orders list</h1>
-<?php echo 'thanh son'?>
+<div class="admin-header">Orders list
+	<div class="contextual"> 
+		<a href="{{ path('order_new') }}" class="icon icon-add">New</a> 
+	</div>
+</div>
 
-<table class="records_list" cellspacing="0">
+<table class="list records-list" cellspacing="0">
     <thead>
         <tr>
             <th class="spec">Id</th>
-            <th>Userid</th>
+            <th>Phone</th>
             <th>Orderfrom</th>
             <th>Orderto</th>
-            <th>Orderinfo</th>
-            <th>Phone</th>
             <th>Price</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in paginator %}
-        <tr>
+        <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
             <td class="spec"><a href="{{ path('order_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.userId }}</td>
+            <td>{{ entity.phone }}</td>
             <td>{{ entity.orderFrom }}</td>
             <td>{{ entity.orderTo }}</td>
-            <td>{{ entity.orderInfo }}</td>
-            <td>{{ entity.phone }}</td>
             <td>{{ entity.price }}</td>
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('order_show', { 'id': entity.id }) }}">show</a>
+                        <a class="icon icon-show" href="{{ path('order_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a href="{{ path('order_edit', { 'id': entity.id }) }}">edit</a>
+                        <a class="icon icon-edit" href="{{ path('order_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
             </td>
@@ -40,9 +39,9 @@
     {% endfor %}
     </tbody>
 </table>
-<p class="pagination">
+<div class="pagination-container">
 	{{ pagerfanta(paginator, 'default') }}
-</p>
+</div>
 
 <ul>
     <li>

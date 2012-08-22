@@ -1,4 +1,9 @@
-<h1>Orders</h1>
+<div class="admin-header"><span>Orders</span>
+	<div class="contextual"> 
+		<a href="{{ path('order_new') }}" class="icon icon-add">New</a> 
+        <a href="{{ path('order_edit', { 'id': entity.id }) }}" class="icon icon-add">Edit</a>
+	</div>
+</div>
 
 <table class="record-properties" cellspacing="0">
 	<thread>
@@ -47,19 +52,14 @@
 
 <ul class="record-actions">
     <li>
-        <a href="{{ path('order') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('order_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
         <form action="{{ path('order_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
             <button type="submit" class="btn-delete">Delete</button>
         </form>
+    </li>
+    <li>
+        <a href="{{ path('order') }}">
+            Back to the list
+        </a>
     </li>
 </ul>

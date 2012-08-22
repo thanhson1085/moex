@@ -79,7 +79,7 @@
 	<div class="banner">
 		<div class="logo-container">
 			<div class="logo">
-				<img src="<?php echo get_bloginfo('template_url');?>/images/logo2.png"/>
+				<img src="<?php echo get_bloginfo('template_url');?>/images/logo3.png"/>
 			</div>
 		</div>
 		<div class="sub-menu-container">

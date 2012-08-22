@@ -1,7 +1,7 @@
 /**
  * Mon Feb 13, 2012 10:43:38 added by Thanh Son 
  * Email: thanhson1085@gmail.com 
- * Color: #650198, #FF6602
+ * Color: #0066b3, #ee1c24
  */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -132,7 +132,7 @@ a img.aligncenter {
 .menu-top-container{
 	height: 30px;
 	width: 100%;
-	background: #650198;
+	background: #0066b3;
 	box-shadow: 0 0 8px;
 	-moz-box-shadow: 0 0 8px;
 	-webkit-box-shadow: 0 0 8px;
@@ -147,7 +147,7 @@ a img.aligncenter {
 	line-height: 30px;
 }
 .menu-top a:hover{
-	background: #FF6602;
+	background: #ee1c24;
 }
 .menu-top-left{
 	float: left;
@@ -208,7 +208,7 @@ a img.aligncenter {
 .header-container{
 	height: 200px;
 	width: 100%;
-	background: #FF6602;
+	background: #ee1c24;
 	background: url(images/bg_banner.jpg);
 	box-shadow: 0 0 8px;
 	-moz-box-shadow: 0 0 8px;
@@ -232,7 +232,7 @@ h2.page-title{
 }
 h2.page-title a{
 	font-size: 20px;
-	color: #650198;
+	color: #0066b3;
 	text-decoration: none;
 }
 .header-container.single{
@@ -277,7 +277,7 @@ h2.page-title a{
 }
 .btn-main{
 	cursor: pointer;
-	background: #650198;
+	background: #0066b3;
 	padding: 10px;
 	line-height: 40px;
 	border-radius: 5px;
@@ -334,13 +334,13 @@ h2.page-title a{
 .idx-item-header{
 	font-size: 24px;
 	padding: 10px 7px;
-	color: #650198;
+	color: #0066b3;
 	margin-left: -1px;
 	margin-right: -1px;
 	border-bottom: solid 1px #CCC;
 }
 .idx-item-header.orange{
-	color: #FF6602;
+	color: #ee1c24;
 }
 .idx-item-readmore{
 	position: absolute;
@@ -353,7 +353,7 @@ h2.page-title a{
 	color: #BBB;
 }
 .idx-item-readmore > a:hover{
-	color: #FF6602;
+	color: #ee1c24;
 }
 .idx-item-content{
 	padding: 7px;
@@ -422,7 +422,7 @@ h2.page-title a{
 
 .single-title a{
 	text-decoration: none;
-	color: #650198;
+	color: #0066b3;
 	font-size: 20px;
 }
 .single-title{
@@ -497,7 +497,7 @@ h2.page-title a{
 	margin-right: 10px;
 }
 .txt-main:focus{
-	box-shadow: 0 0 8px #FF6602;
+	box-shadow: 0 0 8px #ee1c24;
 }
 .btn-main.page{
 	padding: 11px 15px;
@@ -583,7 +583,7 @@ a.title-edit-link{
 }
 .left-menu > div ul > li > a{
 	text-decoration: none;
-	color: #650198;
+	color: #0066b3;
 }
 .left-menu > div ul.sub-menu > li > a{
 	color: #F63;
@@ -604,56 +604,23 @@ a.title-edit-link{
 	padding: 0 5px;
 }
 
-#admin-area th {
-	font: bold 11px "Verdana", Arial, Helvetica, sans-serif;
-	color: #FFF; 
-	border-right: 1px solid #CCC; 
-	border-bottom: 1px solid #CCC;
-	border-top: 1px solid #CCC;
-	letter-spacing: 2px;
+
+table.list th {
+	border: none;
+	border-bottom: 1px solid #999;
+	font-size: 9px;
+	font-weight: normal;
+	padding: 0pt 3px 3px;
 	text-transform: uppercase;
-	text-align: left;
-	padding: 6px 6px 6px 12px;
-	background: #650198;
 }
-
-#admin-area th.nobg {
-	border-top: 0;
-	border-left: 0;
-	border-right: 1px solid #C1DAD7;
-	background: none;
+table.list tr td {
+	border-bottom: solid 1px #DDD;
+	padding: 4px 10px 4px 3px;
 }
-#admin-area td.spec {	
-	border-left: 1px solid #C1DAD7;
-	border-top: 0;
-	background: #fff;
-	color: #650198;
-}
-
-#admin-area th.spec{
-	border-left: 1px solid #C1DAD7;
-}
-
-#admin-area th.specalt {
-	border-left: 1px solid #C1DAD7;
-	border-top: 0;
-	color: #FFF; 
-}
-#admin-area td {
-	border-right: 1px solid #CCC; 
-	border-bottom: 1px solid #CCC; 
-	background: #fff;
-	padding: 7px;
-	vertical-align: top;
-	color: #650198;
-}
-#admin-area td a{
+table.list td a{
 	color: #FF6600;
 }
-#admin-area td.alt {
-	background: #F5FAFA;
-	color: #B4AA9D;
-}
+
 #admin-area div label{
 	width: 150px;
 	display: inline-block;
@@ -679,7 +646,7 @@ a.title-edit-link{
 }
 #admin-area button[type="submit"]{
 	cursor: pointer;
-	background: #650198;
+	background: #0066b3;
 	padding: 10px;
 	border-radius: 5px;
 	color: white;
@@ -687,16 +654,34 @@ a.title-edit-link{
 	font-size: 16px;
 }
 #admin-area button[type="submit"].btn-delete{
-	background: #FF6602;
+	background: #ee1c24;
 }
 
-#admin-area h1{
-	color: #CCC;
-	text-transform: uppercase;
-	line-height: 50px;
+.admin-header{
+	color: #EEE;
+	line-height: 30px;
 	padding-bottom: 5px;
+	background: #0066B3;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	position: relative;
+	font-size: 16px
+}
+.contextual{
+	position: absolute;
+	top: 0.4em;
+	right: 0.4em;
+}
+.contextual a{
+	font-size: 12px;
+	color: #EEE;
+	text-decoration: none;
 }
 table.record-properties{
+	width: 100%;
+}
+table.records-list{
 	width: 100%;
 }
 .record-actions{
@@ -715,3 +700,72 @@ table.record-properties{
 	height: 30px;
 }
 
+#filter-area h3{
+	text-transform: uppercase;
+	color: #CCC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.filter div label{
+	display: inline-block;
+	width: 100px;
+}
+
+.filter button{
+	cursor: pointer;
+	background: #0066b3;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: white;
+	border: 0;
+	font-size: 13px;
+	margin-top: 15px;
+}
+.pagination-container{
+	padding: 10px 0;
+}
+.pagination-container span.disabled{
+	color: #CCC;	
+	margin: 0 5px;
+}
+.pagination-container span.current{
+	color: black;
+	padding: 0 5px;
+	margin: 0 3px;
+	border: solid 1px #CCC;
+}
+.pagination-container a{
+	background: #0066b3;
+	color: white;
+	text-decoration: none;
+	padding: 2px 5px;
+	margin: 0 3px;
+	border: solid 1px #CCC;
+	
+}
+.odd{
+	background-color: #F6F7F8;
+}
+.even{
+	background-color: white;
+}
+.icon-add{
+	background-image: url(images/add.png);
+}
+.icon-show{
+	background-image: url(images/show.png);
+}
+.icon-edit{
+	background-image: url(images/edit.png);
+}
+.icon-del{
+	background-image: url(images/delete.png);
+}
+.icon {
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+}
