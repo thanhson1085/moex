@@ -1,4 +1,5 @@
 <h1>Orders list</h1>
+<?php echo 'thanh son'?>
 
 <table class="records_list" cellspacing="0">
     <thead>
@@ -10,12 +11,11 @@
             <th>Orderinfo</th>
             <th>Phone</th>
             <th>Price</th>
-            <th>Createdat</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-    {% for entity in entities %}
+    {% for entity in paginator %}
         <tr>
             <td class="spec"><a href="{{ path('order_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.userId }}</td>
@@ -24,7 +24,6 @@
             <td>{{ entity.orderInfo }}</td>
             <td>{{ entity.phone }}</td>
             <td>{{ entity.price }}</td>
-            <td>{% if entity.createdAt %}{{ entity.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
             <td>
                 <ul>
                     <li>
@@ -36,9 +35,14 @@
                 </ul>
             </td>
         </tr>
+	{% else %}
+		<tr><td>no record found.</td></tr>
     {% endfor %}
     </tbody>
 </table>
+<p class="pagination">
+	{{ pagerfanta(paginator, 'default') }}
+</p>
 
 <ul>
     <li>

@@ -1,3 +1,4 @@
+var submit_click = false;
 $(document).ready(function(){
 	menu_left = $('.left-menu-container');
 	left_part = $('.left-part-container');
@@ -8,7 +9,11 @@ $(document).ready(function(){
 		$("#loading").hide();
 		me_window_resize();
 	});
-	$('#admin-area a').live('click', function(e){
+	jQuery.post(ajax_filter_link,{},
+	function(data){ 
+		jQuery("#filter-area").html(data); 
+	});
+	$('#admin-area a, #filter-area a').live('click', function(e){
 		$("#loading").show();
 		e.preventDefault();
 		ajax_link = $(this).attr('href');
@@ -16,7 +21,7 @@ $(document).ready(function(){
 		function(data){ jQuery("#admin-area").html(data); $("#loading").hide(); });
 		me_window_resize();
 	});	
-	$('#admin-area form').live('submit', function(e){
+	$('#admin-area form, #filter-area form').live('submit', function(e){
 		e.preventDefault();
 		ajax_link = $(this).attr('action');
 		$("#loading").show();
@@ -24,6 +29,11 @@ $(document).ready(function(){
 		function(data){ jQuery("#admin-area").html(data); $("#loading").hide();});
 		me_window_resize();
 	});	
+	$('#filter-area #btn-clear').live('click', function(){
+		$('#filter-area form input[type="text"]').each(function(){
+			$(this).attr('value','');
+		});
+	});
 	$(window).resize(function(){
 		window_resize();
 	});

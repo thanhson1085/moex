@@ -73,3 +73,15 @@
 [HypebeastWordpressBundle]
    git=git://github.com/kayue/WordpressBundle.git
    target=/bundles/Hypebeast/WordpressBundle
+
+[GravatarBundle]
+    git=https://github.com/ornicar/GravatarBundle.git
+    target=../src/Bundle/GravatarBundle
+
+[WhiteOctoberPagerFanta]
+    git=http://github.com/whiteoctober/Pagerfanta.git
+
+[WhiteOctoberPagerFantaBundle]
+    git=http://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git
+    target=/bundles/WhiteOctober/PagerfantaBundle
+	version=origin/symfony2.0

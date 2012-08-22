@@ -19,7 +19,8 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Moex\CoreBundle\MoexCoreBundle(),
 			new Hypebeast\WordpressBundle\HypebeastWordpressBundle(),
-        	//new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+        	new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+        	new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

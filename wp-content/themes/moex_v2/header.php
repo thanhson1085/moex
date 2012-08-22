@@ -38,9 +38,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <script src="<?php echo get_bloginfo('template_url')?>/js/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-	var ajax_link = "<?php echo get_bloginfo("url");?>/core/web/app_dev.php/order/"
-</script>
 <?php
     wp_head();
 ?>

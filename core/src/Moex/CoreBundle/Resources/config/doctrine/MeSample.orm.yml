@@ -1,0 +1,18 @@
+Moex\CoreBundle\Entity\MeSample:
+  type: entity
+  table: me_sample
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      column: id
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 255
+      fixed: false
+      nullable: true
+      column: name 
+  lifecycleCallbacks: {  }

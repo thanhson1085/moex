@@ -8,6 +8,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Moex\CoreBundle\Entity\MeOrders;
 use Moex\CoreBundle\Form\MeOrdersType;
+use Moex\CoreBundle\Form\OrderFilterType;
+use Pagerfanta\Pagerfanta;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
 
 /**
  * MeOrders controller.
@@ -26,9 +29,35 @@ class MeOrdersController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entities = $em->getRepository('MoexCoreBundle:MeOrders')->findAll();
+        $filter = $this->getRequest()->getSession()->get('order.filter', new MeOrders());
 
-        return array('entities' => $entities);
+        $filterForm = $this->createForm(new OrderFilterType(), $filter);
+        $filterForm->bindRequest($this->getRequest());
+        $this->getRequest()->getSession()->set('order.filter', $filter);
+        
+        $query = $em->getRepository('MoexCoreBundle:MeOrders')->findByFilterQuery($filter);
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator->setMaxPerPage($this->container->getParameter('moex.pagesize.default'));
+        $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
+
+        return array('filterForm' => $filterForm->createView(), 'paginator' => $paginator);
+    }
+
+    /**
+     * Filter Form.
+     *
+     * @Route("/filter", name="order_filter")
+     * @Template()
+     */
+    public function filterAction()
+    {
+        $filter = $this->getRequest()->getSession()->get('order.filter', new MeOrders());
+
+        $filterForm = $this->createForm(new OrderFilterType(), $filter);
+        $filterForm->bindRequest($this->getRequest());
+        $this->getRequest()->getSession()->set('order.filter', $filter);
+
+        return array('filterForm' => $filterForm->createView());
     }
 
     /**
@@ -42,6 +71,7 @@ class MeOrdersController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
 
         $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
+		$username = $em->getRepository('MoexCoreBundle:MeOrders')->findOneUserById($entity->getUserId());
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeOrders entity.');
@@ -51,7 +81,9 @@ class MeOrdersController extends Controller
 
         return array(
             'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),        );
+			'username'   => $username,
+            'delete_form' => $deleteForm->createView(),
+			);
     }
 
     /**

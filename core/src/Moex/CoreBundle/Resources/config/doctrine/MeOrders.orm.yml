@@ -1,6 +1,14 @@
 Moex\CoreBundle\Entity\MeOrders:
   type: entity
+  repositoryClass: Moex\CoreBundle\Repository\MeOrdersRepository
   table: me_orders
+  relations:
+    MeUsers:
+      class: MeUsers
+      local: userId
+      foreign: id
+      type: many
+      foreignType: one
   fields:
     id:
       id: true

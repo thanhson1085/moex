@@ -15,7 +15,7 @@ get_header();
         </div>
         <div class="right-part-container">
             <div class="right-part">
-                <?php get_sidebar(); ?>
+                <?php get_template_part('sidebar', 'index');?>
             </div>
         </div>
     </div>

@@ -32,10 +32,16 @@ get_header();
 		</div>
 		<div class="right-part-container">
 			<div class="right-part">
+				<div id="filter-area"></div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	var ajax_link = "<?php echo get_bloginfo("url");?>/core/web/app_dev.php/order/"
+	var ajax_filter_link = "<?php echo get_bloginfo("url");?>/core/web/app_dev.php/order/filter"
+</script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 <script type="text/javascript">

@@ -1,0 +1,3 @@
+parameters:
+  moex.version: V1.0
+  moex.pagesize.default: 10
