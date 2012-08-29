@@ -1,0 +1,4 @@
+Moex\CoreBundle\Entity\MeOrders:
+  properties:
+    orderFrom:
+      - NotNull: ~

@@ -1,6 +1,6 @@
-<div class="admin-header">Orders list
+<div class="admin-header">MeDrivers list
 	<div class="contextual"> 
-		<a href="{{ path('order_new') }}" class="icon icon-add">New</a> 
+		<a href="{{ path('driver_new') }}" class="icon icon-add">New</a> 
 	</div>
 </div>
 
@@ -8,28 +8,26 @@
     <thead>
         <tr>
             <th class="spec">Id</th>
+            <th>DriverName</th>
             <th>Phone</th>
-            <th>Orderfrom</th>
-            <th>Orderto</th>
-            <th>Price</th>
+            <th>Position</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in paginator %}
         <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
-            <td class="spec"><a href="{{ path('order_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.phone }}</td>
-            <td class="from">{{ entity.orderFrom }}</td>
-            <td class="to">{{ entity.orderTo }}</td>
-            <td>{{ entity.price }}</td>
+            <td class="spec">{{ entity.id }}</td>
+            <td class="spec"><a href="{{ path('driver_show', { 'id': entity.id }) }}">{{ entity.driverName }}</a></td>
+            <td class="name">{{ entity.phone }}</td>
+            <td class="position">{{ entity.position }}</td>
             <td class="action">
                 <ul>
                     <li>
-                        <a class="icon icon-show" href="{{ path('order_show', { 'id': entity.id }) }}">show</a>
+                        <a class="icon icon-show" href="{{ path('driver_show', { 'id': entity.id }) }}">show</a>
                     </li>
                     <li>
-                        <a class="icon icon-edit" href="{{ path('order_edit', { 'id': entity.id }) }}">edit</a>
+                        <a class="icon icon-edit" href="{{ path('driver_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
                 </ul>
             </td>

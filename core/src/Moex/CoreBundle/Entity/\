@@ -6,9 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Moex\CoreBundle\Entity\MeOrders
+ * Moex\CoreBundle\Entity\MeDrivers
  */
-class MeOrders
+class MeDrivers
 {
     /**
      * @var bigint $id
@@ -16,32 +16,20 @@ class MeOrders
     private $id;
 
     /**
-     * @var bigint $userId
+     * @var string $driverName
      */
-    private $userId;
+    private $driverName;
 
     /**
-     * @var string $orderName
+     * @var int $driverAge
      * @Assert\NotBlank()
      */
-    private $orderName;
+    private $driverAge;
 
     /**
-     * @var string $orderFrom
-     * @Assert\NotBlank()
+     * @var text $driverInfo
      */
-    private $orderFrom;
-
-    /**
-     * @var string $orderTo
-     * @Assert\NotBlank()
-     */
-    private $orderTo;
-
-    /**
-     * @var text $orderInfo
-     */
-    private $orderInfo;
+    private $driverInfo;
 
     /**
      * @var string $phone
@@ -49,9 +37,9 @@ class MeOrders
     private $phone;
 
     /**
-     * @var string $price
+     * @var string $position
      */
-    private $price;
+    private $position;
 
     /**
      * @var string $lat
@@ -85,103 +73,63 @@ class MeOrders
     }
 
     /**
-     * Set userId
+     * Set driverName
      *
-     * @param bigint $userId
+     * @param string $driverName
      */
-    public function setUserId($userId)
+    public function setDriverName($driverName)
     {
-        $this->userId = $userId;
+        $this->driverName = $driverName;
     }
 
     /**
-     * Get userId
-     *
-     * @return bigint 
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * Set orderName
-     *
-     * @param string $orderName
-     */
-    public function setOrderName($orderName)
-    {
-        $this->orderName = $orderName;
-    }
-
-    /**
-     * Get orderName
+     * Get driverName
      *
      * @return string 
      */
-    public function getOrderName()
+    public function getDriverName()
     {
-        return $this->orderName;
+        return $this->driverName;
     }
 
     /**
-     * Set orderFrom
+     * Set driverAge
      *
-     * @param string $orderFrom
+     * @param int $driverAge
      */
-    public function setOrderFrom($orderFrom)
+    public function setDriverAge($driverAge)
     {
-        $this->orderFrom = $orderFrom;
+        $this->driverAge = $driverAge;
     }
 
     /**
-     * Get orderFrom
+     * Get driverAge
      *
-     * @return string 
+     * @return int 
      */
-    public function getOrderFrom()
+    public function getDriverAge()
     {
-        return $this->orderFrom;
+        return $this->driverAge;
     }
 
     /**
-     * Set orderTo
+     * Set driverInfo
      *
-     * @param string $orderTo
+     * @param text $driverInfo
      */
-    public function setOrderTo($orderTo)
+    public function setDriverInfo($driverInfo)
     {
-        $this->orderTo = $orderTo;
+        $this->driverInfo = $driverInfo;
     }
 
     /**
-     * Get orderTo
-     *
-     * @return string 
-     */
-    public function getOrderTo()
-    {
-        return $this->orderTo;
-    }
-
-    /**
-     * Set orderInfo
-     *
-     * @param text $orderInfo
-     */
-    public function setOrderInfo($orderInfo)
-    {
-        $this->orderInfo = $orderInfo;
-    }
-
-    /**
-     * Get orderInfo
+     * Get driverInfo
      *
      * @return text 
      */
-    public function getOrderInfo()
+    public function getDriverInfo()
     {
-        return $this->orderInfo;
+        return $this->driverInfo;
     }
 
     /**
@@ -205,27 +153,27 @@ class MeOrders
     }
 
     /**
-     * Set price
+     * Set position
      *
-     * @param string $price
+     * @param string $position
      */
-    public function setPrice($price)
+    public function setPosition($position)
     {
-        $this->price = $price;
+        $this->position = $position;
     }
 
     /**
-     * Get price
+     * Get position
      *
      * @return string 
      */
-    public function getPrice()
+    public function getPosition()
     {
-        return $this->price;
+        return $this->position;
     }
 
     /**
-     * Set lat
+     * Set  lat
      *
      * @param string $lat
      */
@@ -235,7 +183,7 @@ class MeOrders
     }
 
     /**
-     * Get lng 
+     * Get lat 
      *
      * @return string 
      */
@@ -249,20 +197,21 @@ class MeOrders
      *
      * @param string $lng
      */
-    public function setLng($lng)
+    public function setLat($lat)
     {
-        $this->lng = $lng;
+        $this->lat = $lat;
     }
 
     /**
-     * Get lng 
+     * Get lat 
      *
      * @return string 
      */
-    public function getLng()
+    public function getLat()
     {
-        return $this->lng;
+        return $this->lat;
     }
+
 
     /**
      * Set createdAt

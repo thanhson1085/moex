@@ -11,6 +11,7 @@ class OrderFilterType extends AbstractType
     {
         $builder
             ->add('phone', 'text', array('required' => false))
+            ->add('orderName', 'text', array('required' => false))
             ->add('orderInfo', 'text', array('required' => false))
             ->add('orderFrom', 'text', array('required' => false))
             ->add('orderTo', 'text', array('required' => false))

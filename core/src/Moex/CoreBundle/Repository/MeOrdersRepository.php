@@ -19,7 +19,7 @@ class MeOrdersRepository extends EntityRepository
 		return (empty($user_logins))?'':$user_logins[0]['userLogin'];
 	}
 
-    public function findByFilterQuery(\Moex\CoreBundle\Entity\MeOrders $filter)
+    public function findByFilterQuery(\Moex\CoreBundle\Entity\OrderFilter $filter)
     {
         $query = $this->createQueryBuilder('o')
                               ->where('1 = 1');
@@ -39,6 +39,15 @@ class MeOrdersRepository extends EntityRepository
                             ->setParameter('orderto', $filter->getOrderTo()."%");
         }
 
+        if ($filter->getOrderName() != null) {
+            $query = $query->andWhere('o.orderName LIKE :ordername')
+                            ->setParameter('ordername', $filter->getOrderName()."%");
+        }
+
+        if ($filter->getOrderInfo() != null) {
+            $query = $query->andWhere('o.orderInfo LIKE :orderinfo')
+                            ->setParameter('orderinfo', $filter->getOrderInfo()."%");
+        }
 		/*
         if ($filter->getGroup() != null) {
             $group = $filter->getGroup();

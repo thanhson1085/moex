@@ -47,7 +47,12 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
+        default_entity_manager: default
+        entity_managers:
+            default:
+                mappings:
+                    # ...
+                    MoexCoreBundle: ~
 # Doctrine Extensions Configuration
 #stof_doctrine_extensions:
         #default_locale: en_us

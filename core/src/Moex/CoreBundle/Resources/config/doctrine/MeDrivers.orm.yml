@@ -1,7 +1,7 @@
-Moex\CoreBundle\Entity\MeOrders:
+Moex\CoreBundle\Entity\MeDrivers:
   type: entity
-  repositoryClass: Moex\CoreBundle\Repository\MeOrdersRepository
-  table: me_orders
+  repositoryClass: Moex\CoreBundle\Repository\MeDriversRepository
+  table: me_drivers
   fields:
     id:
       id: true
@@ -9,38 +9,27 @@ Moex\CoreBundle\Entity\MeOrders:
       nullable: false
       generator:
         strategy: IDENTITY
-    userId:
-      type: bigint
-      nullable: false
-      column: user_id
-    orderName:
+    driverName:
       type: string
       length: 250
       fixed: false
       nullable: false
-      column: order_name
-    orderFrom:
-      type: string
-      length: 250
-      fixed: false
+      column: driver_name
+    driverAge:
+      type: integer
+      length: 2 
       nullable: false
-      column: order_from
-    orderTo:
-      type: string
-      length: 250
-      fixed: false
-      nullable: false
-      column: order_to
-    orderInfo:
+      column: driver_age 
+    driverInfo:
       type: text
-      nullable: false 
-      column: order_info
+      nullable: true 
+      column: driver_info
     phone:
       type: string
       length: 250
       fixed: false
       nullable: false
-    price:
+    position:
       type: string
       length: 250
       fixed: false

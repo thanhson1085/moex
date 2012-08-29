@@ -63,3 +63,38 @@
         </a>
     </li>
 </ul>
+<table class="list records-list" cellspacing="0">
+    <thead>
+        <tr>
+            <th class="spec">Id</th>
+            <th>Phone</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Distance</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for value in drivers %}
+    {% set en = value[0] %}
+    {% set distance = value['distance'] %}
+        <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+            <td class="spec"><a href="{{ path('driver_show', { 'id': en.id }) }}">{{ en.id }}</a></td>
+            <td class="phone">{{ en.phone }}</td>
+            <td class="name">{{ en.driverName }}</td>
+            <td class="position">{{ en.position }}</td>
+            <td>{{ '%.2f' | format(distance) }}</td>
+            <td class="action">
+                <ul>
+                    <li>
+                        <a class="icon icon-show" href="{{ path('driver_show', { 'id': en.id }) }}">show</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% else %}
+        <tr><td>no record found.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+

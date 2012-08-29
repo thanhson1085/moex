@@ -312,6 +312,7 @@ h2.page-title a{
 	-webkit-box-sizing: border-box;
 	border-left: solid 1px #CCC;
 	border-right: solid 1px #CCC;
+	padding-bottom: 20px;
 }
 .left-part{
 	padding: 10px 0;
@@ -408,9 +409,8 @@ h2.page-title a{
 
 /* footer part */
 .footer-container{
-	margin-top: 20px;
 	overflow: auto;
-	border-top: solid 1px #EEE;
+	border-top: solid 1px #CCC;
 }
 .footer{
 	margin: 0 10px;
@@ -598,6 +598,13 @@ a.title-edit-link{
 #admin-area ul{
 	list-style: none;
 }
+#admin-area ul{
+	list-style: none;
+}
+
+#admin-area form div ul li{
+	color: red;
+}
 
 #admin-area ul li{
 	float: left;
@@ -622,7 +629,7 @@ table.list td a{
 }
 
 #admin-area div label{
-	width: 150px;
+	width: 300px;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -634,6 +641,9 @@ table.list td a{
 	padding: 8px 6px;
 	font-size: 20px;
 	background-color: white;
+}
+#admin-area form div input[readonly="readonly"]{
+	background: #EEE;
 }
 #admin-area form div textarea{
 	width: 382px;
@@ -768,4 +778,13 @@ table.records-list{
 	padding-left: 20px;
 	padding-top: 2px;
 	padding-bottom: 3px;
+}
+td.action{
+	width: 20%;
+}
+td.position{
+	width: 40%;
+}
+td.name{
+	width: 20%;
 }

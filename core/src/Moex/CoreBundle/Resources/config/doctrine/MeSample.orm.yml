@@ -6,7 +6,6 @@ Moex\CoreBundle\Entity\MeSample:
       id: true
       type: bigint
       nullable: false
-      column: id
       generator:
         strategy: IDENTITY
     name:
@@ -14,5 +13,4 @@ Moex\CoreBundle\Entity\MeSample:
       length: 255
       fixed: false
       nullable: true
-      column: name 
   lifecycleCallbacks: {  }

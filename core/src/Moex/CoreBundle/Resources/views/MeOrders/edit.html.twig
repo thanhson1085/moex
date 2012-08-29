@@ -1,4 +1,4 @@
-<h1>Orders edit</h1>
+<div class="admin-header">Orders edit</div>
 
 <form action="{{ path('order_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
     {{ form_widget(edit_form) }}
@@ -14,29 +14,10 @@
 <p><a href="{{ path('order') }}">
 	Back to the list
 </a></p>
-<div class="search-result-container">
-    <div class="from-desc-container">
-        <div class="from-desc">
-            <p><span class="search-text">From:</span></p>
-            <p class="search-address" id="search-from"></p>
-        </div>
-    </div>
-    <div class="to-desc-container">
-        <div class="to-desc">
-            <p><span class="search-text">To:</span></p>
-            <p class="search-address" id="search-to"></p>
-        </div>
-    </div>
-    <div class="price-result-container">
-        <div class="price-result" id ="search-result">
-            0
-        </div>
-    </div>
-</div>
 <div class="search-form-container">
     <div class="search-form">
-        <input class="txt-main page" id="input-from" name="from" type="text" placeholder="From..."/>
-        <input class="txt-main page" id="input-to" name="to" type="text" placeholder="To..."/>
+        <input class="txt-main page" id="input-from" name="from" type="text" value="{{ entity.orderFrom }}" placeholder="From..."/>
+        <input class="txt-main page" id="input-to" name="to" type="text" value="{{ entity.orderTo }}"  placeholder="To..."/>
         <div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
     </div>
 </div>

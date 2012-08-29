@@ -6,34 +6,36 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Moex\CoreBundle\Entity\MeOrders;
-use Moex\CoreBundle\Form\MeOrdersType;
-use Moex\CoreBundle\Form\OrderFilterType;
+use Moex\CoreBundle\Entity\MeDrivers;
+use Moex\CoreBundle\Form\MeDriversType;
+use Moex\CoreBundle\Form\DriverFilterType;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
+
 /**
- * MeOrders controller.
+ * MeDrivers controller.
  *
- * @Route("/order")
+ * @Route("/driver")
  */
-class MeOrdersController extends Controller
+class MeDriversController extends Controller
 {
     /**
-     * Lists all MeOrders entities.
+     * Lists all MeDrivers entities.
      *
-     * @Route("/", name="order")
+     * @Route("/", name="driver")
      * @Template()
      */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
+        $filter = $this->getRequest()->getSession()->remove('driver.filter');
+        $filter = $this->getRequest()->getSession()->get('driver.filter', new \Moex\CoreBundle\Entity\DriverFilter());
 
-        $filterForm = $this->createForm(new OrderFilterType(), $filter);
+        $filterForm = $this->createForm(new DriverFilterType(), $filter);
         $filterForm->bindRequest($this->getRequest());
-        $this->getRequest()->getSession()->set('order.filter', $filter);
+        $this->getRequest()->getSession()->set('driver.filter', $filter);
         
-        $query = $em->getRepository('MoexCoreBundle:MeOrders')->findByFilterQuery($filter);
+        $query = $em->getRepository('MoexCoreBundle:MeDrivers')->findByFilterQuery($filter);
         $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
         $paginator->setMaxPerPage($this->container->getParameter('moex.pagesize.default'));
         $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
@@ -44,61 +46,53 @@ class MeOrdersController extends Controller
     /**
      * Filter Form.
      *
-     * @Route("/filter", name="order_filter")
+     * @Route("/filter", name="driver_filter")
      * @Template()
      */
     public function filterAction()
     {
-        $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
+        $filter = $this->getRequest()->getSession()->get('driver.filter', new MeDrivers());
 
-        $filterForm = $this->createForm(new OrderFilterType(), $filter);
+        $filterForm = $this->createForm(new DriverFilterType(), $filter);
         $filterForm->bindRequest($this->getRequest());
-        $this->getRequest()->getSession()->set('order.filter', $filter);
+        $this->getRequest()->getSession()->set('driver.filter', $filter);
 
         return array('filterForm' => $filterForm->createView());
     }
 
     /**
-     * Finds and displays a MeOrders entity.
+     * Finds and displays a MeDrivers entity.
      *
-     * @Route("/{id}/show", name="order_show")
+     * @Route("/{id}/show", name="driver_show")
      * @Template()
      */
     public function showAction($id)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
-		$username = $em->getRepository('MoexCoreBundle:MeOrders')->findOneUserById($entity->getUserId());
+        $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+            throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
 
-		$lat = $entity->getLat();
-		$lng = $entity->getLng();
-		
-		$drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByDistance($lat, $lng);
         return array(
             'entity'      => $entity,
-            'drivers'     => $drivers,
-			'username'   => $username,
-            'delete_form' => $deleteForm->createView(),
-			);
+            'delete_form' => $deleteForm->createView(),        );
     }
 
     /**
-     * Displays a form to create a new MeOrders entity.
+     * Displays a form to create a new MeDrivers entity.
      *
-     * @Route("/new", name="order_new")
+     * @Route("/new", name="driver_new")
      * @Template()
      */
     public function newAction()
     {
-        $entity = new MeOrders();
-        $form   = $this->createForm(new MeOrdersType(), $entity);
+        $entity = new MeDrivers();
+        $form   = $this->createForm(new MeDriversType(), $entity);
 
         return array(
             'entity' => $entity,
@@ -107,34 +101,29 @@ class MeOrdersController extends Controller
     }
 
     /**
-     * Creates a new MeOrders entity.
+     * Creates a new MeDrivers entity.
      *
-     * @Route("/create", name="order_create")
+     * @Route("/create", name="driver_create")
      * @Method("post")
-     * @Template("MoexCoreBundle:MeOrders:new.html.twig")
+     * @Template("MoexCoreBundle:MeDrivers:new.html.twig")
      */
     public function createAction()
     {
-        $entity  = new MeOrders();
+        $entity  = new MeDrivers();
         $request = $this->getRequest();
-        $form    = $this->createForm(new MeOrdersType(), $entity);
+        $form    = $this->createForm(new MeDriversType(), $entity);
         $form->bindRequest($request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getEntityManager();
         	$created_at = new \DateTime();
         	$updated_at = new \DateTime();
-        	$user_id = $this->get('security.context')->getToken()->getUser()->ID; 
 			$entity->setCreatedAt($created_at);
 			$entity->setUpdatedAt($updated_at);
-			$entity->setUserId($user_id);
-			if ($entity->getOrderInfo() === null) $entity->setOrderInfo("");
-			$validator = $this->get('validator');
-			$errors = $validator->validate($entity);
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('order_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('driver_show', array('id' => $entity->getId())));
             
         }
 
@@ -145,22 +134,22 @@ class MeOrdersController extends Controller
     }
 
     /**
-     * Displays a form to edit an existing MeOrders entity.
+     * Displays a form to edit an existing MeDrivers entity.
      *
-     * @Route("/{id}/edit", name="order_edit")
+     * @Route("/{id}/edit", name="driver_edit")
      * @Template()
      */
     public function editAction($id)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
+        $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+            throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
 
-        $editForm = $this->createForm(new MeOrdersType(), $entity);
+        $editForm = $this->createForm(new MeDriversType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
@@ -171,23 +160,23 @@ class MeOrdersController extends Controller
     }
 
     /**
-     * Edits an existing MeOrders entity.
+     * Edits an existing MeDrivers entity.
      *
-     * @Route("/{id}/update", name="order_update")
+     * @Route("/{id}/update", name="driver_update")
      * @Method("post")
-     * @Template("MoexCoreBundle:MeOrders:edit.html.twig")
+     * @Template("MoexCoreBundle:MeDrivers:edit.html.twig")
      */
     public function updateAction($id)
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
+        $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+            throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
 
-        $editForm   = $this->createForm(new MeOrdersType(), $entity);
+        $editForm   = $this->createForm(new MeDriversType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         $request = $this->getRequest();
@@ -200,7 +189,7 @@ class MeOrdersController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('order_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('driver_edit', array('id' => $id)));
         }
 
         return array(
@@ -211,9 +200,9 @@ class MeOrdersController extends Controller
     }
 
     /**
-     * Deletes a MeOrders entity.
+     * Deletes a MeDrivers entity.
      *
-     * @Route("/{id}/delete", name="order_delete")
+     * @Route("/{id}/delete", name="driver_delete")
      * @Method("post")
      */
     public function deleteAction($id)
@@ -225,17 +214,17 @@ class MeOrdersController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getEntityManager();
-            $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
+            $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
 
             if (!$entity) {
-                throw $this->createNotFoundException('Unable to find MeOrders entity.');
+                throw $this->createNotFoundException('Unable to find MeDrivers entity.');
             }
 
             $em->remove($entity);
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('order'));
+        return $this->redirect($this->generateUrl('driver'));
     }
 
     private function createDeleteForm($id)
@@ -245,22 +234,4 @@ class MeOrdersController extends Controller
             ->getForm()
         ;
     }
-
-	function distance($lat1, $lng1, $lat2, $lng2, $miles = false)
-	{
-		$pi80 = M_PI / 180;
-		$lat1 *= $pi80;
-		$lng1 *= $pi80;
-		$lat2 *= $pi80;
-		$lng2 *= $pi80;
-
-		$r = 6372.797; // mean radius of Earth in km
-		$dlat = $lat2 - $lat1;
-		$dlng = $lng2 - $lng1;
-		$a = sin($dlat / 2) * sin($dlat / 2) + cos($lat1) * cos($lat2) * sin($dlng / 2) * sin($dlng / 2);
-		$c = 2 * atan2(sqrt($a), sqrt(1 - $a));
-		$km = $r * $c;
-
-		return ($miles ? ($km * 0.621371192) : $km);
-	}
 }

@@ -1,0 +1,21 @@
+<h1>MeDrivers creation</h1>
+
+<form action="{{ path('driver_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<p>
+	<a href="{{ path('driver') }}">
+		Back to the list
+	</a>
+</p>
+<div class="search-form-container">
+	<div class="search-form">
+		<input class="txt-main page" id="input-position" name="from" type="text" placeholder="Position...">
+		<div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+	</div>
+</div>
+<div id="map"></div>

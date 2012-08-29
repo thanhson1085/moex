@@ -25,6 +25,8 @@ $(document).ready(function(){
 			me_window_resize(); });
 	});	
 	$('#admin-area form, #filter-area form').live('submit', function(e){
+		submit_click = false;
+		currentDirections = null;
 		e.preventDefault();
 		ajax_link = $(this).attr('action');
 		$("#loading").show();
@@ -42,7 +44,6 @@ $(document).ready(function(){
 	});
 	me_window_resize();
 });
-var distance = 0;
 function getRoute(){
     distance = 0;
     request.origin += province;
@@ -69,6 +70,7 @@ function countMoney(){
         if (distance > price_level[value].distance*1000){
             ret = price_level[value].price*distance
             ret = Math.round(ret/1000)*1000;
+            ret = Math.ceil(ret/1000/5)*1000*5;
             ret = ret  + ' VND';    
         }
     }   

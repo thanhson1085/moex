@@ -51,10 +51,16 @@ var request = {
     destination: '99 PHỐ HUẾ',
     travelMode: google.maps.DirectionsTravelMode.WALKING
 };
+var distance = 0;
 var submit_click = false;
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
+var oldDirections = [];
+var currentDirections = null;
 $(document).ready(function(){
+	$('.txt-main').live('click', function(){
+		$(this).select();
+	});
     $('#admin-area').ajaxSuccess(function(){
 		var input = document.getElementById('input-from');
 		var options = {
@@ -67,21 +73,55 @@ $(document).ready(function(){
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(document.getElementById("map"), myOptions);
+		directionsDisplay = new google.maps.DirectionsRenderer({
+			'draggable': true
+		});
         directionsDisplay.setMap(map);
         $("#search-from").html(request.origin);
         $("#search-to").html(request.destination)
+		if ($('#moex_corebundle_meorderstype_orderFrom').val() != ""){
+			request.origin = $('#moex_corebundle_meorderstype_orderFrom').val();
+		}
+		if ($('#moex_corebundle_meorderstype_orderTo').val() != ""){
+			request.destination = $('#moex_corebundle_meorderstype_orderTo').val();
+		}
         getRoute();
         $("#search-submit").click(function(){
 		    submit_click = true;	
             request.origin = $('#input-from').attr('value');
             request.destination = $('#input-to').attr('value');
-            $("#search-from").html(request.origin);
-            $("#search-to").html(request.destination)
-			$('#moex_corebundle_meorderstype_orderFrom').attr('value',request.origin);
-			$('#moex_corebundle_meorderstype_orderTo').attr('value',request.destination);
             getRoute();
+			var marker = new google.maps.Marker({
+				map: map,
+			});
+			var geo = new google.maps.Geocoder;
+			geo.geocode({'address':$('#input-from').attr('value') + province},function(results, status){
+				if (status == google.maps.GeocoderStatus.OK) {
+					marker.setPosition(results[0].geometry.location);
+					$('#moex_corebundle_meorderstype_lat').val(marker.getPosition().lat());
+					$('#moex_corebundle_meorderstype_lng').val(marker.getPosition().lng());
+				} else {
+					alert("Geocode was not successful for the following reason: " + status);
+				}
+			});
         });
-    });
+		google.maps.event.addListener(directionsDisplay, 'directions_changed',
+		function() {
+			if (currentDirections) {
+				var rleg = directionsDisplay.directions.routes[0].legs[0];
+				console.log(rleg);
+				distance = rleg.distance.value;
+				money_value = countMoney();
+				$('#search-result').html(money_value);
+				$('#moex_corebundle_meorderstype_price').attr('value',money_value);
+				$('#moex_corebundle_meorderstype_orderFrom').attr('value',rleg.start_address);
+				$('#moex_corebundle_meorderstype_orderTo').attr('value',rleg.end_address);
+				$('#moex_corebundle_meorderstype_lat').val(rleg.start_location.lat());
+				$('#moex_corebundle_meorderstype_lng').val(rleg.end_location.lng());
+			}
+			currentDirections = directionsDisplay.getDirections();
+		});
+	});
 });
 </script>
 <?php
