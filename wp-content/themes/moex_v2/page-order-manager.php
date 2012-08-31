@@ -62,12 +62,14 @@ $(document).ready(function(){
 		$(this).select();
 	});
     $('#admin-area').ajaxSuccess(function(){
-		var input = document.getElementById('input-from');
+		var inputFrom = document.getElementById('input-from');
+		var inputTo = document.getElementById('input-to');
 		var options = {
-		  types: ['(cities)'],
+		  types: ['geocode'],
 		  componentRestrictions: {country: 'vn'}
 		};
-		autocomplete = new google.maps.places.Autocomplete(input, options);
+		autocomplete = new google.maps.places.Autocomplete(inputFrom, options);
+		autocomplete = new google.maps.places.Autocomplete(inputTo, options);
         var myOptions = {
             zoom:7,
             mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -91,20 +93,28 @@ $(document).ready(function(){
             request.origin = $('#input-from').attr('value');
             request.destination = $('#input-to').attr('value');
             getRoute();
-			var marker = new google.maps.Marker({
-				map: map,
-			});
-			var geo = new google.maps.Geocoder;
-			geo.geocode({'address':$('#input-from').attr('value') + province},function(results, status){
-				if (status == google.maps.GeocoderStatus.OK) {
-					marker.setPosition(results[0].geometry.location);
-					$('#moex_corebundle_meorderstype_lat').val(marker.getPosition().lat());
-					$('#moex_corebundle_meorderstype_lng').val(marker.getPosition().lng());
-				} else {
-					alert("Geocode was not successful for the following reason: " + status);
-				}
-			});
         });
+        $('#input-to').bind('keypress',function(e){
+            if(e.keyCode == 13){
+				if ($('#input-from').val() != "" && $('#input-to').val() != ""){
+					submit_click = true;	
+					request.origin = $('#input-from').attr('value');
+					request.destination = $('#input-to').attr('value');
+					getRoute();
+				}
+			}
+		});
+        $('#input-from').bind('keypress',function(e){
+            if(e.keyCode == 13){
+				if ($('#input-from').val() != "" && $('#input-to').val() != ""){
+					submit_click = true;	
+					request.origin = $('#input-from').attr('value');
+					request.destination = $('#input-to').attr('value');
+					getRoute();
+				}
+			}
+		});
+
 		google.maps.event.addListener(directionsDisplay, 'directions_changed',
 		function() {
 			if (currentDirections) {
