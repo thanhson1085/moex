@@ -37,6 +37,9 @@ img{
 	padding:0;
 	margin: 0;
 }
+input{
+	padding: 0 3px;
+}
 :focus {
 	outline: 0;
 }
@@ -142,12 +145,12 @@ a img.aligncenter {
 
 /* banner top */
 .banner-container{
-	height: 100px;
+	height: 80px;
 	width: 100%;
 }
 .banner{
 	margin: 0 10px;
-	height: 100px;
+	height: 80px;
 	position: relative;
 }
 .banner{
@@ -173,7 +176,7 @@ a img.aligncenter {
 	height: 200px;
 	width: 100%;
 	background: #ee1c24;
-	background: url(images/bg_banner.jpg);
+	background: url(../images/bg_banner.jpg);
 	box-shadow: 0 0 8px;
 	-moz-box-shadow: 0 0 8px;
 	-webkit-box-shadow: 0 0 8px;
@@ -232,12 +235,14 @@ h2.page-title a{
 	padding-bottom: 5px;
 }
 .txt-main{
-	height: 40px;
-	border-radius: 5px;
 	border: solid 1px #BBB;
+	line-height: 35px;
 	margin: 3px 0;
 	font-size: 24px;
 	width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 .btn-main{
 	cursor: pointer;
@@ -253,6 +258,8 @@ h2.page-title a{
 .content-container{
 	width: 100%;
 	position: relative;
+	overflow: auto;
+	min-height: 400px;
 }
 .content{
 	margin: 0 10px;
@@ -268,18 +275,17 @@ h2.page-title a{
 
 /* left part */
 .left-part-container{
-	width: 62%;
 	float: left;
 	position: relative;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	border-left: solid 1px #CCC;
-	border-right: solid 1px #CCC;
 	padding-bottom: 20px;
+	min-height: 400px;
 }
 .left-part{
-	padding: 10px 0;
+	padding: 10px 10px;
 }
 .left-part.single{
 	padding: 10px 10px;
@@ -329,7 +335,6 @@ h2.page-title a{
 
 /* right part */
 .right-part-container{
-	width: 22%;
 	float: left;
 	position: relative;
 	height: 100%;
@@ -345,8 +350,9 @@ h2.page-title a{
 .right-part > h3{
 	color: #BBB;
 	text-transform: uppercase;
-	padding-top: 12px;
-	padding-left: 5px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
 }
 .right-part > h3.index{
 	padding-top: 6px;
@@ -382,6 +388,21 @@ h2.page-title a{
 	height: 70px;
 	position: relative;
 }
+.footer > ul{
+	list-style: none;
+}
+.footer > ul > li{
+	float: left;
+}
+.footer > ul > li img{
+	width: 25px;
+}
+.footer-partner img{
+	width: 80px;	
+	float: right;
+	right: 0;
+	top: 0;
+}
 /* end footer */
 
 .single-title a{
@@ -396,14 +417,14 @@ h2.page-title a{
 	text-align: justify;
 }
 .logo img{	
-	width: 150px;
+	width: 100px;
 	margin-top: 20px;
 }
 .hotline-header{
 	position: absolute;
 	right: 0;
 	top: 3px;
-	background: url(images/hotline.png);
+	background: url(../images/hotline.png);
 	height: 62px;
 	width: 464px;
 }
@@ -422,10 +443,10 @@ h2.page-title a{
 	padding-left: 25px;
 }
 .related-news > ul > li.odd{
-	background: transparent url(images/bullet1.png) no-repeat left top;
+	background: transparent url(../images/bullet1.png) no-repeat left top;
 }
 .related-news > ul > li.even{
-	background: transparent url(images/bullet2.png) no-repeat left top;
+	background: transparent url(../images/bullet2.png) no-repeat left top;
 }
 .related-news > ul > li > a{
 	color: #BA081D;
@@ -448,13 +469,14 @@ h2.page-title a{
 	display: block;
 	width: 98%;
 	margin: 0 auto;
-	padding: 10px 0;
+	margin-bottom: 5px;
+}
+.search-form input{
+	border: solid 1px #ccc;
 }
 .search-form-container{
 	width: 100%;
-	border-top: solid 1px #CCC;
-	border-bottom: solid 1px #CCC;
-	margin: 10px auto;
+	margin: 0 auto;
 }
 .txt-main.page{
 	width: 40%;
@@ -543,7 +565,7 @@ a.title-edit-link{
 }
 .left-menu > div ul.sub-menu > li{
 	padding-left: 20px;
-	background: transparent url(images/bullet2.png) no-repeat left top;
+	background: transparent url(../images/bullet2.png) no-repeat left top;
 }
 .left-menu > div ul > li > a{
 	text-decoration: none;
@@ -559,22 +581,6 @@ a.title-edit-link{
 	color: #F78181;
 	text-decoration: underline;
 }
-#admin-area ul{
-	list-style: none;
-}
-#admin-area ul{
-	list-style: none;
-}
-
-#admin-area form div ul li{
-	color: red;
-}
-
-#admin-area ul li{
-	float: left;
-	padding: 0 5px;
-}
-
 
 table.list th {
 	border: none;
@@ -592,56 +598,16 @@ table.list td a{
 	color: #FF6600;
 }
 
-#admin-area div label{
-	width: 300px;
-	display: inline-block;
-	vertical-align: top;
-}
-#admin-area form div input{
-	display: inline-block;
-	outline: 0;
-	width: 382px;
-	border: 1px solid #DDD;
-	padding: 8px 6px;
-	font-size: 20px;
-	background-color: white;
-}
-#admin-area form div input[readonly="readonly"]{
-	background: #EEE;
-}
-#admin-area form div textarea{
-	width: 382px;
-	height: 50px;
-	display: inline-block;
-	border: 1px solid #DDD;
-	padding: 8px 6px;
-	font-size: 20px;
-	background-color: white;
-}
-#admin-area button[type="submit"]{
-	cursor: pointer;
-	background: #0066b3;
-	padding: 10px;
-	border-radius: 5px;
-	color: white;
-	border: 0;
-	font-size: 16px;
-}
-#admin-area button[type="submit"].btn-delete{
-	background: #ee1c24;
-}
-
 .admin-header{
-	color: #EEE;
+	color: #1e1e1e;
 	font-weight: bold;
-	line-height: 30px;
 	padding-bottom: 5px;
-	background: #0066B3;
-	padding: 5px 10px;
+	padding: 5px 0;
 	border-radius: 5px;
 	margin-bottom: 10px;
 	position: relative;
-	font-size: 16px
+	font-size: 16px;
+	text-transform: uppercase;
 }
 .contextual{
 	position: absolute;
@@ -649,12 +615,30 @@ table.list td a{
 	right: 0.4em;
 }
 .contextual a{
-	font-size: 12px;
-	color: #EEE;
+	font-size: 11px;
+	font-weight: normal;
+	color: #0066b3;
 	text-decoration: none;
+	text-transform: none;
 }
 table.record-properties{
 	width: 100%;
+	margin-bottom: 20px;
+}
+table.record-properties tr{
+	line-height: 35px;
+}
+table.record-properties th{
+	text-align: left;
+}
+table.record-properties .label{
+	padding-left: 7px;
+	font-weight: bold;
+	color: #ee1c24;
+	width: 25%;
+}
+table.record-properties .value{
+	color: #1e1e1e;
 }
 table.records-list{
 	width: 100%;
@@ -684,7 +668,11 @@ table.records-list{
 
 .filter div label{
 	display: inline-block;
-	width: 100px;
+	width: 26%; 
+}
+.filter div input{
+	display: inline-block;
+	width: 70%; 
 }
 
 .filter button{
@@ -717,7 +705,6 @@ table.records-list{
 	padding: 2px 5px;
 	margin: 0 3px;
 	border: solid 1px #CCC;
-	
 }
 .odd{
 	background-color: #F6F7F8;
@@ -726,16 +713,19 @@ table.records-list{
 	background-color: white;
 }
 .icon-add{
-	background-image: url(images/add.png);
+	background-image: url(../images/add.png);
 }
 .icon-show{
-	background-image: url(images/show.png);
+	background-image: url(../images/show.png);
 }
 .icon-edit{
-	background-image: url(images/edit.png);
+	background-image: url(../images/edit.png);
 }
 .icon-del{
-	background-image: url(images/delete.png);
+	background-image: url(../images/delete.png);
+}
+.icon-back{
+	background-image: url(../images/backtolist.png);
 }
 .icon {
 	background-position: 0% 50%;
@@ -753,3 +743,60 @@ td.position{
 td.name{
 	width: 20%;
 }
+.action > ul{
+	list-style: none;
+}
+.action > ul > li{
+	float: left;
+	padding: 0 5px;
+}
+.rate50{
+	width: 50%;
+}
+.rate60{
+	width: 60%;
+}
+.rate40{
+	width: 40%;
+}
+.moex-form div{
+	margin: 3px 0;
+}
+.moex-form div label{
+	display: inline-block;
+	width: 30%;	
+	line-height: 35px;
+	font-weight: bold;
+	color: #0066b3;
+}	
+.moex-form div input{
+	width: 70%;	
+	line-height: 35px;
+	font-size: 18px;
+	border: solid 1px #ccc;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}	
+.moex-form div textarea{
+	font-size: 18px;
+	width: 70%;	
+	line-height: 35px;
+	border: solid 1px #ccc;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}	
+.moex-form div input[readonly="readonly"]{
+	background: #EEE;
+}
+.moex-form button[type="submit"]{
+	cursor: pointer;
+	background: #0066b3;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	border: 0;
+	font-size: 16px;
+}
+

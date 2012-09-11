@@ -2,12 +2,79 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}MoEx - Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+			<link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet" />
+		{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+		<div class="menu-top-container">
+			<div class="menu-top">
+				<div class="menu-top-left">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li>
+							<a href="#">Help</a>
+						</li>
+					</ul>
+				</div>
+				<div class="menu-top-right">
+					<ul>
+						<li>
+							<a href="#">Lorem Imsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem Imsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem Imsum</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="banner-container">
+			<div class="banner">
+				<div class="logo-container">
+					<div class="logo">
+						<img src="{{ asset('images/logo3.png') }}"/>
+					</div>
+				</div>
+				<div class="sub-menu-container">
+					<div class="sub-menu">
+						<ul>
+							<li><a>Lorem Ipsum</a></li>
+							<li><a>Donor Asert</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+		{% endblock %}
+		<div id="loading" style="display: none; "><img src="{{ asset('images/loader.gif') }}"></div>
+		<div class="footer-container">
+			<div class="footer">
+				Developed by TechBurg 2012.
+
+				<ul>
+					<li><img src="{{ asset('images/facebook.png') }}"></li>
+					<li><img src="{{ asset('images/twitter.png') }}"></li>
+					<li><img src="{{ asset('images/google.png') }}"></li>
+				</ul>
+				<div class="footer-partner">
+					<img src="{{ asset('images/logo3.png') }}">	
+				</div>
+			</div>
+		</div>
+		</div> <!-- end main-->
     </body>
 </html>

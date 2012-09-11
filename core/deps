@@ -76,7 +76,7 @@
 
 [GravatarBundle]
     git=https://github.com/ornicar/GravatarBundle.git
-    target=../src/Bundle/GravatarBundle
+    target=/bundles/GravatarBundle
 
 [WhiteOctoberPagerFanta]
     git=http://github.com/whiteoctober/Pagerfanta.git

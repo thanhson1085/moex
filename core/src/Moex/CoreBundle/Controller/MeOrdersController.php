@@ -214,7 +214,7 @@ class MeOrdersController extends Controller
      * Deletes a MeOrders entity.
      *
      * @Route("/{id}/delete", name="order_delete")
-     * @Method("post")
+	 *
      */
     public function deleteAction($id)
     {
@@ -223,17 +223,15 @@ class MeOrdersController extends Controller
 
         $form->bindRequest($request);
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
-            $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
+		$em = $this->getDoctrine()->getEntityManager();
+		$entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
 
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find MeOrders entity.');
-            }
+		if (!$entity) {
+			throw $this->createNotFoundException('Unable to find MeOrders entity.');
+		}
 
-            $em->remove($entity);
-            $em->flush();
-        }
+		$em->remove($entity);
+		$em->flush();
 
         return $this->redirect($this->generateUrl('order'));
     }

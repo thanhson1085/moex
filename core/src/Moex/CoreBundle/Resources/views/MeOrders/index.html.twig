@@ -1,44 +1,70 @@
-<div class="admin-header">Orders list
-	<div class="contextual"> 
-		<a href="{{ path('order_new') }}" class="icon icon-add">New</a> 
+{% extends "MoexCoreBundle::layout.html.twig" %}
+{% block moex_content %}
+<div class="content-container">
+<div class="left-part-container rate60">
+	<div class="left-part">
+		<div class="admin-header">Orders list
+			<div class="contextual"> 
+				<a href="{{ path('order_new') }}" class="icon icon-add">New</a> 
+			</div>
+		</div>
+
+		<table class="list records-list" cellspacing="0">
+			<thead>
+				<tr>
+					<th class="spec">Id</th>
+					<th>Phone</th>
+					<th>Orderfrom</th>
+					<th>Orderto</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entity in paginator %}
+				<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+					<td class="id">{{ entity.id }}</td>
+					<td class="phone"><a href="{{ path('order_show', { 'id':entity.id }) }}">{{ entity.phone }}</a></td>
+					<td class="from">{{ entity.orderFrom | cut(20) }}</td>
+					<td class="to">{{ entity.orderTo | cut(20) }}</td>
+					<td class="price">{{ entity.price }}</td>
+					<td class="action">
+						<ul>
+							<li>
+								<a class="icon icon-show" href="{{ path('order_show', { 'id': entity.id }) }}">show</a>
+							</li>
+							<li>
+								<a class="icon icon-edit" href="{{ path('order_edit', { 'id': entity.id }) }}">edit</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			{% else %}
+				<tr><td>no record found.</td></tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<div class="pagination-container">
+			{{ pagerfanta(paginator, 'default') }}
+		</div>
 	</div>
 </div>
+<div class="right-part-container rate40">
+	<div class="right-part">
+		<h3>Filter Form</h3>
+		<div class="filter">
+			<form action="{{ path('order') }}" id="filter-form" method="POST">
+				{{ form_row(filterForm.phone) }}
+				{{ form_row(filterForm.orderFrom) }}
+				{{ form_row(filterForm.orderTo) }}
+				{{ form_row(filterForm.orderName) }}
+				{{ form_row(filterForm.orderInfo) }}
 
-<table class="list records-list" cellspacing="0">
-    <thead>
-        <tr>
-            <th class="spec">Id</th>
-            <th>Phone</th>
-            <th>Orderfrom</th>
-            <th>Orderto</th>
-            <th>Price</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for entity in paginator %}
-        <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
-            <td class="spec"><a href="{{ path('order_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.phone }}</td>
-            <td class="from">{{ entity.orderFrom }}</td>
-            <td class="to">{{ entity.orderTo }}</td>
-            <td>{{ entity.price }}</td>
-            <td class="action">
-                <ul>
-                    <li>
-                        <a class="icon icon-show" href="{{ path('order_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a class="icon icon-edit" href="{{ path('order_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-	{% else %}
-		<tr><td>no record found.</td></tr>
-    {% endfor %}
-    </tbody>
-</table>
-<div class="pagination-container">
-	{{ pagerfanta(paginator, 'default') }}
+				<button type="submit">Filter</button>
+				<button id="btn-clear" type="submit">Reset</button
+		  </form>
+		</div>
+	</div>
 </div>
+</div>
+{% endblock moex_content %}

@@ -1,4 +1,4 @@
-symfony 07d108af5ec88b20efd1faf8931e15ec5b89df15
+symfony 462f93ad12c0916b51dbcaaec5b46349b2c96826
 twig v1.8.2
 monolog 1.0.2
 doctrine-common 2.1.4
@@ -6,15 +6,15 @@ doctrine-dbal 2.1.7
 doctrine 2.1.7
 swiftmailer v4.2.0
 assetic v1.0.3
-twig-extensions feb6d3f10c411e2631997c0a905aa581c80305c1
+twig-extensions f904575642b1213db69b4a98f08397e722ba1cae
 metadata 1.0.0
-SensioFrameworkExtraBundle 85911039aca2ef39805640d9238c7157d8c30d2e
+SensioFrameworkExtraBundle v2.0.17
 JMSSecurityExtraBundle e752f888c51425f71382c056961f10f2be642102
-SensioDistributionBundle 41a6c5caed65f02bb09c95a90579f047616471fd
-SensioGeneratorBundle c0118ce370f8da20e43051f2dd1ae331a202ab9c
+SensioDistributionBundle v2.0.17
+SensioGeneratorBundle v2.0.17
 AsseticBundle 6f15728c1aefa5246caa83730e3dbf70b0d46052
 gedmo-doctrine-extensions v2.3.1
-Stof-DoctrineExtensionsBundle 63c2aa344bd45ca8cf16d778bb8d382bf18b09e3
+Stof-DoctrineExtensionsBundle 0247e6f1658d76292c8ffe2c5106090bd36bd799
 HypebeastWordpressBundle b44c8f07ef904854ef762a2867a96437a4171127
 GravatarBundle e5aedca3bd066081e16912ca8be96ba4ca570d0a
 WhiteOctoberPagerFanta 12f71d99457b018fb80746f84514dd5b495c5789

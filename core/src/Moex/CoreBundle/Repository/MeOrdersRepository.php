@@ -56,6 +56,7 @@ class MeOrdersRepository extends EntityRepository
                             ->setParameter('group', $group->getId());
         }
 		*/
+		$query = $query->orderBy('o.id', 'DESC');
 
         return $query->getQuery();
     }
