@@ -15,6 +15,14 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
+	get_currentuserinfo();
+	global $user_ID;
+	if ($user_ID == '')
+	{
+		header('Location: wp-login.php');
+		exit();
+	}
+
     /*
      * Print the <title> tag based on what is being viewed.
      */

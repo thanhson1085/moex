@@ -1,57 +1,85 @@
-<h1>MeDrivers</h1>
+{% extends "MoexCoreBundle::layout.html.twig" %}
+{% block moex_content %}
+<div class="content-container">
+<div class="left-part-container rate50">
+    <div class="left-part">
+        <div class="admin-header"><span>{{ entity.phone }}</span>
+            <div class="contextual"> 
+                <a href="{{ path('driver_new') }}" class="icon icon-add">New</a> 
+                <a href="{{ path('driver_delete', { 'id': entity.id }) }}" class="icon icon-del">Delete</a> 
+                <a href="{{ path('driver_edit', { 'id': entity.id }) }}" class="icon icon-edit">Edit</a>
+                <a href="{{ path('driver') }}" class="icon icon-back">Back to list</a>
+            </div>
+        </div>
 
-<table class="record_properties">
-    <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ entity.id }}</td>
-        </tr>
-        <tr>
-            <th>Drivername</th>
-            <td>{{ entity.driverName }}</td>
-        </tr>
-        <tr>
-            <th>Driverage</th>
-            <td>{{ entity.driverAge }}</td>
-        </tr>
-        <tr>
-            <th>Driverinfo</th>
-            <td>{{ entity.driverInfo }}</td>
-        </tr>
-        <tr>
-            <th>Phone</th>
-            <td>{{ entity.phone }}</td>
-        </tr>
-        <tr>
-            <th>Position</th>
-            <td>{{ entity.position }}</td>
-        </tr>
-        <tr>
-            <th>Createdat</th>
-            <td>{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
-        </tr>
-        <tr>
-            <th>Updatedat</th>
-            <td>{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
-        </tr>
-    </tbody>
-</table>
-
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('driver') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('driver_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('driver_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+		<table class="record-properties" cellspacing="0">
+			<tbody>
+				<tr class="odd">
+					<th class="label">Drivername</th>
+					<td class="value">{{ entity.driverName }}</td>
+				</tr>
+				<tr class="even">
+					<th class="label">Driverage</th>
+					<td class="value">{{ entity.driverAge }}</td>
+				</tr>
+				<tr class="odd">
+					<th class="label">Driverinfo</th>
+					<td class="value">{{ entity.driverInfo }}</td>
+				</tr>
+				<tr class="even">
+					<th class="label">Phone</th>
+					<td class="value">{{ entity.phone }}</td>
+				</tr>
+				<tr class="odd">
+					<th class="label">Position</th>
+					<td class="value">{{ entity.position }}</td>
+				</tr>
+				<tr class="even">
+					<th class="label">Createdat</th>
+					<td class="value">{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
+				</tr>
+				<tr class="odd">
+					<th class="label">Updatedat</th>
+					<td class="value">{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="right-part-container rate50">
+	<div class="right-part">
+		<div id="map"></div>
+	</div>
+</div>
+</div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
+<script type="text/javascript">
+var submit_click = false;
+var province = ', Hà Nội, Việt Nam';
+var submit_click = false;
+var geocoder = new google.maps.Geocoder();
+var latlng = new google.maps.LatLng(21.0188564, 105.8397048);
+$(document).ready(function(){
+	var myOptions = {
+		zoom:15,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(document.getElementById("map"), myOptions);
+	var marker = new google.maps.Marker({
+		map: map,
+		draggable: false 
+	});
+	sAddress = "{{ entity.position }}";
+	geocoder.geocode({ 'address': sAddress }, function( results, status){
+		if (status == google.maps.GeocoderStatus.OK){
+			map.setCenter(results[0].geometry.location);
+			marker.setPosition(results[0].geometry.location);
+		}
+	});
+});
+</script>
+{% endblock moex_content %}

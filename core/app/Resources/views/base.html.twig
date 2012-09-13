@@ -27,13 +27,10 @@
 				<div class="menu-top-right">
 					<ul>
 						<li>
-							<a href="#">Lorem Imsum</a>
+							<a href="#">Hi {{ app.user.username }}!!!</a>
 						</li>
 						<li>
-							<a href="#">Lorem Imsum</a>
-						</li>
-						<li>
-							<a href="#">Lorem Imsum</a>
+							<a href="/moex/wp-login.php?action=logout">Logout</a>
 						</li>
 					</ul>
 				</div>
@@ -48,10 +45,17 @@
 				</div>
 				<div class="sub-menu-container">
 					<div class="sub-menu">
-						<ul>
-							<li><a>Lorem Ipsum</a></li>
-							<li><a>Donor Asert</a></li>
-						</ul>
+						<div class="extramenu">
+							<dl style="" class="dropdown">
+								<dt><a id="linkglobal" style="cursor:pointer;" class="icon icon-tool">Actions</a></dt>
+									<dd>
+										<ul id="ulglobal">
+											<li><a href="{{ path('order') }}"><span class="icon icon-order">Order Manager</span></a></li>
+											<li><a href="{{ path('driver') }}"><span class="icon icon-driver">Driver Manager</span></a></li>
+										</ul>
+									</dd>
+								</dl>
+						 </div>
 					</div>
 				</div>
 			</div>

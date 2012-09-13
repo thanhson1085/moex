@@ -1,5 +1,3 @@
-function initialize_order_new(){
-}
 function getRoute(){
     distance = 0;
     request.origin += province;
@@ -31,4 +29,50 @@ function countMoney(){
         }
     }   
     return ret;
+}
+$(document).ready(function(){
+    $('.filter #btn-clear').live('click', function(){
+        $('.filter form input[type="text"]').each(function(){
+            $(this).attr('value','');
+        });
+    });
+	$(".dropdown dt a").click(function() {
+		var toggleId = "#" + this.id.replace(/^link/,"ul");
+		$(".dropdown dd ul").not(toggleId).hide();
+		$(toggleId).toggle();
+		if($(toggleId).css("display") == "none"){
+			$(this).removeClass("selected");
+		}else{
+			$(this).addClass("selected");
+		}
+
+	});
+
+	$(".dropdown dd ul li a").click(function() {
+		var text = $(this).html();
+		$(".dropdown dt a span").html(text);
+		$(".dropdown dd ul").hide();
+	});
+
+	$(document).bind('click', function(e) {
+		var $clicked = $(e.target);
+		if (!$clicked.parents().hasClass("dropdown")){
+			$(".dropdown dd ul").hide();
+			$(".dropdown dt a").removeClass("selected");
+		}
+
+	});
+	
+	$(".icon-del").click(function(){
+		return confirm_delete();
+	});
+
+});
+function confirm_delete()
+{
+	var agree = confirm("Are you sure you wish to continue?");
+	if (agree)
+		return true ;
+	else
+		return false ;
 }

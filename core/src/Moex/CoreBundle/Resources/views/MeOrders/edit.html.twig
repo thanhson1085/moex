@@ -3,21 +3,22 @@
 <div class="content-container">
 <div class="left-part-container rate50">
 	<div class="left-part">
-<div class="admin-header">Orders edit
-		<div class="contextual"> 
-			<a href="{{ path('order') }}" class="icon icon-back">Back to list</a> 
+		<div class="admin-header">Orders edit
+				<div class="contextual"> 
+					<a class="icon icon-del" href="{{ path('order_delete', { 'id': entity.id }) }}">delete</a>
+					<a href="{{ path('order') }}" class="icon icon-back">Back to list</a> 
+				</div>
 		</div>
-</div>
 
-<form action="{{ path('order_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-	<div class="moex-form">
-    	{{ form_widget(edit_form) }}
-		<p class="alignright">
-			<button type="submit">Edit</button>
-		</p>
+		<form action="{{ path('order_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+			<div class="moex-form">
+				{{ form_widget(edit_form) }}
+				<p class="alignright">
+					<button type="submit">Edit</button>
+				</p>
+			</div>
+		</form>
 	</div>
-</form>
-</div>
 </div>
 <div class="right-part-container rate50">
 	<div class="right-part">

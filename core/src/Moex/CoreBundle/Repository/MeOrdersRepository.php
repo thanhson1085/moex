@@ -26,22 +26,22 @@ class MeOrdersRepository extends EntityRepository
 
         if ($filter->getPhone() != null) {
             $query = $query->andWhere('o.phone LIKE :phone')
-                            ->setParameter('phone', $filter->getPhone()."%");
+                            ->setParameter('phone', "%".$filter->getPhone()."%");
         }
 
         if ($filter->getOrderFrom() != null) {
             $query = $query->andWhere('o.orderFrom LIKE :orderfrom')
-                            ->setParameter('orderfrom', $filter->getOrderFrom()."%");
+                            ->setParameter('orderfrom', "%".$filter->getOrderFrom()."%");
         }
 
         if ($filter->getOrderTo() != null) {
             $query = $query->andWhere('o.orderTo LIKE :orderto')
-                            ->setParameter('orderto', $filter->getOrderTo()."%");
+                            ->setParameter('orderto', "%".$filter->getOrderTo()."%");
         }
 
         if ($filter->getOrderName() != null) {
             $query = $query->andWhere('o.orderName LIKE :ordername')
-                            ->setParameter('ordername', $filter->getOrderName()."%");
+                            ->setParameter('ordername', "%".$filter->getOrderName()."%");
         }
 
         if ($filter->getOrderInfo() != null) {

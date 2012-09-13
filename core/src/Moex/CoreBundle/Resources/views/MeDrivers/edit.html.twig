@@ -1,24 +1,113 @@
-<div class="admin-header">Drivers edit</div>
+{% extends "MoexCoreBundle::layout.html.twig" %}
+{% block moex_content %}
+<div class="content-container">
+<div class="left-part-container rate50">
+    <div class="left-part">
 
-<form action="{{ path('driver_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    {{ form_widget(edit_form) }}
-    <p>
-        <button type="submit">Edit</button>
-    </p>
-</form>
-<form action="{{ path('driver_delete', { 'id': entity.id }) }}" method="post">
-	{{ form_widget(delete_form) }}
-	<button type="submit" class="btn-delete">Delete</button>
-</form>
-<p>
-	<a href="{{ path('driver') }}">
-		Back to the list
-	</a>
-</p>
-<div class="search-form-container">
-    <div class="search-form">
-        <input class="txt-main page" id="input-position" name="from" type="text" placeholder="Position...">
-        <div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
-    </div>
+        <div class="admin-header">Drivers edit
+                <div class="contextual">
+					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">Delete</a>
+                    <a href="{{ path('driver') }}" class="icon icon-back">Back to list</a>
+                </div>
+        </div>
+
+		<form action="{{ path('driver_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+			<div class="moex-form">
+				{{ form_widget(edit_form) }}
+				<p class="alignright">
+					<button type="submit">Edit</button>
+				</p>
+			</div>
+		</form>
+	</div>
 </div>
-<div id="map"></div>
+<div class="right-part-container rate50">
+	<div class="right-part">
+		<div class="search-form-container">
+			<div class="search-form">
+				<input class="txt-main page" id="input-position" name="from" type="text" placeholder="Position..." value="{{ entity.position }}">
+				<div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+			</div>
+		</div>
+		<div id="map">123</div>
+	</div>
+</div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
+<script type="text/javascript">
+var submit_click = false;
+var province = ', Hà Nội, Việt Nam';
+var submit_click = false;
+var geocoder = new google.maps.Geocoder();
+var latlng = new google.maps.LatLng(21.0188564, 105.8397048);
+$(document).ready(function(){
+	var inputPosition = document.getElementById('input-position');
+	var options = {
+	  types: ['geocode'],
+	  componentRestrictions: {country: 'vn'}
+	};
+	autocomplete = new google.maps.places.Autocomplete(inputPosition, options);
+
+	var myOptions = {
+		zoom:15,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(document.getElementById("map"), myOptions);
+	var marker = new google.maps.Marker({
+		map: map,
+		draggable: true
+	});
+	sAddress = $('#input-position').val() + province; 
+	geocoder.geocode({ 'address': sAddress }, function( results, status){
+		if (status == google.maps.GeocoderStatus.OK){
+			map.setCenter(results[0].geometry.location);
+			marker.setPosition(results[0].geometry.location);
+		}
+	});
+
+	$('#search-submit').click(function(){
+		sAddress = $('#input-position').val() + province; 
+		geocoder.geocode({ 'address': sAddress }, function( results, status){
+			if (status == google.maps.GeocoderStatus.OK){
+				map.setCenter(results[0].geometry.location);
+				marker.setPosition(results[0].geometry.location);
+				$('#moex_corebundle_medriverstype_position').val(results[0].formatted_address);
+				$('#moex_corebundle_medriverstype_lat').val(marker.getPosition().lat());
+				$('#moex_corebundle_medriverstype_lng').val(marker.getPosition().lng());
+			}
+		});
+	});
+	$('#input-position').bind('keypress',function(e){
+		if(e.keyCode == 13){
+			sAddress = $('#input-position').val() + province; 
+			geocoder.geocode({ 'address': sAddress }, function( results, status){
+				if (status == google.maps.GeocoderStatus.OK){
+					map.setCenter(results[0].geometry.location);
+					marker.setPosition(results[0].geometry.location);
+					$('#moex_corebundle_medriverstype_position').val(results[0].formatted_address);
+					$('#moex_corebundle_medriverstype_lat').val(marker.getPosition().lat());
+					$('#moex_corebundle_medriverstype_lng').val(marker.getPosition().lng());
+				}
+			});
+		}
+	});
+	$('#input-position').click(function(){
+		$(this).select();
+	});
+	google.maps.event.addListener(marker, 'drag', function() {
+		geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+				if (results[0]) {
+					$('#moex_corebundle_medriverstype_position').val(results[0].formatted_address);
+					$('#moex_corebundle_medriverstype_lat').val(marker.getPosition().lat());
+					$('#moex_corebundle_medriverstype_lng').val(marker.getPosition().lng());
+				}
+			}
+		});
+	});
+});
+</script>
+{% endblock moex_content %}

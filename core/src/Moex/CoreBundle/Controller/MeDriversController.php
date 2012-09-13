@@ -75,12 +75,9 @@ class MeDriversController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
-
-        $deleteForm = $this->createDeleteForm($id);
-
         return array(
             'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),        );
+            );
     }
 
     /**
@@ -150,12 +147,10 @@ class MeDriversController extends Controller
         }
 
         $editForm = $this->createForm(new MeDriversType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
 
         return array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         );
     }
 
@@ -177,7 +172,6 @@ class MeDriversController extends Controller
         }
 
         $editForm   = $this->createForm(new MeDriversType(), $entity);
-        $deleteForm = $this->createDeleteForm($id);
 
         $request = $this->getRequest();
 
@@ -195,7 +189,6 @@ class MeDriversController extends Controller
         return array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         );
     }
 
@@ -203,7 +196,6 @@ class MeDriversController extends Controller
      * Deletes a MeDrivers entity.
      *
      * @Route("/{id}/delete", name="driver_delete")
-     * @Method("post")
      */
     public function deleteAction($id)
     {
@@ -212,17 +204,15 @@ class MeDriversController extends Controller
 
         $form->bindRequest($request);
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
-            $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
+		$em = $this->getDoctrine()->getEntityManager();
+		$entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
 
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find MeDrivers entity.');
-            }
+		if (!$entity) {
+			throw $this->createNotFoundException('Unable to find MeDrivers entity.');
+		}
 
-            $em->remove($entity);
-            $em->flush();
-        }
+		$em->remove($entity);
+		$em->flush();
 
         return $this->redirect($this->generateUrl('driver'));
     }

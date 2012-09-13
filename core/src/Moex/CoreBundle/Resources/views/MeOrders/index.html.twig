@@ -31,7 +31,7 @@
 					<td class="action">
 						<ul>
 							<li>
-								<a class="icon icon-show" href="{{ path('order_show', { 'id': entity.id }) }}">show</a>
+								<a class="icon icon-del" href="{{ path('order_delete', { 'id': entity.id }) }}">delete</a>
 							</li>
 							<li>
 								<a class="icon icon-edit" href="{{ path('order_edit', { 'id': entity.id }) }}">edit</a>
@@ -67,4 +67,6 @@
 	</div>
 </div>
 </div>
+<script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
 {% endblock moex_content %}

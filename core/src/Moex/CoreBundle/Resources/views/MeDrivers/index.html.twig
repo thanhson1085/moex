@@ -1,42 +1,68 @@
-<div class="admin-header">MeDrivers list
-	<div class="contextual"> 
-		<a href="{{ path('driver_new') }}" class="icon icon-add">New</a> 
+{% extends "MoexCoreBundle::layout.html.twig" %}
+{% block moex_content %}
+<div class="content-container">
+<div class="left-part-container rate60">
+    <div class="left-part">
+        <div class="admin-header">Drivers list
+            <div class="contextual"> 
+                <a href="{{ path('driver_new') }}" class="icon icon-add">New</a>  
+            </div>
+        </div>
+		<table class="list records-list" cellspacing="0">
+			<thead>
+				<tr>
+					<th class="spec">Id</th>
+					<th>DriverName</th>
+					<th>Phone</th>
+					<th>Position</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for entity in paginator %}
+				<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+					<td class="spec">{{ entity.id }}</td>
+					<td class="spec"><a href="{{ path('driver_show', { 'id': entity.id }) }}">{{ entity.driverName }}</a></td>
+					<td class="name">{{ entity.phone }}</td>
+					<td class="position">{{ entity.position | cut(30) }}</td>
+					<td class="action">
+						<ul>
+							<li>
+								<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">delete</a>
+							</li>
+							<li>
+								<a class="icon icon-edit" href="{{ path('driver_edit', { 'id': entity.id }) }}">edit</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			{% else %}
+				<tr><td>no record found.</td></tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<div class="pagination-container">
+			{{ pagerfanta(paginator, 'default') }}
+		</div>
 	</div>
 </div>
+<div class="right-part-container rate40">
+	<div class="right-part">
+		<h3>{{ "filter_form" | trans }}</h3>
+		<div class="filter">
+			<form action="{{ path('driver') }}" id="filter-form" method="POST">
+				{{ form_row(filterForm.phone) }}
+				{{ form_row(filterForm.driverName) }}
+				{{ form_row(filterForm.position) }}
+				{{ form_row(filterForm.driverInfo) }}
 
-<table class="list records-list" cellspacing="0">
-    <thead>
-        <tr>
-            <th class="spec">Id</th>
-            <th>DriverName</th>
-            <th>Phone</th>
-            <th>Position</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for entity in paginator %}
-        <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
-            <td class="spec">{{ entity.id }}</td>
-            <td class="spec"><a href="{{ path('driver_show', { 'id': entity.id }) }}">{{ entity.driverName }}</a></td>
-            <td class="name">{{ entity.phone }}</td>
-            <td class="position">{{ entity.position }}</td>
-            <td class="action">
-                <ul>
-                    <li>
-                        <a class="icon icon-show" href="{{ path('driver_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a class="icon icon-edit" href="{{ path('driver_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-	{% else %}
-		<tr><td>no record found.</td></tr>
-    {% endfor %}
-    </tbody>
-</table>
-<div class="pagination-container">
-	{{ pagerfanta(paginator, 'default') }}
+				<button type="submit">Filter</button>
+				<button id="btn-clear" type="submit">Reset</button
+		  </form>
+		</div>
+	</div>
 </div>
+<script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
+</div>
+{% endblock moex_content %}

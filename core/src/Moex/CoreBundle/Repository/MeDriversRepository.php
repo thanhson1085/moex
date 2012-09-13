@@ -21,22 +21,22 @@ class MeDriversRepository extends EntityRepository
 
         if ($filter->getPhone() != null) {
             $query = $query->andWhere('o.phone LIKE :phone')
-                            ->setParameter('phone', $filter->getPhone()."%");
+                            ->setParameter('phone', "%".$filter->getPhone()."%");
         }
 
         if ($filter->getPosition() != null) {
             $query = $query->andWhere('o.position LIKE :position')
-                            ->setParameter('position', $filter->getPostion()."%");
+                            ->setParameter('position', "%".$filter->getPostion()."%");
         }
 
         if ($filter->getDriverName() != null) {
             $query = $query->andWhere('o.driverName LIKE :drivername')
-                            ->setParameter('drivername', $filter->getDriverName()."%");
+                            ->setParameter('drivername', "%".$filter->getDriverName()."%");
         }
 
         if ($filter->getDriverInfo() != null) {
             $query = $query->andWhere('o.driverInfo LIKE :driverinfo')
-                            ->setParameter('driverinfo', $filter->getDriverInfo()."%");
+                            ->setParameter('driverinfo', "%".$filter->getDriverInfo()."%");
         }
 
         return $query->getQuery();

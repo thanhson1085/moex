@@ -162,13 +162,6 @@ a img.aligncenter {
 	right: 0;
 	position: relative;
 }
-.sub-menu ul{
-	list-style: none;
-}
-.sub-menu ul > li{
-	float: left;
-	padding: 0 7px;
-}
 /* end banner top */
 
 /* header */
@@ -715,6 +708,15 @@ table.records-list{
 .icon-add{
 	background-image: url(../images/add.png);
 }
+.icon-driver{
+	background-image: url(../images/driver.png);
+}
+.icon-order{
+	background-image: url(../images/order.png);
+}
+.icon-tool{
+	background-image: url(../images/tool2.png);
+}
 .icon-show{
 	background-image: url(../images/show.png);
 }
@@ -799,4 +801,33 @@ td.name{
 	border: 0;
 	font-size: 16px;
 }
+/* DT styles for sliding doors */
+.dropdown dt a {display:block;cursor:pointer;line-height:22px;padding: 1px 10px 1px 30px; background-position-x: 7px}
+.dropdown dt a.selected{ 
+	background-position-x: 7px;
+    color:#FFFFFF;
+	background-color:#0066b3;
+	padding: 1px 10px 1px 30px;
+}
 
+
+.dropdown dt a span {cursor:pointer; display:block; padding:5px;}
+
+/* UL styles */
+.dropdown dd ul { background:#FFFFFF none repeat scroll 0 0; display:none;
+    list-style:none; padding:3px 0; position:absolute;
+    left:0px; left:auto; right:0; border:1px solid #0066b3; cursor:pointer;}
+.dropdown dd ul li{ background-color:#FFFFFF; margin:0; width: 200px;} 
+.dropdown span.value { display:none;}
+.dropdown dd ul li a { box-sizing: border-box; -moz-box-sizing: border-box; width: 100%; display:block; font-weight:normal;text-align:left; overflow:hidden; padding:4px 4px 5px 9px; color:#111111; text-decoration:none;}
+.dropdown dd ul li a:hover{ background:#0066b3; color:white; text-decoration:none;}
+.dropdown dd ul li a:visited{ text-decoration:none; }
+
+.dropdown dd ul#ulinbox{border:1px solid #D24939;}
+.dropdown dd ul#ulinbox li a:hover{background:#D24939;}
+.dropdown dt a#linkinbox.selected{background-color:#D24939; color:#FFFFFF;}
+.dropdown dt a#linkinbox{color:#D24939;}
+.extramenu{
+	position: relative;
+	z-index: 100;
+}

@@ -33,6 +33,5 @@ security:
 
             # You want your users to be able to log out, right? See Symfony docs for options
             logout: ~
-            logout: true
             security: true
             anonymous: true

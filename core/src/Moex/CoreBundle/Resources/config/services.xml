@@ -21,5 +21,23 @@
         <service id="moex.twig.moex_extension" class="Moex\CoreBundle\Twig\MoexExtension">
             <tag name="twig.extension" />
         </service>
+        <service id="wordpress.api.loader"
+                 class="Hypebeast\WordpressBundle\Wordpress\ApiLoader"
+                 public="true">
+            <argument>%hypebeast_wordpress.wordpress_path%</argument>
+            <argument>%hypebeast_wordpress.short_init%</argument>
+        </service>
+
+        <service id="wordpress.api.abstraction"
+                 class="Hypebeast\WordpressBundle\Wordpress\ApiAbstraction"
+                 public="true">
+            <argument type="service" id="wordpress.api.loader" />
+        </service>
+        <service id="wordpress.security.http.logout"
+                 class="Hypebeast\WordpressBundle\Security\Http\Logout\WordpressLogoutHandler"
+                 public="false">
+            <argument type="service" id="wordpress.api.abstraction" />
+        </service>
     </services>
+
 </container>
