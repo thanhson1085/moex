@@ -3,19 +3,19 @@
 <div class="content-container">
 <div class="left-part-container rate60">
     <div class="left-part">
-        <div class="admin-header">Drivers list
+        <div class="admin-header">{{ "header_driver_list" | trans }}
             <div class="contextual"> 
-                <a href="{{ path('driver_new') }}" class="icon icon-add">New</a>  
+                <a href="{{ path('driver_new') }}" class="icon icon-add">{{ "action_new" | trans}}</a>  
             </div>
         </div>
 		<table class="list records-list" cellspacing="0">
 			<thead>
 				<tr>
 					<th class="spec">Id</th>
-					<th>DriverName</th>
-					<th>Phone</th>
-					<th>Position</th>
-					<th>Actions</th>
+					<th>{{ "driver_drivername" | trans }}</th>
+					<th>{{ "driver_phone" | trans }}</th>
+					<th>{{ "driver_position" | trans }}</th>
+					<th>{{ "table_action" | trans }}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -28,16 +28,22 @@
 					<td class="action">
 						<ul>
 							<li>
-								<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">delete</a>
+								<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">{{ "action_delete" | trans }}</a>
 							</li>
 							<li>
-								<a class="icon icon-edit" href="{{ path('driver_edit', { 'id': entity.id }) }}">edit</a>
+								<a class="icon icon-edit" href="{{ path('driver_edit', { 'id': entity.id }) }}">{{ "action_edit" | trans }}</a>
 							</li>
 						</ul>
 					</td>
 				</tr>
 			{% else %}
-				<tr><td>no record found.</td></tr>
+				<tr>
+					<td>{{ "message_record_not_found" | trans }}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
 			{% endfor %}
 			</tbody>
 		</table>
@@ -48,7 +54,7 @@
 </div>
 <div class="right-part-container rate40">
 	<div class="right-part">
-		<h3>{{ "filter_form" | trans }}</h3>
+		<h3>{{ "header_filter_form" | trans }}</h3>
 		<div class="filter">
 			<form action="{{ path('driver') }}" id="filter-form" method="POST">
 				{{ form_row(filterForm.phone) }}
@@ -56,8 +62,8 @@
 				{{ form_row(filterForm.position) }}
 				{{ form_row(filterForm.driverInfo) }}
 
-				<button type="submit">Filter</button>
-				<button id="btn-clear" type="submit">Reset</button
+				<button type="submit">{{ "button_filter" | trans }}</button>
+				<button id="btn-clear" type="submit">{{ "button_reset" | trans}}</button
 		  </form>
 		</div>
 	</div>

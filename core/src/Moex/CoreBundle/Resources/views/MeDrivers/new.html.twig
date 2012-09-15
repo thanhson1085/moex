@@ -3,34 +3,33 @@
 <div class="content-container">
 <div class="left-part-container rate50">
     <div class="left-part">
-
-        <div class="admin-header">Drivers edit
+        <div class="admin-header">{{ "header_driver_new" | trans }}
                 <div class="contextual">
-					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">Delete</a>
-                    <a href="{{ path('driver') }}" class="icon icon-back">Back to list</a>
+					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">{{ "action_delete" | trans }}</a>
+                    <a href="{{ path('driver') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a>
                 </div>
         </div>
 
-<form action="{{ path('driver_create') }}" method="post" {{ form_enctype(form) }}>
-	<div class="moex-form">
-		{{ form_widget(form) }}
-		<p class="alignright">
-			<button type="submit">Create</button>
-		</p>
-	</div>
-</form>
+		<form action="{{ path('driver_create') }}" method="post" {{ form_enctype(form) }}>
+			<div class="moex-form">
+				{{ form_widget(form) }}
+				<p class="alignright">
+					<button type="submit">{{ "button_create" | trans }}</button>
+				</p>
+			</div>
+		</form>
 
-</div>
+	</div>
 </div>
 <div class="right-part-container rate50">
 	<div class="right-part">
 		<div class="search-form-container">
 			<div class="search-form">
-				<input class="txt-main page" id="input-position" name="from" type="text" placeholder="Position..." value="{{ entity.position }}">
-				<div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+				<input class="txt-main page" id="input-position" name="from" type="text" placeholder="{{ "placehoder_position" | trans }}" value="{{ entity.position }}">
+				<div class="btn-search-container" id="search-submit"><span class="btn-main page">{{ "button_search" | trans }}</span></div>
 			</div>
 		</div>
-		<div id="map">123</div>
+		<div id="map"></div>
 	</div>
 </div>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>

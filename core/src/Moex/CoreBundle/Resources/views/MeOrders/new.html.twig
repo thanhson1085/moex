@@ -3,9 +3,9 @@
 <div class="content-container">
 <div class="left-part-container rate50">
 	<div class="left-part">
-	<div class="admin-header">Orders creation
+	<div class="admin-header">{{ "order_create" | trans }}
 		<div class="contextual"> 
-			<a href="{{ path('order') }}" class="icon icon-back">Back to list</a> 
+			<a href="{{ path('order') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a> 
 		</div>
 	</div>
 
@@ -13,7 +13,7 @@
 		<div class="moex-form">
 			{{ form_widget(form) }}
 			<p class="alignright">
-				<button type="submit">Create</button>
+				<button type="submit">{{ "button_create" | trans }}</button>
 			</p>
 		</div>
 	</form>
@@ -22,12 +22,12 @@
 </div>
 <div class="right-part-container rate50">
 	<div class="right-part">
-		<h3>Map</h3>
+		<h3>{{ "header_map" | trans }}</h3>
 		<div class="search-form-container">
 			<div class="search-form">
-				<input class="txt-main page" id="input-from" name="from" type="text" placeholder="From..."/>
-				<input class="txt-main page" id="input-to" name="to" type="text" placeholder="To..."/>
-				<div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+				<input class="txt-main page" id="input-from" name="from" type="text" placeholder="{{ "placehoder_from" | trans }}"/>
+				<input class="txt-main page" id="input-to" name="to" type="text" placeholder="{{ "placehoder_to" | trans }}"/>
+				<div class="btn-search-container" id="search-submit"><span class="btn-main page">{{ "button_search" | trans }}</span></div>
 			</div>
 		</div>
 		<div id="map"></div>

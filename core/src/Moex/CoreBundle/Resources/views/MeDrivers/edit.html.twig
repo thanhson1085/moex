@@ -4,10 +4,10 @@
 <div class="left-part-container rate50">
     <div class="left-part">
 
-        <div class="admin-header">Drivers edit
+        <div class="admin-header">{{ "header_driver_edit" | trans }}
                 <div class="contextual">
-					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">Delete</a>
-                    <a href="{{ path('driver') }}" class="icon icon-back">Back to list</a>
+					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">{{ "action_delete" | trans }}</a>
+                    <a href="{{ path('driver') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a>
                 </div>
         </div>
 
@@ -15,7 +15,7 @@
 			<div class="moex-form">
 				{{ form_widget(edit_form) }}
 				<p class="alignright">
-					<button type="submit">Edit</button>
+					<button type="submit">{{ "button_edit" | trans }}</button>
 				</p>
 			</div>
 		</form>
@@ -26,7 +26,7 @@
 		<div class="search-form-container">
 			<div class="search-form">
 				<input class="txt-main page" id="input-position" name="from" type="text" placeholder="Position..." value="{{ entity.position }}">
-				<div class="btn-search-container" id="search-submit"><span class="btn-main page">Submit</span></div>
+				<div class="btn-search-container" id="search-submit"><span class="btn-main page">{{ "button_search" | trans }}</span></div>
 			</div>
 		</div>
 		<div id="map">123</div>

@@ -29,7 +29,8 @@ class MeOrdersController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
         $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
 
-        $filterForm = $this->createForm(new OrderFilterType(), $filter);
+		$translator = $this->get('translator');
+        $filterForm = $this->createForm(new OrderFilterType($translator), $filter);
         $filterForm->bindRequest($this->getRequest());
         $this->getRequest()->getSession()->set('order.filter', $filter);
         
@@ -51,7 +52,8 @@ class MeOrdersController extends Controller
     {
         $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
 
-        $filterForm = $this->createForm(new OrderFilterType(), $filter);
+		$translator = $this->get('translator');
+        $filterForm = $this->createForm(new OrderFilterType($translator), $filter);
         $filterForm->bindRequest($this->getRequest());
         $this->getRequest()->getSession()->set('order.filter', $filter);
 
@@ -98,7 +100,8 @@ class MeOrdersController extends Controller
     public function newAction()
     {
         $entity = new MeOrders();
-        $form   = $this->createForm(new MeOrdersType(), $entity);
+		$translator = $this->get('translator');
+        $form   = $this->createForm(new MeOrdersType($translator), $entity);
 
         return array(
             'entity' => $entity,
@@ -117,7 +120,8 @@ class MeOrdersController extends Controller
     {
         $entity  = new MeOrders();
         $request = $this->getRequest();
-        $form    = $this->createForm(new MeOrdersType(), $entity);
+		$translator = $this->get('translator');
+        $form    = $this->createForm(new MeOrdersType($translator), $entity);
         $form->bindRequest($request);
 
         if ($form->isValid()) {
@@ -160,7 +164,8 @@ class MeOrdersController extends Controller
             throw $this->createNotFoundException('Unable to find MeOrders entity.');
         }
 
-        $editForm = $this->createForm(new MeOrdersType(), $entity);
+		$translator = $this->get('translator');
+        $editForm = $this->createForm(new MeOrdersType($translator), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
@@ -187,7 +192,8 @@ class MeOrdersController extends Controller
             throw $this->createNotFoundException('Unable to find MeOrders entity.');
         }
 
-        $editForm   = $this->createForm(new MeOrdersType(), $entity);
+		$translator = $this->get('translator');
+        $editForm   = $this->createForm(new MeOrdersType($translator), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         $request = $this->getRequest();

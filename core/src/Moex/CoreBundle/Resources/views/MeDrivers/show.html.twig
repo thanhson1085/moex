@@ -5,9 +5,9 @@
     <div class="left-part">
         <div class="admin-header"><span>{{ entity.phone }}</span>
             <div class="contextual"> 
-                <a href="{{ path('driver_new') }}" class="icon icon-add">New</a> 
-                <a href="{{ path('driver_delete', { 'id': entity.id }) }}" class="icon icon-del">Delete</a> 
-                <a href="{{ path('driver_edit', { 'id': entity.id }) }}" class="icon icon-edit">Edit</a>
+                <a href="{{ path('driver_new') }}" class="icon icon-add">{{ "action_new" | trans }}</a> 
+                <a href="{{ path('driver_delete', { 'id': entity.id }) }}" class="icon icon-del">{{ "action_delete" | trans }}</a> 
+                <a href="{{ path('driver_edit', { 'id': entity.id }) }}" class="icon icon-edit">{{ "action_edit" | trans }}</a>
                 <a href="{{ path('driver') }}" class="icon icon-back">Back to list</a>
             </div>
         </div>
@@ -15,31 +15,31 @@
 		<table class="record-properties" cellspacing="0">
 			<tbody>
 				<tr class="odd">
-					<th class="label">Drivername</th>
+					<th class="label">{{ "driver_drivername" | trans }}</th>
 					<td class="value">{{ entity.driverName }}</td>
 				</tr>
 				<tr class="even">
-					<th class="label">Driverage</th>
+					<th class="label">{{ "driver_driverage" | trans }}</th>
 					<td class="value">{{ entity.driverAge }}</td>
 				</tr>
 				<tr class="odd">
-					<th class="label">Driverinfo</th>
+					<th class="label">{{ "driver_driverinfo" | trans }}</th>
 					<td class="value">{{ entity.driverInfo }}</td>
 				</tr>
 				<tr class="even">
-					<th class="label">Phone</th>
+					<th class="label">{{ "driver_phone" | trans }}</th>
 					<td class="value">{{ entity.phone }}</td>
 				</tr>
 				<tr class="odd">
-					<th class="label">Position</th>
+					<th class="label">{{ "driver_position" | trans }}</th>
 					<td class="value">{{ entity.position }}</td>
 				</tr>
 				<tr class="even">
-					<th class="label">Createdat</th>
+					<th class="label">{{ "driver_createdat" | trans }}</th>
 					<td class="value">{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
 				</tr>
 				<tr class="odd">
-					<th class="label">Updatedat</th>
+					<th class="label">{{ "driver_updatedat" | trans }}</th>
 					<td class="value">{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
 				</tr>
 			</tbody>

@@ -1,0 +1,56 @@
+topbar_home: Home
+topbar_aboutus: About Us
+topbar_help: Help
+topbar_hi: Hi
+topbar_logout: Logout
+menu_actions: Actions
+menu_order_manager: Order Manager
+menu_driver_manager: Driver Manager
+message_record_not_found: Record not found.
+action_new: New 
+action_edit: Edit 
+action_delete: Delete
+action_show: Show
+action_backtolist: Back to list
+button_edit: Edit
+button_create: Create 
+button_search: Search
+button_filter: Filter
+button_reset: Reset
+table_id: Id
+table_action: Actions
+
+header_order_list: Orders List
+header_order_new: Orders Creation
+header_order_edit: Orders Edit
+header_driver_list: Drivers List
+header_driver_new: Drivers Creation 
+header_driver_edit: Drivers Edit
+header_filter_form: Filter form
+
+order_phone: Phone 
+order_orderfrom: From
+order_orderto: To
+order_price: Price
+order_lat: Latitude
+order_lng: Longtitude
+order_ordername: Order Name 
+order_orderinfo: Order Info
+order_createdat: Created At 
+order_updatedat: Updated At
+
+driver_drivername: Driver name
+driver_phone: Phone
+driver_position: Postion
+driver_driverage: Driver Age
+driver_lat: Latitude
+driver_lng: Longtitude
+driver_driverinfo: Driver Info
+driver_createdat: Created At 
+driver_updatedat: Updated At
+
+placeholder_position: Position....
+placeholder_from: From....
+placeholder_to: To....
+
+footer: Developed by Software Team, R&D Center, MoEx JSC., Co.

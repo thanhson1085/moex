@@ -30,8 +30,9 @@ class MeDriversController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
         $filter = $this->getRequest()->getSession()->remove('driver.filter');
         $filter = $this->getRequest()->getSession()->get('driver.filter', new \Moex\CoreBundle\Entity\DriverFilter());
-
-        $filterForm = $this->createForm(new DriverFilterType(), $filter);
+		
+		$translator = $this->get('translator');
+        $filterForm = $this->createForm(new DriverFilterType($translator), $filter);
         $filterForm->bindRequest($this->getRequest());
         $this->getRequest()->getSession()->set('driver.filter', $filter);
         
@@ -53,7 +54,8 @@ class MeDriversController extends Controller
     {
         $filter = $this->getRequest()->getSession()->get('driver.filter', new MeDrivers());
 
-        $filterForm = $this->createForm(new DriverFilterType(), $filter);
+		$translator = $this->get('translator');
+        $filterForm = $this->createForm(new DriverFilterType($translator), $filter);
         $filterForm->bindRequest($this->getRequest());
         $this->getRequest()->getSession()->set('driver.filter', $filter);
 
@@ -89,7 +91,8 @@ class MeDriversController extends Controller
     public function newAction()
     {
         $entity = new MeDrivers();
-        $form   = $this->createForm(new MeDriversType(), $entity);
+		$translator = $this->get('translator');
+        $form   = $this->createForm(new MeDriversType($translator), $entity);
 
         return array(
             'entity' => $entity,
@@ -108,7 +111,8 @@ class MeDriversController extends Controller
     {
         $entity  = new MeDrivers();
         $request = $this->getRequest();
-        $form    = $this->createForm(new MeDriversType(), $entity);
+		$translator = $this->get('translator');
+        $form    = $this->createForm(new MeDriversType($translator), $entity);
         $form->bindRequest($request);
 
         if ($form->isValid()) {
@@ -145,8 +149,8 @@ class MeDriversController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
-
-        $editForm = $this->createForm(new MeDriversType(), $entity);
+		$translator = $this->get('translator');
+        $editForm = $this->createForm(new MeDriversType($translator), $entity);
 
         return array(
             'entity'      => $entity,
@@ -170,8 +174,9 @@ class MeDriversController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
-
-        $editForm   = $this->createForm(new MeDriversType(), $entity);
+	
+		$translator = $this->get('translator');
+        $editForm   = $this->createForm(new MeDriversType($translator), $entity);
 
         $request = $this->getRequest();
 

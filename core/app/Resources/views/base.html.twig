@@ -14,23 +14,23 @@
 				<div class="menu-top-left">
 					<ul>
 						<li>
-							<a href="#">Home</a>
+							<a href="#">{{ "topbar_home" | trans }}</a>
 						</li>
 						<li>
-							<a href="#">About Us</a>
+							<a href="#">{{ "topbar_aboutus" | trans }}</a>
 						</li>
 						<li>
-							<a href="#">Help</a>
+							<a href="#">{{ "topbar_help" | trans }}</a>
 						</li>
 					</ul>
 				</div>
 				<div class="menu-top-right">
 					<ul>
 						<li>
-							<a href="#">Hi {{ app.user.username }}!!!</a>
+							<a href="#">{{ "topbar_hi" | trans }} {{ app.user.username }}!!!</a>
 						</li>
 						<li>
-							<a href="/moex/wp-login.php?action=logout">Logout</a>
+							<a href="/moex/wp-login.php?action=logout">{{ "topbar_logout" | trans }}</a>
 						</li>
 					</ul>
 				</div>
@@ -47,11 +47,11 @@
 					<div class="sub-menu">
 						<div class="extramenu">
 							<dl style="" class="dropdown">
-								<dt><a id="linkglobal" style="cursor:pointer;" class="icon icon-tool">Actions</a></dt>
+								<dt><a id="linkglobal" style="cursor:pointer;" class="icon icon-tool">{{ "menu_actions" | trans }}</a></dt>
 									<dd>
 										<ul id="ulglobal">
-											<li><a href="{{ path('order') }}"><span class="icon icon-order">Order Manager</span></a></li>
-											<li><a href="{{ path('driver') }}"><span class="icon icon-driver">Driver Manager</span></a></li>
+											<li><a href="{{ path('order') }}"><span class="icon icon-order">{{ "menu_order_manager" | trans }}</span></a></li>
+											<li><a href="{{ path('driver') }}"><span class="icon icon-driver">{{ "menu_driver_manager" | trans }}</span></a></li>
 										</ul>
 									</dd>
 								</dl>
@@ -67,7 +67,7 @@
 		<div id="loading" style="display: none; "><img src="{{ asset('images/loader.gif') }}"></div>
 		<div class="footer-container">
 			<div class="footer">
-				Developed by TechBurg 2012.
+				{{ "footer" | trans }}
 
 				<ul>
 					<li><img src="{{ asset('images/facebook.png') }}"></li>

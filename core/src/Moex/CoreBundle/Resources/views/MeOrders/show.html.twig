@@ -5,41 +5,41 @@
 	<div class="left-part">
 		<div class="admin-header"><span>{{ entity.phone }}</span>
 			<div class="contextual"> 
-				<a href="{{ path('order_new') }}" class="icon icon-add">New</a> 
-				<a href="{{ path('order_delete', { 'id': entity.id }) }}" class="icon icon-del">Delete</a> 
-				<a href="{{ path('order_edit', { 'id': entity.id }) }}" class="icon icon-edit">Edit</a>
-				<a href="{{ path('order') }}" class="icon icon-back">Back to list</a>
+				<a href="{{ path('order_new') }}" class="icon icon-add">{{ "action_new" | trans }}</a> 
+				<a href="{{ path('order_delete', { 'id': entity.id }) }}" class="icon icon-del">{{ "action_delete" | trans }}</a> 
+				<a href="{{ path('order_edit', { 'id': entity.id }) }}" class="icon icon-edit">{{ "action_edit" | trans }}</a>
+				<a href="{{ path('order') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a>
 			</div>
 		</div>
 
 		<table class="record-properties" cellspacing="0">
 			<tbody>
 				<tr class="even">
-					<th class="label">Orderfrom</th>
+					<th class="label">{{ "order_orderfrom" | trans }}</th>
 					<td class="value">{{ entity.orderFrom }}</td>
 				</tr>
 				<tr class="odd">
-					<th class="label">Orderto</th>
+					<th class="label">{{ "order_orderto" | trans }}</th>
 					<td class="value">{{ entity.orderTo }}</td>
 				</tr>
 				<tr class="even">
-					<th class="label">Orderinfo</th>
+					<th class="label">{{ "order_orderinfo" | trans }}</th>
 					<td class="value">{{ entity.orderInfo }}</td>
 				</tr>
 				<tr class="odd">
-					<th class="label">Phone</th>
+					<th class="label">{{ "order_phone" | trans }}</th>
 					<td class="value">{{ entity.phone }}</td>
 				</tr>
 				<tr class="even">
-					<th class="label">Price</th>
+					<th class="label">{{ "order_price" | trans }}</th>
 					<td class="value">{{ entity.price }}</td>
 				</tr>
 				<tr class="odd">
-					<th class="label">Createdat</th>
+					<th class="label">{{ "order_createdat" | trans }}</th>
 					<td class="value">{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
 				</tr>
 				<tr class="even">
-					<th class="label">Updatedat</th>
+					<th class="label">{{ "order_updatedat" | trans }}</th>
 					<td class="value">{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
 				</tr>
 			</tbody>
@@ -48,11 +48,11 @@
 		<table class="list records-list" cellspacing="0">
 			<thead>
 				<tr>
-					<th class="spec">Id</th>
-					<th>Phone</th>
-					<th>Name</th>
-					<th>Position</th>
-					<th>Distance</th>
+					<th class="spec">{{ "table_id" | trans }}</th>
+					<th>{{ "driver_phone" | trans }}</th>
+					<th>{{ "driver_name" | trans }}</th>
+					<th>{{ "driver_position" | trans }}</th>
+					<th>{{ "driver_distance" | trans }}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -67,7 +67,13 @@
 					<td>{{ '%.2f' | format(distance) }}</td>
 				</tr>
 			{% else %}
-				<tr><td>no record found.</td></tr>
+				<tr>
+					<td>{{ "message_record_not_found" | trans }}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
 			{% endfor %}
 			</tbody>
 		</table>
