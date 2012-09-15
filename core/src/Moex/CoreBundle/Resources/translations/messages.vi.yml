@@ -1,0 +1,57 @@
+﻿topbar_home: Trang chủ
+topbar_aboutus: Giới thiệu
+topbar_help: Giúp đỡ
+topbar_hi: Xin chào
+topbar_logout: Đăng xuất
+menu_actions: Quản lý
+menu_order_manager: Quản lý đơn hàng
+menu_driver_manager: Quản lý lái xe
+message_record_not_found: Không tìm thấy bản ghi nào
+action_new: Tạo mới 
+action_edit: Sửa 
+action_delete: Xóa
+action_show: Xem
+action_backtolist: Trở lại
+button_edit: Sửa
+button_create: Tạo mới 
+button_search: Tìm kiếm
+button_filter: Lọc
+button_reset: Bỏ lọc
+table_id: Id
+table_action: Tác vụ
+
+header_order_list: Danh sách đơn hàng
+header_order_new: Tạo mới đơn hàng
+header_order_edit: Sửa đơn hàng
+header_driver_list: Danh sách Lái xe
+header_driver_new: Tạo mới Lái xe
+header_driver_edit: Sửa Lái xe
+header_filter_form: Khung lọc
+
+order_phone: Điện thoại 
+order_orderfrom: Từ
+order_orderto: Đến
+order_price: Giá
+order_lat: Vĩ độ
+order_lng: Kinh độ
+order_ordername: Tên đơn hàng
+order_orderinfo: Mô tả
+order_createdat: Ngày tạo
+order_updatedat: Ngày cập nhật
+
+driver_drivername: Tên lái xe
+driver_phone: Điện thoại
+driver_position: Vị trí
+driver_driverage: Tuổi
+driver_lat: Vĩ độ
+driver_lng: Kinh độ
+driver_driverinfo: Mô tả
+driver_distance: Khoảng cách
+driver_createdat: Ngày tạo
+driver_updatedat: Ngày cập nhật
+
+placeholder_position: Vị trí....
+placeholder_from: Từ....
+placeholder_to: Đến....
+
+footer: Developed by Software Team, R&D Center, MoEx JSC., Co.
