@@ -26,6 +26,7 @@ class MeOrdersController extends Controller
      */
     public function indexAction()
     {
+		$this->get('session')->setLocale('vi');
         $em = $this->getDoctrine()->getEntityManager();
         $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
 
