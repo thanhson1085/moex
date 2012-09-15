@@ -46,6 +46,7 @@ driver_driverage: Driver Age
 driver_lat: Latitude
 driver_lng: Longtitude
 driver_driverinfo: Driver Info
+driver_distance: Distance
 driver_createdat: Created At 
 driver_updatedat: Updated At
 
