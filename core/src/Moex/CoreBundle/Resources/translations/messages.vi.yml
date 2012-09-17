@@ -28,11 +28,11 @@ header_driver_list: Danh sách Lái xe
 header_driver_new: Tạo mới Lái xe
 header_driver_edit: Sửa Lái xe
 header_filter_form: Khung lọc
-header_map: Ban do
+header_map: Bản đồ
 
 order_phone: Điện thoại 
-order_orderfrom: Từ
-order_orderto: Đến
+order_orderfrom: Từ(A)
+order_orderto: Đến(B)
 order_price: Giá
 order_lat: Vĩ độ
 order_lng: Kinh độ
