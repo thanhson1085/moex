@@ -157,9 +157,9 @@ a img.aligncenter {
 	border-bottom: solid 1px #CCC;
 }
 .sub-menu-container{
-	float: right;
+	float: left; 
 	bottom: 7px;
-	right: 0;
+	left: 100px;
 	position: relative;
 }
 /* end banner top */
@@ -627,7 +627,7 @@ table.record-properties th{
 table.record-properties .label{
 	padding-left: 7px;
 	font-weight: bold;
-	color: #ee1c24;
+	color: #0066b3;
 	width: 25%;
 }
 table.record-properties .value{
@@ -816,7 +816,7 @@ td.name{
 /* UL styles */
 .dropdown dd ul { background:#FFFFFF none repeat scroll 0 0; display:none;
     list-style:none; padding:3px 0; position:absolute;
-    left:0px; left:auto; right:0; border:1px solid #0066b3; cursor:pointer;}
+    left:auto; border:1px solid #0066b3; cursor:pointer;}
 .dropdown dd ul li{ background-color:#FFFFFF; margin:0; width: 200px;} 
 .dropdown span.value { display:none;}
 .dropdown dd ul li a { box-sizing: border-box; -moz-box-sizing: border-box; width: 100%; display:block; font-weight:normal;text-align:left; overflow:hidden; padding:4px 4px 5px 9px; color:#111111; text-decoration:none;}

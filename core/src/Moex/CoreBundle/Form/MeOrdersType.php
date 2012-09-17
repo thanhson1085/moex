@@ -20,7 +20,7 @@ class MeOrdersType extends AbstractType
             ->add('orderName', 'text', array( 'label' => $this->translator->trans('order_ordername')))
             ->add('orderInfo', 'textarea', array('required' => false, 'label' => $this->translator->trans('order_orderinfo')))
             ->add('orderFrom', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_orderfrom')))
-            ->add('orderTo', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_to')))
+            ->add('orderTo', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_orderto')))
             ->add('price', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_price')))
             ->add('lat', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_lat')))
             ->add('lng', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_lng')))

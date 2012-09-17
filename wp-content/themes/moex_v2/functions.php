@@ -24,7 +24,7 @@ function edit_link_to_title($title, $id){
 }
 function custom_login_logo() {
     echo '<style type="text/css">
-    h1 a { background-image: url('.get_bloginfo('template_directory').'/images/logo2.png) !important; background-size: 200px !important}
+    h1 a { background-image: url('.get_bloginfo('template_directory').'/images/logo3.png) !important; background-size: 200px !important}
     </style>';
 }
 add_action('login_head', 'custom_login_logo');

@@ -28,6 +28,7 @@ header_driver_list: Danh sách Lái xe
 header_driver_new: Tạo mới Lái xe
 header_driver_edit: Sửa Lái xe
 header_filter_form: Khung lọc
+header_map: Ban do
 
 order_phone: Điện thoại 
 order_orderfrom: Từ

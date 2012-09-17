@@ -5,7 +5,6 @@
     <div class="left-part">
         <div class="admin-header">{{ "header_driver_new" | trans }}
                 <div class="contextual">
-					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">{{ "action_delete" | trans }}</a>
                     <a href="{{ path('driver') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a>
                 </div>
         </div>
@@ -25,7 +24,7 @@
 	<div class="right-part">
 		<div class="search-form-container">
 			<div class="search-form">
-				<input class="txt-main page" id="input-position" name="from" type="text" placeholder="{{ "placehoder_position" | trans }}" value="{{ entity.position }}">
+				<input class="txt-main page" id="input-position" name="from" type="text" placeholder="{{ "placeholder_position" | trans }}" value="{{ entity.position }}">
 				<div class="btn-search-container" id="search-submit"><span class="btn-main page">{{ "button_search" | trans }}</span></div>
 			</div>
 		</div>
