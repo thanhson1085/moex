@@ -8,8 +8,8 @@ menu_actions: Quản lý
 menu_order_manager: Quản lý đơn hàng
 menu_driver_manager: Quản lý lái xe
 message_record_not_found: Không tìm thấy bản ghi nào
-action_unassign: Huy giao 
-action_assign: Giao viec 
+action_unassign: Hủy giao 
+action_assign: Giao việc
 action_done: Xong
 action_new: Tạo mới 
 action_edit: Sửa 
@@ -32,6 +32,16 @@ header_driver_new: Tạo mới Lái xe
 header_driver_edit: Sửa Lái xe
 header_filter_form: Khung lọc
 header_map: Bản đồ
+header_assign_drivers: Đã giao cho
+header_unassign_driver: Có thể giao cho
+header_order_asigned: Đơn hàng đang làm
+header_order_done: Đơn hàng đã hoàn thành
+
+intro_assign_drivers: Danh sách lái xe đã được giao việc cho đơn hàng này
+intro_unassign_drivers: Danh sách lái xe có thể giao làm việc cho đơn hàng này
+intro_order_assigned: Danh sách đơn hàng mà lái xe đang làm
+intro_order_done: Danh sách đơn hàng mà lái xe đã hoàn thành
+
 
 order_phone: Điện thoại 
 order_orderfrom: Từ(A)
@@ -43,6 +53,7 @@ order_ordername: Tên đơn hàng
 order_orderinfo: Mô tả
 order_createdat: Ngày tạo
 order_updatedat: Ngày cập nhật
+order_starttime: Bắt đầu từ
 
 driver_drivername: Tên lái xe
 driver_phone: Điện thoại
