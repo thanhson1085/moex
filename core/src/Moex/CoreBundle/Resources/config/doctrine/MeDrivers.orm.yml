@@ -34,6 +34,12 @@ Moex\CoreBundle\Entity\MeDrivers:
       length: 250
       fixed: false
       nullable: false
+    money:
+      type: string
+      length: 250
+      default: "0"
+      fixed: false
+      nullable: true 
     lat:
       type: string
       length: 250

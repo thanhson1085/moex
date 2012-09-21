@@ -42,6 +42,11 @@ class MeDrivers
     private $position;
 
     /**
+     * @var string $money
+     */
+    private $money;
+
+    /**
      * @var string $lat
      */
     private $lat;
@@ -60,7 +65,6 @@ class MeDrivers
      * @var datetime $updatedAt
      */
     private $updatedAt;
-
 
     /**
      * Get id
@@ -170,6 +174,26 @@ class MeDrivers
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set money 
+     *
+     * @param string $money
+     */
+    public function setMoney($money)
+    {
+        $this->money = $money;
+    }
+
+    /**
+     * Get money 
+     *
+     * @return string 
+     */
+    public function getMoney()
+    {
+        return $this->money;
     }
 
     /**

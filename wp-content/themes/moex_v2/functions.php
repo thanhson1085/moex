@@ -4,6 +4,23 @@
  * Email: thanhson1085@gmail.com 
  */
 
+$result = add_role('cs', 'CS', array(
+    'read' => true,
+    'edit_posts' => true,
+    'delete_posts' => false,
+));
+$result = add_role('router', 'ROUTER', array(
+    'read' => true,
+    'edit_posts' => true,
+    'delete_posts' => false,
+));
+
+$result = add_role('cs_router', 'CS + ROUTER', array(
+    'read' => true,
+    'edit_posts' => true,
+    'delete_posts' => false,
+));
+
 add_filter('excerpt_length', 'my_excerpt_length');
 function my_excerpt_length($length) {
 	return 20; 

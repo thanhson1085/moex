@@ -42,10 +42,33 @@ class MeDriversRepository extends EntityRepository
         return $query->getQuery();
     }
 
-	public function findByDistance($latitude, $longitude){
+	public function findByAssignAndDistance($latitude, $longitude, $order_id){
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrderDriver', 'od'); $rsm->addFieldResult('d','id','id');
+		$rsm->addFieldResult('d','lat','lat');
+		$rsm->addFieldResult('d','lng','lng');
+		$rsm->addFieldResult('d','phone','phone');
+		$rsm->addFieldResult('d','driverName','driverName');
+		$rsm->addFieldResult('d','position','position');
+		$rsm->addScalarResult('distance','distance');
+		$sql = 'SELECT d.id AS id, d.lat AS lat, d.lng AS lng, d.phone AS phone, d.driver_name AS driverName, d.position AS position,'
+			.' (((ACOS(SIN('.$latitude.' * PI() / 180) * SIN(d.lat * PI() / 180)'
+			.' + COS('.$latitude.' * PI() / 180) * COS(d.lat * PI() / 180)'
+			.' * COS(('.$longitude.' - d.lng) * PI() / 180))* 180 / PI())'
+			.' * 60 * 1.1515)*1.609344) AS distance'
+			.' FROM me_drivers d INNER JOIN me_order_driver od ON od.driver_id = d.id'
+			.' WHERE od.order_id = '.$order_id.' GROUP BY id HAVING distance < 10'
+			.' ORDER BY distance ASC';
+		return $em->createNativeQuery($sql, $rsm)->getResult();
+	}
+
+	public function findByUnAssignAndDistance($latitude, $longitude, $order_id){
+		$em = $this->getEntityManager();
+		$rsm = new ResultSetMapping;
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrderDriver', 'od');
 		$rsm->addFieldResult('d','id','id');
 		$rsm->addFieldResult('d','lat','lat');
 		$rsm->addFieldResult('d','lng','lng');
@@ -53,13 +76,33 @@ class MeDriversRepository extends EntityRepository
 		$rsm->addFieldResult('d','driverName','driverName');
 		$rsm->addFieldResult('d','position','position');
 		$rsm->addScalarResult('distance','distance');
-		$sql = 'SELECT id AS id, lat AS lat, lng AS lng, phone AS phone, driver_name AS driverName, position AS position,'
+		$sql = 'SELECT d.id AS id, d.lat AS lat, d.lng AS lng, d.phone AS phone, d.driver_name AS driverName, d.position AS position,'
 			.' (((ACOS(SIN('.$latitude.' * PI() / 180) * SIN(lat * PI() / 180)'
 			.' + COS('.$latitude.' * PI() / 180) * COS(lat * PI() / 180)'
 			.' * COS(('.$longitude.' - lng) * PI() / 180))* 180 / PI())'
 			.' * 60 * 1.1515)*1.609344) AS distance'
-			.' FROM me_drivers d GROUP BY id HAVING distance < 10'
+			.' FROM me_drivers d WHERE d.id NOT IN (SELECT od.driver_id FROM me_order_driver od WHERE d.id = od.driver_id AND od.order_id = '.$order_id.') '
+			.' GROUP BY id HAVING distance < 10'
 			.' ORDER BY distance ASC';
 		return $em->createNativeQuery($sql, $rsm)->getResult();
 	}
+
+    public function findByStatusAndDriverId($status, $driver_id, $limit = 10)
+    {
+		$em = $this->getEntityManager();
+		$rsm = new ResultSetMapping;
+		$rsm = new ResultSetMapping;
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrders', 'o');
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrderDriver', 'od');
+        $rsm->addFieldResult('o','id','id');
+        $rsm->addFieldResult('o','orderName','orderName');
+        $rsm->addFieldResult('o','price','price');
+        $rsm->addFieldResult('o','phone','phone');
+		$sql = "SELECT o.id AS id, o.order_name AS orderName, o.price AS price, o.phone AS phone"
+			." FROM me_orders AS o INNER JOIN me_order_driver od ON od.order_id = o.id WHERE o.order_status = '".$status."'"
+			." AND od.driver_id = ".$driver_id." LIMIT ".$limit;
+		return $em->createNativeQuery($sql, $rsm)->getResult();
+
+    }
+
 }

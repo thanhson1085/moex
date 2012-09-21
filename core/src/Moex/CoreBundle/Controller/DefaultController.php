@@ -16,4 +16,11 @@ class DefaultController extends Controller
     {
         return array('name' => $name);
     }
+	/**
+	* @Template()
+	*/
+	public function unauthorizedAction()
+	{
+		return array();
+	}
 }

@@ -11,6 +11,14 @@ security:
         wordpress:
             id: wordpress.security.user.provider
 
+    role_hierarchy:
+        ROLE_CS_ROUTER: [ROLE_WP_CS, ROLE_WP_ROUTER]
+    access_control:
+        #- { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/order/.*/delete, roles: ROLE_WP_ADMINISTRATOR }
+        - { path: ^/order/.*/.*/assign, roles: [ROLE_WP_CS_ROUTER, ROLE_WP_CS] }
+        - { path: ^/order/.*/.*/unassign, roles: [ROLE_WP_CS_ROUTER, ROLE_WP_CS] }
+    access_denied_url: /unauthorized
     firewalls:
         secured_area:
             pattern:    /.*

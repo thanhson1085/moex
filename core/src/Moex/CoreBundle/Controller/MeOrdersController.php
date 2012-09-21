@@ -2,6 +2,7 @@
 
 namespace Moex\CoreBundle\Controller;
 
+use Symfony\Component\Request\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -18,6 +19,9 @@ use Pagerfanta\Adapter\DoctrineORMAdapter;
  */
 class MeOrdersController extends Controller
 {
+	const STATUS_PENDING = 'PENDING';
+	const STATUS_ASSIGNED = 'ASSIGNED';
+	const STATUS_DONE = 'DONE';
     /**
      * Lists all MeOrders entities.
      *
@@ -26,7 +30,6 @@ class MeOrdersController extends Controller
      */
     public function indexAction()
     {
-		$this->get('session')->setLocale('vi');
         $em = $this->getDoctrine()->getEntityManager();
         $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
 
@@ -39,7 +42,7 @@ class MeOrdersController extends Controller
         $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
         $paginator->setMaxPerPage($this->container->getParameter('moex.pagesize.default'));
         $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
-
+		
         return array('filterForm' => $filterForm->createView(), 'paginator' => $paginator);
     }
 
@@ -78,17 +81,21 @@ class MeOrdersController extends Controller
             throw $this->createNotFoundException('Unable to find MeOrders entity.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
-
 		$lat = $entity->getLat();
 		$lng = $entity->getLng();
 		
-		$drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByDistance($lat, $lng);
+		$assign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByAssignAndDistance($lat, $lng, $id);
+		$unassign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByUnAssignAndDistance($lat, $lng, $id);
+		if(!$assign_drivers){
+			$entity->setOrderStatus(self::STATUS_PENDING);
+			$em->persist($entity);
+			$em->flush();
+		}
         return array(
             'entity'      => $entity,
-            'drivers'     => $drivers,
+            'assign_drivers'     => $assign_drivers,
+            'unassign_drivers'     => $unassign_drivers,
 			'username'   => $username,
-            'delete_form' => $deleteForm->createView(),
 			);
     }
 
@@ -136,6 +143,8 @@ class MeOrdersController extends Controller
 			if ($entity->getOrderInfo() === null) $entity->setOrderInfo("");
 			$validator = $this->get('validator');
 			$errors = $validator->validate($entity);
+			$status = self::STATUS_PENDING; 
+			$entity->setOrderStatus($status);
             $em->persist($entity);
             $em->flush();
 
@@ -167,12 +176,10 @@ class MeOrdersController extends Controller
 
 		$translator = $this->get('translator');
         $editForm = $this->createForm(new MeOrdersType($translator), $entity);
-        $deleteForm = $this->createDeleteForm($id);
 
         return array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         );
     }
 
@@ -195,7 +202,6 @@ class MeOrdersController extends Controller
 
 		$translator = $this->get('translator');
         $editForm   = $this->createForm(new MeOrdersType($translator), $entity);
-        $deleteForm = $this->createDeleteForm($id);
 
         $request = $this->getRequest();
 
@@ -213,7 +219,6 @@ class MeOrdersController extends Controller
         return array(
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
         );
     }
 
@@ -242,6 +247,87 @@ class MeOrdersController extends Controller
 
         return $this->redirect($this->generateUrl('order'));
     }
+
+    /**
+     *
+     * @Route("/{order_id}/{driver_id}/assign", name="order_assign")
+     */
+    public function assignAction($order_id, $driver_id)
+    {
+		$em = $this->getDoctrine()->getEntityManager();
+		$entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($order_id);
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+        }
+		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $order_id, 'driverId' => $driver_id)); 
+        if (!$order_driver) {
+			$order_driver = new \Moex\CoreBundle\Entity\MeOrderDriver;
+			$order_driver->setDriverId($driver_id);
+			$order_driver->setOrderId($order_id);
+			$created_at = new \DateTime();
+			$updated_at = new \DateTime();
+			$order_driver->setCreatedAt($created_at);
+			$order_driver->setUpdatedAt($updated_at);
+			$em->persist($order_driver);
+			$entity->setOrderStatus(self::STATUS_ASSIGNED);
+			$em->persist($entity);
+			$em->flush();
+		}
+		return $this->redirect($this->generateUrl('order_show', array( 'id' => $order_id )));
+	}
+
+    /**
+     *
+     * @Route("/{order_id}/{driver_id}/unassign", name="order_unassign")
+     */
+    public function unassignAction($order_id, $driver_id)
+    {
+		$em = $this->getDoctrine()->getEntityManager();
+		$entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($order_id);
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+        }
+		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $order_id, 'driverId' => $driver_id)); 
+        if (!$order_driver) {
+            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+        }
+		foreach ($order_driver as $value){
+			$em->remove($value);
+		}
+		$em->flush();	
+
+		return $this->redirect($this->generateUrl('order_show', array( 'id' => $order_id )));
+	}
+
+    /**
+     *
+     * @Route("/{id}/done", name="order_done")
+     */
+    public function doneAction($id)
+    {
+		$em = $this->getDoctrine()->getEntityManager();
+		$entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($id);
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+        }
+		$entity->setOrderStatus(self::STATUS_DONE);
+		$em->persist($entity);
+		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $id)); 
+		$count = count($order_driver);
+		$price = floor($entity->getPrice()/$count);
+		$updated_at = new \DateTime();
+		foreach ($order_driver as $value){
+			$value->setMoney($price);
+			$value->setUpdatedAt($updated_at);
+			$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($value->getDriverId());
+			$driver->setMoney($driver->getMoney() + $price);
+			$em->persist($driver);
+			$em->persist($value);
+		}
+		$em->flush();
+		return $this->redirect($this->generateUrl('order_show', array( 'id' => $id )));
+	}
+
 
     private function createDeleteForm($id)
     {

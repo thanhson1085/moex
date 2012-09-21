@@ -8,6 +8,9 @@ menu_actions: Quản lý
 menu_order_manager: Quản lý đơn hàng
 menu_driver_manager: Quản lý lái xe
 message_record_not_found: Không tìm thấy bản ghi nào
+action_unassign: Huy giao 
+action_assign: Giao viec 
+action_done: Xong
 action_new: Tạo mới 
 action_edit: Sửa 
 action_delete: Xóa

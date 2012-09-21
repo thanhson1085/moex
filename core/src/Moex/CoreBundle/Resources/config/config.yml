@@ -1,8 +1,7 @@
 parameters:
   moex.version: V1.0
   moex.pagesize.default: 10
-  medrivers_type.class: Moex\CoreBundle\Form\MeDriversType
-services:
-    core.form.medrivers_type:
-        class: %medrivers_type.class%
-        arguments: [@translator]
+  moex.driver.money.max: 1000000 
+  moex.order.status.pending: PENDING 
+  moex.order.status.assigned: ASSIGNED
+  moex.order.status.done: DONE 

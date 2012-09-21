@@ -1,0 +1,39 @@
+Moex\CoreBundle\Entity\MeOrderDriver:
+  type: entity
+  table: me_order_driver
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      column: id
+      generator:
+        strategy: IDENTITY
+    orderId:
+      type: bigint
+      nullable: false
+      column: order_id 
+    driverId:
+      type: bigint
+      nullable: false
+      column: driver_id 
+    money:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+      column: money 
+    createdAt:
+      type: datetime
+      nullable: false
+      column: created_at
+    updatedAt:
+      type: datetime
+      nullable: false
+      column: updated_at
+  relations:
+    MeOrders:
+      foreignAlias: MeOrderDriver 
+    MeDrivers:
+      foreignAlias: MeOrderDriver
+  lifecycleCallbacks: {  }

@@ -25,7 +25,6 @@ function countMoney(){
             ret = price_level[value].price*distance
             ret = Math.round(ret/1000)*1000;
             ret = Math.ceil(ret/1000/5)*1000*5;
-            ret = ret  + ' VND';    
         }
     }   
     return ret;

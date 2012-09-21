@@ -74,11 +74,18 @@ class MeDriversController extends Controller
 
         $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
 
+		$done_order = $em->getRepository('MoexCoreBundle:MeDrivers')
+							->findByStatusAndDriverId($this->container->getParameter('moex.order.status.done'), $id);
+		$assigned_order = $em->getRepository('MoexCoreBundle:MeDrivers')
+							->findByStatusAndDriverId($this->container->getParameter('moex.order.status.assigned'), $id);
+
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
         return array(
             'entity'      => $entity,
+			'done_order'  => $done_order,
+			'assigned_order' => $assigned_order
             );
     }
 
@@ -221,6 +228,27 @@ class MeDriversController extends Controller
 
         return $this->redirect($this->generateUrl('driver'));
     }
+
+    /**
+     *
+     * @Route("/{id}/charge", name="driver_charge")
+     */
+    public function chargeAction($id)
+    {
+
+		$em = $this->getDoctrine()->getEntityManager();
+		$entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
+
+		if (!$entity) {
+			throw $this->createNotFoundException('Unable to find MeDrivers entity.');
+		}
+		$entity->setMoney(0);
+		$em->persist($entity);
+		$em->flush();
+
+        return $this->redirect($this->generateUrl('driver_show', array('id' => $id)));
+    }
+
 
     private function createDeleteForm($id)
     {

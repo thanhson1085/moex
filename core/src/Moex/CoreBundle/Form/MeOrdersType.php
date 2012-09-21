@@ -18,6 +18,7 @@ class MeOrdersType extends AbstractType
         $builder
             ->add('phone', 'text', array( 'label' => $this->translator->trans('order_phone')))
             ->add('orderName', 'text', array( 'label' => $this->translator->trans('order_ordername')))
+            ->add('startTime', 'datetime', array('widget' => 'single_text', 'required' => false, 'attr' => array('class' => 'txt-time', 'readonly' => 'readonly') , 'label' => $this->translator->trans('order_starttime')))
             ->add('orderInfo', 'textarea', array('required' => false, 'label' => $this->translator->trans('order_orderinfo')))
             ->add('orderFrom', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_orderfrom')))
             ->add('orderTo', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_orderto')))

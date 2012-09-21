@@ -590,6 +590,19 @@ table.list tr td {
 table.list td a{
 	color: #FF6600;
 }
+table.list td.status{
+	text-align: center;
+	color: white;
+}
+.pending{
+	background: #FFFD3F;
+}
+.assigned{
+	background: #14D60E;
+}
+.done{
+	background: #3F75FF;
+}
 
 .admin-header{
 	color: #1e1e1e;
@@ -704,6 +717,18 @@ table.records-list{
 }
 .even{
 	background-color: white;
+}
+.icon-charge{
+	background-image: url(../images/charge.png);
+}
+.icon-done{
+	background-image: url(../images/done.png);
+}
+.icon-assign{
+	background-image: url(../images/assign.png);
+}
+.icon-unassign{
+	background-image: url(../images/unassign.png);
 }
 .icon-add{
 	background-image: url(../images/add.png);
@@ -830,4 +855,24 @@ td.name{
 .extramenu{
 	position: relative;
 	z-index: 100;
+}
+
+span.status{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 5px;
+	margin-right: 7px;
+	color: white;
+}
+
+.header-table{
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+.header-intro{
+	color: #CCC;
+	margin-bottom: 10px;
+	font-size: 11px;
 }

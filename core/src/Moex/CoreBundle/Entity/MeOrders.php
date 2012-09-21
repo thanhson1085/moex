@@ -49,6 +49,11 @@ class MeOrders
     private $phone;
 
     /**
+     * @var string $orderStatus
+     */
+    private $orderStatus;
+
+    /**
      * @var string $price
      */
     private $price;
@@ -62,6 +67,11 @@ class MeOrders
      * @var string $lng
      */
     private $lng;
+
+    /**
+     * @var datetime $startTime
+     */
+    private $startTime;
 
     /**
      * @var datetime $createdAt
@@ -205,6 +215,26 @@ class MeOrders
     }
 
     /**
+     * Set orderStatus 
+     *
+     * @param string $orderStatus
+     */
+    public function setOrderStatus($orderStatus)
+    {
+        $this->orderStatus = $orderStatus;
+    }
+
+    /**
+     * Get orderStatus 
+     *
+     * @return string 
+     */
+    public function getOrderStatus()
+    {
+        return $this->orderStatus;
+    }
+
+    /**
      * Set price
      *
      * @param string $price
@@ -262,6 +292,26 @@ class MeOrders
     public function getLng()
     {
         return $this->lng;
+    }
+
+    /**
+     * Set startTime 
+     *
+     * @param datetime $startTime
+     */
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+    }
+
+    /**
+     * Get startTime 
+     *
+     * @return datetime 
+     */
+    public function getStartTime()
+    {
+        return $this->startTime;
     }
 
     /**

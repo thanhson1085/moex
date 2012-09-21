@@ -45,6 +45,11 @@ Moex\CoreBundle\Entity\MeOrders:
       length: 250
       fixed: false
       nullable: false
+    orderStatus:
+      type: string 
+      length: 250
+      nullable: false
+      column: order_status 
     lat:
       type: string
       length: 250
@@ -55,6 +60,10 @@ Moex\CoreBundle\Entity\MeOrders:
       length: 250
       fixed: false
       nullable: false
+    startTime:
+      type: datetime
+      nullable: true 
+      column: start_time 
     createdAt:
       type: datetime
       nullable: false
