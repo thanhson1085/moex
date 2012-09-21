@@ -34,7 +34,7 @@ header_filter_form: Khung lọc
 header_map: Bản đồ
 header_assign_drivers: Đã giao cho
 header_unassign_driver: Có thể giao cho
-header_order_asigned: Đơn hàng đang làm
+header_order_assigned: Đơn hàng đang làm
 header_order_done: Đơn hàng đã hoàn thành
 
 intro_assign_drivers: Danh sách lái xe đã được giao việc cho đơn hàng này
