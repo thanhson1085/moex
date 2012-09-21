@@ -16,6 +16,7 @@ action_edit: Sửa
 action_delete: Xóa
 action_show: Xem
 action_backtolist: Trở lại
+action_charge: Nạp tiền
 button_edit: Sửa
 button_create: Tạo mới 
 button_search: Tìm kiếm
@@ -33,7 +34,7 @@ header_driver_edit: Sửa Lái xe
 header_filter_form: Khung lọc
 header_map: Bản đồ
 header_assign_drivers: Đã giao cho
-header_unassign_driver: Có thể giao cho
+header_unassign_drivers: Có thể giao cho
 header_order_assigned: Đơn hàng đang làm
 header_order_done: Đơn hàng đã hoàn thành
 
@@ -69,5 +70,9 @@ driver_updatedat: Ngày cập nhật
 placeholder_position: Vị trí....
 placeholder_from: Từ....
 placeholder_to: Đến....
+
+status_pending: Chưa giao
+status_assigned: Đã giao
+status_done: Hoàn thành
 
 footer: Developed by Software Team, R&D Center, MoEx JSC., Co.
