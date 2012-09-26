@@ -1,0 +1,52 @@
+{% macro order_show(entity) %}
+<div class="admin-header"><span class="status {{ entity.orderStatus | lower }}">{{ entity.orderStatus | trans }}</span><span>{{ entity.phone }}</span>
+	<div class="contextual"> 
+		{% if(entity.orderStatus == status_assigned) %}<a href="{{ path('order_done', { 'id': entity.id }) }}" class="icon icon-done">{{ "action_done" | trans }}</a> {% endif %}
+		{% if(entity.orderStatus == status_done) %}<a href="{{ path('order_undone', { 'id': entity.id }) }}" class="icon icon-undone">{{ "action_undone" | trans }}</a> {% endif %}
+		<a href="{{ path('order_delete', { 'id': entity.id }) }}" class="icon icon-del">{{ "action_delete" | trans }}</a> 
+		<a href="{{ path('order_edit', { 'id': entity.id }) }}" class="icon icon-edit">{{ "action_edit" | trans }}</a>
+		<a href="{{ path('order') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a>
+	</div>
+</div>
+
+<table class="record-properties" cellspacing="0">
+	<tbody>
+		<tr class="odd">
+			<th class="label">{{ "order_ordername" | trans }}</th>
+			<td class="value">{{ entity.orderName }}</td>
+		</tr>
+		<tr class="even">
+			<th class="label">{{ "order_starttime" | trans }}</th>
+			<td class="value">{{ entity.startTime | date('H:i:s d-m-Y') }}</td>
+		</tr>
+		<tr class="even">
+			<th class="label">{{ "order_orderfrom" | trans }}</th>
+			<td class="value">{{ entity.orderFrom }}</td>
+		</tr>
+		<tr class="odd">
+			<th class="label">{{ "order_orderto" | trans }}</th>
+			<td class="value">{{ entity.orderTo }}</td>
+		</tr>
+		<tr class="even">
+			<th class="label">{{ "order_orderinfo" | trans }}</th>
+			<td class="value">{{ entity.orderInfo }}</td>
+		</tr>
+		<tr class="odd">
+			<th class="label">{{ "order_phone" | trans }}</th>
+			<td class="value">{{ entity.phone }}</td>
+		</tr>
+		<tr class="even">
+			<th class="label">{{ "order_price" | trans }}</th>
+			<td class="value">{{ entity.price | number_format(0, '.', ',') }}</td>
+		</tr>
+		<tr class="odd">
+			<th class="label">{{ "order_createdat" | trans }}</th>
+			<td class="value">{{ entity.createdAt  | date('H:i:s d-m-Y') }}</td>
+		</tr>
+		<tr class="even">
+			<th class="label">{{ "order_updatedat" | trans }}</th>
+			<td class="value">{{ entity.updatedAt | date('H:i:s d-m-Y') }}</td>
+		</tr>
+	</tbody>
+</table>
+{% endmacro %}

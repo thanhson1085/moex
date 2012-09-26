@@ -273,7 +273,6 @@ h2.page-title a{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	border-left: solid 1px #CCC;
 	padding-bottom: 20px;
 	min-height: 400px;
 }
@@ -590,12 +589,15 @@ table.list tr td {
 table.list td a{
 	color: #FF6600;
 }
+table.list td.id{
+	width: 15px;
+}
 table.list td.status{
 	text-align: center;
 	color: white;
 }
 .pending{
-	background: #FFFD3F;
+	background: #ee1c24;
 }
 .assigned{
 	background: #14D60E;
@@ -718,8 +720,17 @@ table.records-list{
 .even{
 	background-color: white;
 }
+span.disable{
+	color: #CCC;
+}
+.icon-quickview{
+	background-image: url(../images/quick_view.png);
+}
 .icon-charge{
 	background-image: url(../images/charge.png);
+}
+.icon-undone{
+	background-image: url(../images/undone.png);
 }
 .icon-done{
 	background-image: url(../images/done.png);
@@ -776,6 +787,12 @@ td.name{
 .action > ul > li{
 	float: left;
 	padding: 0 5px;
+}
+.rate30{
+	width: 30%;
+}
+.rate70{
+	width: 70%;
 }
 .rate50{
 	width: 50%;
@@ -876,3 +893,56 @@ span.status{
 	margin-bottom: 10px;
 	font-size: 11px;
 }
+
+.light-box {
+    display: none;
+    position: fixed;
+    top: 7%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    padding: 16px;
+    border: 1px solid #0066b3; 
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+    border-color:  #0066b3; box-shadow: 0 0px 18px #0066b3; -moz-box-shadow: 0 0px 18px #0066b3; -webkit-box-shadow: 0 0px 18px  #0066b3;outline:0;
+}
+.black-overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index:1001;
+    -moz-opacity: 0.7;
+    opacity:.70;
+    filter: alpha(opacity=70);
+}
+.intro{
+	font-size: 11px;
+	color: #888;
+}
+ul.quickview-list > li > a{
+	font-weight: bold;
+	color: #ee1c24;	
+	text-decoration: none;
+}
+ul.quickview-list > li{
+	padding: 7px;
+	margin-bottom: 2px;
+}
+ul.quickview-list > li:hover{
+	background: #FDFF44;
+}
+ul.quickview-list > li.current{
+	background:#FF5E99;
+}
+ul.quickview-list > li.current a, ul.quickview-list > li.current .intro{
+	color: white;
+}
+.slimScrollDiv {padding-right: 10px;}
+::selection{background:#FF5E99;color:#fff;text-shadow:none;}
+

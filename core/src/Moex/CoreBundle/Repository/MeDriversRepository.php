@@ -42,7 +42,7 @@ class MeDriversRepository extends EntityRepository
         return $query->getQuery();
     }
 
-	public function findByAssignAndDistance($latitude, $longitude, $order_id){
+	public function findByAssignAndDistance($latitude, $longitude, $order_id, $limit = 10){
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
@@ -60,11 +60,11 @@ class MeDriversRepository extends EntityRepository
 			.' * 60 * 1.1515)*1.609344) AS distance'
 			.' FROM me_drivers d INNER JOIN me_order_driver od ON od.driver_id = d.id'
 			.' WHERE od.order_id = '.$order_id.' GROUP BY id HAVING distance < 10'
-			.' ORDER BY distance ASC';
+			.' ORDER BY distance ASC LIMIT '.$limit;
 		return $em->createNativeQuery($sql, $rsm)->getResult();
 	}
 
-	public function findByUnAssignAndDistance($latitude, $longitude, $order_id){
+	public function findByUnAssignAndDistance($latitude, $longitude, $order_id, $limit = 10){
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
@@ -83,7 +83,7 @@ class MeDriversRepository extends EntityRepository
 			.' * 60 * 1.1515)*1.609344) AS distance'
 			.' FROM me_drivers d WHERE d.id NOT IN (SELECT od.driver_id FROM me_order_driver od WHERE d.id = od.driver_id AND od.order_id = '.$order_id.') '
 			.' GROUP BY id HAVING distance < 10'
-			.' ORDER BY distance ASC';
+			.' ORDER BY distance ASC LIMIT '.$limit;
 		return $em->createNativeQuery($sql, $rsm)->getResult();
 	}
 

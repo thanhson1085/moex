@@ -59,6 +59,7 @@
                     <th>{{ "order_phone" | trans }}</th>
                     <th>{{ "order_ordername" | trans }}</th>
                     <th>{{ "order_price" | trans }}</th>
+                    <th>{{ "table_action" | trans }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -69,10 +70,18 @@
                     <td class="phone"><a href="{{ path( 'order_show', { 'id': en.id }) }}">{{ en.phone }}</a></td>
                     <td class="name">{{ en.orderName }}</td>
                     <td>{{ en.price | number_format(0,'.',',') }}</td>
+                    <td class="action">
+                        <ul>
+                            <li>
+                                <a class="icon icon-quickview" href="{{ path('order_quickview', { 'order_id': en.id, 'driver_id': entity.id }) }}">{{ "action_quickview" | trans }}</a>
+                            </li>
+                        </ul>
+                    </td>
                 </tr>
             {% else %}
                 <tr>
                     <td>{{ "message_record_not_found" | trans }}</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -91,6 +100,7 @@
                     <th>{{ "order_phone" | trans }}</th>
                     <th>{{ "order_ordername" | trans }}</th>
                     <th>{{ "order_price" | trans }}</th>
+                    <th>{{ "table_action" | trans }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -101,10 +111,18 @@
                     <td class="phone"><a href="{{ path( 'order_show', { 'id': en.id }) }}">{{ en.phone }}</a></td>
                     <td class="name">{{ en.orderName }}</td>
                     <td>{{ en.price | number_format(0,'.',',') }}</td>
+                    <td class="action">
+                        <ul>
+                            <li>
+                                <a class="icon icon-quickview" href="{{ path('order_quickview', { 'order_id': en.id, 'driver_id': entity.id }) }}">{{ "action_quickview" | trans }}</a>
+                            </li>
+                        </ul>
+                    </td>
                 </tr>
             {% else %}
                 <tr>
                     <td>{{ "message_record_not_found" | trans }}</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -124,6 +142,7 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 <script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui.js') }}"></script>
 <script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
 <script type="text/javascript">
 var submit_click = false;
