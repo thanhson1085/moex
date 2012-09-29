@@ -15,7 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
-	header('Location: core/web/app_dev.php/order');
+	header('Location: core/web/app_dev.php/index');
 	get_currentuserinfo();
 	global $user_ID;
 	if ($user_ID == '')

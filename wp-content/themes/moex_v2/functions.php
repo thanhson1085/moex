@@ -55,7 +55,7 @@ if (function_exists('wp_nav_menu'))
   	add_action('init', 'wp_moex_menus');
 }
 function my_login_redirect($redirect_to, $request){
-	return "core/web/app_dev.php/order";
+	return "core/web/app_dev.php/index";
 }
 add_filter("login_redirect", "my_login_redirect", 10, 3);
 
