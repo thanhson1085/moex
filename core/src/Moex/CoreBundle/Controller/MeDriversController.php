@@ -249,6 +249,65 @@ class MeDriversController extends Controller
         return $this->redirect($this->generateUrl('driver_show', array('id' => $id)));
     }
 
+    /**
+     *
+     * @Route("/{order_id}/{driver_id}/quickview", name="driver_quickview")
+	 * @Template()
+     */
+    public function quickviewAction($order_id, $driver_id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($driver_id);
+        $username = $em->getRepository('MoexCoreBundle:MeOrders')->findOneUserById($entity->getUserId());
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find MeOrders entity.');
+        }
+
+        $lat = $entity->getLat();
+        $lng = $entity->getLng();
+
+        $assign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByAssignAndDistance($lat, $lng, $order_id);
+        $unassign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByUnAssignAndDistance($lat, $lng, $order_id);
+        if(!$assign_drivers){
+            $entity->setOrderStatus($this->container->getParameter("moex.order.status.pending"));
+            $em->persist($entity);
+            $em->flush();
+        }
+        return array(
+            'order_id'      => $order_id,
+            'driver_id'      => $driver_id,
+            'assign_drivers'     => $assign_drivers,
+            'unassign_drivers'     => $unassign_drivers,
+            );
+    }
+
+    /**
+     *
+     * @Route("/{order_id}/{driver_id}/info", name="driver_info")
+	 * @Template()
+     */
+	public function infoAction($order_id, $driver_id){
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($driver_id);
+
+        $done_order = $em->getRepository('MoexCoreBundle:MeDrivers')
+                            ->findByStatusAndDriverId($this->container->getParameter('moex.order.status.done'), $driver_id);
+        $assigned_order = $em->getRepository('MoexCoreBundle:MeDrivers')
+                            ->findByStatusAndDriverId($this->container->getParameter('moex.order.status.assigned'), $driver_id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find MeDrivers entity.');
+        }
+        return array(
+            'entity'      => $entity,
+            'done_order'  => $done_order,
+            'assigned_order' => $assigned_order
+            );
+	}
+
 
     private function createDeleteForm($id)
     {

@@ -3,3 +3,6 @@ CREATE TABLE me_order_driver (id BIGINT AUTO_INCREMENT NOT NULL, order_id BIGINT
 ALTER TABLE me_order_driver ADD money VARCHAR(250) DEFAULT NULL, ADD created_at DATETIME NOT NULL, ADD updated_at DATETIME NOT NULL;
 ALTER TABLE me_drivers ADD money VARCHAR(250) DEFAULT NULL;
 ALTER TABLE me_orders ADD start_time DATETIME DEFAULT NULL;
+ALTER TABLE me_drivers ADD moto_no VARCHAR(250) DEFAULT NULL AFTER driver_info;
+ALTER TABLE me_drivers CHANGE driver_age driver_age INT DEFAULT NULL;
+ALTER TABLE me_orders ADD distance VARCHAR(250) DEFAULT NULL AFTER order_to; 

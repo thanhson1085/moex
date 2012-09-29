@@ -1,0 +1,42 @@
+		{% macro show_driver(entity) %}
+        <div class="admin-header"><span>{{ entity.phone }}</span>
+            <div class="contextual"> 
+                <a href="{{ path('driver_charge', { 'id': entity.id }) }}" class="icon icon-charge">{{ "action_charge" | trans }}</a> 
+                <a href="{{ path('driver_delete', { 'id': entity.id }) }}" class="icon icon-del">{{ "action_delete" | trans }}</a> 
+                <a href="{{ path('driver_edit', { 'id': entity.id }) }}" class="icon icon-edit">{{ "action_edit" | trans }}</a>
+                <a href="{{ path('driver') }}" class="icon icon-back">Back to list</a>
+            </div>
+        </div>
+
+		<table class="record-properties" cellspacing="0">
+			<tbody>
+				{% set info = [
+									{"label": "driver_drivername", "value": entity.driverName},
+									{"label": "driver_motono", "value": entity.motoNo},
+									{"label": "driver_driverage", "value": entity.driverAge},
+									{"label": "driver_driverinfo", "value": entity.driverInfo},
+									{"label": "driver_phone", "value": entity.phone},
+									{"label": "driver_position", "value": entity.position},
+								] 
+				%}			
+				{% for value in info %}
+					<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+						<th class="label">{{ value.label | trans }}</th>
+						<td class="value">{{ value.value }}</td>
+					</tr>
+				{% endfor %}
+				<tr class="even">
+					<th class="label">{{ "driver_createdat" | trans }}</th>
+					<td class="value">{{ entity.createdAt|date('H:i:s d-m-Y') }}</td>
+				</tr>
+				<tr class="odd">
+					<th class="label">{{ "driver_updatedat" | trans }}</th>
+					<td class="value">{{ entity.updatedAt|date('H:i:s d-m-Y') }}</td>
+				</tr>
+				<tr class="even">
+					<th class="label">{{ "driver_money" | trans }}</th>
+					<td class="value">{{ entity.money | number_format(0, '.', ',') }}</td>
+				</tr>
+			</tbody>
+		</table>
+		{% endmacro %}

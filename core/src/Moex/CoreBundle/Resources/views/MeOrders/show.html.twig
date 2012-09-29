@@ -36,6 +36,9 @@
                                 {% if( entity.orderStatus != status_done ) %}<a class="icon icon-unassign" href="{{ path('order_unassign', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_unassign" | trans }}</a>
                                 {% else %}<span class="icon icon-unassign disable">{{ "action_unassign" | trans }}</span>{% endif %}
                             </li>
+                            <li>
+                                <a class="icon icon-quickview" href="{{ path('driver_quickview', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_quickview" | trans }}</a>
+							</li>
                         </ul>
 					</td>
 				</tr>
@@ -80,6 +83,9 @@
                             <li>
                                 {% if( entity.orderStatus != status_done ) %}<a class="icon icon-assign" href="{{ path('order_assign', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_assign" | trans }}</a>
                                 {% else %}<span class="icon icon-assign disable">{{ "action_assign" | trans }}</span>{% endif %}
+								<li>
+									<a class="icon icon-quickview" href="{{ path('driver_quickview', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_quickview" | trans }}</a>
+								</li>
                             </li>
                         </ul>
 					</td>
@@ -107,6 +113,7 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 <script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui.js') }}"></script>
 <script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
 
 <script type="text/javascript">

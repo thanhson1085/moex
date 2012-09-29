@@ -16,7 +16,7 @@
 				<div class="menu-top-left">
 					<ul>
 						<li>
-							<a href="#">{{ "topbar_home" | trans }}</a>
+							<a href="{{ path('dashboard') }}">{{ "topbar_home" | trans }}</a>
 						</li>
 						<li>
 							<a href="#">{{ "topbar_aboutus" | trans }}</a>
@@ -42,7 +42,7 @@
 			<div class="banner">
 				<div class="logo-container">
 					<div class="logo">
-						<img src="{{ asset('images/logo3.png') }}"/>
+						<a href="{{ path('dashboard') }}"><img src="{{ asset('images/logo3.png') }}"/></a>
 					</div>
 				</div>
 				<div class="sub-menu-container">
@@ -66,9 +66,9 @@
         {% block body %}{% endblock %}
         {% block javascripts %}
 		{% endblock %}
-		<div id="loading" style="display: none; "><img src="{{ asset('images/loader.gif') }}"></div>
+		<div id="loading" style="display: none; "><img src="{{ asset('images/loading2.gif') }}"></div>
 		<div id="mybox" class="light-box" style="display: none"></div>
-		<div id="fade" class="black-overlay" style="display: none;"></div>
+		<div id="fade" class="black-overlay" style="display: none;"><img src="{{ asset('images/close.png') }}"></div>
 		<div class="footer-container">
 			<div class="footer">
 				{{ "footer" | trans }}

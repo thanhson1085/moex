@@ -40,6 +40,11 @@ Moex\CoreBundle\Entity\MeOrders:
       length: 250
       fixed: false
       nullable: false
+    distance:
+      type: string
+      length: 250
+      fixed: false
+      nullable: true 
     price:
       type: string
       length: 250

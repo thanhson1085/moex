@@ -433,7 +433,14 @@ $(document).ready(function(){
 			});
 		});
 	});
-
+    $('#loading')
+    .hide()  // hide it initially
+    .ajaxStart(function() {
+        $(this).show();
+    })
+    .ajaxStop(function() {
+        $(this).hide();
+    }); 
 });
 function confirm_delete()
 {

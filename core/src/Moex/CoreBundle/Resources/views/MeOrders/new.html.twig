@@ -128,6 +128,7 @@ $(document).ready(function(){
 			distance = rleg.distance.value;
 			money_value = countMoney();
 			$('#search-result').html(money_value);
+			$('#moex_corebundle_meorderstype_distance').attr('value',distance);
 			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
 			$('#moex_corebundle_meorderstype_orderFrom').attr('value',rleg.start_address);
 			$('#moex_corebundle_meorderstype_orderTo').attr('value',rleg.end_address);

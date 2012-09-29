@@ -15,10 +15,16 @@ Moex\CoreBundle\Entity\MeDrivers:
       fixed: false
       nullable: false
       column: driver_name
+    motoNo:
+      type: string
+      length: 250
+      fixed: false
+      nullable: true 
+      column: moto_no 
     driverAge:
       type: integer
       length: 2 
-      nullable: false
+      nullable: true 
       column: driver_age 
     driverInfo:
       type: text

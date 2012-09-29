@@ -19,12 +19,13 @@ class MeDriversType extends AbstractType
     {
         $builder
             ->add('driverName', 'text', array( 'label' => $this->translator->trans("driver_drivername")))
-            ->add('driverAge', 'text', array( 'label' => $this->translator->trans("driver_driverage")))
-            ->add('driverInfo', 'textarea', array('required' => false, 'label' => $this->translator->trans("driver_driverinfo")))
             ->add('phone', 'text', array('label' => $this->translator->trans('driver_phone')))
-            ->add('position', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans("driver_position")))
-            ->add('lat', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans("driver_lat")))
-            ->add('lng', 'text', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans("driver_lng")))
+            ->add('motoNo', 'text', array( 'required' => false, 'label' => $this->translator->trans("driver_motono")))
+            ->add('driverAge', 'text', array( 'required' => false, 'label' => $this->translator->trans("driver_driverage")))
+            ->add('driverInfo', 'textarea', array('required' => false, 'label' => $this->translator->trans("driver_driverinfo")))
+            ->add('position', 'text', array('attr' => array('readonly' => 'readonly', 'tabindex' => '-1'), 'label' => $this->translator->trans("driver_position")))
+            ->add('lat', 'text', array('attr' => array('readonly' => 'readonly', 'tabindex' => '-1'), 'label' => $this->translator->trans("driver_lat")))
+            ->add('lng', 'text', array('attr' => array('readonly' => 'readonly', 'tabindex' => '-1'), 'label' => $this->translator->trans("driver_lng")))
         ;
     }
 

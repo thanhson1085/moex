@@ -22,7 +22,6 @@ class MeDrivers
 
     /**
      * @var int $driverAge
-     * @Assert\NotBlank()
      */
     private $driverAge;
 
@@ -30,6 +29,11 @@ class MeDrivers
      * @var text $driverInfo
      */
     private $driverInfo;
+
+    /**
+     * @var string $motoNo
+     */
+    private $motoNo;
 
     /**
      * @var string $phone
@@ -114,6 +118,26 @@ class MeDrivers
     public function getDriverAge()
     {
         return $this->driverAge;
+    }
+
+    /**
+     * Set motoNo
+     *
+     * @param string $motoNo
+     */
+    public function setMotoNo($motoNo)
+    {
+        $this->motoNo = $motoNo;
+    }
+
+    /**
+     * Get motoNo
+     *
+     * @return string 
+     */
+    public function getMotoNo()
+    {
+        return $this->motoNo;
     }
 
     /**

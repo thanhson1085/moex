@@ -49,6 +49,11 @@ class MeOrders
     private $phone;
 
     /**
+     * @var string $distance
+     */
+    private $distance;
+
+    /**
      * @var string $orderStatus
      */
     private $orderStatus;
@@ -212,6 +217,26 @@ class MeOrders
     public function getPhone()
     {
         return $this->phone;
+    }
+
+    /**
+     * Set distance 
+     *
+     * @param string $distance
+     */
+    public function setDistance($distance)
+    {
+        $this->distance = $distance;
+    }
+
+    /**
+     * Get distance 
+     *
+     * @return string 
+     */
+    public function getDistance()
+    {
+        return $this->distance;
     }
 
     /**

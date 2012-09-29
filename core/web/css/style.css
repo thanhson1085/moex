@@ -603,7 +603,7 @@ table.list td.status{
 	background: #14D60E;
 }
 .done{
-	background: #3F75FF;
+	background: #0066b3;
 }
 
 .admin-header{
@@ -659,8 +659,11 @@ table.records-list{
 	font-size: 28px;
 	color: black;
 	position: fixed;
-	bottom: .5em;
+	/*bottom: .5em;
 	right: 6%;
+	*/
+	left: 48%;
+	top: 48%;
 	z-index: 1003;
 }
 #loading img{
@@ -921,6 +924,11 @@ span.status{
     opacity:.70;
     filter: alpha(opacity=70);
 }
+.black-overlay img{
+	position: absolute;
+	top: 0.35em;
+	right: 0.5em;
+}
 .intro{
 	font-size: 11px;
 	color: #888;
@@ -942,6 +950,57 @@ ul.quickview-list > li.current{
 }
 ul.quickview-list > li.current a, ul.quickview-list > li.current .intro{
 	color: white;
+}
+.splitleft-container{
+	width: 210px;
+	float: left;
+	position: relative;
+}
+.splitright-container{
+	margin-left: 210px;
+	border-left: solid 5px #0066b3;
+	min-height: 250px;
+}
+ul.leftmenu{
+	list-style:none;
+	line-height: 25px;
+	width:200px;
+	display:block;
+	padding: 4px 0px;
+}
+
+
+ul.leftmenu li a{
+	line-height:25px;
+	display:block;
+	padding-left:14px;
+}
+
+ul.leftmenu li a:hover{
+	background-color: #0066b3;
+	width:200px;
+	color:white;
+	line-height:25px;
+	display:block;
+}
+.search-button-blue{
+	background: url('../images/search_button.png');
+	border: 0;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+}
+.search-button-red{
+	background: url('../images/search_button2.png');
+	border: 0;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+}
+.search-text{
+	vertical-align: middle;
 }
 .slimScrollDiv {padding-right: 10px;}
 ::selection{background:#FF5E99;color:#fff;text-shadow:none;}
