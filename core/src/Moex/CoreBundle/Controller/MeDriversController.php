@@ -259,7 +259,6 @@ class MeDriversController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
 
         $entity = $em->getRepository('MoexCoreBundle:MeOrders')->find($driver_id);
-        $username = $em->getRepository('MoexCoreBundle:MeOrders')->findOneUserById($entity->getUserId());
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeOrders entity.');
