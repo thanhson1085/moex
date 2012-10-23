@@ -23,6 +23,7 @@ action_show: Xem
 action_quickview: Xem
 action_backtolist: Trở lại
 action_charge: Nạp tiền
+action_undone: Chưa xong
 button_edit: Sửa
 button_create: Tạo mới 
 button_search: Tìm kiếm
@@ -70,7 +71,7 @@ driver_lat: Vĩ độ
 driver_lng: Kinh độ
 driver_driverinfo: Mô tả
 driver_money: Số tiền
-driver_no: Biển số xe
+driver_motono: Biển số xe
 driver_distance: Khoảng cách
 driver_createdat: Ngày tạo
 driver_updatedat: Ngày cập nhật

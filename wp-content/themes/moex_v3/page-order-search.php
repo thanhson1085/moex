@@ -18,14 +18,14 @@ get_header();
 					if($status):
 					?>
 					<script type="text/javascript">
-						alert("<?php echo _e("Dang ky thanh cong"); ?>");
+						alert("<?php echo _e("Đăng ký thành công, MoEx sẽ phục vụ bạn ngay!"); ?>");
 						$(location).attr("href","<?php echo get_bloginfo("url");?>");
 					</script>
 					<?php
 					else:
 					?>
 					<script type="text/javascript">
-						alert("<?php echo _e("Dang ky khong thanh cong, vui long thu lai"); ?>");
+						alert("<?php echo _e("Đăng ký không thành công, vui lòng thử lại"); ?>");
 					</script>
 					<?php
 					endif;
@@ -82,7 +82,7 @@ get_header();
                  <div class="fl">:</div>
                  <div class="right"><span id="search-result">30.000</span> VNĐ</div>
                  <div class="cb h12"><!----></div>
-                 <div class="left">Ho va ten <span>*</span></div>
+                 <div class="left">Họ và tên <span>*</span></div>
                  <div class="fl">:</div>
                  <div class="right">
 					<?php if(is_user_logged_in()):
@@ -98,7 +98,7 @@ get_header();
 					?>
 				 </div>
                  <div class="cb h12"><!----></div>
-                 <div class="left">Dien thoai <span>*</span></div>
+                 <div class="left">Điện thoại <span>*</span></div>
                  <div class="fl">:</div>
                  <div class="right">
 					<?php if(is_user_logged_in()):

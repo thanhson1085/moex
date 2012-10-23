@@ -21,7 +21,7 @@ get_header();
 					if($status){
 					?>
 						<script type="text/javascript">
-							alert("<?php echo _e("Dang ky thanh cong"); ?>");
+							alert("<?php echo _e("Đăng ký thành công, MoEx sẽ phục vụ bạn ngay!"); ?>");
 							$(location).attr("href","<?php echo get_bloginfo("url");?>");
 						</script>
 					<?php
@@ -29,7 +29,7 @@ get_header();
 					else{
 					?>
 						<script type="text/javascript">
-							alert("<?php echo _e("Dang ky khong thanh cong, vui long thu lai"); ?>");
+							alert("<?php echo _e("Đăng ký không thành công, vui lòng thử lại"); ?>");
 						</script>
 					<?php
 					}
