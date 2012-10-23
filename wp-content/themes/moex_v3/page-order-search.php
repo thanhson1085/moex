@@ -82,7 +82,7 @@ get_header();
                  <div class="fl">:</div>
                  <div class="right"><span id="search-result">30.000</span> VNĐ</div>
                  <div class="cb h12"><!----></div>
-                 <div class="left">Ho va ten</div>
+                 <div class="left">Ho va ten <span>*</span></div>
                  <div class="fl">:</div>
                  <div class="right">
 					<?php if(is_user_logged_in()):
@@ -98,7 +98,7 @@ get_header();
 					?>
 				 </div>
                  <div class="cb h12"><!----></div>
-                 <div class="left">Dien thoai</div>
+                 <div class="left">Dien thoai <span>*</span></div>
                  <div class="fl">:</div>
                  <div class="right">
 					<?php if(is_user_logged_in()):
@@ -115,8 +115,13 @@ get_header();
 				 </div>
                 <div class="cot2">
                     <a class="btOK" href="javascript:void(0)" onclick="DangKy()"><span><span>Đăng ký</span></span></a>
-                    <a class="btOK" href="#"><span><span>Huỷ bỏ</span></span></a>
+                    <a class="btOK" href="javascript:void(0)" onclick="reset()" ><span><span>Huỷ bỏ</span></span></a>
                     <script type="text/javascript">
+						function reset(){
+							$('#order-form input[type="text"]').each(function(){
+								$(this).attr('value','');
+							});
+						}
                         function DangKy() {
                             if (document.getElementById("tbHoTen").value.length < 1) {
                                 alert("Vui lòng nhập Họ tên");

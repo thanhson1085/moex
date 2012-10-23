@@ -5,6 +5,7 @@
 #Order .cot1{float:left;width:105px;font-weight:bold}
 #Order .cot2{float:left;width:325px}
 #Order .cot1 span{color:#ff0000}
+#order-search .left span{color:#ff0000}
 #Order .textbox{background:#fbfbfb url(pic/Order/bgtextbox.jpg) repeat-x;border:solid 1px #dcdcdc;padding:3px 5px;width:310px}
 #Order select:focus{outline: 0;}
 #order-search .textbox{background:#fbfbfb url(pic/Order/bgtextbox.jpg) repeat-x;border:solid 1px #dcdcdc;padding:3px 5px;width:310px}

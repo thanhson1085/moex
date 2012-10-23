@@ -88,8 +88,13 @@ get_header();
                 <div class="cot1">&nbsp;</div>
                 <div class="cot2">
                     <a class="btOK" href="javascript:void(0)" onclick="DangKy()"><span><span>Đăng ký</span></span></a>
-                    <a class="btOK" href="#"><span><span>Huỷ bỏ</span></span></a>
+                    <a class="btOK" href="javascript:void(0)" onclick="reset()" ><span><span>Huỷ bỏ</span></span></a>
                     <script type="text/javascript">
+						function reset(){
+							$('#order-form input[type="text"]').each(function(){
+								$(this).attr('value','');
+							});
+						}
                         function DangKy() {
                             if (document.getElementById("tbHoTen").value.length < 1) {
                                 alert("Vui lòng nhập Họ tên");
