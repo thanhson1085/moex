@@ -1,0 +1,61 @@
+﻿/*header*/
+#PageContent{width:980px}
+#Header{position:relative;z-index:1;height:68px}
+#Logo{float:left;width:500px}
+#Logo .anhQC{border:0;max-height:68px}
+#Phone{position:absolute;z-index:2;bottom:0;right:0}
+#OnCall{position:fixed;z-index:99;right:0;top:50%;display:none}
+#OnCall img{border:0}
+
+/*Language*/
+#Language{float:right;padding:3px 5px 0 5px}
+#Language a{display:inline-block;padding-right:4px}
+#Language img{border:0;width:22px;height:15px}
+
+/*SearchBox*/
+#SearchBox{float:right;width:125px;height:20px;background:url(pic/CommonControls/bgSearch.jpg) no-repeat}
+#SearchBox .textbox{width:90px;margin:2px 10px 0 0;border:0;font-size:11px;color:#8c8c8c;background:none}
+#SearchBox .btsearch{width:25px;height:20px;background:none;border:0;cursor:pointer}
+
+/*MenuTop*/
+#MenuTop{float:right}
+#MenuTop a.mnt{color:inherit;padding:0 4px;display:inline-block;line-height:18px}
+#MenuTop a.mnt span{color:#ee1d25}
+#MenuTop a.mnt:hover{color:#f36523}
+#MenuTop .mntSplit{float:right;width:1px;height:20px;background:url(pic/CommonControls/mntSplit.jpg) no-repeat center}
+
+/*MenuMain*/
+#MenuMain{overflow:hidden}
+#MenuMain a.mnm{font:normal 13px/31px UTMAvo;color:#fff;text-align:center;text-transform:uppercase;display:inline-block;width:195px}
+#MenuMain a.mnm:hover{-moz-opacity: 0.7;opacity:.70; filter: alpha(opacity=70)}
+#MenuMain a.bgmnm0{background:#6b7b84}
+#MenuMain a.bgmnm1{background:#c8215d}
+#MenuMain a.bgmnm2{background:#8dc63f}
+#MenuMain a.bgmnm3{background:#f26522}
+#MenuMain a.bgmnm4{background:#20409a;width:196px}
+#MenuMain .mnmSplit{float:left;width:1px;height:31px;background:#fff}
+
+/*Footer*/
+#Footer{border-top:solid 1px #e7e7e7;padding:10px;clear:both}
+
+/*MenuBottom*/
+#MenuBottom{float:right;padding-right:5px}
+#MenuBottom a.mnb{color:inherit;padding:0 6px;display:inline-block;line-height:18px;font-weight:bold}
+#MenuBottom a.mnb:hover{color:#f36523}
+#MenuBottom .mnbSplit{float:right;width:1px;height:20px;background:url(pic/CommonControls/mntSplit.jpg) no-repeat center}
+
+/*Share*/
+#Share{float:right}
+#Share a{width:16px;height:16px;display:inline-block;padding:0 2px 0 1px}
+#Share a:hover{
+-moz-transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-webkit-transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-o-transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+-ms-transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg); 
+}
+#Share a.share1{background:url(pic/CommonControls/s1.jpg) no-repeat}
+#Share a.share2{background:url(pic/CommonControls/s2.jpg) no-repeat}
+#Share a.share3{background:url(pic/CommonControls/s3.jpg) no-repeat}
+#Share a.share4{background:url(pic/CommonControls/s4.jpg) no-repeat}
+#Share a.share5{background:url(pic/CommonControls/s5.jpg) no-repeat}

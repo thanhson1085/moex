@@ -1,0 +1,35 @@
+﻿#Blog #mainAdv .anhQC{border:0;max-width:980px}
+#Blog .head{clear:both;height:50px;background:url(pic/Blog/head.jpg) no-repeat center}
+#Blog .content{width:935px;margin:auto}
+#Blog .motdm{width:455px}
+#Blog .motdm .nd{padding-left:10px}
+
+#Blog a.btOK{height:25px;background:url(pic/Blog/btRPX.jpg) repeat-x;display:inline-block;margin-right:8px}
+#Blog a.btOK span{height:25px;background:url(pic/Blog/btLeft.jpg) no-repeat top left;display:inline-block}
+#Blog a.btOK span span{height:25px;background:url(pic/Blog/btRight.jpg) no-repeat top right;display:inline-block}
+#Blog a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+#Blog a.btOK span span span{height:25px;padding:0 15px 0 25px;font:bold 11px/24px Tahoma;color:#fff;text-transform:uppercase;min-width:150px}
+#Blog a.btOK span span span.bt1{background:url(pic/Blog/bt1.jpg) no-repeat 12px 8px}
+#Blog .khungAnh{float:left;width:121px;margin-right:15px;position:relative;z-index:1}
+#Blog .nenAnh{width:133px;height:12px;background:url(pic/Blog/bgpic.jpg) no-repeat;position:absolute;z-index:2;bottom:-13px;right:-13px}
+#Blog .anhND{width:121px;border:0}
+#Blog a.title{color:#383838;font-weight:bold;display:block}
+#Blog a.title:hover{color:#f26522}
+#Blog .date{color:#757575}
+#Blog a.detail{color:#f26522}
+#Blog a.detail:hover{color:#ff0000}
+#Blog .vientren{height:10px;clear:both;border-top:dotted 1px #d4d4d4}
+#Blog a.tinkhac{color:#383838;background:url(pic/Blog/dot.jpg) no-repeat 0 6px;display:block;padding:0 0 7px 12px}
+#Blog a.tinkhac span{color:#757575}
+#Blog a.tinkhac:hover{color:#f26522;background-image:url(pic/Blog/dot.jpg)}
+
+#Blog .cot1{float:left;width:612px;margin-right:30px}
+#Blog .cot2{float:left;width:290px}
+#Blog .titledetail{font:bold 12px Tahoma;color:#f26522;padding-bottom:3px}
+#Blog .otitle{font:bold 11px Tahoma;color:#f26522;text-transform:uppercase;padding-bottom:10px}
+
+#Blog a.top{background:url(pic/Blog/top.jpg) no-repeat}
+#Blog a.email{background:url(pic/Blog/email.jpg) no-repeat}
+#Blog a.print{background:url(pic/Blog/print.jpg) no-repeat}
+#Blog a.share{color:inherit;display:inline-block;padding-left:15px;margin-left:10px;background-position:left center;line-height:20px}
+#Blog a.share:hover{color:#f26522}

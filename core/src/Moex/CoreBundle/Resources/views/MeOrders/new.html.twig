@@ -124,7 +124,6 @@ $(document).ready(function(){
 	function() {
 		if (currentDirections) {
 			var rleg = directionsDisplay.directions.routes[0].legs[0];
-			console.log(rleg);
 			distance = rleg.distance.value;
 			money_value = countMoney();
 			$('#search-result').html(money_value);

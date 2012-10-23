@@ -1,0 +1,35 @@
+﻿/*HOMEPAGE*/
+/*leftHomepage*/
+#leftHomepage{float:left;width:372px;padding-left:10px;font-size:12px;color:#333}
+#leftHomepage .textbox2{font:normal 12px Tahoma;color:#5b5b5b;border:solid 1px #b3b3b3;background:url(pic/Homepage/bgtb2.jpg) repeat-x;width:352px;padding:4px 10px}
+#leftHomepage .map{max-width:372px;border:0}
+#leftHomepage .btGo{width:67px;height:23px;background:url(pic/Homepage/btGo.jpg) no-repeat;cursor:pointer;display:inline-block;border:0;font:bold 11px Tahoma;color:#fff;text-align:center;text-transform:uppercase}
+#leftHomepage .btGo:hover{color:#000}
+
+/*rightHomepage*/
+#rightHomepage{float:right;width:588px}
+/*mainAdv*/
+#mainAdv{padding-bottom:10px}
+#mainAdv .anhQC{border:0;max-width:588px}
+
+/*footerAdv*/
+#footerAdv{padding-bottom:10px}
+#footerAdv .anhQC{border:0;max-width:588px}
+
+/*ListService*/
+#ListService{padding-bottom:2px}
+#ListService .service{float:left;width:161px;height:215px;padding:0 15px;margin-right:7px;background:#eaeaea url(pic/Homepage/bgsrpx.jpg) repeat-x;position:relative;z-index:1}
+#ListService .sbottomleft{width:191px;height:11px;background:url(pic/Homepage/sdb.jpg) no-repeat center;position:absolute;bottom:-11px;left:0}
+#ListService .bdt0{border-top:solid 3px #20409a}
+#ListService .bdt1{border-top:solid 3px #ff7200}
+#ListService .bdt2{border-top:solid 3px #ed1d24;margin-right:0}
+#ListService a.svname{font:normal 24px/44px UTMAvo;text-transform:uppercase;padding-left:45px;display:block}
+#ListService a.svname:hover{-moz-opacity: 0.7;opacity:.70; filter: alpha(opacity=70)}
+#ListService a.cname0{color:#20409a;background:url(pic/Homepage/sv1.jpg) no-repeat top left}
+#ListService a.cname1{color:#ff7200;background:url(pic/Homepage/sv2.jpg) no-repeat top left}
+#ListService a.cname2{color:#ed1d24;background:url(pic/Homepage/sv3.jpg) no-repeat top left}
+#ListService .spic{width:161px;height:75px;border:0;-moz-transition:all 0.3s ease 0s;-webkit-transition:all 0.3s ease 0s;-o-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s}
+#ListService .spic:hover{-moz-opacity: 0.7;opacity:.70; filter: alpha(opacity=70)}
+#ListService .sdesc{text-align:justify;line-height:18px;clear:both}
+/*HOMEPAGE - end*/
+#map{width: 372px; height: 331px;}

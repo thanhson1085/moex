@@ -1,0 +1,48 @@
+﻿#Order{min-height:590px;_height:590px}
+#Order #mainAdv .anhQC{border:0;max-width:980px}
+#Order .head{clear:both;height:45px;background:url(pic/Order/head.jpg) no-repeat center}
+#Order .content{width:434px;margin:auto}
+#Order .cot1{float:left;width:105px;font-weight:bold}
+#Order .cot2{float:left;width:325px}
+#Order .cot1 span{color:#ff0000}
+#Order .textbox{background:#fbfbfb url(pic/Order/bgtextbox.jpg) repeat-x;border:solid 1px #dcdcdc;padding:3px 5px;width:310px}
+#Order select:focus{outline: 0;}
+#order-search .textbox{background:#fbfbfb url(pic/Order/bgtextbox.jpg) repeat-x;border:solid 1px #dcdcdc;padding:3px 5px;width:310px}
+#order-search select:focus{outline: 0;}
+#Order a.btOK{height:25px;background:url(pic/Order/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#Order a.btOK span{height:25px;background:url(pic/Order/btLeft.jpg) no-repeat top left;display:inline-block}
+#Order a.btOK span span{height:25px;background:url(pic/Order/btRight.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#Order a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+
+#order-search a.btOK{height:25px;background:url(pic/Order/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px; margin-top: 15px; margin-bottom: 15px;}
+#order-search a.btOK span{height:25px;background:url(pic/Order/btLeft.jpg) no-repeat top left;display:inline-block}
+#order-search a.btOK span span{height:25px;background:url(pic/Order/btRight.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#order-search a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+
+#Order select{background:transparent;width:340px;font-style:italic;color:#fff;border:0;-webkit-appearance: none}
+#Order option{background:#8dc63f;padding:5px 0}
+#Order #khungddl{width:322px;height:24px;overflow:hidden;background:#6b7b84 url(pic/Order/ddl.gif) no-repeat 305px 9px}
+
+#order-search #khungddl{width:322px;height:24px;overflow:hidden;background:#6b7b84 url(pic/Order/ddl.gif) no-repeat 305px 9px}
+#order-search select{background:transparent;width:340px;font-style:italic;color:#fff;border:0;-webkit-appearance: none}
+#order-search option{background:#8dc63f;padding:5px 0}
+
+#Order #fadePopupOrder {display: none;top: 0%; left: 0%; width: 100%; height: 100%; background:#000; position:fixed; z-index:100; -moz-opacity: 0.5; opacity:.50; filter: alpha(opacity=50)}
+#Order #lightPopupOrder{width:600px;height:380px;background:#ffffff;border:solid 5px #8dc63f;border-radius:15px;position:fixed;z-index:101;top:15%;display:none;font:bold 11px Tahoma;color:#50504f}
+#order-search #fadePopupOrder {display: none;top: 0%; left: 0%; width: 100%; height: 100%; background:#000; position:fixed; z-index:100; -moz-opacity: 0.5; opacity:.50; filter: alpha(opacity=50)}
+#order-search #lightPopupOrder{width:600px;height:380px;background:#ffffff;border:solid 5px #8dc63f;border-radius:15px;position:fixed;z-index:101;top:15%;display:none;font:bold 11px Tahoma;color:#50504f}
+#Order a#btClose{width:25px;height:25px;display:block;background:url(pic/Order/btClose8dc63f.png) no-repeat;position:absolute;top:-13px;right:-13px}
+#Order .header{font:normal 16px UTMAvoBold;color:#8dc63f;text-align:center;padding-top:10px;font-weight:bold\9;padding-bottom:5px\9}
+#Order .header1{font:normal 14px UTMAvoBold;color:#4d4d4d;text-align:center;font-weight:bold\9}
+#Order .header2{clear:both;height:30px;background:url(pic/Order/header2.jpg) no-repeat center top}
+#Order .left{float:left;width:105px;margin-left:115px}
+#Order .right{float:left;width:330px;padding-left:20px}
+#Order a.btOrder{width:98px;height:23px;background:url(pic/Order/btok8dc63f.png) no-repeat;font:bold 11px/23px Tahoma;color:#fff;display:inline-block}
+
+#order-search a#btClose{width:25px;height:25px;display:block;background:url(pic/Order/btClose8dc63f.png) no-repeat;position:absolute;top:-13px;right:-13px}
+#order-search #lightPopupOrder .header{font:normal 16px UTMAvoBold;color:#8dc63f;text-align:center;padding-top:10px;font-weight:bold\9;padding-bottom:5px\9}
+#order-search #lightPopupOrder .header1{font:normal 14px UTMAvoBold;color:#4d4d4d;text-align:center;font-weight:bold\9}
+#order-search #lightPopupOrder .header2{clear:both;height:30px;background:url(pic/Order/header2.jpg) no-repeat center top}
+#order-search #lightPopupOrder .left{float:left;width:105px;margin-left:115px}
+#order-search #lightPopupOrder .right{float:left;width:330px;padding-left:20px}
+#order-search a.btOrder{width:98px;height:23px;background:url(pic/Order/btok8dc63f.png) no-repeat;font:bold 11px/23px Tahoma;color:#fff;display:inline-block}

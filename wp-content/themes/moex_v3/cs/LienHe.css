@@ -1,0 +1,15 @@
+﻿#LienHe #mainAdv .anhQC{border:0;max-width:980px}
+#LienHe .head{clear:both;height:45px;background:url(pic/LienHe/head.jpg) no-repeat center}
+#LienHe .head1{clear:both;height:45px;background:url(pic/LienHe/head1.jpg) no-repeat center}
+#LienHe .content{width:512px;height:205px;margin:auto;font-style:italic;color:#3d3d3d;background:#fbfbfb url(pic/LienHe/bgT.jpg) repeat-x top;border:solid 1px #dcdcdc}
+#LienHe .content2{background:url(pic/LienHe/bgL.jpg) repeat-y left;padding:0 15px;height:100%}
+#LienHe .cot1{float:left;width:75px}
+#LienHe .cot2{float:left;width:400px}
+#LienHe .textbox, #LienHe input[type="text"], #LienHe textarea{border:0;background:none;padding:0 5px;width:396px;font-size:11px}
+#LienHe .textbox:active, #LienHe input[type="text"]:active, #LienHe textarea:active{border:solid 1px #d4d4d4}
+#LienHe textarea{height: 75px;}
+#LienHe a.btOK{height:25px;background:url(pic/LienHe/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#LienHe a.btOK span{height:25px;background:url(pic/LienHe/btLeft.jpg) no-repeat top left;display:inline-block}
+#LienHe a.btOK span span{height:25px;background:url(pic/LienHe/btRight.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#LienHe a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+#LienHe a.help{color:#ff0000}

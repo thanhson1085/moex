@@ -1,0 +1,335 @@
+# Byrial Ole Jensen <byrial@vip.cybercity.dk>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: captcha\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-08 13:34+0200\n"
+"PO-Revision-Date: 2012-10-08 13:34+0200\n"
+"Last-Translator: ss <ss>\n"
+"Language-Team: billyjeans <billyjeans@gmail.com>\n"
+"Language: cn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: captcha.php:31
+msgid "Login form"
+msgstr "登录"
+
+#: captcha.php:32
+msgid "Register form"
+msgstr "注册"
+
+#: captcha.php:33
+msgid "Lost password form"
+msgstr "丢失密码"
+
+#: captcha.php:34
+msgid "Comments form"
+msgstr "评论"
+
+#: captcha.php:35
+msgid "Hide CAPTCHA for registered users"
+msgstr "对注册用户关闭验证问答"
+
+#: captcha.php:40
+msgid "Plus (&#43;)"
+msgstr "加 (&#43;)"
+
+#: captcha.php:40
+msgid "Plus"
+msgstr "加 (&#43;)"
+
+#: captcha.php:41
+msgid "Minus (&minus;)"
+msgstr "减 (&minus;)"
+
+#: captcha.php:41
+msgid "Minus"
+msgstr "减 (&minus;)"
+
+#: captcha.php:42
+msgid "Multiply (&times;)"
+msgstr "乘 (&times;)"
+
+#: captcha.php:42
+msgid "Increase"
+msgstr "增加"
+
+#: captcha.php:47
+msgid "Numbers"
+msgstr "数字"
+
+#: captcha.php:48
+msgid "Words"
+msgstr "单词"
+
+#: captcha.php:100
+msgid "Activated plugins"
+msgstr "激活插件"
+
+#: captcha.php:102 captcha.php:110 captcha.php:118
+msgid "Read more"
+msgstr "阅读更多"
+
+#: captcha.php:102 captcha.php:222 captcha.php:231
+msgid "Settings"
+msgstr "设置"
+
+#: captcha.php:108
+msgid "Installed plugins"
+msgstr "安装插件"
+
+#: captcha.php:116
+msgid "Recommended plugins"
+msgstr "推荐插件"
+
+#: captcha.php:118
+msgid "Download"
+msgstr "下载"
+
+#: captcha.php:118
+#, php-format
+msgid "Install %s"
+msgstr "安装 %s"
+
+#: captcha.php:118
+msgid "Install now from wordpress.org"
+msgstr "现在从wordpress.org安装"
+
+#: captcha.php:120
+msgid ""
+"If you have any questions, please contact us via plugin@bestwebsoft.com or "
+"fill in our contact form on our site"
+msgstr ""
+"如果有疑问，请通过plugin@bestwebsoft.com联系我们，或者在我们的网站填写联系信"
+"息"
+
+#: captcha.php:130 captcha.php:295
+msgid "Captcha Options"
+msgstr "验证问答选项"
+
+#: captcha.php:130
+msgid "Captcha"
+msgstr "验证文档"
+
+#: captcha.php:232
+msgid "FAQ"
+msgstr "常见问题"
+
+#: captcha.php:233
+msgid "Support"
+msgstr "支持"
+
+#: captcha.php:277
+msgid ""
+"Please select one point in the blocks Arithmetic actions and Difficulty for "
+"CAPTCHA"
+msgstr "请选择一组数学运算操作和验证问答难度"
+
+#: captcha.php:281
+msgid "Options saved."
+msgstr "选项保存成功"
+
+#: captcha.php:301
+msgid "Enable CAPTCHA on the:"
+msgstr "对以下内容要求验证问答："
+
+#: captcha.php:310 captcha.php:313 captcha.php:317
+msgid "Contact form"
+msgstr "联系"
+
+#: captcha.php:310 captcha.php:313 captcha.php:317
+msgid "(power by bestwebsoft.com)"
+msgstr "(powered by bestwebsoft.com)"
+
+#: captcha.php:313
+msgid "Activate contact form"
+msgstr "激活插件Contact Form"
+
+#: captcha.php:317
+msgid "Download contact form"
+msgstr "下载插件Contact Form"
+
+#: captcha.php:319
+msgid ""
+"If you would like to customize this plugin for a custom form, please contact "
+"us via <a href=\"Mailto:plugin@bestwebsoft.com\">plugin@bestwebsoft.com</a> "
+"or fill in our contact form on our site"
+msgstr ""
+"如果您喜欢定制Custom Form插件，请联系<a href=\"Mailto:plugin@bestwebsoft.com"
+"\">plugin@bestwebsoft.com</a>，或在我们的网站填写联系信息"
+
+#: captcha.php:323
+msgid "Label for CAPTCHA in form"
+msgstr "验证问答的标签"
+
+#: captcha.php:327
+msgid "Arithmetic actions for CAPTCHA"
+msgstr "验证问答的数学操作"
+
+#: captcha.php:336
+msgid "Difficulty for CAPTCHA"
+msgstr "问答难度："
+
+#: captcha.php:346
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: captcha.php:390 captcha.php:396 captcha.php:544 captcha.php:551
+#: captcha.php:561 captcha.php:568
+msgid "ERROR"
+msgstr "错误"
+
+#: captcha.php:390 captcha.php:412 captcha.php:511 captcha.php:544
+#: captcha.php:561 captcha.php:584
+msgid "Please complete the CAPTCHA."
+msgstr "请您输入验证问答"
+
+#: captcha.php:396 captcha.php:423 captcha.php:551 captcha.php:568
+msgid "That CAPTCHA was incorrect."
+msgstr "您输入的验证问答不正确"
+
+#: captcha.php:517 captcha.php:591
+msgid ""
+"Error: You entered in the wrong CAPTCHA phrase. Press your browser's back "
+"button and try again."
+msgstr "错误：您输入的验证问答不正确，请按浏览器的返回按键返回，并重新尝试"
+
+#: captcha.php:606 captcha.php:840
+msgid "zero"
+msgstr "零"
+
+#: captcha.php:607 captcha.php:841 captcha.php:1031
+msgid "one"
+msgstr "一"
+
+#: captcha.php:608 captcha.php:842
+msgid "two"
+msgstr "二"
+
+#: captcha.php:609 captcha.php:843
+msgid "three"
+msgstr "三"
+
+#: captcha.php:610 captcha.php:844
+msgid "four"
+msgstr "四"
+
+#: captcha.php:611 captcha.php:845
+msgid "five"
+msgstr "五"
+
+#: captcha.php:612 captcha.php:846 captcha.php:1031
+msgid "six"
+msgstr "六"
+
+#: captcha.php:613 captcha.php:847 captcha.php:1019 captcha.php:1025
+msgid "seven"
+msgstr "七"
+
+#: captcha.php:614 captcha.php:848 captcha.php:1022
+msgid "eight"
+msgstr "八"
+
+#: captcha.php:615 captcha.php:849
+msgid "nine"
+msgstr "九"
+
+#: captcha.php:618 captcha.php:852
+msgid "eleven"
+msgstr "十一"
+
+#: captcha.php:619 captcha.php:853
+msgid "twelve"
+msgstr "十二"
+
+#: captcha.php:620 captcha.php:854
+msgid "thirteen"
+msgstr "十三"
+
+#: captcha.php:621 captcha.php:855
+msgid "fourteen"
+msgstr "十四"
+
+#: captcha.php:622 captcha.php:856
+msgid "fifteen"
+msgstr "十五"
+
+#: captcha.php:623 captcha.php:857
+msgid "sixteen"
+msgstr "十六"
+
+#: captcha.php:624 captcha.php:858
+msgid "seventeen"
+msgstr "十七"
+
+#: captcha.php:625 captcha.php:859
+msgid "eighteen"
+msgstr "十八"
+
+#: captcha.php:626 captcha.php:860
+msgid "nineteen"
+msgstr "十九"
+
+#: captcha.php:629 captcha.php:863
+msgid "ten"
+msgstr "十"
+
+#: captcha.php:630 captcha.php:864
+msgid "twenty"
+msgstr "二十"
+
+#: captcha.php:631 captcha.php:865
+msgid "thirty"
+msgstr "三时"
+
+#: captcha.php:632 captcha.php:866
+msgid "forty"
+msgstr "四十"
+
+#: captcha.php:633 captcha.php:867
+msgid "fifty"
+msgstr "五十"
+
+#: captcha.php:634 captcha.php:868
+msgid "sixty"
+msgstr "六十"
+
+#: captcha.php:635 captcha.php:869
+msgid "seventy"
+msgstr "七十"
+
+#: captcha.php:636 captcha.php:870
+msgid "eighty"
+msgstr "八十"
+
+#: captcha.php:637 captcha.php:871
+msgid "ninety"
+msgstr "九十"
+
+#: captcha.php:724 captcha.php:958
+msgid "and"
+msgstr "和"
+
+#: captcha.php:743
+msgid "The password of encryption is not set"
+msgstr "未设置加密的密码"
+
+#: captcha.php:762
+msgid "The password of decoding is not set"
+msgstr "未设置解密的密码"
+
+#~ msgid "null"
+#~ msgstr "cero"
+
+#~ msgid "BWS Plugins"
+#~ msgstr "BWS Plugins"
+
+#~ msgid "Install Now"
+#~ msgstr "Installér nu"

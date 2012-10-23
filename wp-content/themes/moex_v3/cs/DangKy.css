@@ -1,0 +1,16 @@
+﻿#DangKy.mh1{min-height:590px;_height:590px}
+#DangKy.mh2{min-height:510px;_height:510px}
+#DangKy #mainAdv .anhQC{border:0;max-width:980px}
+#DangKy .head{clear:both;height:45px;background:url(pic/DangKy/head.jpg) no-repeat center}
+#DangKy .head1{clear:both;height:45px;background:url(pic/DangKy/head1.jpg) no-repeat center}
+#DangKy .content{width:415px;margin:auto}
+#DangKy .cot1{float:left;width:105px}
+#DangKy .cot2{float:left;width:310px}
+#DangKy .cot3{float:left;width:65px;padding-left:30px}
+#DangKy .cot1 span{color:#ff0000}
+#DangKy .textbox{background:#fbfbfb url(pic/DangKy/bgtextbox.jpg) repeat-x;border:solid 1px #dcdcdc;padding:2px 5px}
+#DangKy a.btOK{height:25px;background:url(pic/DangKy/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#DangKy a.btOK span{height:25px;background:url(pic/DangKy/btLeft.jpg) no-repeat top left;display:inline-block}
+#DangKy a.btOK span span{height:25px;background:url(pic/DangKy/btRight.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#DangKy a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+#DangKy a.help{color:#ff0000}

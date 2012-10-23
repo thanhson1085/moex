@@ -1,0 +1,13 @@
+﻿#QuanLyTaiKhoan #mainAdv .anhQC{border:0;max-width:980px}
+#QuanLyTaiKhoan .head{clear:both;height:45px;background:url(pic/QuanLyTaiKhoan/head.jpg) no-repeat center}
+#QuanLyTaiKhoan .content{width:500px;margin:auto}
+#QuanLyTaiKhoan .cot1{float:left;width:105px;padding-left:40px}
+#QuanLyTaiKhoan .cot2{float:left;width:310px}
+#QuanLyTaiKhoan .textbox{background:#fbfbfb url(pic/QuanLyTaiKhoan/bgtextbox.jpg) repeat-x;border:solid 1px #dcdcdc;padding:2px 5px;font:normal 11px Tahoma;color:#646464}
+#QuanLyTaiKhoan a.btOK{height:25px;background:url(pic/QuanLyTaiKhoan/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#QuanLyTaiKhoan a.btOK span{height:25px;background:url(pic/QuanLyTaiKhoan/btLeft.jpg) no-repeat top left;display:inline-block}
+#QuanLyTaiKhoan a.btOK span span{height:25px;background:url(pic/QuanLyTaiKhoan/btRight.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#QuanLyTaiKhoan a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+#QuanLyTaiKhoan a.help{color:#ff0000}
+#QuanLyTaiKhoan .btBrowse{width:302px;height:23px;padding-top:2px;background:url(pic/QuanLyTaiKhoan/btBrowse.jpg) no-repeat right;cursor:pointer;position:relative;z-index:1;overflow:hidden}
+#QuanLyTaiKhoan .btBrowse input[type="file"] {cursor:pointer;display:block;font-size:194px;height:25px;position:absolute;right:0;top:0;-moz-opacity: 0.0;opacity:.00; filter: alpha(opacity=00)}

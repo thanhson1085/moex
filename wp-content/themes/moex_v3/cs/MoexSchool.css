@@ -1,0 +1,40 @@
+﻿#MoexSchool #mainAdv .anhQC{border:0;max-width:980px}
+#MoexSchool .head{clear:both;height:45px;background:url(pic/MoexSchool/head.jpg) no-repeat center}
+#MoexSchool .content{width:925px;margin:auto}
+#MoexSchool .cot1{float:left;width:442px}
+#MoexSchool .cot2{float:right;width:442px}
+
+#MoexSchool .ctext{color:#20409a}/*Đổi màu*/
+#MoexSchool .sdtext{text-shadow: 0 0 1px #c4cce4/*;filter:dropshadow(color=#d8dcde, offx=1, offy=1)*/}/*Đổi màu*/
+
+#MoexSchool .header{font:normal 15px UTMAvoBold;text-transform:uppercase;padding-bottom:10px;font-weight:bold\9}
+#MoexSchool .dot{background:url(pic/MoexSchool/dot.jpg) no-repeat 0 4px;padding:0 0 20px 12px}/*Đổi màu*/
+#MoexSchool .buoc{font:normal 14px Fujiyama}
+#MoexSchool .khungAnhMember{float:left;width:62px;margin:5px 10px 0 0}
+#MoexSchool .khungAnhMember img{width:62px;border:0}
+#MoexSchool .right{float:left;width:370px;line-height:18px}
+#MoexSchool .date{font-style:italic;color:#838383}
+#MoexSchool .traloi{clear:both;padding:7px 10px 10px 10px;margin:10px 0 0 72px;border:solid 1px #cfcfcf;border-radius:5px;background:#fcfcfc;position:relative;z-index:1}
+#MoexSchool .arrow{background:url(pic/MoexSchool/arrow.jpg) no-repeat;width:14px;height:8px;position:absolute;top:-8px;left:33px}
+#MoexSchool .khungAnh2{float:left;width:44px;margin:3px 10px 0 0}
+#MoexSchool .khungAnh2 img{border:solid 1px #20409a}/*Đổi màu*/
+#MoexSchool .right2{float:left;width:292px}
+
+#MoexSchool .boxcontent{width:442px;height:136px;margin:auto;font-style:italic;color:#3d3d3d;background:#fbfbfb url(pic/MoexSchool/bgT.jpg) repeat-x top;border:solid 1px #dcdcdc}
+#MoexSchool .boxcontent2{background:url(pic/MoexSchool/bgL.jpg) repeat-y left;padding:0 15px;height:100%}
+#MoexSchool .cot1c{float:left;width:75px}
+#MoexSchool .cot2c{float:left;width:335px}
+#MoexSchool .textbox{border:0;background:none;padding:0 5px;width:330px;font-size:11px}
+#MoexSchool .textbox:active{border:solid 1px #d4d4d4}
+#MoexSchool a.btOK{height:25px;background:url(pic/MoexSchool/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#MoexSchool a.btOK span{height:25px;background:url(pic/MoexSchool/btL.jpg) no-repeat top left;display:inline-block}
+#MoexSchool a.btOK span span{height:25px;background:url(pic/MoexSchool/btR.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#MoexSchool a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+
+#MoexSchool .bgTextBox{width:247px;height:20px;border:solid 1px #d4d4d4;background:url(pic/MoexSchool/bgtextbox.jpg) repeat-x}
+#MoexSchool .btBrowse{width:333px;height:23px;padding-top:2px;background:url(pic/MoexSchool/btBrowse.jpg) no-repeat right;cursor:pointer;position:relative;z-index:1;overflow:hidden}
+#MoexSchool .btBrowse input[type="file"] {cursor:pointer;display:block;font-size:194px;height:25px;position:absolute;right:0;top:0;-moz-opacity: 0.0;opacity:.00; filter: alpha(opacity=00)}
+
+#MoexSchool .motbuoctl{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexSchool/TopLeft.png) no-repeat top left}
+#MoexSchool .motbuocl{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexSchool/l.png) no-repeat top left;margin-top:-1px}
+#MoexSchool .motbuocr{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexSchool/r.png) no-repeat top right;margin-top:-1px}

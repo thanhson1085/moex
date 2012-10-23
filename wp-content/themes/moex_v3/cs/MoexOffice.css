@@ -1,0 +1,40 @@
+﻿#MoexOffice #mainAdv .anhQC{border:0;max-width:980px}
+#MoexOffice .head{clear:both;height:45px;background:url(pic/MoexOffice/head.jpg) no-repeat center}
+#MoexOffice .content{width:925px;margin:auto}
+#MoexOffice .cot1{float:left;width:442px}
+#MoexOffice .cot2{float:right;width:442px}
+
+#MoexOffice .ctext{color:#6b7b84}/*Đổi màu*/
+#MoexOffice .sdtext{text-shadow: 0 0 1px #d8dcde/*;filter:dropshadow(color=#d8dcde, offx=1, offy=1)*/}/*Đổi màu*/
+
+#MoexOffice .header{font:normal 15px UTMAvoBold;text-transform:uppercase;padding-bottom:10px;font-weight:bold\9}
+#MoexOffice .dot{background:url(pic/MoexOffice/dot.jpg) no-repeat 0 4px;padding:0 0 20px 12px}/*Đổi màu*/
+#MoexOffice .buoc{font:normal 14px Fujiyama}
+#MoexOffice .khungAnhMember{float:left;width:62px;margin:5px 10px 0 0}
+#MoexOffice .khungAnhMember img{width:62px;border:0}
+#MoexOffice .right{float:left;width:370px;line-height:18px}
+#MoexOffice .date{font-style:italic;color:#838383}
+#MoexOffice .traloi{clear:both;padding:7px 10px 10px 10px;margin:10px 0 0 72px;border:solid 1px #cfcfcf;border-radius:5px;background:#fcfcfc;position:relative;z-index:1}
+#MoexOffice .arrow{background:url(pic/MoexOffice/arrow.jpg) no-repeat;width:14px;height:8px;position:absolute;top:-8px;left:33px}
+#MoexOffice .khungAnh2{float:left;width:44px;margin:3px 10px 0 0}
+#MoexOffice .khungAnh2 img{border:solid 1px #6b7b84}/*Đổi màu*/
+#MoexOffice .right2{float:left;width:292px}
+
+#MoexOffice .boxcontent{width:442px;height:136px;margin:auto;font-style:italic;color:#3d3d3d;background:#fbfbfb url(pic/MoexOffice/bgT.jpg) repeat-x top;border:solid 1px #dcdcdc}
+#MoexOffice .boxcontent2{background:url(pic/MoexOffice/bgL.jpg) repeat-y left;padding:0 15px;height:100%}
+#MoexOffice .cot1c{float:left;width:75px}
+#MoexOffice .cot2c{float:left;width:335px}
+#MoexOffice .textbox{border:0;background:none;padding:0 5px;width:330px;font-size:11px}
+#MoexOffice .textbox:active{border:solid 1px #d4d4d4}
+#MoexOffice a.btOK{height:25px;background:url(pic/MoexOffice/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#MoexOffice a.btOK span{height:25px;background:url(pic/MoexOffice/btL.jpg) no-repeat top left;display:inline-block}
+#MoexOffice a.btOK span span{height:25px;background:url(pic/MoexOffice/btR.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#MoexOffice a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+
+#MoexOffice .bgTextBox{width:247px;height:20px;border:solid 1px #d4d4d4;background:url(pic/MoexOffice/bgtextbox.jpg) repeat-x}
+#MoexOffice .btBrowse{width:333px;height:23px;padding-top:2px;background:url(pic/MoexOffice/btBrowse.jpg) no-repeat right;cursor:pointer;position:relative;z-index:1;overflow:hidden}
+#MoexOffice .btBrowse input[type="file"] {cursor:pointer;display:block;font-size:194px;height:25px;position:absolute;right:0;top:0;-moz-opacity: 0.0;opacity:.00; filter: alpha(opacity=00)}
+
+#MoexOffice .motbuoctl{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexOffice/TopLeft.png) no-repeat top left}
+#MoexOffice .motbuocl{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexOffice/l.png) no-repeat top left;margin-top:-1px}
+#MoexOffice .motbuocr{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexOffice/r.png) no-repeat top right;margin-top:-1px}

@@ -1,0 +1,40 @@
+﻿#MoexGo #mainAdv .anhQC{border:0;max-width:980px}
+#MoexGo .head{clear:both;height:45px;background:url(pic/MoexGo/head.jpg) no-repeat center}
+#MoexGo .content{width:925px;margin:auto}
+#MoexGo .cot1{float:left;width:442px}
+#MoexGo .cot2{float:right;width:442px}
+
+#MoexGo .ctext{color:#c8215d}/*Đổi màu*/
+#MoexGo .sdtext{text-shadow: 0 0 1px #f0c4d4/*;filter:dropshadow(color=#d8dcde, offx=1, offy=1)*/}/*Đổi màu*/
+
+#MoexGo .header{font:normal 15px UTMAvoBold;text-transform:uppercase;padding-bottom:10px;font-weight:bold\9}
+#MoexGo .dot{background:url(pic/MoexGo/dot.jpg) no-repeat 0 4px;padding:0 0 20px 12px}
+#MoexGo .buoc{font:normal 14px Fujiyama}
+#MoexGo .khungAnhMember{float:left;width:62px;margin:5px 10px 0 0}
+#MoexGo .khungAnhMember img{width:62px;border:0}
+#MoexGo .right{float:left;width:370px;line-height:18px}
+#MoexGo .date{font-style:italic;color:#838383}
+#MoexGo .traloi{clear:both;padding:7px 10px 10px 10px;margin:10px 0 0 72px;border:solid 1px #cfcfcf;border-radius:5px;background:#fcfcfc;position:relative;z-index:1}
+#MoexGo .arrow{background:url(pic/MoexGo/arrow.jpg) no-repeat;width:14px;height:8px;position:absolute;top:-8px;left:33px}
+#MoexGo .khungAnh2{float:left;width:44px;margin:3px 10px 0 0}
+#MoexGo .khungAnh2 img{border:solid 1px #c8215d}/*Đổi màu*/
+#MoexGo .right2{float:left;width:292px}
+
+#MoexGo .boxcontent{width:442px;height:136px;margin:auto;font-style:italic;color:#3d3d3d;background:#fbfbfb url(pic/MoexGo/bgT.jpg) repeat-x top;border:solid 1px #dcdcdc}
+#MoexGo .boxcontent2{background:url(pic/MoexGo/bgL.jpg) repeat-y left;padding:0 15px;height:100%}
+#MoexGo .cot1c{float:left;width:75px}
+#MoexGo .cot2c{float:left;width:335px}
+#MoexGo .textbox{border:0;background:none;padding:0 5px;width:330px;font-size:11px}
+#MoexGo .textbox:active{border:solid 1px #d4d4d4}
+#MoexGo a.btOK{height:25px;background:url(pic/MoexGo/btRPX.jpg) repeat-x;display:inline-block;margin-right:3px}
+#MoexGo a.btOK span{height:25px;background:url(pic/MoexGo/btL.jpg) no-repeat top left;display:inline-block}
+#MoexGo a.btOK span span{height:25px;background:url(pic/MoexGo/btR.jpg) no-repeat top right;display:inline-block;padding:0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#MoexGo a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+
+#MoexGo .bgTextBox{width:247px;height:20px;border:solid 1px #d4d4d4;background:url(pic/MoexGo/bgtextbox.jpg) repeat-x}
+#MoexGo .btBrowse{width:333px;height:23px;padding-top:2px;background:url(pic/MoexGo/btBrowse.jpg) no-repeat right;cursor:pointer;position:relative;z-index:1;overflow:hidden}
+#MoexGo .btBrowse input[type="file"] {cursor:pointer;display:block;font-size:194px;height:25px;position:absolute;right:0;top:0;-moz-opacity: 0.0;opacity:.00; filter: alpha(opacity=00)}
+
+#MoexGo .motbuoctl{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexGo/TopLeft.png) no-repeat top left}
+#MoexGo .motbuocl{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexGo/l.png) no-repeat top left;margin-top:-1px}
+#MoexGo .motbuocr{width:422px;height:120px;padding:5px 10px;background:url(pic/MoexGo/r.png) no-repeat top right;margin-top:-1px}

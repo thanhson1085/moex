@@ -1,0 +1,23 @@
+﻿#GioiThieu #mainAdv .anhQC{border:0;max-width:980px}
+#GioiThieu .content{width:925px;margin:auto}
+#GioiThieu .head{clear:both;height:45px;background:url(pic/GioiThieu/head.jpg) no-repeat center}
+#GioiThieu .cot1{float:left;width:600px}
+#GioiThieu .cot2{float:right;width:295px;padding-top:10px}
+#GioiThieu a.btOK{height:25px;background:url(pic/GioiThieu/btRPX.jpg) repeat-x;display:inline-block;margin-right:8px}
+#GioiThieu a.btOK span{height:25px;background:url(pic/GioiThieu/btLeft.jpg) no-repeat top left;display:inline-block}
+#GioiThieu a.btOK span span{height:25px;background:url(pic/GioiThieu/btRight.jpg) no-repeat top right;display:inline-block}
+#GioiThieu a.btOK:hover{-moz-opacity: 0.8;opacity:.80; filter: alpha(opacity=80)}
+#GioiThieu a.btOK span span span{height:25px;padding:0 15px 0 25px;font:bold 11px/22px Tahoma;color:#fff}
+#GioiThieu a.btOK span span span.bt1{background:url(pic/GioiThieu/bt1.jpg) no-repeat 12px 7px}
+#GioiThieu a.btOK span span span.bt2{background:url(pic/GioiThieu/bt2.jpg) no-repeat 12px 7px}
+#GioiThieu .facebookLikebox{border:solid 1px #dfdfdf}
+
+#GioiThieu .khungGioiThieu{border:solid 1px #dddddd}
+#GioiThieu .jCarouselLiteGioiThieu{margin:auto}
+#GioiThieu .tab{clear:both;height:27px;padding:0 15px;border-bottom:solid 1px #dddddd;background:#f9f9f9 url(pic/GioiThieu/bgt.jpg) repeat-x;position:relative;z-index:1;font:normal 12px/27px UTMAvoBold;color:#55585b;text-transform:uppercase}
+#GioiThieu  a.next{display:inline-block;width:11px;height:15px;background:url(pic/GioiThieu/right.jpg) no-repeat;position:absolute;z-index:2;top:5px;right:8px}
+#GioiThieu  a.prev{display:inline-block;width:11px;height:15px;background:url(pic/GioiThieu/left.jpg) no-repeat;position:absolute;z-index:2;top:5px;right:25px}
+#GioiThieu  a:hover{background-position:bottom left;cursor:pointer}
+#GioiThieu .motmuc{width:176px;height:185px;line-height:20px}
+#GioiThieu .khungAnh{width:121px;height:121px;margin:20px auto 10px auto;position:relative;z-index:1}
+#GioiThieu .nenAnh{width:132px;height:13px;position:absolute;z-index:2;bottom:-13px;right:-15px;background:url(pic/GioiThieu/bgpic.jpg) no-repeat}
