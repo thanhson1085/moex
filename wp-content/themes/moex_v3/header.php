@@ -72,7 +72,7 @@
 								// Not logged in.
 								echo "Bạn";
 							} else {
-								echo $current_user->user_lastname;
+								echo $current_user->user_login;
 							}
 						?>
 						</span>
