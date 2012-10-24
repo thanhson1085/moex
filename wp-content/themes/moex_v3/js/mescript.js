@@ -24,7 +24,7 @@ function getRoute(){
         distance = response.routes[0].legs[0].distance.value;
         money_value = countMoney();
         $('#search-result').html(money_value);
-		$('#order-distance').html(distance/1000);
+		$('#order-distance').html(Math.ceil(distance/1000));
         directionsDisplay.setDirections(response);
     }
     });
