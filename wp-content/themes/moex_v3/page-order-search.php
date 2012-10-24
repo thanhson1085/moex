@@ -32,7 +32,7 @@ get_header();
 				}
 				?>
              <div class="cot2">
-				<form method="POST" id="order-form" name="orderform" action="<?php get_bloginfo("template_url")?>?page_id=191">
+				<form method="POST" id="order-form" name="orderform" action="">
                 <div class="pb10">
                      <img src="<?php echo get_bloginfo("template_url");?>/pic/map/head.jpg" />
                  </div>

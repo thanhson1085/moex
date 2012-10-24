@@ -38,7 +38,7 @@ get_header();
             </div>         
             <div class="cb h25"><!----></div>
             <div class="content">
-				<form method="POST" id="order-form" name="orderform" action="<?php get_bloginfo("template_url")?>?page_id=187">
+				<form method="POST" id="order-form" name="orderform" action="">
                 <div class="cot1">Họ tên <span>*</span></div>
                 <div class="cot2">
 					<?php if(is_user_logged_in()):
