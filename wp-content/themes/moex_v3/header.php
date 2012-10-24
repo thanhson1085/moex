@@ -24,11 +24,14 @@
     <link href="<?php echo get_bloginfo("template_url")?>/cs/Blog.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem2.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="mo">  
     <div id="OnCall">
         <a href="<?php echo get_bloginfo("url")?>?page_id=187"><img src="<?php echo get_bloginfo("template_url")?>/pic/adv/onCall.jpg" /></a>        
     </div>    
+	<div class="page-moex-container">
+	<div class="page-moex">
     <div id="PageContent">
         <div id="Header">
             <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/phone.jpg" /></div>

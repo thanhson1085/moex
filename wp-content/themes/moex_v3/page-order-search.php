@@ -10,10 +10,11 @@ get_header();
 			<div id="order-search">
 				<?php
 				if($_SERVER['REQUEST_METHOD'] == 'POST'){	
-					$status = $wpdb->insert($wpdb->prefix."orders", array("order_name" => $_POST['tbHoTen'], 
-												"phone" => $_POST["tbDienThoai"], "service_type" => $_POST['ddlDichVu'],
-												"order_from" => $_POST["tbFrom"], "order_to" => $_POST["tbTo"],
-												"order_info" => $_POST["tbYeuCauChiTiet"], "updated_at" => current_time('mysql'), 
+					$status = $wpdb->insert($wpdb->prefix."orders", array("order_name" => esc_attr($_POST['tbHoTen']), 
+												"phone" => esc_attr($_POST["tbDienThoai"]), "service_type" => esc_attr($_POST['ddlDichVu']),
+												"order_from" => esc_attr($_POST["tbFrom"]), "order_to" => esc_attr($_POST["tbTo"]),
+												"order_info" => esc_attr($_POST["tbYeuCauChiTiet"]), "updated_at" => current_time('mysql'), 
+												"lat" => esc_attr($_POST["tbLat"]), "lng" => esc_attr($_POST["tbLng"]), 
 												"created_at" => current_time('mysql')), array("%s", "%s", "%d", "%s", "%s", "%s"));
 					if($status):
 					?>
@@ -46,6 +47,8 @@ get_header();
                  <div class="fl">:</div>
                  <div class="right">
                 	<input id="input-to" name="tbTo" type="text" class="textbox" value="<?php echo (isset($_GET['to']))?$_GET['to']:""; ?>"/>
+                	<input id="input-lat" name="tbLat" type="hidden"/>
+                	<input id="input-lng" name="tbLng" type="hidden"/>
 				 </div>
                  <div class="cb h12"><!----></div>
                 <div class="left">Dịch vụ đăng ký <span>*</span></div>
@@ -319,6 +322,9 @@ $(document).ready(function(){
 			$('#order-distance').html(distance/1000);
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);
+            $('#input-lat').val(rleg.start_location.lat());
+            $('#input-lng').val(rleg.end_location.lng());
+
         }
         currentDirections = directionsDisplay.getDirections();
     });

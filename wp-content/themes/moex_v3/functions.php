@@ -130,3 +130,4 @@ function posts_custom_column_views($column_name, $id){
         echo getPostViews(get_the_ID());
     }
 }
+
