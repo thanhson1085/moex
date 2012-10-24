@@ -67,7 +67,7 @@ $current_user = wp_get_current_user();
                 <div class="cb h15"><!----></div> 
 				<script type="text/javascript">
 					function submitform(){
-						if($("#tbMatKhau").attr("value") && $("#tbMatKhau").attr("value") != $("tbXacNhanMatKhau").attr("value")){
+						if($("#tbMatKhau").attr("value") && $("#tbMatKhau").attr("value") != $("#tbXacNhanMatKhau").attr("value")){
 							alert("Xac nhan mat khau khong chinh xac");
 							return;
 						}
