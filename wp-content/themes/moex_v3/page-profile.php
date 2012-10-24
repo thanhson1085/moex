@@ -68,7 +68,7 @@ $current_user = wp_get_current_user();
 				<script type="text/javascript">
 					function submitform(){
 						if($("#tbMatKhau").attr("value") && $("#tbMatKhau").attr("value") != $("#tbXacNhanMatKhau").attr("value")){
-							alert("Xac nhan mat khau khong chinh xac");
+							alert("Xác nhận mật khẩu không chính xác");
 							return;
 						}
 						$("#form-profile").submit();
