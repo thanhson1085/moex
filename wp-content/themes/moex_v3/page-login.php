@@ -32,6 +32,14 @@ get_header();
                 </div>
 				</form>
 				<script type="text/javascript">
+				$(document).ready(function(){
+					$("#tbMatKhau").keypress(function(event) {
+						if (event.which == 13) {
+							event.preventDefault();
+							$("#loginform").submit();
+						}
+					});
+				});
 				function submitform()
 				{
 				  document.loginform.submit();

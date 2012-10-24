@@ -11,6 +11,12 @@ $current_user = wp_get_current_user();
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){	
 				if (!empty($_POST["tbMatKhau"]) && $_POST["tbMatKhau"] == $_POST["tbXacNhanMatKhau"]):
 					wp_update_user(array('ID' => $current_user->ID, 'user_pass' => esc_attr($_POST["tbMatKhau"])));
+				?>	
+					<script type="text/javascript">
+						alert('Bạn đã thay đổi mật khẩu thành công, vui lòng đăng nhập lại');
+						$(location).attr("href","<?php echo get_bloginfo("url")?>?page_id=154");
+					</script>
+				<?php
 				endif;
 				wp_update_user(array('ID' => $current_user->ID, 'user_email' => esc_attr($_POST["tbEmail"])));
 				update_user_meta($current_user->ID, 'last_name' , esc_attr($_POST['tbHoTen']));
@@ -49,7 +55,7 @@ $current_user = wp_get_current_user();
                 </div>
                 <div class="cb h12"><!----></div>
                 <div class="pb15"><b>THAY ĐỔI MẬT KHẨU:</b></div>                   
-                <div class="cot1">Mật khẩu</div>
+                <div class="cot1">Mật khẩu mới</div>
                 <div class="cot2">
                     <input id="tbMatKhau" name="tbMatKhau" type="password" class="textbox" style="width:210px" value=""/>                    
                 </div>
