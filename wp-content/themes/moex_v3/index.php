@@ -67,7 +67,7 @@
             </div>
 
             <div id="footerAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/adv2.jpg" class="anhQC"/></a>                
+                <a href="<?php echo get_bloginfo("url")?>?page_id=2"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/adv2.jpg" class="anhQC"/></a>                
             </div>
         </div>
 

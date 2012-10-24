@@ -57,11 +57,11 @@ get_header();
                     <div id="khungddl">
                         <div class="cb h2"><!----></div>
                         <select id="ddlDichVu" name="ddlDichVu" onchange="FillBGColor('khungddl')">
-                            <option style="background:#6b7b84" value="Moex Office">Moex Delivery</option>
-                            <option style="background:#c8215d" value="Moex Go">Moex Go</option>
-                            <option style="background:#8dc63f" value="Moex Food">Moex Food</option>
-                            <option style="background:#f26522" value="Moex Shopping">Moex Shopping</option>
-                            <option style="background:#20409a" value="Moex School">Moex School</option>
+                            <option style="background:#6b7b84" value="1">Moex Delivery</option>
+                            <option style="background:#c8215d" value="2">Moex Go</option>
+                            <option style="background:#8dc63f" value="3">Moex Food</option>
+                            <option style="background:#f26522" value="4">Moex Shopping</option>
+                            <option style="background:#20409a" value="5">Moex School</option>
                         </select>
                         <script type="text/javascript">
                             function FillBGColor(parrentId) {
@@ -310,6 +310,13 @@ $(document).ready(function(){
             }
         }
     });
+	$("#ddlDichVu").change(function(){
+		if ($(this).val() == 2 || $(this).val() == 5){
+			limit = 2;
+			money_value = countMoney();
+            $('#search-result').html(money_value);
+		}
+	});
 
     google.maps.event.addListener(directionsDisplay, 'directions_changed',
     function() {
@@ -319,7 +326,7 @@ $(document).ready(function(){
             distance = rleg.distance.value;
             money_value = countMoney();
             $('#search-result').html(money_value);
-			$('#order-distance').html(distance/1000);
+			$('#order-distance').html(Math.ceil(distance/1000));
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);
             $('#input-lat').val(rleg.start_location.lat());
