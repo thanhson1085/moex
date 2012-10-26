@@ -28,7 +28,7 @@ get_header();
                 <div class="cot3">&nbsp;</div>
                 <div class="fl">
                     <a class="btOK" href="javascript:void(0)" onclick="submitform()"><span><span>Đăng nhập</span></span></a>
-                    <a class="help" href="#">Cần trợ giúp?</a>                    
+                    <a class="help" href="<?php echo get_bloginfo("url")?>/wp-login.php?action=lostpassword">Quên mật khẩu?</a>                    
                 </div>
 				</form>
 				<script type="text/javascript">

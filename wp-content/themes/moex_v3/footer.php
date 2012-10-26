@@ -13,7 +13,7 @@
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>?page_id=2" title="Liên hệ">Liên hệ</a></div>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>?page_id=36" title="Giới thiệu">Giới thiệu</a></div>
-				<?php if(current_user_can("edit_post")):?>
+				<?php if(current_user_can("edit_posts")):?>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo admin_url()?>">Admin</a></div>
                 <div class="mnbSplit"><!----></div>
