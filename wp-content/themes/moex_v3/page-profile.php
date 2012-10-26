@@ -1,6 +1,14 @@
 <?php
 get_header();
 $current_user = wp_get_current_user(); 
+if ($current_user->ID == 0):
+?>
+	<script type="text/javascript">
+		$(location).attr('href','<?php echo get_bloginfo("url");?>?page_id=157;');
+	</script>
+<?php
+	exit;
+endif;
 ?>
     <div id="PageContent">
         <div id="QuanLyTaiKhoan">

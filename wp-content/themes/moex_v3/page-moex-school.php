@@ -36,7 +36,7 @@
                         <table>
                             <tr>
                                 <td><img src="<?php echo get_bloginfo("template_url");?>/pic/service/MoexSchool/b1.png" /></td>
-                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Gọi 1900 56 56 36 đặt dịch vụ.</span></td>
+                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Gọi <span class="ctext">1900 56 56 36</span> đặt dịch vụ.</span></td>
                             </tr>
                         </table>
                     </div>

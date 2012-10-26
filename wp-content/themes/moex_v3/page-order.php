@@ -1,5 +1,12 @@
 <?php
 get_header();
+//if($_SERVER['REQUEST_METHOD'] == 'POST'){	
+	//if(strtolower($_SESSION['captcha']['code']) == strtolower($_POST['tbCaptcha'])){
+		//$status = wp_create_user(esc_attr($_POST['user_login']), esc_attr($_POST['user_pass']), esc_attr($_POST['user_email']));
+		//$register = true;
+	//}
+//}
+$_SESSION['captcha'] = captcha();
 ?>
     <div id="PageContent">
         <div id="Order">

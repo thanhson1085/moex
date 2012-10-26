@@ -1,5 +1,17 @@
 <?php
 	get_header();
+
+	/*
+	include_once('/var/www/moex/wp-content/themes/moex_v3/lib/recaptcha/recaptchalib.php');
+	$publickey = "6LeTMNgSAAAAAKlNtBAkDII_Nm6rYdTcZo8XrnaU";
+	$privatekey = "6LeTMNgSAAAAANs1Nw78m0_-er0UMDYpN_FVZayu";
+
+	# the response from reCAPTCHA
+	$resp = null;
+	# the error code from reCAPTCHA, if any
+	$error = null;
+	*/
+
 ?>
     <div id="PageContent">
         <div id="DangKy" class="mh1">
@@ -8,9 +20,8 @@
             </div>
             <div class="head"><!----></div>  
             <div class="tac lh18">
-				<?php //global $user_ID, $user_identity; get_currentuserinfo(); if (!$user_ID) { ?>
 				<?php 
-					$register = (isset($_GET['register']))?$_GET['register']:''; 
+					$register = (isset($_GET['register']))?$_GET['register']:false; 
 					if(isset($register) && $register == true):
 						echo '<p>Mật khẩu đã được gửi đến địa chỉ email bạn đăng kí, vui lòng kiểm tra email để lấy mật khẩu</p>';
 					else:
@@ -37,9 +48,14 @@
 				?>
                 <div class="cot1">Email <span>*</span></div>
                 <div class="cot2">
-                    <input id="tbEmail" name="user_email" type="text" class="textbox" style="width:290px"/>
+                    <input id="tbEmail" name="user_email" type="text" class="textbox" style="width:215px"/>
                 </div>
 				<?php /*
+                <div class="cb h12"><!----></div>
+                <div class="cot1">Mật khẩu <span>*</span></div>
+                <div class="cot2">
+                    <input id="tbMatKhau" name="user_pass" type="password" class="textbox" style="width:215px"/>                    
+                </div>
                 <div class="cb h12"><!----></div>
                 <div class="cot1">Mật khẩu <span>*</span></div>
                 <div class="cot2">
@@ -50,14 +66,29 @@
                 <div class="cot2">
                     <input id="tbXacNhanMatKhau" type="password" class="textbox" style="width:215px"/>
                 </div>
+                <div class="cb h12"><!----></div>
+                <div class="cot1">Họ và tên <span>*</span></div>
+                <div class="cot2">
+                    <input id="tbHoVaTen" name="user_lastname" type="text" class="textbox" style="width:215px"/>
+                </div>
 				*/
 				?>
                 <div class="cb h12"><!----></div>
                 <div class="cot1">Điện thoại <span>*</span></div>
                 <div class="cot2">
-                    <input id="tbDienThoai" name="user_login" type="text" class="textbox" style="width:290px"/>
+                    <input id="tbDienThoai" name="user_login" type="text" class="textbox" style="width:215px"/>
                 </div>
 				<?php /*
+                <div class="cb h12"><!----></div>
+                <div class="cot1">&nbsp;</div>
+                <div class="cot2">
+					<?php echo '<img src="' . $_SESSION['captcha']['image_src'] . '" alt="CAPTCHA" />';?>
+                </div>
+                <div class="cb h12"><!----></div>
+                <div class="cot1">&nbsp;</div>
+                <div class="cot2">
+                    <input id="tbCaptcha" name="tbCaptcha" type="text" class="textbox" style="width:150px" placeholder="Input image code"/>
+                </div>
                 <div class="cb h12"><!----></div>
                 <div class="cot1">Địa chỉ nhận hàng <span>*</span></div>
                 <div class="cot2">
@@ -133,6 +164,8 @@
                     </script>
                 </div>
                 <div class="cb"><!----></div> 
+                <div class="cb h12"><!----></div>   
+                <div class="cb h12"><!----></div>   
             </div>
         </div>
     </div>    

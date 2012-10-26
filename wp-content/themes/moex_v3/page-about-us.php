@@ -42,6 +42,7 @@ Template Name: About Us Page
                     </div>
                 </div>
                 <div class="cb h18"><!----></div>   
+				<?php /*
                 <div class="khungGioiThieu">
                     <div class="tab">
                         Đội ngũ ban lãnh đạo
@@ -132,6 +133,8 @@ Template Name: About Us Page
                          });
                     </script>
                 </div>
+				*/
+				?>
                 <div class="cb h12"><!----></div>               
             </div>            
         </div>

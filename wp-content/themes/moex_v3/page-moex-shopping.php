@@ -29,7 +29,7 @@ get_header();
                         <table>
                             <tr>
                                 <td><img src="<?php echo get_bloginfo("template_url");?>/pic/service/MoexShopping/b1.png" /></td>
-                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Lên danh sách hàng hóa bạn cần trên www.moex.vn hoặc gọi 1900 56 56 36.</span></td>
+                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Lên danh sách hàng hóa bạn cần trên www.moex.vn hoặc gọi <span class="ctext">1900 56 56 36</span>.</span></td>
                             </tr>
                         </table>
                     </div>

@@ -78,8 +78,17 @@ class MeOrdersController extends Controller
             throw $this->createNotFoundException('Unable to find MeOrders entity.');
         }
 
-		$lat = $entity->getLat();
-		$lng = $entity->getLng();
+		$lat = ($entity->getLat())?$entity->getLat():'21.0267';
+		$lng = ($entity->getLng())?$entity->getLng():'105.83659';
+
+		if(!$entity->getLat()){
+			$entity->setLat('21.0267');
+			$em->persist($entity);
+		}
+		if(!$entity->getLng()){
+			$entity->setLng('105.83659');
+			$em->persist($entity);
+		}
 		
 		$assign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByAssignAndDistance($lat, $lng, $id);
 		$unassign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByUnAssignAndDistance($lat, $lng, $id);

@@ -79,11 +79,11 @@ get_header();
                 <div class="cb h12"><!----></div>
                  <div class="left">Khoảng cách</div>
                  <div class="fl">:</div>
-                 <div class="right"><span id="order-distance">4.75</span> Km</div>
+                 <div class="right"><span id="order-distance"></span> Km</div>
                  <div class="cb h12"><!----></div>
                  <div class="left">Giá</div>
                  <div class="fl">:</div>
-                 <div class="right"><span id="search-result">30.000</span> VNĐ</div>
+                 <div class="right"><span id="search-result"></span> VNĐ</div>
                  <div class="cb h12"><!----></div>
                  <div class="left">Họ và tên <span>*</span></div>
                  <div class="fl">:</div>

@@ -29,7 +29,7 @@ get_header();
                         <table>
                             <tr>
                                 <td><img src="<?php echo get_bloginfo("template_url")?>/pic/service/MoexOffice/b1.png" /></td>
-                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Gọi 1900 56 56 36 thông tin hàng hóa và đích đến.</span></td>
+                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Gọi <span class="ctext">1900 56 56 36</span> thông tin hàng hóa và đích đến.</span></td>
                             </tr>
                         </table>
                     </div>

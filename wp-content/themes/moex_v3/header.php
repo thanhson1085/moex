@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Moex - Vận chuyển siêu tốc - An toàn tuyệt đối</title>
+    <title>Moex - An toàn - Tiện lợi - Chu đáo</title>
     <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
@@ -27,6 +27,9 @@
     <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="mo">  
+<?php
+session_start();
+?>
     <div id="OnCall">
         <a href="<?php echo get_bloginfo("url")?>?page_id=187"><img src="<?php echo get_bloginfo("template_url")?>/pic/adv/onCall.jpg" /></a>        
     </div>    

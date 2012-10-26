@@ -32,7 +32,7 @@
                         <table>
                             <tr>
                                 <td><img src="<?php echo get_bloginfo("template_url")?>/pic/service/MoexGo/b1.png" /></td>
-                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Gọi 1900 56 56 36 cho moEx biết điểm đến của bạn.</span></td>
+                                <td><span class="buoc"><span class="ctext sdtext">BƯỚC 1:</span> Gọi <span class="ctext">1900 56 56 36</span> cho moEx biết điểm đến của bạn.</span></td>
                             </tr>
                         </table>
                     </div>
