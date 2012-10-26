@@ -1,14 +1,10 @@
 <IfModule mod_rewrite.c>
-    Options +FollowSymlinks
     RewriteEngine On
 
-    # Explicitly disable rewriting for front controllers
-    RewriteRule ^app_dev.php - [L]
-    RewriteRule ^app.php - [L]
+    #<IfModule mod_vhost_alias.c>
+    #    RewriteBase /
+    #</IfModule>
 
     RewriteCond %{REQUEST_FILENAME} !-f
-
-    # Change below before deploying to production
-    RewriteRule ^(.*)$ app.php [QSA,L]
-    #RewriteRule ^(.*)$ app_dev.php [QSA,L]
+    RewriteRule ^(.*)$ app_dev.php [QSA,L]
 </IfModule>

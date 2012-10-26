@@ -330,16 +330,14 @@ function getRoute(){
     });
 }
 
-var price_level = [{distance: 0, price: 12}, {distance: 1, price: 10}, { distance: 5, price: 8}, {distance: 10, price: 7}, {distance:20, price: 6}]
+var price_level = 9900;
+var limit = 5;
 
 function countMoney(){
-    ret = 0;
-    for ( value in price_level){
-        if (distance > price_level[value].distance*1000){
-            ret = price_level[value].price*distance
-            ret = Math.round(ret/1000)*1000;
-            ret = Math.ceil(ret/1000/5)*1000*5;
-        }
+    ret = limit * Math.ceil(price_level/1000)*1000; 
+    d = Math.ceil(distance/1000);
+    if (d > limit){
+        ret = price_level*d;
     }   
     return ret;
 }

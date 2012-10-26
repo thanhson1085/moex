@@ -2,13 +2,13 @@
         <div id="leftHomepage">
             <div class="fwb pb6">Điểm đi</div>
             <div class="pb10">
-                <input id="input-from" type="text" class="textbox2" value="Số 2, Khâm Thiên, Đống Đa, Hà Nội"/>
+                <input id="input-from" type="text" class="textbox2" value="" placeholder="Điểm đi..."/>
             </div>
             <div class="fwb pb6">Điểm đến</div>
             <div class="pb17">
-                <input id="input-to" type="text" class="textbox2" value="Số 1, Trần Duy Hưng, Cầu Giấy, Hà Nội"/>
+                <input id="input-to" type="text" class="textbox2" value="" placeholder="Điểm đến..." />
             </div>
-            <div class="fl fwb">Giá: <span id="search-result">45.000</span> VNĐ</div>            
+            <div class="fl fwb">Giá: <span id="search-result"></span> VNĐ</div>            
             <div class="fr">
                 <input id="search-submit" type="submit" value="Go" class="btGo" title="Click để tìm kiếm"/> 
             </div>
@@ -154,7 +154,7 @@ $(document).ready(function(){
             distance = rleg.distance.value;
             distance = rleg.distance.value;
             money_value = countMoney();
-            $('#search-result').html(money_value);
+            $('#search-result').html(money_value.formatMoney(0,"",".",","));
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);
         }

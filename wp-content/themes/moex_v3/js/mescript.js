@@ -4,16 +4,40 @@ $(document).ready(function(){
 
 //var price_level = [{distance: 0, price: 12}, {distance: 1, price: 10}, { distance: 5, price: 8}, {distance: 10, price: 7}, {distance:20, price: 6}]
 var distance = 0;
+var moex_distance = 0;
 var price_level = 9900;
+var moexDelivery = 0;
+var moexGo = 0;
 var limit = 5;
-
 function countMoney(){
-    ret = limit * Math.ceil(price_level/1000)*1000; 
-	d = Math.ceil(distance/1000);
-	if (d > limit){
-		ret = price_level*d;
+	d = distance;
+	if (d > 5){
+		moexDelivery = Math.ceil(price_level*d/5000)*5000;
     }   
-    return ret;
+	else{
+    	moexDelivery = 5 * Math.ceil(price_level/1000)*1000; 
+	}
+	if (d > 2){
+		moexGo = Math.ceil((price_level*d)/5000)*5000;
+    }   
+	else{
+    	moexGo = 2 * Math.ceil(price_level/1000)*1000; 
+	}
+	if (limit == 5) ret = moexDelivery;
+	if (limit == 2) ret = moexGo;
+	if (d > limit){
+		moex_distance = ret/price_level;
+	}
+	else{
+		if (d > 2 && d < 5){
+			moex_distance = moexGo/price_level;
+		}
+		else{
+			moex_distance = distance; 
+		}
+	}
+	moex_distance = Math.round(moex_distance*1000)/1000;
+	return ret;
 }
 function getRoute(){
     distance = 0;
@@ -21,10 +45,10 @@ function getRoute(){
     request.destination += province;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-        distance = response.routes[0].legs[0].distance.value;
+        distance = response.routes[0].legs[0].distance.value/1000;
         money_value = countMoney();
-        $('#search-result').html(money_value);
-		$('#order-distance').html(Math.ceil(distance/1000));
+        $('#search-result').html(money_value.formatMoney(0,'','.',','));
+		$('#order-distance').html(moex_distance);
         directionsDisplay.setDirections(response);
     }
     });
@@ -107,3 +131,17 @@ function onecall(){
 		return n_body && (!n_result || (n_result > n_body)) ? n_body : n_result;
 	}
 }
+// Extend the default Number object with a formatMoney() method:
+// usage: someVar.formatMoney(decimalPlaces, symbol, thousandsSeparator, decimalSeparator)
+// defaults: (2, "$", ",", ".")
+Number.prototype.formatMoney = function(places, symbol, thousand, decimal) {
+	places = !isNaN(places = Math.abs(places)) ? places : 2;
+	symbol = symbol !== undefined ? symbol : "$";
+	thousand = thousand || ",";
+	decimal = decimal || ".";
+	var number = this, 
+	    negative = number < 0 ? "-" : "",
+	    i = parseInt(number = Math.abs(+number || 0).toFixed(places), 10) + "",
+	    j = (j = i.length) > 3 ? j % 3 : 0;
+	return symbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : "");
+};

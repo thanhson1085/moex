@@ -146,7 +146,7 @@ get_header();
                         }
                     </script>
                 </div>
-                 <div class="cred">* Giá có thể thay đổi. Vào giờ cao điểm (16:00-19:00) cộng thêm 2.000 VNĐ/km.</div>
+                 <div class="cred">&nbsp;</div>
                  <div class="pb10 pt10">
                     <img src="<?php echo get_bloginfo("template_url")?>/pic/map/phone.jpg" />
                  </div>
@@ -313,8 +313,13 @@ $(document).ready(function(){
 	$("#ddlDichVu").change(function(){
 		if ($(this).val() == 2 || $(this).val() == 5){
 			limit = 2;
-			money_value = countMoney();
-            $('#search-result').html(money_value);
+			money_value = moexGo; 
+            $('#search-result').html(money_value.formatMoney(0,"",".", ","));
+		}
+		else{
+			limit = 5;
+			money_value = moexDelivery; 
+            $('#search-result').html(money_value.formatMoney(0,"",".", ","));
 		}
 	});
 
@@ -322,11 +327,10 @@ $(document).ready(function(){
     function() {
         if (currentDirections) {
             var rleg = directionsDisplay.directions.routes[0].legs[0];
-            distance = rleg.distance.value;
-            distance = rleg.distance.value;
+            distance = rleg.distance.value/1000;
             money_value = countMoney();
-            $('#search-result').html(money_value);
-			$('#order-distance').html(Math.ceil(distance/1000));
+            $('#search-result').html(money_value.formatMoney(0,"",".", ","));
+			$('#order-distance').html(moex_distance);
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);
             $('#input-lat').val(rleg.start_location.lat());
