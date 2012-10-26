@@ -9,16 +9,12 @@ get_header();
             <div class="head"><!----></div>                                   
             <div class="content">
                <div class="cot1">
-                    <div class="header ctext sdtext">Dịch vụ và tiện ích</div>
-                    <div class="dot">
-                        <b>Tốc độ</b>: moEx hiểu trong kinh doanh thời gian là tiền bạc, mọi tài liệu và hàng hóa của bạn sẽ được chuyển tời đích trong vòng 2h từ khi moEx nhận hàng
-                    </div>
-                    <div class="dot">
-                        <b>An toàn</b>: mọi nhân viên của moEx đều được đào tạo chu đáo và biết cách bảo vệ tài sản của bạn như chính bản thân họ
-                    </div>
-                    <div class="dot">
-                        <b>Bảo mật</b>: Hàng hóa của bạn sẽ được chuyển tới tận tay người nhận, mà không qua bất cứ người trung gian nào, bạn cũng có thể kiểm soát hàng hóa trong suốt quá trình vận chuyển 
-                    </div>
+                    <?php
+                    if ( have_posts() ) while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                    ?>
+
                     <div class="header ctext sdtext">Ý kiến bình luận</div>
 					<?php comments_template('', true);?>
                </div>                
