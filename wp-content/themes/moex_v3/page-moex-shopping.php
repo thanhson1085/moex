@@ -19,6 +19,11 @@ get_header();
                     <div class="dot">
                         <b>Đảm bảo</b>: moEx chăm sóc bạn như một người thân trong gia đình, và luôn đảm báo mua đúng món hàng bạn cần
                     </div>
+                    <?php
+                    if ( have_posts() ) while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                    ?>
                     <div class="header ctext sdtext">Ý kiến bình luận</div>
 					<?php comments_template('', true);?>
                </div>                

@@ -22,6 +22,11 @@
                     <div class="dot">
                         <b>Lịch sự</b>: Đội ngũ lái xe moEx được trang bị đồng phục và mũ bảo hiểm an toàn, với thái độ tận tình và luôn mong ước mang lại cho bạn niềm vui khi di chuyển  
                     </div>
+                    <?php
+                    if ( have_posts() ) while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                    ?>
                     <div class="header ctext sdtext">Ý kiến bình luận</div>
 					<?php comments_template('', true);?>
                </div>                

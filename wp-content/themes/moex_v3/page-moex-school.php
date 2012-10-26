@@ -26,6 +26,11 @@
                     <div class="dot">
                         <b>Tin cậy</b>:  Nhân viên moEx sẽ đưa các em đi học theo đúng lộ trình. Phụ huynh có thể theo dõi lộ trình đi lại của các em ngay tại website www.moEx.vn hoặc gọi đến tổng đài 1900 56 56 36
                     </div>
+                    <?php
+                    if ( have_posts() ) while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                    ?>
                     <div class="header ctext sdtext">Ý kiến bình luận</div>
 					<?php comments_template('', true);?>
                </div>                

@@ -19,6 +19,7 @@ $result = add_role('router', 'ROUTER', array(
 $result = add_role('cs_router', 'CS + ROUTER', array(
     'read' => true,
     'edit_posts' => true,
+    'edit_pages' => true,
     'delete_posts' => false,
 ));
 
