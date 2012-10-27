@@ -151,8 +151,7 @@ $(document).ready(function(){
     function() {
         if (currentDirections) {
             var rleg = directionsDisplay.directions.routes[0].legs[0];
-            distance = rleg.distance.value;
-            distance = rleg.distance.value;
+            distance = rleg.distance.value/1000;
             money_value = countMoney();
             $('#search-result').html(money_value.formatMoney(0,"",".",","));
             $('#input-from').attr('value',rleg.start_address);
