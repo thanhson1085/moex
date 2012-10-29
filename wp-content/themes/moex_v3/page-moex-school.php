@@ -10,22 +10,6 @@
             <div class="head"><!----></div>                                   
             <div class="content">
                <div class="cot1">
-                    <div class="header ctext sdtext">Dịch vụ và tiện ích</div>
-                    <div class="dot">
-                        <b>An tâm</b>: Đội ngũ lái xe moEx được tuyển chọn kỹ lưỡng và đào tạo chuyên nghiệp, luôn đặt sự an toàn của khách hàng lên hàng đầu
-                    </div>
-                    <div class="dot">
-                        <b>Tiện lợi</b>: Chỉ cần 2 phút gọi đến tổng đài moEx, bạn sẽ có 26 tiếng mỗi ngày để để nâng cao chất lượng cuộc sống cho gia đình và bản thân
-                    </div>
-                    <div class="dot">
-                        <b>Tiết kiệm</b>: Gia đình bạn sẽ tiết kiệm được chi phí và công sức khi đưa đón các bé mỗi ngày
-                    </div>
-                    <div class="dot">
-                        <b>Chu đáo</b>: Với sự nhiệt tình và  tinh thần trách nhiệm cao nhân viên moEx sẽ đưa các em đi học đầy đủ và đúng giờ
-                    </div>
-                    <div class="dot">
-                        <b>Tin cậy</b>:  Nhân viên moEx sẽ đưa các em đi học theo đúng lộ trình. Phụ huynh có thể theo dõi lộ trình đi lại của các em ngay tại website www.moEx.vn hoặc gọi đến tổng đài 1900 56 56 36
-                    </div>
                     <?php
                     if ( have_posts() ) while ( have_posts() ) : the_post();
                         the_content();

@@ -1,13 +1,30 @@
 <?php get_header() ?>
         <div id="leftHomepage">
-            <div class="fwb pb6">Điểm đi</div>
+            <div class="fwb pb6"></div>
             <div class="pb10">
                 <input id="input-from" type="text" class="textbox2" value="" placeholder="Điểm đi..."/>
             </div>
-            <div class="fwb pb6">Điểm đến</div>
-            <div class="pb17">
+            <div class="fwb pb6"></div>
+            <div class="pb10">
                 <input id="input-to" type="text" class="textbox2" value="" placeholder="Điểm đến..." />
             </div>
+            <div class="pb17">
+                    <div id="khungddl">
+                        <div class="cb h2"><!----></div>
+                        <select id="ddlDichVu" name="ddlDichVu" onchange="FillBGColor('khungddl')">
+                            <option style="background:#6b7b84" value="1">Moex Delivery</option>
+                            <option style="background:#c8215d" value="2">Moex Go</option>
+                            <option style="background:#8dc63f" value="3">Moex Food</option>
+                            <option style="background:#f26522" value="4">Moex Shopping</option>
+                            <option style="background:#20409a" value="5">Moex School</option>
+                        </select>
+                        <script type="text/javascript">
+                            function FillBGColor(parrentId) {
+                                document.getElementById(parrentId).style.backgroundColor = ddlDichVu.options[ddlDichVu.selectedIndex].style.backgroundColor;                                
+                            }
+                        </script>
+                    </div>
+			</div>
             <div class="fl fwb">Giá: <span id="search-result"></span> VNĐ</div>            
             <div class="fr">
                 <input id="search-submit" type="submit" value="Go" class="btGo" title="Click để tìm kiếm"/> 
@@ -75,7 +92,7 @@
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
 <script type="text/javascript">
-var province = ', Hà Nội, Việt Nam';
+var province = '';
 var request = {
     origin: '219 KHÂM THIÊN',
     destination: '99 PHỐ HUẾ',
@@ -122,7 +139,7 @@ $(document).ready(function(){
         submit_click = true;
         request.origin = $('#input-from').attr('value');
         request.destination = $('#input-to').attr('value');
-		$(location).attr("href",'<?php echo get_bloginfo("url");?>?page_id=191&from='+request.origin+'&to='+request.destination);
+		$(location).attr("href",'<?php echo get_bloginfo("url");?>?page_id=191&service='+$('#ddlDichVu').val()+'&from='+request.origin+'&to='+request.destination);
         getRoute();
     });
 

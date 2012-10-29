@@ -9,19 +9,6 @@
             <div class="head"><!----></div>                                   
             <div class="content">
                <div class="cot1">
-                    <div class="header ctext sdtext">Dịch vụ và tiện ích</div>
-                    <div class="dot">
-                        <b>Nhanh chóng</b>: Sau khi bạn gọi 1900 56 56 36, moEx sẽ đón bạn trong vòng 10 phút
-                    </div>
-                    <div class="dot">
-                        <b>Thuận tiện:</b>: Dù bạn đang ở địa điểm nào, chỉ cần gọi, moEx sẽ đến tận nơi để phục vụ bạn 
-                    </div>
-                    <div class="dot">
-                        <b>Đơn giản</b>: mức cước luôn được moEx thống nhất trước, nên bạn không cần mất thời gian mặc cả  
-                    </div>
-                    <div class="dot">
-                        <b>Lịch sự</b>: Đội ngũ lái xe moEx được trang bị đồng phục và mũ bảo hiểm an toàn, với thái độ tận tình và luôn mong ước mang lại cho bạn niềm vui khi di chuyển  
-                    </div>
                     <?php
                     if ( have_posts() ) while ( have_posts() ) : the_post();
                         the_content();

@@ -240,7 +240,7 @@ get_header();
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
 <script type="text/javascript">
-var province = ', Hà Nội, Việt Nam';
+var province = '';
 var request = {
     origin: '219 KHÂM THIÊN',
     destination: '99 PHỐ HUẾ',
@@ -253,6 +253,15 @@ var directionsDisplay = new google.maps.DirectionsRenderer();
 var oldDirections = [];
 var currentDirections = null;
 $(document).ready(function(){
+	$("#ddlDichVu option").each(function(){
+		if($(this).val() == <?php echo (isset($_GET['service']))?$_GET['service']:1?>){
+			$(this).attr('selected','selected')
+			if ($(this).val() == 2 || $(this).val() == 5){
+				limit = 2
+			}
+		}
+	});
+	FillBGColor('khungddl');
     $('input[type="text"]').live('click', function(){
         $(this).select();
     });

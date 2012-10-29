@@ -9,16 +9,6 @@ get_header();
             <div class="head"><!----></div>                                   
             <div class="content">
                <div class="cot1">
-                    <div class="header ctext sdtext">Dịch vụ và tiện ích</div>
-                    <div class="dot">
-                        <b>Chủ động</b>: Khi bạn không có thời gian mua sắm,  moEx sẽ giúp bạn có ngay những thứ bạn cần
-                    </div>
-                    <div class="dot">
-                        <b>Tiện lợi</b>: Tất cả những việc bạn cần làm là đăng ký trên moex.vn hay gọi 1900 56 56 36, và moEx sẽ thu xếp mọi chuyện còn lại
-                    </div>
-                    <div class="dot">
-                        <b>Đảm bảo</b>: moEx chăm sóc bạn như một người thân trong gia đình, và luôn đảm báo mua đúng món hàng bạn cần
-                    </div>
                     <?php
                     if ( have_posts() ) while ( have_posts() ) : the_post();
                         the_content();
