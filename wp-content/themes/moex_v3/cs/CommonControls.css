@@ -1,6 +1,6 @@
 ﻿/*header*/
 #PageContent{width:980px}
-#Header{position:relative;z-index:1;height:68px}
+#Header{position:relative;z-index:1;height:75px}
 #Logo{float:left;width:500px;position: relative}
 .promotion{position: absolute; top: 0;left: 196px;}
 #Logo .anhQC{border:0;max-height:68px}

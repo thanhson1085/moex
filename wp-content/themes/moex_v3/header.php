@@ -1,7 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>moEx - An Toàn, Tiện Lợi, Chu Đáo</title>
+    <title>
+<?php
+    /*
+     * Print the <title> tag based on what is being viewed.
+     */
+    global $page, $paged;
+
+    wp_title( '-', true, 'right' );
+
+    // Add the blog name.
+    bloginfo( 'name' );
+
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_home() || is_front_page() ) )
+        echo " - $site_description";
+?>
+</title>
+
     <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
@@ -25,11 +43,11 @@
     <link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem2.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
+<?php
+    wp_head();
+?>
 </head>
 <body class="mo">  
-<?php
-session_start();
-?>
     <div id="OnCall">
         <a href="<?php echo get_bloginfo("url")?>?page_id=187"><img src="<?php echo get_bloginfo("template_url")?>/pic/adv/onCall.jpg" /></a>        
     </div>    
