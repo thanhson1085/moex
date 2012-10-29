@@ -1,7 +1,7 @@
         <div id="Footer">
             <div class="fl">Bản quyền website thuộc về moEx.</div>
             <div id="Share">
-                <a href="#" class="share1">&nbsp;</a>
+                <a href="http://www.facebook.com/MoexJsc" class="share1">&nbsp;</a>
                 <a href="#" class="share2">&nbsp;</a>
                 <a href="#" class="share3">&nbsp;</a>
                 <a href="#" class="share4">&nbsp;</a>

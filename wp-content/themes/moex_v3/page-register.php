@@ -26,7 +26,11 @@
 						echo '<p>Mật khẩu đã được gửi đến địa chỉ email bạn đăng kí, vui lòng kiểm tra email để lấy mật khẩu</p>';
 					else:
 				?>
-                Đăng ký trở thành thành viên moEx, quý khách sẽ thuận lợi hơn trong việc gửi các yêu cầu mua hàng hay yêu cầu dịch vụ với moEx.<br />                Để đăng ký thành viên, Quý khách vui lòng điền đầy đủ các thông tin theo mẫu bên dưới:
+                    <?php
+                    if ( have_posts() ) while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                    ?>
 				<?php
 					endif;
 				?>
