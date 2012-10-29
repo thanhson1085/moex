@@ -8,18 +8,20 @@ include_once(get_template_directory().'/lib/claviska/simple-php-captcha.php');
 $result = add_role('cs', 'CS', array(
     'read' => true,
     'edit_posts' => true,
+    'edit_pages' => true,
     'delete_posts' => false,
 ));
 $result = add_role('router', 'ROUTER', array(
     'read' => true,
     'edit_posts' => true,
+    'edit_pages' => true,
     'delete_posts' => false,
 ));
 
 $result = add_role('cs_router', 'CS + ROUTER', array(
     'read' => true,
     'edit_posts' => true,
-    'edit_published_pages' => true,
+    'edit_pages' => true,
     'delete_posts' => false,
 ));
 
