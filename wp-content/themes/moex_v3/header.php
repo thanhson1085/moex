@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Moex - An toàn - Tiện lợi - Chu đáo</title>
+    <title>moEx - An Toàn, Tiện Lợi, Chu Đáo</title>
     <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
