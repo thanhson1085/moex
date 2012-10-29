@@ -24,6 +24,8 @@ $result = add_role('cs_router', 'CS + ROUTER', array(
     'edit_pages' => true,
     'delete_posts' => false,
 ));
+$role = get_role('cs_router');
+$role->add_cap('edit_pages');
 
 add_filter('excerpt_length', 'my_excerpt_length');
 function my_excerpt_length($length) {
