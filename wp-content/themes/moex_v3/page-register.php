@@ -16,7 +16,7 @@
     <div id="PageContent">
         <div id="DangKy" class="mh1">
             <div id="mainAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url");?>/pic/adv/slide.jpg" class="anhQC"/></a>                
+                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
             </div>
             <div class="head"><!----></div>  
             <div class="tac lh18">

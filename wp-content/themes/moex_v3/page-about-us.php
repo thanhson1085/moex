@@ -11,7 +11,7 @@ Template Name: About Us Page
     </div>    
         <div id="GioiThieu">
             <div id="mainAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/slide.jpg" class="anhQC"/></a>                
+                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
             </div>
             <div class="content">
                 <div class="head"><!----></div>                       
