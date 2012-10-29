@@ -39,7 +39,8 @@ session_start();
         <div id="Header">
             <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/phone.jpg" /></div>
             <div id="Logo">
-                <a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/logo.jpg" class="anhQC"/></a>
+                <div class="logo"><a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo.jpg" class="anhQC"/></a></div>
+                <div class="promotion"><a href="#"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/banner_promotion.jpg" class="anhQC"/></a></div>
             </div>                        
             <div class="fr pt10">
                 <div id="Language">

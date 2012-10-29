@@ -35,7 +35,7 @@
         </div>
         <div id="rightHomepage">
             <div id="mainAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/adv1.jpg" class="anhQC"/></a>                
+                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/home_banner_FA.jpg" class="anhQC"/></a>                
             </div>
             <div id="ListService">
                 <div class="service bdt0">
