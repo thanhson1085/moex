@@ -57,5 +57,6 @@
                <div class="cb h15"><!----></div>
             </div>
         </div>
-</body>
-</html>
+<?php
+get_footer();
+?>
