@@ -29,11 +29,12 @@
 						});
 						function tinhcuoc(){
 							demo_distance = $("#demo-distance").val()*$("#demo-time").val()*$("#demo-date").val();
-							if (demo_distance > 250){
-								demo_distance = demo_distance*((100-10)/100);
-							}
 							if (demo_distance <= 250 && demo_distance > 170){
-								demo_distance = demo_distance*((100-7)/100);
+								demo_distance =  170 + (demo_distance-170)*((100-7)/100);
+							}
+							if (demo_distance > 250){
+								demo_distance = 
+								demo_distance =  170 + (250-170)*((100-7)/100) + (demo_distance-250)*((100-10)/100);
 							}
 							var rst = Math.max((demo_distance*price_level),20000);
 							$("#result").html(rst.formatMoney(0,"",".", ",") + " VNĐ");
