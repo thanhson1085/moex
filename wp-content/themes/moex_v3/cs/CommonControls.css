@@ -60,3 +60,9 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 #Share a.share3{background:url(pic/CommonControls/s3.jpg) no-repeat}
 #Share a.share4{background:url(pic/CommonControls/s4.jpg) no-repeat}
 #Share a.share5{background:url(pic/CommonControls/s5.jpg) no-repeat}
+.countprice{padding-top: 10px; padding-bottom: 10px;}
+.form-row{height: 35px;}
+.form-row label{width: 100px; display: inline-block}
+#MoexGo .form-row input{border: solid 1px #C8215D; border-radius: 3px;text-align: center}
+#MoexSchool .form-row input{border: solid 1px #20409A; border-radius: 3px;text-align: center}
+.btOK{outline: 0}

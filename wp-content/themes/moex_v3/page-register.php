@@ -54,6 +54,7 @@
                 <div class="cot2">
                     <input id="tbEmail" name="user_email" type="text" class="textbox" style="width:215px"/>
                 </div>
+				<input type="text" name="last_name" id="last_name" value="Thanh Sơn" class="regular-text">
 				<?php /*
                 <div class="cb h12"><!----></div>
                 <div class="cot1">Mật khẩu <span>*</span></div>

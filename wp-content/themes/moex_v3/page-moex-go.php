@@ -14,6 +14,25 @@
                         the_content();
                     endwhile;
                     ?>
+                    <div class="header ctext sdtext">Tính phí</div>
+					<div class="countprice">
+					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span>Km</span></div>
+					<div class="form-row"><a class="btOK" tabindex="5" href="javascript:void(0)" onclick="tinhcuoc()"><span><span>Tính cước</span></span></a></div>
+					<div class="form-row"><label>Giá trị đơn hàng:</label><b><span id="result" class="ctext">49.500 VNĐ</span></b></div>
+					</div>
+					<script type="text/javascript">
+						function tinhcuoc(){
+							demo_distance = $("#demo-distance").val();
+							if (demo_distance > 250){
+								demo_distance = demo_distance*((100-10)/100);
+							}
+							if (demo_distance <= 250 && demo_distance > 170){
+								demo_distance = demo_distance*((100-7)/100);
+							}
+							var rst = Math.max((demo_distance*price_level),20000);
+							$("#result").html(rst.formatMoney(0,"",".", ",") + " VNĐ");
+						}
+					</script>
                     <div class="header ctext sdtext">Ý kiến bình luận</div>
 					<?php comments_template('', true);?>
                </div>                

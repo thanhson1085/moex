@@ -19,6 +19,7 @@
         echo " - $site_description";
 ?>
 </title>
+	<link href="<?php echo get_bloginfo("template_url")?>/pic/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
     <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
