@@ -14,6 +14,39 @@ get_header();
                         the_content();
                     endwhile;
                     ?>
+                    <div class="header ctext sdtext">Tính thử phí</div>
+					<div class="countprice">
+					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span> km</span></div>
+					<div class="form-row"><label>Cân nặng</label><input type="number" id="demo-weight" value="2"><span> kg</span></div>
+					<div class="form-row"><label>Bìa carton</label><input type="checkbox" id="demo-carton" value="2"></div>
+					<div class="form-row"><a class="btOK" tabindex="5" href="javascript:void(0)" onclick="tinhcuoc()"><span><span>Tính cước</span></span></a></div>
+					<div class="form-row"><label>Giá trị đơn hàng:</label><b><span id="result" class="ctext">49.500 VNĐ</span></b></div>
+					</div>
+					<script type="text/javascript">
+						$(document).ready(function(){
+							tinhcuoc();
+						});
+						function tinhcuoc(){
+							demo_distance = $("#demo-distance").val() - 5;
+							demo_weight = $("#demo-weight").val();
+							over_weight = "";
+							var rst = demo_distance*price_level + 50000;
+							if(demo_weight > 5 && demo_weight <= 10){
+								rst = rst + 20000;
+							}
+							if(demo_weight > 10 && demo_weight <= 30){
+								rst = rst + 50000;
+							}
+							if(demo_weight > 30){
+								over_weight = ' + Thỏa thuận';
+							}
+							if($("#demo-carton").attr('checked') == true){
+								rst = rst + 20000;
+							}
+							$("#result").html(rst.formatMoney(0,"",".", ",") + " VNĐ" + over_weight);
+
+						}
+					</script>
 
                     <div class="header ctext sdtext">Ý kiến bình luận</div>
 					<?php comments_template('', true);?>

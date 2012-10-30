@@ -15,7 +15,7 @@
                         the_content();
                     endwhile;
                     ?>
-                    <div class="header ctext sdtext">Tính phí</div>
+                    <div class="header ctext sdtext">Tính thử phí</div>
 					<div class="countprice">
 					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span> km/lần</span></div>
 					<div class="form-row"><label>Số lần đưa đón</label><input type="number" id="demo-time" value="2"><span> lần/ngày</span></div>
