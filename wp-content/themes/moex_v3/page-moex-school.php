@@ -17,13 +17,18 @@
                     ?>
                     <div class="header ctext sdtext">Tính phí</div>
 					<div class="countprice">
-					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span>Km</span></div>
+					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span> km/lần</span></div>
+					<div class="form-row"><label>Số lần đưa đón</label><input type="number" id="demo-time" value="2"><span> lần/ngày</span></div>
+					<div class="form-row"><label>Số ngày đón</label><input type="number" id="demo-date" value="20"><span> ngày/tháng</span></div>
 					<div class="form-row"><a class="btOK" tabindex="5" href="javascript:void(0)" onclick="tinhcuoc()"><span><span>Tính cước</span></span></a></div>
 					<div class="form-row"><label>Giá trị đơn hàng:</label><b><span id="result" class="ctext">49.500 VNĐ</span></b></div>
 					</div>
 					<script type="text/javascript">
+						$(document).ready(function(){
+							tinhcuoc();
+						});
 						function tinhcuoc(){
-							demo_distance = $("#demo-distance").val();
+							demo_distance = $("#demo-distance").val()*$("#demo-time").val()*$("#demo-date").val();
 							if (demo_distance > 250){
 								demo_distance = demo_distance*((100-10)/100);
 							}

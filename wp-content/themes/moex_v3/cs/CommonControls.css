@@ -63,6 +63,7 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 .countprice{padding-top: 10px; padding-bottom: 10px;}
 .form-row{height: 35px;}
 .form-row label{width: 100px; display: inline-block}
-#MoexGo .form-row input{border: solid 1px #C8215D; border-radius: 3px;text-align: center}
-#MoexSchool .form-row input{border: solid 1px #20409A; border-radius: 3px;text-align: center}
+.form-row input{width: 50px}
+#MoexGo .form-row input{border: solid 1px #C8215D;text-align: center}
+#MoexSchool .form-row input{border: solid 1px #20409A;text-align: center}
 .btOK{outline: 0}
