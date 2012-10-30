@@ -163,13 +163,7 @@ if ( !function_exists('wp_new_user_notification') ) {
         $message .= sprintf(__('If you have any problems, please contact me at %s.'), get_option('admin_email')) . "\r\n\r\n";
         $message .= __('Adios!');
 
-        wp_mail($user_email, sprintf(__('[%s] Your username and password'), get_option('blogname')), $message);
+        wp_mail($user_email, sprintf(__('[%s] Hi, your username and password'), get_option('blogname')), $message);
 
     }
 }
-function tml_new_user_registered( $user_id ) {
-    wp_set_auth_cookie( $user_id, false, is_ssl() );
-    wp_redirect( admin_url( 'profile.php' ) );
-    exit;
-}
-add_action( 'tml_new_user_registered', 'tml_new_user_registered' );

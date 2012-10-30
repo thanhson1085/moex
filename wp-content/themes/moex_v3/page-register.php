@@ -102,7 +102,7 @@
 				?>
 				<div class="login_fields">
 					<?php do_action('register_form'); ?>
-					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>&register=true" />
+					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
 					<input type="hidden" name="user-cookie" value="1" />
 				</div>
 			</form>
