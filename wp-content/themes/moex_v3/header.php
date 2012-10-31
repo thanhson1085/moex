@@ -66,15 +66,7 @@
                     <a href="#" title="Tiếng Việt"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/language/flVie.jpg" /></a>
                     <a href="#" title="English"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/language/flEng.jpg" /></a>
                 </div>
-                <div id="SearchBox">
-                    <div class="fr">
-                        <input id="Text1" type="text" class="textbox" value="Tìm kiếm..." onclick="if(this.value=='Tìm kiếm...') this.value=''" onblur="if(this.value=='') this.value='Tìm kiếm...'"/>
-                    </div>
-                    <div class="fr">
-                        <input id="Submit1" type="submit" value=" " onclick="window.location='#'" class="btsearch" title="Click để tìm kiếm"/>
-                    </div>
-                    <div class="cb"><!----></div>
-                </div>
+				<?php get_search_form()?>
                 <div id="MenuTop">
 					<?php if (!is_user_logged_in()): ?>
 						<div class="fr"><a class="mnt" href="<?php echo get_bloginfo("url")?>?page_id=154" title="Đăng nhập">Đăng nhập</a></div>

@@ -27,7 +27,7 @@ get_header();
 							tinhcuoc();
 						});
 						function tinhcuoc(){
-							demo_distance = $("#demo-distance").val() - 5;
+							demo_distance = Math.max($("#demo-distance").val() - 5,0);
 							demo_weight = $("#demo-weight").val();
 							over_weight = "";
 							var rst = demo_distance*price_level + 50000;
