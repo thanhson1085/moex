@@ -98,7 +98,7 @@
 								// Not logged in.
 								echo "Bạn";
 							} else {
-								echo $current_user->user_login;
+								echo ($current_user->last_name)?$current_user->last_name:$current_user->user_login;
 							}
 						?>
 						</span>
