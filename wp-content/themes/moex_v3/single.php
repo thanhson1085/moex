@@ -6,7 +6,7 @@ get_header();
             <div id="mainAdv">
                 <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
             </div>
-            <div class="head"><!----></div>                                   
+            <a href="<?php echo get_bloginfo("url"); ?>/moex-blog/"><div class="head"><!----></div></a>
             <div class="content">
                 <div class="cb h12"><!----></div>
 				<?php
