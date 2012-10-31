@@ -67,3 +67,6 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 #MoexGo .form-row input{border: solid 1px #C8215D;text-align: center}
 #MoexSchool .form-row input{border: solid 1px #20409A;text-align: center}
 .btOK{outline: 0}
+.content{
+	font-size: 12px;
+}
