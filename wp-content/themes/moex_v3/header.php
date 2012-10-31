@@ -43,6 +43,7 @@
     <link href="<?php echo get_bloginfo("template_url")?>/cs/Blog.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem2.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
 <?php
     wp_head();
