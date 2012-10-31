@@ -20,6 +20,7 @@
             </div>
             <div class="head"><!----></div>  
             <div class="tac lh18">
+			<div class="moex-message">
 				<?php 
 					$register = (isset($_GET['register']))?$_GET['register']:false; 
 					if(isset($register) && $register == true):
@@ -34,6 +35,7 @@
 				<?php
 					endif;
 				?>
+			</div>
             </div>         
             <div class="cb h25"><!----></div>
             <div class="content">

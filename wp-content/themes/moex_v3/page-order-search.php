@@ -19,7 +19,7 @@ get_header();
 					if($status):
 					?>
 					<script type="text/javascript">
-						alert("<?php echo _e("Đăng ký thành công, MoEx sẽ phục vụ bạn ngay!"); ?>");
+						alert("<?php echo _e("Cảm ơn bạn đã sử dụng dịch vụ, moEx sẽ phục vụ theo đúng yêu cầu của bạn. moEx luôn sẵn sàng với 1900 56 56 36!"); ?>");
 						$(location).attr("href","<?php echo get_bloginfo("url");?>");
 					</script>
 					<?php
