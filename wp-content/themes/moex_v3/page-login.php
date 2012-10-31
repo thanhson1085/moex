@@ -26,6 +26,9 @@ get_header();
                 </div>              
                 <div class="cb h12"><!----></div>   
                 <div class="cot3">&nbsp;</div>
+				<div class="fl"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="90"> Nhớ tài khoản</label></div>
+                <div class="cb h12"><!----></div>   
+                <div class="cot3">&nbsp;</div>
                 <div class="fl">
                     <a class="btOK" href="javascript:void(0)" onclick="submitform()"><span><span>Đăng nhập</span></span></a>
                     <a class="help" href="<?php echo get_bloginfo("url")?>/wp-login.php?action=lostpassword">Quên mật khẩu?</a>                    
