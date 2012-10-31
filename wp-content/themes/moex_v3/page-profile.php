@@ -28,6 +28,7 @@ endif;
 				endif;
 				wp_update_user(array('ID' => $current_user->ID, 'user_email' => esc_attr($_POST["tbEmail"])));
 				update_user_meta($current_user->ID, 'last_name' , esc_attr($_POST['tbHoTen']));
+				update_user_meta($current_user->ID, 'first_name' , esc_attr($_POST['tbFirstname']));
 			}
 			?>
             <div class="head"><!----></div>
@@ -57,7 +58,11 @@ endif;
                         </script>
                     </div>                    
                 </div-->                
-                <div class="cot1">Họ và tên</div>
+                <div class="cot1">Họ đệm</div>
+                <div class="cot2">
+                    <input id="tbFirstname" name="tbFirstname" type="text" class="textbox" style="width:210px" value="<?php echo $current_user->user_firstname ?>"/>
+                </div>
+                <div class="cot1">Tên riêng</div>
                 <div class="cot2">
                     <input id="tbHoTen" name="tbHoTen" type="text" class="textbox" style="width:210px" value="<?php echo $current_user->user_lastname ?>"/>
                 </div>
