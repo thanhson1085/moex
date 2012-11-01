@@ -6,9 +6,6 @@ Template Name: About Us Page
 <?php
 	get_header();
 ?>
-    <div id="OnCall">
-        <a href="Order.htm"><img src="pic/adv/onCall.jpg" /></a>        
-    </div>    
         <div id="GioiThieu">
             <div id="mainAdv">
                 <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
