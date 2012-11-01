@@ -23,8 +23,9 @@
 			<div class="moex-message">
 				<?php 
 					$register = (isset($_GET['register']))?$_GET['register']:false; 
+					$email = (isset($_GET['email']))?$_GET['email']:false; 
 					if(isset($register) && $register == true):
-						echo '<p>Mật khẩu đã được gửi đến địa chỉ email bạn đăng kí, vui lòng kiểm tra email để lấy mật khẩu</p>';
+						echo '<p>Mật khẩu đã được gửi đến <span class="cred">'.$email.'</span>, vui lòng kiểm tra email để lấy mật khẩu</p>';
 					else:
 				?>
                     <?php
@@ -104,7 +105,7 @@
 				?>
 				<div class="login_fields">
 					<?php do_action('register_form'); ?>
-					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
+					<input type="hidden" id="redirect-to" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>?register=true" />
 					<input type="hidden" name="user-cookie" value="1" />
 				</div>
 			</form>
@@ -164,8 +165,10 @@
                                 tbDienThoai.focus();
                                 return false;
                             }
-
-						    document.registerform.submit();
+							var redirect_to = $('#redirect-to').val();
+							$('#redirect-to').val(redirect_to + '&email='+$('#tbEmail').val());
+							return;
+							document.registerform.submit();
                         }
                     </script>
                 </div>

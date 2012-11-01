@@ -24,6 +24,26 @@
             <div class="cb"><!----></div>
         </div>
     </div>    
+    <div id="OnCall">
+		<?php 
+			$page_id = $posts[0]->ID;
+			switch($page_id){
+				case 164:
+					$service = 1; break;
+				case 161:
+					$service = 2; break;
+				case 170:
+					$service = 3; break;
+				case 172:
+					$service = 4; break;
+				case 166:
+					$service = 5; break;
+				default:
+					$service = 1; break;
+			}
+		?>
+        <a href="<?php echo get_bloginfo("url")?>?page_id=191&service=<?php echo $service;?>"><img src="<?php echo get_bloginfo("template_url")?>/pic/adv/onCall.jpg" /></a>        
+    </div>    
 	</div>
 	</div>
 </body>

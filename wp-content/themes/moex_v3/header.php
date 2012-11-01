@@ -50,9 +50,6 @@
 ?>
 </head>
 <body class="mo">  
-    <div id="OnCall">
-        <a href="<?php echo get_bloginfo("url")?>?page_id=187"><img src="<?php echo get_bloginfo("template_url")?>/pic/adv/onCall.jpg" /></a>        
-    </div>    
 	<div class="page-moex-container">
 	<div class="page-moex">
     <div id="PageContent">

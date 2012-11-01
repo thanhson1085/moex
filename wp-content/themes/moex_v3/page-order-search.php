@@ -35,7 +35,7 @@ get_header();
              <div class="cot2">
 				<form method="POST" id="order-form" name="orderform" action="">
                 <div class="pb10">
-                     <img src="<?php echo get_bloginfo("template_url");?>/pic/map/head.jpg" />
+					<span class="order-header" style="color:red; font-size: 28px;">Đăng ký dịch vụ</span>
                  </div>
                  <div class="left">Điểm đi</div>
                  <div class="fl">:</div>
