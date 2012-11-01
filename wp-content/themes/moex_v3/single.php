@@ -38,7 +38,7 @@ get_header();
                     <div class="date"><?php echo date_i18n( __( 'd/m/Y' ))?> - <?php echo getPostViews($post->ID);?> lượt xem</div>
                     <div class="lh18 fwb">
 					<?php
-                         echo get_the_excerpt();
+                         //echo get_the_excerpt();
 					?>
 					</div>
                     <div class="cb pt10 lh20 taj">
