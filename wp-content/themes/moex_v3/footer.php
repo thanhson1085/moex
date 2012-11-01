@@ -8,7 +8,7 @@
                 <a href="#" class="share5">&nbsp;</a>
             </div>
             <div id="MenuBottom">
-                <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>?page_id=36" title="Nghề nghiệp">Nghề nghiệp</a></div>
+                <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>/career" title="Nghề nghiệp">Nghề nghiệp</a></div>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>?page_id=2" title="Liên hệ">Liên hệ</a></div>
                 <div class="mnbSplit"><!----></div>
