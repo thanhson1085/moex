@@ -9,7 +9,8 @@ get_header();
             <div class="head"><!----></div>  
             <div class="tac lh18">
                 <img src="<?php echo get_bloginfo("template_url")?>/cs/pic/LienHe/ten.jpg" /><br />
-                <b>Địa chỉ:</b> Biệt thự C2-6, Khu đô thị Yên Hòa, Cầu Giấy, Hà Nội<br />                <b>Điện thoại:</b> 04 378 24239 - <b>oneCall:</b> 1900 56 56 36<br />                <b>Email:</b> sale@moex.vn - <b>Website:</b> moex.vn<br /><br />                Nếu quý khách có góp ý về công ty, vui lòng gửi thư về địa chỉ sale@moex.vn. Moex sẽ phản hồi lại quý khách sớm nhất. Xin trân trọng cảm ơn!
+                <b>Địa chỉ:</b> Biệt thự C2-6, Khu đô thị Yên Hòa, Cầu Giấy, Hà Nội<br />                <b>Điện thoại:</b> 04 378 24239 - <b>oneCall:</b> 1900 56 56 36<br />                <b>Email:</b> sale@moex.vn - <b>Website:</b> moex.vn<br /><br />
+Nếu quý khách có góp ý về công ty, vui lòng gửi thư về địa chỉ sale@moex.vn. Moex sẽ phản hồi lại quý khách sớm nhất. Xin trân trọng cảm ơn!
             </div>         
             <div class="cb h15"><!----></div>
             <div class="content">

@@ -20,7 +20,7 @@ Template Name: About Us Page
 					?>
                     <div>
                         <a class="btOK" href="<?php echo get_bloginfo("url")?>?page_id=177"><span><span><span class="bt1">Cuộc sống với Moex</span></span></span></a>
-                        <a class="btOK" href="http://www.facebook.com/MoexJsc"><span><span><span class="bt2">Blog Moex</span></span></span></a>
+                        <a class="btOK" href="http://www.facebook.com/MoexJsc" target="_blank"><span><span><span class="bt2">Blog Moex</span></span></span></a>
                     </div>
                 </div>
                 <div class="cot2">
