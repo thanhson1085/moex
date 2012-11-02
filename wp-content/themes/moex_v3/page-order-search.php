@@ -240,7 +240,7 @@ get_header();
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
 <script type="text/javascript">
-var province = '';
+var province = ',hà nội, việt nam';
 var request = {
     origin: '219 KHÂM THIÊN',
     destination: '99 PHỐ HUẾ',

@@ -3,10 +3,25 @@ get_header();
 ?>
     <div id="PageContent">
         <div id="Blog">
-            <div id="mainAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
-            </div>
-            <a href="<?php echo get_bloginfo("url"); ?>/moex-blog/"><div class="head"><!----></div></a>
+			<?php
+				$post_id = $post->ID;
+				$post_categories = wp_get_post_categories( $post->ID );
+				$cat_id = $post_categories[0];
+			?>
+				<div id="mainAdv">
+					<a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
+				</div>
+			<?php
+				if ($cat_id == 16):
+			?>
+            	<a href="<?php echo get_bloginfo("url"); ?>/moex-blog/"><div class="head"><!----></div></a>
+			<?php
+				else:
+			?>
+            	<a href="<?php echo get_bloginfo("url"); ?>/moex-blog/"><div class="head"><!----></div></a>
+			<?php
+				endif;	
+			?>
             <div class="content">
                 <div class="cb h12"><!----></div>
 				<?php
@@ -71,8 +86,6 @@ get_header();
                 <div class="cot2">
                     <div class="otitle">Các tin tức cùng danh mục</div>
 					<?php
-						$post_id = $post->ID;
-						$post_categories = wp_get_post_categories( $post->ID );
 							
 						foreach($post_categories as $cat_id){
 							$category = get_category($cat_id);

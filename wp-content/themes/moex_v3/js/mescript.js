@@ -41,8 +41,8 @@ function countMoney(){
 }
 function getRoute(){
     distance = 0;
-    //request.origin += province;
-    //request.destination += province;
+    request.origin += province;
+    request.destination += province;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
         distance = response.routes[0].legs[0].distance.value/1000;
