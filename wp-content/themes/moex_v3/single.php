@@ -14,7 +14,7 @@ get_header();
 			<?php
 				if ($cat_id == 16):
 			?>
-            	<a href="<?php echo get_bloginfo("url"); ?>/moex-blog/"><div class="head"><!----></div></a>
+            	<a href="<?php echo get_bloginfo("url"); ?>/career/"><div class="head career"><!----></div></a>
 			<?php
 				else:
 			?>
