@@ -151,6 +151,25 @@ var json = [
 	{% endfor %}
 ]
 $(document).ready(function(){
+    if ($('#map').length > 0){
+        var mapwidth = $('#map').width();
+        var mapoffsetleft = $('#map').offset().left;
+        $(document).scroll(function(){
+            if ($(document).scrollTop() > 124){
+                $('#map').css('position', 'fixed');
+                $('#map').css('top', '0.5em');
+                $('#map').css('left', mapoffsetleft);
+                $('#map').css('width', mapwidth);
+            }
+            if ($(document).scrollTop() < 124){
+                $('#map').css('position', 'relative');
+                $('#map').css('top', 'auto');
+                $('#map').css('left', 'auto');
+                $('#map').css('width', '98%');
+            }
+        });
+    }
+
 	var myOptions = {
 		center: new google.maps.LatLng({{ entity.lat }},{{ entity.lng }}),
 		zoom: 10,
@@ -181,7 +200,7 @@ $(document).ready(function(){
 		(function(marker, data) {
 			google.maps.event.addListener(marker, "click", function(e) {
 				infoWindow.setContent(data.description);
-				infoWindow.open(map, marker);
+				//infoWindow.open(map, marker);
 				$(".list tr").each(function(){
 					if ($(this).css("background-color") ==  "rgb(169, 245, 169)"){
 						$(this).css("background-color", "");

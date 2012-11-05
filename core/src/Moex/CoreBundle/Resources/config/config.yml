@@ -5,8 +5,15 @@ parameters:
   moex.order.status.pending: PENDING 
   moex.order.status.assigned: ASSIGNED
   moex.order.status.done: DONE 
+  moex.order.servicetype:
+    1: 'moEx Delivery'   
+    2: 'moEx Go'   
+    3: 'moEx Food'   
+    4: 'moEx Shopping'   
+    5: 'moEx School'   
 twig:
-    globals:
-        status_assigned: %moex.order.status.assigned% 
-        status_done: %moex.order.status.done% 
-        status_pending: %moex.order.status.pending% 
+  globals:
+    status_assigned: %moex.order.status.assigned% 
+    status_done: %moex.order.status.done% 
+    status_pending: %moex.order.status.pending% 
+    service_type: %moex.order.servicetype% 

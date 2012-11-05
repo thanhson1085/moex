@@ -369,22 +369,6 @@ function countMoney(){
 
 var mainColor = "#0066b3";
 $(document).ready(function(){
-	var mapwidth = $('#map').width();
-	var mapoffsetleft = $('#map').offset().left;
-	$(document).scroll(function(){
-		if ($(document).scrollTop() > 124){
-			$('#map').css('position', 'fixed');
-			$('#map').css('top', '0.5em');
-			$('#map').css('left', mapoffsetleft);
-			$('#map').css('width', mapwidth);
-		}
-		if ($(document).scrollTop() < 124){
-			$('#map').css('position', 'relative');
-			$('#map').css('top', 'auto');
-			$('#map').css('left', 'auto');
-			$('#map').css('width', '98%');
-		}
-	});
     $('.filter #btn-clear').live('click', function(){
         $('.filter form input[type="text"]').each(function(){
             $(this).attr('value','');

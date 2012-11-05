@@ -229,9 +229,9 @@ h2.page-title a{
 }
 .txt-main{
 	border: solid 1px #BBB;
-	line-height: 35px;
+	line-height: 25px;
 	margin: 3px 0;
-	font-size: 18px;
+	font-size: 13px;
 	width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -478,8 +478,8 @@ h2.page-title a{
 	box-shadow: 0 0 8px #ee1c24;
 }
 .btn-main.page{
-	padding: 11px 15px;
-	font-size: 15px;
+	padding: 7px 10px;
+	font-size: 13px;
 }
 .btn-search-container{
 	display: inline-block;
@@ -812,14 +812,14 @@ td.name{
 .moex-form div label{
 	display: inline-block;
 	width: 30%;	
-	line-height: 35px;
+	line-height: 25px;
 	font-weight: bold;
 	color: #0066b3;
 }	
 .moex-form div input{
 	width: 70%;	
-	line-height: 35px;
-	font-size: 18px;
+	line-height: 25px;
+	font-size: 13px;
 	border: solid 1px #ccc;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -827,11 +827,11 @@ td.name{
 }	
 .moex-form div select{
 	width: 458px;
-	height: 37px;
-	font-size: 18px;
+	height: 25px;
+	font-size: 13px;
 }
 .moex-form div textarea{
-	font-size: 18px;
+	font-size: 13px;
 	width: 70%;	
 	line-height: 35px;
 	border: solid 1px #ccc;
