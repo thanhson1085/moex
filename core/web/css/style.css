@@ -231,7 +231,7 @@ h2.page-title a{
 	border: solid 1px #BBB;
 	line-height: 35px;
 	margin: 3px 0;
-	font-size: 24px;
+	font-size: 18px;
 	width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -825,6 +825,11 @@ td.name{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }	
+.moex-form div select{
+	width: 458px;
+	height: 37px;
+	font-size: 18px;
+}
 .moex-form div textarea{
 	font-size: 18px;
 	width: 70%;	

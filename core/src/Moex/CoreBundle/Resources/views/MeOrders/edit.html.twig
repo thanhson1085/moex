@@ -46,7 +46,6 @@ var request = {
     destination: '99 PHỐ HUẾ',
     travelMode: google.maps.DirectionsTravelMode.WALKING
 };
-var distance = 0;
 var submit_click = false;
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -115,10 +114,11 @@ $(document).ready(function(){
 		if (currentDirections) {
 			var rleg = directionsDisplay.directions.routes[0].legs[0];
 			console.log(rleg);
-			distance = rleg.distance.value;
+			distance = rleg.distance.value/1000;
 			money_value = countMoney();
 			$('#search-result').html(money_value);
 			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
+			$('#moex_corebundle_meorderstype_distance').attr('value',distance);
 			$('#moex_corebundle_meorderstype_orderFrom').attr('value',rleg.start_address);
 			$('#moex_corebundle_meorderstype_orderTo').attr('value',rleg.end_address);
 			$('#moex_corebundle_meorderstype_lat').val(rleg.start_location.lat());

@@ -13,6 +13,14 @@ Moex\CoreBundle\Entity\MeOrders:
       type: bigint
       nullable: false
       column: user_id
+    customerId:
+      type: bigint
+      nullable: false
+      column: customer_id
+    serviceType:
+      type: smallint
+      nullable: false
+      column: service_type
     orderName:
       type: string
       length: 250

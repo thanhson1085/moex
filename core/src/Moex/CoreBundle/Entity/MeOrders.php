@@ -21,6 +21,16 @@ class MeOrders
     private $userId;
 
     /**
+     * @var bigint $customerId
+     */
+    private $customerId;
+
+    /**
+     * @var smallint $serviceType
+     */
+    private $serviceType;
+
+    /**
      * @var string $orderName
      * @Assert\NotBlank()
      */
@@ -117,6 +127,46 @@ class MeOrders
     public function getUserId()
     {
         return $this->userId;
+    }
+
+    /**
+     * Set customerId
+     *
+     * @param bigint $customerId
+     */
+    public function setCustomerId($customerId)
+    {
+        $this->customerId = $customerId;
+    }
+
+    /**
+     * Get customerId
+     *
+     * @return bigint 
+     */
+    public function getCustomerId()
+    {
+        return $this->customerId;
+    }
+
+    /**
+     * Set serviceType
+     *
+     * @param smallint $serviceType
+     */
+    public function setServiceType($serviceType)
+    {
+        $this->serviceType = $serviceType;
+    }
+
+    /**
+     * Get serviceType
+     *
+     * @return smallint 
+     */
+    public function getServiceType()
+    {
+        return $this->serviceType;
     }
 
     /**

@@ -329,21 +329,62 @@ function getRoute(){
     }
     });
 }
-
+var distance = 0;
+var moex_distance = 0;
 var price_level = 9900;
+var moexDelivery = 0;
+var moexGo = 0;
 var limit = 5;
-
 function countMoney(){
-    ret = limit * Math.ceil(price_level/1000)*1000; 
-    d = Math.ceil(distance/1000);
+    d = distance;
+    if (d > 5){
+        moexDelivery = Math.ceil(price_level*d/5000)*5000;
+    }
+    else{
+        moexDelivery = 5 * Math.ceil(price_level/1000)*1000;
+    }
+    if (d > 2){
+        moexGo = Math.ceil((price_level*d)/5000)*5000;
+    }
+    else{
+        moexGo = 2 * Math.ceil(price_level/1000)*1000;
+    }
+    if (limit == 5) ret = moexDelivery;
+    if (limit == 2) ret = moexGo;
     if (d > limit){
-        ret = price_level*d;
-    }   
+        moex_distance = ret/price_level;
+    }
+    else{
+        if (d > 2 && d < 5){
+            moex_distance = moexGo/price_level;
+        }
+        else{
+            moex_distance = distance;
+        }
+    }
+    moex_distance = Math.round(moex_distance*1000)/1000;
     return ret;
 }
 
+
 var mainColor = "#0066b3";
 $(document).ready(function(){
+	var mapwidth = $('#map').width();
+	var mapoffsetleft = $('#map').offset().left;
+	$(document).scroll(function(){
+		if ($(document).scrollTop() > 124){
+			$('#map').css('position', 'fixed');
+			$('#map').css('top', '0.5em');
+			$('#map').css('left', mapoffsetleft);
+			$('#map').css('width', mapwidth);
+		}
+		if ($(document).scrollTop() < 124){
+			$('#map').css('position', 'relative');
+			$('#map').css('top', 'auto');
+			$('#map').css('left', 'auto');
+			$('#map').css('width', '98%');
+		}
+	});
     $('.filter #btn-clear').live('click', function(){
         $('.filter form input[type="text"]').each(function(){
             $(this).attr('value','');

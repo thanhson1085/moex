@@ -39,6 +39,7 @@ function countMoney(){
 	moex_distance = Math.round(moex_distance*1000)/1000;
 	return ret;
 }
+
 function getRoute(){
     distance = 0;
     request.origin += province;
