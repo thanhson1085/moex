@@ -8,6 +8,7 @@
 #MoexOffice .sdtext{text-shadow: 0 0 1px #d8dcde/*;filter:dropshadow(color=#d8dcde, offx=1, offy=1)*/}/*Đổi màu*/
 
 #MoexOffice .header{font:normal 15px UTMAvoBold;text-transform:uppercase;padding-bottom:10px;font-weight:bold\9}
+.count-header{font:normal 15px UTMAvoBold;text-transform:uppercase;font-weight:bold}
 #MoexOffice .dot{background:url(pic/MoexOffice/dot.jpg) no-repeat 0 4px;padding:0 0 20px 12px}/*Đổi màu*/
 #MoexOffice .buoc{font:normal 14px Fujiyama}
 #MoexOffice .khungAnhMember{float:left;width:62px;margin:5px 10px 0 0}

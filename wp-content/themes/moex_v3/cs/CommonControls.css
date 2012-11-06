@@ -61,7 +61,7 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 #Share a.share4{background:url(pic/CommonControls/s4.jpg) no-repeat}
 #Share a.share5{background:url(pic/CommonControls/s5.jpg) no-repeat}
 .countprice{padding-top: 10px; padding-bottom: 10px;}
-.form-row{height: 35px;}
+.form-row{height: 30px;}
 .form-row label{width: 100px; display: inline-block}
 .form-row input{width: 50px}
 #MoexGo .form-row input{border: solid 1px #C8215D;text-align: center}
@@ -73,3 +73,8 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 .moex-online{list-style: none; padding: 0; margin: 0; overflow: auto;}
 .moex-online > li{float: left; width: 50%;}
 .moex-online > li > ul{list-style: none; padding: 0 15px}
+a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; font-weight: bold; line-height: 20px;}
+#MoexOffice a.btn-count{background:#6B7B84;}
+#MoexSchool a.btn-count{background:#20409A;}
+#MoexGo a.btn-count{background:#C8215D;}
+.form-count-container{padding-left: 20px; padding-top: 10px;}

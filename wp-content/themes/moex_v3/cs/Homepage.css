@@ -9,7 +9,7 @@
 /*rightHomepage*/
 #rightHomepage{float:right;width:588px}
 /*mainAdv*/
-#mainAdv{padding-bottom:10px}
+#mainAdv{height: 198px;margin-bottom: 7px;}
 #mainAdv .anhQC{border:0;max-width:588px}
 
 /*footerAdv*/

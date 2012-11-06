@@ -5,7 +5,18 @@
     <div id="PageContent">
         <div id="MoexSchool">
             <div id="mainAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/sub-banner_FA.jpg" class="anhQC"/></a>                
+            <div id="mainAdv" style="background: url('<?php echo get_bloginfo("template_url")?>/pic/service/school.jpg') no-repeat;">
+				<div class="form-count-container">
+                    <div class="count-header ctext sdtext">Tính phí</div>
+					<div class="countprice">
+					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span> km/lần</span></div>
+					<div class="form-row"><label>Số lần đưa đón</label><input type="number" id="demo-time" value="2"><span> lần/ngày</span></div>
+					<div class="form-row"><label>Số ngày đón</label><input type="number" id="demo-date" value="20"><span> ngày/tháng</span></div>
+					<div class="form-row"><a class="btn-count" tabindex="5" href="javascript:void(0)" onclick="tinhcuoc()"><span><span>Tính cước</span></span></a></div>
+					<div class="form-row"><label>Giá trị đơn hàng:</label><b><span id="result" class="ctext">49.500 VNĐ</span></b></div>
+					</div>
+				</div>
+            </div>
             </div>
             <div class="head"><!----></div>                                   
             <div class="content">
@@ -15,14 +26,6 @@
                         the_content();
                     endwhile;
                     ?>
-                    <div class="header ctext sdtext">Tính thử phí</div>
-					<div class="countprice">
-					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5"><span> km/lần</span></div>
-					<div class="form-row"><label>Số lần đưa đón</label><input type="number" id="demo-time" value="2"><span> lần/ngày</span></div>
-					<div class="form-row"><label>Số ngày đón</label><input type="number" id="demo-date" value="20"><span> ngày/tháng</span></div>
-					<div class="form-row"><a class="btOK" tabindex="5" href="javascript:void(0)" onclick="tinhcuoc()"><span><span>Tính cước</span></span></a></div>
-					<div class="form-row"><label>Giá trị đơn hàng:</label><b><span id="result" class="ctext">49.500 VNĐ</span></b></div>
-					</div>
 					<script type="text/javascript">
 						$(document).ready(function(){
 							tinhcuoc();
