@@ -72,4 +72,4 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 .moex-para{text-align: justify;}
 .moex-online{list-style: none; padding: 0; margin: 0; overflow: auto;}
 .moex-online > li{float: left; width: 50%;}
-.moex-online > li > ul{list-style: none; padding: 15px}
+.moex-online > li > ul{list-style: none; padding: 0 15px}

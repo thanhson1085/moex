@@ -89,6 +89,7 @@ Template Name: About Us Page
 						<li><a href="ymsgr:sendIM?small_angel140291"><img border="0" src="http://mail.opi.yahoo.com/online?u=small_angel140291&m=g&t=0"> CSKH moEx 4</a></li>
 						</ul></li>
 					</ul>
+                    <div class="cb h15"><!----></div>
 					<div style="background:url('<?php echo get_bloginfo('template_url') ?>/pic/gioithieu/quy-trinh.jpg'); height: 34px; width: 313px;"></div>
 					<div class="moex-para">
 					<img src="<?php echo get_bloginfo('template_url')?>/pic/gioithieu/tong-dai.png" width="313px"/>
