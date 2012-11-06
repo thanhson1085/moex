@@ -78,6 +78,17 @@ Template Name: About Us Page
                         <div class="fb-like-box" data-href="http://www.facebook.com/MoexJsc" data-width="293" data-height="275" data-show-faces="true" data-border-color="#dcdcdc" data-stream="false" data-header="false"></div>    
                     </div>
                     <div class="cb h15"><!----></div>
+					<div style="background:url('<?php echo get_bloginfo('template_url') ?>/pic/gioithieu/online.jpg'); height: 44px; width: 310px;"></div>
+					<ul class="moex-online">
+						<li><ul>
+						<li><a href="ymsgr:sendIM?cskhmoex"><img border="0" src="http://mail.opi.yahoo.com/online?u=cskhmoex&m=g&t=0"> CSKH moEx 1</a></li>
+						<li><a href="ymsgr:sendIM?mjnmin_bexinh_9x"><img border="0" src="http://mail.opi.yahoo.com/online?u=mjnmin_bexinh_9x&m=g&t=0"> CSKH moEx 2</a></li>
+						</ul></li>
+						<li><ul>
+						<li><a href="ymsgr:sendIM?becon_co_duoi2610"><img border="0" src="http://mail.opi.yahoo.com/online?u=becon_co_duoi2610&m=g&t=0"> CSKH moEx 3</a></li>
+						<li><a href="ymsgr:sendIM?small_angel140291"><img border="0" src="http://mail.opi.yahoo.com/online?u=small_angel140291&m=g&t=0"> CSKH moEx 4</a></li>
+						</ul></li>
+					</ul>
 					<div style="background:url('<?php echo get_bloginfo('template_url') ?>/pic/gioithieu/quy-trinh.jpg'); height: 34px; width: 313px;"></div>
 					<div class="moex-para">
 					<img src="<?php echo get_bloginfo('template_url')?>/pic/gioithieu/tong-dai.png" width="313px"/>
