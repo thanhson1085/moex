@@ -69,3 +69,4 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 .btOK{outline: 0}
 .content{font-size: 12px; line-height: 1.5;}
 .moex-message{font-size: 13px;}
+.moex-para{text-align: justify;}
