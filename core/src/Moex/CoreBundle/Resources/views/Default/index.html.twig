@@ -2,11 +2,12 @@
 {% block moex_content %}
 <div class="content-container">
 	<div class="content">
-	<div class="admin-header">{{ "header_order_list" | trans }}
+	<div class="admin-header">
 		<div class="contextual">
 			<a href="{{ path('order_new') }}" class="icon icon-add">{{ "action_new" | trans }}</a>
 		</div>
 	</div>
+	<div class="admin-header-intro">{{ "order_admin_header_intro" | trans }}</div>
 	<div class="splitleft-container">
 		<div class="splitleft">
             <form action="{{ path('dashboard') }}" id="filter-form" method="POST">
@@ -68,11 +69,12 @@
 
 		</div>
 	</div>
-	<div class="admin-header">{{ "header_driver_list" | trans }}
+	<div class="admin-header">
 		<div class="contextual">
 			<a href="{{ path('driver_new') }}" class="icon icon-add">{{ "action_new" | trans}}</a>
 		</div>
 	</div>
+	<div class="admin-header-intro">{{ "driver_admin_header_intro" | trans }}</div>
 	<div class="splitleft-container">
 		<div class="splitleft">
             <form action="{{ path('dashboard') }}" id="filter-form" method="POST">

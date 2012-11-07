@@ -9,6 +9,12 @@ Moex\CoreBundle\Entity\MeDrivers:
       nullable: false
       generator:
         strategy: IDENTITY
+    driverCode:
+      type: string
+      length: 250
+      fixed: false
+      nullable: false
+      column: driver_code
     driverName:
       type: string
       length: 250

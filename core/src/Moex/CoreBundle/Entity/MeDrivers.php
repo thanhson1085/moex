@@ -16,6 +16,11 @@ class MeDrivers
     private $id;
 
     /**
+     * @var string $driverCode
+     */
+    private $driverCode;
+
+    /**
      * @var string $driverName
      */
     private $driverName;
@@ -78,6 +83,26 @@ class MeDrivers
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set driverCode
+     *
+     * @param string $driverCode
+     */
+    public function setDriverCode($driverCode)
+    {
+        $this->driverCode = $driverCode;
+    }
+
+    /**
+     * Get driverCode
+     *
+     * @return string 
+     */
+    public function getDriverCode()
+    {
+        return $this->driverCode;
     }
 
     /**

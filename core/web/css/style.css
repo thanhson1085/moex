@@ -242,7 +242,7 @@ h2.page-title a{
 	background: #0066b3;
 	padding: 10px;
 	line-height: 40px;
-	border-radius: 5px;
+	border-radius: 15px;
 	color: white;
 }
 /* end header */
@@ -342,7 +342,7 @@ h2.page-title a{
 .right-part > h3{
 	color: #BBB;
 	text-transform: uppercase;
-	line-height: 40px;
+	line-height: 36px;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -379,6 +379,7 @@ h2.page-title a{
 	color: #BBB;
 	height: 70px;
 	position: relative;
+	font-size: 11px;
 }
 .footer > ul{
 	list-style: none;
@@ -478,7 +479,7 @@ h2.page-title a{
 	box-shadow: 0 0 8px #ee1c24;
 }
 .btn-main.page{
-	padding: 7px 10px;
+	padding: 5px 15px;
 	font-size: 13px;
 }
 .btn-search-container{
@@ -710,8 +711,8 @@ table.records-list{
 	border: solid 1px #CCC;
 }
 .pagination-container a{
-	background: #0066b3;
-	color: white;
+	background: #DDD;
+	color: #1e1e1e;
 	text-decoration: none;
 	padding: 2px 5px;
 	margin: 0 3px;
@@ -845,11 +846,11 @@ td.name{
 .moex-form button[type="submit"]{
 	cursor: pointer;
 	background: #0066b3;
-	padding: 10px;
-	border-radius: 5px;
+	padding: 5px 15px;
+	border-radius: 15px;
 	color: white;
 	border: 0;
-	font-size: 16px;
+	font-size: 13px;
 }
 /* DT styles for sliding doors */
 .dropdown dt a {display:block;cursor:pointer;line-height:22px;padding: 1px 10px 1px 30px; background-position-x: 7px}
@@ -963,7 +964,7 @@ ul.quickview-list > li.current a, ul.quickview-list > li.current .intro{
 }
 .splitright-container{
 	margin-left: 210px;
-	border-left: solid 5px #0066b3;
+	border-left: solid 1px #DDD;
 	min-height: 250px;
 }
 ul.leftmenu{
@@ -1006,6 +1007,11 @@ ul.leftmenu li a:hover{
 }
 .search-text{
 	vertical-align: middle;
+}
+.admin-header-intro{
+	color: #CCC;
+	font-size: 11px;
+	font-style: italic;
 }
 .slimScrollDiv {padding-right: 10px;}
 ::selection{background:#FF5E99;color:#fff;text-shadow:none;}

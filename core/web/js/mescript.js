@@ -318,7 +318,7 @@ function getRoute(){
     request.destination += province;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-        distance = response.routes[0].legs[0].distance.value;
+        distance = response.routes[0].legs[0].distance.value/1000;
 		money_value = countMoney();
         $('#search-result').html(money_value);
 		if(submit_click == true){

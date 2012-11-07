@@ -119,6 +119,19 @@ $(document).ready(function(){
 		}
 	});
 
+    $("#moex_corebundle_meorderstype_serviceType").change(function(){
+        if ($(this).val() == 2 || $(this).val() == 5){
+            limit = 2;
+            money_value = moexGo; 
+			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
+        }
+        else{
+            limit = 5;
+            money_value = moexDelivery; 
+			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
+        }
+    });
+
 	google.maps.event.addListener(directionsDisplay, 'directions_changed',
 	function() {
 		if (currentDirections) {

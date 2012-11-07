@@ -269,11 +269,6 @@ class MeDriversController extends Controller
 
         $assign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByAssignAndDistance($lat, $lng, $order_id);
         $unassign_drivers = $em->getRepository('MoexCoreBundle:MeDrivers')->findByUnAssignAndDistance($lat, $lng, $order_id);
-        if(!$assign_drivers){
-            $entity->setOrderStatus($this->container->getParameter("moex.order.status.pending"));
-            $em->persist($entity);
-            $em->flush();
-        }
         return array(
             'order_id'      => $order_id,
             'driver_id'      => $driver_id,
