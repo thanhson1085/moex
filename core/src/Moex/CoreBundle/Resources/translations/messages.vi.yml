@@ -58,12 +58,16 @@ order_price: Giá(VNĐ)
 order_lat: Vĩ độ
 order_lng: Kinh độ
 order_ordername: Tên đơn hàng
+order_servicetype: Dịch vụ
 order_orderinfo: Mô tả
+order_distance: Khoảng cách(Km)
 order_createdat: Ngày tạo
 order_updatedat: Ngày cập nhật
 order_starttime: Bắt đầu từ
+order_admin_header_intro: Danh sách đơn hàng
 
 driver_drivername: Tên lái xe
+driver_drivercode: Mã lái xe
 driver_phone: Điện thoại
 driver_position: Vị trí
 driver_driverage: Tuổi
@@ -75,6 +79,7 @@ driver_motono: Biển số xe
 driver_distance: Khoảng cách
 driver_createdat: Ngày tạo
 driver_updatedat: Ngày cập nhật
+driver_admin_header_intro: Dach sách lái xe
 
 placeholder_position: Vị trí....
 placeholder_from: Từ....
