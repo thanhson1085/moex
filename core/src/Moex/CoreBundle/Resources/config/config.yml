@@ -6,6 +6,7 @@ parameters:
   moex.order.status.assigned: ASSIGNED
   moex.order.status.done: DONE 
   moex.order.servicetype:
+    0: ''   
     1: 'moEx Delivery'   
     2: 'moEx Go'   
     3: 'moEx Food'   

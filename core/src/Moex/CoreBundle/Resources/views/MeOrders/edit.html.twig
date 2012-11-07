@@ -119,6 +119,10 @@ $(document).ready(function(){
 		}
 	});
 
+	var service_type = $('#moex_corebundle_meorderstype_serviceType option[selected="selected"]').val()
+	if (service_type == 2 || service_type == 5){
+		limit = 2;
+	}
     $("#moex_corebundle_meorderstype_serviceType").change(function(){
         if ($(this).val() == 2 || $(this).val() == 5){
             limit = 2;
