@@ -101,7 +101,7 @@ get_header();
                         <table>
                             <tr>                                
                                 <td><span class="buoc"><span class="ctext sdtext">BƯỚC 4:</span> Theo dõi hàng hóa trong suốt quá trình vận chuyển.</span></td>
-                                <td><img src="<?php echo get_bloginfo("template_url")?>/pic/service/MoexOffice/b4.png" /></td>
+                                <td><img src="<?php echo get_bloginfo("template_url")?>/pic/service/MoexOffice/b5.png" /></td>
                             </tr>
                         </table>
                     </div>

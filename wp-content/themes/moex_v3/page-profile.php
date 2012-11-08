@@ -38,7 +38,7 @@ endif;
                 <div class="pb15"><b>THAY ĐỔI THÔNG TIN TÀI KHOẢN:</b></div>
                 <div class="cot1">Email</div>
                 <div class="cot2">
-                    <input id="tbEmail" name="tbEmail" type="text" class="textbox" style="width:290px" value="<?php echo $current_user->user_email; ?>"/>
+                    <input id="tbEmail" name="tbEmail" type="text" class="textbox" style="width:210px" value="<?php echo $current_user->user_email; ?>"/>
                 </div>
                 <div class="cb h12"><!----></div>
                 <div class="cot1">Điện thoại</div>
