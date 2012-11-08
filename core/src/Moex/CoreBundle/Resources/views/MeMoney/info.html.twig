@@ -1,0 +1,65 @@
+		{% import "MoexCoreBundle:MeDrivers:macro.show.html.twig" as macro %}
+		{{ macro.show_driver(entity) }}
+        <div class="header-table"><span>{{ "header_order_assigned" | trans }}</span></div>
+        <div class="header-intro"><span>{{ "intro_order_assigned" | trans }}</span></div>
+
+        <table class="list records-list" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="spec">{{ "table_id" | trans }}</th>
+                    <th>{{ "order_phone" | trans }}</th>
+                    <th>{{ "order_ordername" | trans }}</th>
+                    <th>{{ "order_price" | trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for value in assigned_order %}
+            {% set en = value %}
+                <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+                    <td class="spec">{{ en.id }}</td>
+                    <td class="phone"><a href="{{ path( 'order_show', { 'id': en.id }) }}">{{ en.phone }}</a></td>
+                    <td class="name">{{ en.orderName }}</td>
+                    <td>{{ en.price | number_format(0,'.',',') }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td>{{ "message_record_not_found" | trans }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="header-table"><span>{{ "header_order_done" | trans }}</span></div>
+        <div class="header-intro"><span>{{ "intro_order_done" | trans }}</span></div>
+
+        <table class="list records-list" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="spec">{{ "table_id" | trans }}</th>
+                    <th>{{ "order_phone" | trans }}</th>
+                    <th>{{ "order_ordername" | trans }}</th>
+                    <th>{{ "order_price" | trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for value in done_order %}
+            {% set en = value %}
+                <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+                    <td class="spec">{{ en.id }}</td>
+                    <td class="phone"><a href="{{ path( 'order_show', { 'id': en.id }) }}">{{ en.phone }}</a></td>
+                    <td class="name">{{ en.orderName }}</td>
+                    <td>{{ en.price | number_format(0,'.',',') }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td>{{ "message_record_not_found" | trans }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>

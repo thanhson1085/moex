@@ -1,0 +1,31 @@
+		{% macro show_money(entity) %}
+        <div class="admin-header"><span>{{ entity.id }}</span>
+            <div class="contextual"> 
+            </div>
+        </div>
+
+		<table class="record-properties" cellspacing="0">
+			<tbody>
+				{% set info = [
+									{"label": "money_fromname", "value": entity.fromId},
+									{"label": "money_toname", "value": entity.toId},
+									{"label": "money_amount", "value": entity.amount},
+								] 
+				%}			
+				{% for value in info %}
+					<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+						<th class="label">{{ value.label | trans }}</th>
+						<td class="value">{{ value.value }}</td>
+					</tr>
+				{% endfor %}
+				<tr class="even">
+					<th class="label">{{ "money_createdat" | trans }}</th>
+					<td class="value">{{ entity.createdAt|date('H:i:s d-m-Y') }}</td>
+				</tr>
+				<tr class="odd">
+					<th class="label">{{ "money_updatedat" | trans }}</th>
+					<td class="value">{{ entity.updatedAt|date('H:i:s d-m-Y') }}</td>
+				</tr>
+			</tbody>
+		</table>
+		{% endmacro %}

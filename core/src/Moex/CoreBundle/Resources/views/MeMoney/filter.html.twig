@@ -1,0 +1,13 @@
+<h3>Filter Form</h3>
+<div class="filter">
+    <form action="{{ path('driver') }}" id="filter-form" method="POST">
+        {{ form_row(filterForm.phone) }}
+        {{ form_row(filterForm.driverName) }}
+        {{ form_row(filterForm.position) }}
+        {{ form_row(filterForm.driverInfo) }}
+
+        <button type="submit">Filter</button>
+        <button id="btn-clear" type="submit">Reset</button
+  </form>
+</div>
+

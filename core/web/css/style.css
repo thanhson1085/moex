@@ -1010,6 +1010,9 @@ ul.leftmenu li a:hover{
 	font-size: 11px;
 	font-style: italic;
 }
+.middle-part{
+	margin: 0 auto;
+}
 .slimScrollDiv {padding-right: 10px;}
 ::selection{background:#FF5E99;color:#fff;text-shadow:none;}
 

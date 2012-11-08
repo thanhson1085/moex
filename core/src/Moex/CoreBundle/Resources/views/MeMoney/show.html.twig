@@ -1,0 +1,11 @@
+{% extends "MoexCoreBundle::layout.html.twig" %}
+{% block moex_content %}
+<div class="content-container">
+	<div class="middle-part rate60">
+		{% import "MoexCoreBundle:MeMoney:macro.show.html.twig" as macro %}
+		{{ macro.show_money(entity) }}
+	</div>
+</div>
+<script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
+{% endblock moex_content %}

@@ -1,0 +1,28 @@
+<div class="left-part-container rate30">
+    <div class="left-part">
+    <ul class="quickview-list">
+    {% for en in assign_drivers %}
+    	{% set value = en[0] %}
+        <li {% if(value.id == driver_id) %} class="current" {% endif %}>
+        <a class="quickview" {% if(value.id == driver_id) %} id="current-quickview" {% endif %} href="{{ path('driver_info', { 'order_id' : order_id, 'driver_id': value.id }) }}">{{ value.driverName }}</a>
+        <p class="intro">{{ value.phone }}</p>
+        <p class="intro">{{ value.motoNo }}</p>
+        </li>
+    {% endfor %}
+    {% for en in unassign_drivers %}
+    	{% set value = en[0] %}
+        <li {% if(value.id == driver_id) %} class="current" {% endif %}>
+        <a class="quickview" {% if(value.id == driver_id) %} id="current-quickview" {% endif %} href="{{ path('driver_info', { 'order_id' : order_id, 'driver_id': value.id }) }}">{{ value.driverName }}</a>
+        <p class="intro">{{ value.phone }}</p>
+        <p class="intro">{{ value.motoNo }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+    </div>
+</div>
+<div class="right-part-container rate70">
+    <div class="right-part">
+        <div id="order-info">
+        </div> <!-- end order-info -->
+    </div>
+</div>

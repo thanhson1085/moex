@@ -1,0 +1,19 @@
+{% extends "MoexCoreBundle::layout.html.twig" %}
+{% block moex_content %}
+<div class="content-container">
+    <div class="middle-part rate40">
+		<div class="admin-header">{{ 'header_charge' | trans }}</div>
+        <form action="{{ path('money_create', { 'driver_id': driver_id }) }}" method="post" {{ form_enctype(charge_form) }}>
+            <div class="moex-form">
+                {{ form_widget(charge_form) }}
+                <p class="alignright">
+                    <button type="submit">{{ "button_charge" | trans }}</button>
+                </p>
+            </div>
+        </form>
+	</div>
+</div>
+<script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
+{% endblock moex_content %}
+

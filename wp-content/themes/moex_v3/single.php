@@ -50,7 +50,7 @@ get_header();
 					?>
                     <div class="titledetail"><?php the_title()?></div>
 					<?php setPostViews($post->ID); ?>
-                    <div class="date"><?php echo date_i18n( __( 'd/m/Y' ))?> - <?php echo getPostViews($post->ID);?> lượt xem</div>
+                    <div class="date"><?php echo date_i18n( __( 'd/m/Y' ), strtotime( $post->post_date ) )?> - <?php echo getPostViews($post->ID);?> lượt xem</div>
                     <div class="lh18 fwb">
 					<?php
                          //echo get_the_excerpt();

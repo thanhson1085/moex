@@ -7,7 +7,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Moex\CoreBundle\Entity\MeDrivers;
+use Moex\CoreBundle\Entity\MeMoney;
 use Moex\CoreBundle\Form\MeDriversType;
+use Moex\CoreBundle\Form\ChargeType;
 use Moex\CoreBundle\Form\DriverFilterType;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
@@ -232,21 +234,27 @@ class MeDriversController extends Controller
     /**
      *
      * @Route("/{id}/charge", name="driver_charge")
+     * @Template()
      */
     public function chargeAction($id)
     {
+        $entity = new MeMoney();
 
-		$em = $this->getDoctrine()->getEntityManager();
-		$entity = $em->getRepository('MoexCoreBundle:MeDrivers')->find($id);
+		$translator = $this->get('translator');
+        $editForm = $this->createForm(new ChargeType($translator), $entity);
 
-		if (!$entity) {
-			throw $this->createNotFoundException('Unable to find MeDrivers entity.');
-		}
+        return array(
+            'driver_id'      => $id,
+            'charge_form'   => $editForm->createView(),
+        );
+
+		/*
 		$entity->setMoney(0);
 		$em->persist($entity);
 		$em->flush();
 
         return $this->redirect($this->generateUrl('driver_show', array('id' => $id)));
+		*/
     }
 
     /**
