@@ -1,0 +1,37 @@
+Moex\CoreBundle\Entity\MeMoney:
+  type: entity
+  repositoryClass: Moex\CoreBundle\Repository\MeMoneyRepository
+  table: me_money
+  fields:
+    id:
+      id: true
+      type: bigint
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    fromId:
+      type: bigint 
+      nullable: false
+      column: from_id
+    toId:
+      type: bigint 
+      nullable: false
+      column: to_id
+    amount:
+      type: string
+      length: 250
+      nullable: false
+      column: amount
+    description:
+      type: text 
+      nullable: true 
+      column: description 
+    createdAt:
+      type: datetime
+      nullable: false
+      column: created_at
+    updatedAt:
+      type: datetime
+      nullable: false
+      column: updated_at
+  lifecycleCallbacks: {  }

@@ -9,3 +9,4 @@ ALTER TABLE me_orders ADD distance VARCHAR(250) DEFAULT NULL AFTER order_to;
 ALTER TABLE me_orders ADD service_type TINYINT NOT NULL AFTER price;
 ALTER TABLE  `me_orders` ADD  `customer_id` BIGINT( 20 ) NOT NULL AFTER  `user_id`
 ALTER TABLE  `me_drivers` ADD  `driver_code` VARCHAR( 250 ) NULL AFTER `id`
+CREATE TABLE me_money (id BIGINT AUTO_INCREMENT NOT NULL, from_id BIGINT NOT NULL, to_id BIGINT NOT NULL, amount VARCHAR(250) NOT NULL, description TEXT DEFAULT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = InnoDB;
