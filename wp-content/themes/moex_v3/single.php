@@ -101,7 +101,7 @@ get_header();
 						foreach ($postslist as $key => $post) : setup_postdata($post); 
 							if ($post->ID == $post_id) continue;
 					?>
-                    <a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> <span>(<?php echo date_i18n( __( 'd/m' ))?>)</span></a>
+                    <a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> <span>(<?php echo date_i18n( __( 'd/m' ), strtotime( $post->post_date ) )?>)</span></a>
 					<?php endforeach;?>
                 </div>
                 <div class="cb h15"><!----></div>
