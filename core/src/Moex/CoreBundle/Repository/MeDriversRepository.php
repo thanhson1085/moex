@@ -46,7 +46,8 @@ class MeDriversRepository extends EntityRepository
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
-		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrderDriver', 'od'); $rsm->addFieldResult('d','id','id');
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrderDriver', 'od'); 
+		$rsm->addFieldResult('d','id','id');
 		$rsm->addFieldResult('d','lat','lat');
 		$rsm->addFieldResult('d','lng','lng');
 		$rsm->addFieldResult('d','phone','phone');
@@ -90,7 +91,6 @@ class MeDriversRepository extends EntityRepository
     public function findByStatusAndDriverId($status, $driver_id, $limit = 10)
     {
 		$em = $this->getEntityManager();
-		$rsm = new ResultSetMapping;
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrders', 'o');
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeOrderDriver', 'od');

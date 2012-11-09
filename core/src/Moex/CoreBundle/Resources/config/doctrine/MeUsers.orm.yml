@@ -60,4 +60,10 @@ Moex\CoreBundle\Entity\MeUsers:
       fixed: false
       nullable: false
       column: display_name
-  lifecycleCallbacks: {  }
+  oneToMany:
+    money:
+      targetEntity: MeMoney 
+      mappedBy: user 
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

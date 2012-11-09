@@ -249,48 +249,4 @@ class MeUsers
     {
         return $this->displayName;
     }
-    /**
-     * @var Moex\CoreBundle\Entity\MeMoney
-     */
-    private $money;
-
-    public function __construct()
-    {
-        $this->money = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Add money
-     *
-     * @param Moex\CoreBundle\Entity\MeMoney $money
-     */
-    public function addMeMoney(\Moex\CoreBundle\Entity\MeMoney $money)
-    {
-        $this->money[] = $money;
-    }
-
-    /**
-     * Get money
-     *
-     * @return Doctrine\Common\Collections\Collection 
-     */
-    public function getMoney()
-    {
-        return $this->money;
-    }
-    /**
-     * @ORM\PrePersist
-     */
-    public function setCreatedAtValue()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function setUpdatedAtValue()
-    {
-        // Add your code here
-    }
 }

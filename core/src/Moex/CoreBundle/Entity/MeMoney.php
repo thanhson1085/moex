@@ -30,9 +30,9 @@ class MeMoney
     private $amount;
 
     /**
-     * @var text $desc
+     * @var text $description
      */
-    private $desc;
+    private $description;
 
     /**
      * @var datetime $createdAt
@@ -43,6 +43,11 @@ class MeMoney
      * @var datetime $updatedAt
      */
     private $updatedAt;
+
+    /**
+     * @var Moex\CoreBundle\Entity\MeUsers
+     */
+    private $user;
 
 
     /**
@@ -116,23 +121,23 @@ class MeMoney
     }
 
     /**
-     * Set desc
+     * Set description
      *
-     * @param text $desc
+     * @param text $description
      */
-    public function setDesc($desc)
+    public function setDescription($description)
     {
-        $this->desc = $desc;
+        $this->description = $description;
     }
 
     /**
-     * Get desc
+     * Get description
      *
      * @return text 
      */
-    public function getDesc()
+    public function getDescription()
     {
-        return $this->desc;
+        return $this->description;
     }
 
     /**
@@ -174,29 +179,39 @@ class MeMoney
     {
         return $this->updatedAt;
     }
-    /**
-     * @var text $description
-     */
-    private $description;
-
 
     /**
-     * Set description
+     * Set user
      *
-     * @param text $description
+     * @param Moex\CoreBundle\Entity\MeUsers $user
      */
-    public function setDescription($description)
+    public function setUser(\Moex\CoreBundle\Entity\MeUsers $user)
     {
-        $this->description = $description;
+        $this->user = $user;
     }
 
     /**
-     * Get description
+     * Get user
      *
-     * @return text 
+     * @return Moex\CoreBundle\Entity\MeUsers 
      */
-    public function getDescription()
+    public function getUser()
     {
-        return $this->description;
+        return $this->user;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
     }
 }

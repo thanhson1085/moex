@@ -31,10 +31,13 @@ class MeMoneyController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
 
 		$entity = $em->getRepository('MoexCoreBundle:MeMoney')
-							->find($id);
+							->getMoneyById($id);
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
+		foreach ($entity as $value){
+			var_dump($value);die;
+		}
         return array(
             'entity'      => $entity,
             );

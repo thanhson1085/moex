@@ -14,4 +14,28 @@ use Doctrine\ORM\Query\ResultSetMapping;
  */
 class MeMoneyRepository extends EntityRepository
 {
+	public function getMoneyById($id){
+		$em = $this->getEntityManager();
+		$query = $em->createQuery(
+			'SELECT m.id, m.toId FROM MoexCoreBundle:MeUsers u INNER JOIN u.money m WHERE m.id ='.$id
+		);
+		return $query->getResult();
+/*
+		$rsm = new ResultSetMapping;
+		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeMoney', 'm');
+		//$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
+		//$rsm->addEntityResult('Moex\CoreBundle\Entity\MeUsers', 'u');
+		$rsm->addFieldResult('m','id','id');
+		$rsm->addFieldResult('m','toId','toId');
+		$rsm->addFieldResult('m','fromId','fromId');
+		$rsm->addFieldResult('m','amount','amount');
+		$rsm->addJoinedEntityResult('Moex\CoreBundle\Entity\MeUsers', 'u', 'm', 'user');
+		$rsm->addFieldResult('u','userId','id');
+		$rsm->addFieldResult('u','userLogin','userLogin');
+		$sql = 'SELECT m.id,m.to_id AS toId,  m.from_id AS fromId, u.id AS userId, u.user_login AS userLogin, m.amount AS amount' 
+			.' FROM me_money m INNER JOIN me_users u ON u.id = m.to_id'
+			.' WHERE m.id = '.$id;
+		return $em->createNativeQuery($sql, $rsm)->getResult();
+*/
+	}
 }

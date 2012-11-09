@@ -34,4 +34,13 @@ Moex\CoreBundle\Entity\MeMoney:
       type: datetime
       nullable: false
       column: updated_at
-  lifecycleCallbacks: {  }
+  manyToOne:
+    user:
+      targetEntity: MeUsers 
+      inversedBy: money 
+      joinColumn:
+        name: to_id 
+        referencedColumnName: id
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]
