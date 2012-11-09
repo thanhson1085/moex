@@ -95,7 +95,7 @@
                         <table>
                             <tr>                                
                                 <td><span class="buoc"><span class="ctext sdtext">BƯỚC 4:</span> Gia đình có thể theo dõi lộ trình đi lại của các em trực tiếp.</span></td>
-                                <td><img src="<?php echo get_bloginfo("template_url");?>/pic/service/MoexSchool/b4.png" /></td>
+                                <td><img src="<?php echo get_bloginfo("template_url");?>/pic/service/MoexOffice/b5.png" /></td>
                             </tr>
                         </table>
                     </div>

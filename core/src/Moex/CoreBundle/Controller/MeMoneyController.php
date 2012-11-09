@@ -32,7 +32,6 @@ class MeMoneyController extends Controller
 
 		$entity = $em->getRepository('MoexCoreBundle:MeMoney')
 							->find($id);
-
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
