@@ -3,7 +3,7 @@
 ?>
         <div id="GioiThieu">
             <div id="mainAdv">
-                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/20_11_2.jpg" class="anhQC"/></a>                
+                <a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/banner-20_11_2.jpg" class="anhQC"/></a>                
             </div>
             <div class="content">
                 <div class="pb10">
