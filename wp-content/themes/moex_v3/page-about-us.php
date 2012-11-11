@@ -8,7 +8,7 @@ Template Name: About Us Page
 ?>
         <div id="GioiThieu">
             <div id="mainAdv">
-                <a href="<?php echo get_bloginfo("url")?>/event/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/20_11_2.jpg" class="anhQC"/></a>                
+                <a href="<?php echo get_bloginfo("url")?>/event/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/banner-20_11_2.jpg" class="anhQC"/></a>                
             </div>
             <div class="content">
                 <div class="head"><!----></div>                       
