@@ -76,5 +76,7 @@ transform: scale(1.2) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) s
 a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; font-weight: bold; line-height: 20px;}
 #MoexOffice a.btn-count{background:#6B7B84;}
 #MoexSchool a.btn-count{background:#20409A;}
+#MoexFood a.btn-count{background:#8DC63F;}
+#MoexShopping a.btn-count{background:#F26522;}
 #MoexGo a.btn-count{background:#C8215D;}
 .form-count-container{padding-left: 20px; padding-top: 10px;}

@@ -31,13 +31,11 @@ class MeMoneyController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
 
 		$entity = $em->getRepository('MoexCoreBundle:MeMoney')
-							->getMoneyById($id);
+							->find($id);
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
-		foreach ($entity as $value){
-			var_dump($value);die;
-		}
+
         return array(
             'entity'      => $entity,
             );
@@ -61,14 +59,20 @@ class MeMoneyController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getEntityManager();
+        	$user_id = $this->get('security.context')->getToken()->getUser()->ID; 
+			$user = $em->getRepository("MoexCoreBundle:MeUsers")->find($user_id);
+			$entity->setUser($user);
+			$driver = $em->getRepository("MoexCoreBundle:MeDrivers")->find($driver_id);
+			$entity->setDriver($driver);
         	$created_at = new \DateTime();
         	$updated_at = new \DateTime();
 			$entity->setCreatedAt($created_at);
 			$entity->setUpdatedAt($updated_at);
-			$entity->setFromId($driver_id);
-        	$user_id = $this->get('security.context')->getToken()->getUser()->ID; 
-			$entity->setToId($user_id);
             $em->persist($entity);
+
+			$driver = $em->getRepository("MoexCoreBundle:MeDrivers")->find($driver_id);
+			$driver->setMoney($driver->getMoney() - $entity->getAmount());
+			$em->persist($driver);
             $em->flush();
 
             return $this->redirect($this->generateUrl('money_show', array('id' => $entity->getId())));

@@ -1,14 +1,11 @@
 Moex\CoreBundle\Entity\MeOrderDriver:
   type: entity
   table: me_order_driver
-  fields:
+  id:
     id:
-      id: true
       type: bigint
-      nullable: false
-      column: id
-      generator:
-        strategy: IDENTITY
+      generator: { strategy: IDENTITY }
+  fields:
     orderId:
       type: bigint
       nullable: false
@@ -23,6 +20,11 @@ Moex\CoreBundle\Entity\MeOrderDriver:
       fixed: false
       nullable: false
       column: money 
+    driverMoney:
+      type: string
+      length: 250
+      nullable: true
+      column: driver_money
     createdAt:
       type: datetime
       nullable: false

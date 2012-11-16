@@ -47,6 +47,7 @@ class MeDrivers
 
     /**
      * @var string $position
+     * @Assert\NotBlank()
      */
     private $position;
 
@@ -324,5 +325,49 @@ class MeDrivers
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+    /**
+     * @var Moex\CoreBundle\Entity\MeMoney
+     */
+    private $driver_money;
+
+    public function __construct()
+    {
+        $this->driver_money = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add driver_money
+     *
+     * @param Moex\CoreBundle\Entity\MeMoney $driverMoney
+     */
+    public function addMeMoney(\Moex\CoreBundle\Entity\MeMoney $driverMoney)
+    {
+        $this->driver_money[] = $driverMoney;
+    }
+
+    /**
+     * Get driver_money
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getDriverMoney()
+    {
+        return $this->driver_money;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
     }
 }

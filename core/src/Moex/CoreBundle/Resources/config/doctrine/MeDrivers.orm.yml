@@ -2,35 +2,26 @@ Moex\CoreBundle\Entity\MeDrivers:
   type: entity
   repositoryClass: Moex\CoreBundle\Repository\MeDriversRepository
   table: me_drivers
-  fields:
+  id:
     id:
-      id: true
       type: bigint
-      nullable: false
-      generator:
-        strategy: IDENTITY
+      generator: { strategy: AUTO }
+  fields:
     driverCode:
       type: string
       length: 250
-      fixed: false
-      nullable: false
       column: driver_code
     driverName:
       type: string
       length: 250
-      fixed: false
-      nullable: false
       column: driver_name
     motoNo:
       type: string
       length: 250
-      fixed: false
-      nullable: true 
       column: moto_no 
     driverAge:
       type: integer
       length: 2 
-      nullable: true 
       column: driver_age 
     driverInfo:
       type: text
@@ -39,29 +30,19 @@ Moex\CoreBundle\Entity\MeDrivers:
     phone:
       type: string
       length: 250
-      fixed: false
-      nullable: false
     position:
       type: string
       length: 250
-      fixed: false
-      nullable: false
     money:
       type: string
       length: 250
       default: "0"
-      fixed: false
-      nullable: true 
     lat:
       type: string
       length: 250
-      fixed: false
-      nullable: false
     lng:
       type: string
       length: 250
-      fixed: false
-      nullable: false
     createdAt:
       type: datetime
       nullable: false
@@ -70,4 +51,10 @@ Moex\CoreBundle\Entity\MeDrivers:
       type: datetime
       nullable: false
       column: updated_at
-  lifecycleCallbacks: {  }
+  oneToMany:
+    driver_money:
+      targetEntity: MeMoney 
+      mappedBy: driver 
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

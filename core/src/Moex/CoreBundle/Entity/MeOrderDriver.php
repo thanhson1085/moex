@@ -149,4 +149,29 @@ class MeOrderDriver
     {
         return $this->updatedAt;
     }
+    /**
+     * @var string $driverMoney
+     */
+    private $driverMoney;
+
+
+    /**
+     * Set driverMoney
+     *
+     * @param string $driverMoney
+     */
+    public function setDriverMoney($driverMoney)
+    {
+        $this->driverMoney = $driverMoney;
+    }
+
+    /**
+     * Get driverMoney
+     *
+     * @return string 
+     */
+    public function getDriverMoney()
+    {
+        return $this->driverMoney;
+    }
 }

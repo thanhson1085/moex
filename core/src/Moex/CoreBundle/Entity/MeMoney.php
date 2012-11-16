@@ -15,16 +15,6 @@ class MeMoney
     private $id;
 
     /**
-     * @var bigint $fromId
-     */
-    private $fromId;
-
-    /**
-     * @var bigint $toId
-     */
-    private $toId;
-
-    /**
      * @var string $amount
      */
     private $amount;
@@ -49,6 +39,11 @@ class MeMoney
      */
     private $user;
 
+    /**
+     * @var Moex\CoreBundle\Entity\MeDrivers
+     */
+    private $driver;
+
 
     /**
      * Get id
@@ -58,46 +53,6 @@ class MeMoney
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set fromId
-     *
-     * @param bigint $fromId
-     */
-    public function setFromId($fromId)
-    {
-        $this->fromId = $fromId;
-    }
-
-    /**
-     * Get fromId
-     *
-     * @return bigint 
-     */
-    public function getFromId()
-    {
-        return $this->fromId;
-    }
-
-    /**
-     * Set toId
-     *
-     * @param bigint $toId
-     */
-    public function setToId($toId)
-    {
-        $this->toId = $toId;
-    }
-
-    /**
-     * Get toId
-     *
-     * @return bigint 
-     */
-    public function getToId()
-    {
-        return $this->toId;
     }
 
     /**
@@ -198,6 +153,26 @@ class MeMoney
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set driver
+     *
+     * @param Moex\CoreBundle\Entity\MeDrivers $driver
+     */
+    public function setDriver(\Moex\CoreBundle\Entity\MeDrivers $driver)
+    {
+        $this->driver = $driver;
+    }
+
+    /**
+     * Get driver
+     *
+     * @return Moex\CoreBundle\Entity\MeDrivers 
+     */
+    public function getDriver()
+    {
+        return $this->driver;
     }
     /**
      * @ORM\PrePersist

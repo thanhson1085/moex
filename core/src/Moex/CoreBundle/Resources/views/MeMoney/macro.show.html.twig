@@ -7,8 +7,8 @@
 		<table class="record-properties" cellspacing="0">
 			<tbody>
 				{% set info = [
-									{"label": "money_fromname", "value": entity.fromId},
-									{"label": "money_toname", "value": entity.toId},
+									{"label": "money_fromname", "value": entity.driver.driverName },
+									{"label": "money_toname", "value": entity.user.userLogin},
 									{"label": "money_amount", "value": entity.amount},
 								] 
 				%}			

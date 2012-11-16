@@ -16,11 +16,6 @@ class MeMoneyRepository extends EntityRepository
 {
 	public function getMoneyById($id){
 		$em = $this->getEntityManager();
-		$query = $em->createQuery(
-			'SELECT m.id, m.toId FROM MoexCoreBundle:MeUsers u INNER JOIN u.money m WHERE m.id ='.$id
-		);
-		return $query->getResult();
-/*
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeMoney', 'm');
 		//$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
@@ -36,6 +31,5 @@ class MeMoneyRepository extends EntityRepository
 			.' FROM me_money m INNER JOIN me_users u ON u.id = m.to_id'
 			.' WHERE m.id = '.$id;
 		return $em->createNativeQuery($sql, $rsm)->getResult();
-*/
 	}
 }

@@ -278,6 +278,26 @@ class MeOrdersController extends Controller
 			$entity->setOrderStatus($this->container->getParameter("moex.order.status.assigned"));
 			$em->persist($entity);
 			$em->flush();
+			$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $order_id)); 
+			$count = count($order_driver);
+			$price = floor($entity->getPrice()/$count);
+			$old_price = ($count <= 1)?0:floor($entity->getPrice()/($count - 1));
+			$updated_at = new \DateTime();
+			foreach ($order_driver as $value){
+				$value->setMoney($price);
+				$value->setDriverMoney(floor($price*$this->container->getParameter("moex.driver.money.rate")));
+				$value->setUpdatedAt($updated_at);
+				$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($value->getDriverId());
+				if ($driver->getId() == $driver_id){
+					$driver->setMoney($driver->getMoney() + $price);
+				}
+				else{
+					$driver->setMoney($driver->getMoney() - $old_price + $price);
+				}
+				$em->persist($driver);
+				$em->persist($value);
+			}
+			$em->flush();
 		}
 		return $this->redirect($this->generateUrl('order_show', array( 'id' => $order_id )));
 	}
@@ -301,6 +321,23 @@ class MeOrdersController extends Controller
 			$em->remove($value);
 		}
 		$em->flush();	
+		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $order_id)); 
+		$count = count($order_driver);
+		$old_price = floor($entity->getPrice()/($count+1));
+		$price = ($count == 0)?0:floor($entity->getPrice()/$count);
+		$updated_at = new \DateTime();
+		foreach ($order_driver as $value){
+			$value->setMoney($price);
+			$value->setUpdatedAt($updated_at);
+			$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($value->getDriverId());
+			$driver->setMoney($driver->getMoney() - $old_price + $price);
+			$em->persist($driver);
+			$em->persist($value);
+		}
+		$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($driver_id);
+		$driver->setMoney($driver->getMoney() - $old_price);
+		$em->persist($driver);
+		$em->flush();	
 
 		return $this->redirect($this->generateUrl('order_show', array( 'id' => $order_id )));
 	}
@@ -321,18 +358,6 @@ class MeOrdersController extends Controller
 		}
 		$entity->setOrderStatus($this->container->getParameter("moex.order.status.done"));
 		$em->persist($entity);
-		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $id)); 
-		$count = count($order_driver);
-		$price = floor($entity->getPrice()/$count);
-		$updated_at = new \DateTime();
-		foreach ($order_driver as $value){
-			$value->setMoney($price);
-			$value->setUpdatedAt($updated_at);
-			$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($value->getDriverId());
-			$driver->setMoney($driver->getMoney() + $price);
-			$em->persist($driver);
-			$em->persist($value);
-		}
 		$em->flush();
 		return $this->redirect($this->generateUrl('order_show', array( 'id' => $id )));
 	}
@@ -353,18 +378,6 @@ class MeOrdersController extends Controller
 		}
 		$entity->setOrderStatus($this->container->getParameter("moex.order.status.assigned"));
 		$em->persist($entity);
-		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('orderId' => $id)); 
-		$count = count($order_driver);
-		$price = floor($entity->getPrice()/$count);
-		$updated_at = new \DateTime();
-		foreach ($order_driver as $value){
-			$value->setMoney($price);
-			$value->setUpdatedAt($updated_at);
-			$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($value->getDriverId());
-			$driver->setMoney($driver->getMoney() - $price);
-			$em->persist($driver);
-			$em->persist($value);
-		}
 		$em->flush();
 		return $this->redirect($this->generateUrl('order_show', array( 'id' => $id )));
 	}

@@ -1,14 +1,11 @@
 Moex\CoreBundle\Entity\MeUsers:
   type: entity
   table: me_users
-  fields:
+  id:
     id:
-      id: true
       type: bigint
-      nullable: false
-      column: ID
-      generator:
-        strategy: IDENTITY
+      generator: { strategy: AUTO }
+  fields:
     userLogin:
       type: string
       length: 60

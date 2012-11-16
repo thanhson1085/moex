@@ -2,21 +2,11 @@ Moex\CoreBundle\Entity\MeMoney:
   type: entity
   repositoryClass: Moex\CoreBundle\Repository\MeMoneyRepository
   table: me_money
-  fields:
+  id:
     id:
-      id: true
       type: bigint
-      nullable: false
-      generator:
-        strategy: IDENTITY
-    fromId:
-      type: bigint 
-      nullable: false
-      column: from_id
-    toId:
-      type: bigint 
-      nullable: false
-      column: to_id
+      generator: { strategy: AUTO }
+  fields:
     amount:
       type: string
       length: 250
@@ -40,6 +30,12 @@ Moex\CoreBundle\Entity\MeMoney:
       inversedBy: money 
       joinColumn:
         name: to_id 
+        referencedColumnName: id
+    driver:
+      targetEntity: MeDrivers 
+      inversedBy: driver_money
+      joinColumn:
+        name: from_id 
         referencedColumnName: id
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]
