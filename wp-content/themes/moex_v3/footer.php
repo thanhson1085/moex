@@ -24,6 +24,10 @@
             <div class="cb"><!----></div>
         </div>
     </div>    
+	<div class="facebook-bar" style="position: fixed; top: 40%; left: 0.5em;">
+	<iframe id="f2c7dc7b" name="f105dc024" scrolling="no" style="border: none; overflow: hidden; height: 61px; width: 44px;" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D17%23cb%3Df14ed2171c%26origin%3Dhttp%253A%252F%252Fmoex.vn%252Ff1f3859014%26domain%3Dmoex.vn%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.facebook.com%2FMoexJSC&amp;node_type=link&amp;width=450&amp;font=tahoma&amp;layout=box_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false">
+</iframe>
+	</div>
     <div id="OnCall">
 		<?php 
 			$page_id = $posts[0]->ID;
