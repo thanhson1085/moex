@@ -20,6 +20,7 @@ function getRoute(){
     distance = 0;
     request.origin += province;
     request.destination += province;
+    request.travelMode = google.maps.DirectionsTravelMode.WALKING;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
         distance = response.routes[0].legs[0].distance.value/1000;
@@ -29,6 +30,20 @@ function getRoute(){
         directionsDisplay.setDirections(response);
     }
     });
+    request.travelMode = google.maps.DirectionsTravelMode.DRIVING;
+    directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+        driving_distance = response.routes[0].legs[0].distance.value/1000;
+		if (driving_distance < distance){		
+			distance = driving_distance;
+			money_value = countMoney();
+			display_price();
+			$('#order-distance').html(moex_distance);
+			directionsDisplay.setDirections(response);
+		}
+    }
+    });
+    request.travelMode = google.maps.DirectionsTravelMode.WALKING;
 }
 function phone_validation(phonenumber){
 	var phoneNumberPattern = /^\+?\(?(\d{2,3})\)?[- ]?(\d{3,4})[- ]?(\d{4})$/;
