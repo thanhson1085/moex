@@ -2,13 +2,11 @@ Moex\CoreBundle\Entity\MeOrders:
   type: entity
   repositoryClass: Moex\CoreBundle\Repository\MeOrdersRepository
   table: me_orders
-  fields:
+  id:
     id:
-      id: true
       type: bigint
-      nullable: false
-      generator:
-        strategy: IDENTITY
+      generator: { strategy: AUTO }
+  fields:
     userId:
       type: bigint
       nullable: false
@@ -85,4 +83,10 @@ Moex\CoreBundle\Entity\MeOrders:
       type: datetime
       nullable: false
       column: updated_at
-  lifecycleCallbacks: {  }
+  oneToMany:
+    order_driver:
+      targetEntity: MeOrderDriver 
+      mappedBy: order 
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

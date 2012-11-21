@@ -370,4 +370,84 @@ class MeDrivers
     {
         // Add your code here
     }
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrderDriver
+     */
+    private $driver_order;
+
+
+    /**
+     * Add driver_order
+     *
+     * @param Moex\CoreBundle\Entity\MeOrderDriver $driverOrder
+     */
+    public function addMeOrderDriver(\Moex\CoreBundle\Entity\MeOrderDriver $driverOrder)
+    {
+        $this->driver_order[] = $driverOrder;
+    }
+
+    /**
+     * Get driver_order
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getDriverOrder()
+    {
+        return $this->driver_order;
+    }
+
+	public function __toString()
+	{
+		return strval($this->id);
+	}
+    /**
+     * @var string $moex_money
+     */
+    private $moex_money;
+
+    /**
+     * @var string $d_money
+     */
+    private $d_money;
+
+
+    /**
+     * Set moex_money
+     *
+     * @param string $moexMoney
+     */
+    public function setMoexMoney($moexMoney)
+    {
+        $this->moex_money = $moexMoney;
+    }
+
+    /**
+     * Get moex_money
+     *
+     * @return string 
+     */
+    public function getMoexMoney()
+    {
+        return $this->moex_money;
+    }
+
+    /**
+     * Set d_money
+     *
+     * @param string $dMoney
+     */
+    public function setDMoney($dMoney)
+    {
+        $this->d_money = $dMoney;
+    }
+
+    /**
+     * Get d_money
+     *
+     * @return string 
+     */
+    public function getDMoney()
+    {
+        return $this->d_money;
+    }
 }

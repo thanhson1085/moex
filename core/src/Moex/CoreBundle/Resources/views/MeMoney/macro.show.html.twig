@@ -6,23 +6,23 @@
 
 		<table class="record-properties" cellspacing="0">
 			<tbody>
-				{% set info = [
-									{"label": "money_fromname", "value": entity.driver.driverName },
-									{"label": "money_toname", "value": entity.user.userLogin},
-									{"label": "money_amount", "value": entity.amount},
-								] 
-				%}			
-				{% for value in info %}
-					<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
-						<th class="label">{{ value.label | trans }}</th>
-						<td class="value">{{ value.value }}</td>
-					</tr>
-				{% endfor %}
 				<tr class="even">
+					<th class="label">{{ "money_fromname" | trans }}</th>
+					<td class="value"><a href="{{ path('driver_show', { 'id': entity.driver.id }) }}">{{ entity.driver.driverName }}</a></td>
+				</tr>
+				<tr class="odd">
+					<th class="label">{{ "money_toname" | trans }}</th>
+					<td class="value">{{ entity.user.userLogin }}</td>
+				</tr>
+				<tr class="event">
+					<th class="label">{{ "money_amount" | trans }}</th>
+					<td class="value">{{ entity.amount | number_format(0, '.', ',') }}</td>
+				</tr>
+				<tr class="odd">
 					<th class="label">{{ "money_createdat" | trans }}</th>
 					<td class="value">{{ entity.createdAt|date('H:i:s d-m-Y') }}</td>
 				</tr>
-				<tr class="odd">
+				<tr class="even">
 					<th class="label">{{ "money_updatedat" | trans }}</th>
 					<td class="value">{{ entity.updatedAt|date('H:i:s d-m-Y') }}</td>
 				</tr>

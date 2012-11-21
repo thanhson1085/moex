@@ -83,7 +83,7 @@ get_header();
                  <div class="cb h12"><!----></div>
                  <div class="left">Giá</div>
                  <div class="fl">:</div>
-                 <div class="right"><span id="search-result"></span> VNĐ</div>
+                 <div class="right"><span id="search-result"></span></div>
                  <div class="cb h12"><!----></div>
                  <div class="left">Họ và tên <span>*</span></div>
                  <div class="fl">:</div>
@@ -240,14 +240,11 @@ get_header();
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
 <script type="text/javascript">
-var province = ',hà nội, việt nam';
 var request = {
     origin: '219 KHÂM THIÊN',
     destination: '99 PHỐ HUẾ',
     travelMode: google.maps.DirectionsTravelMode.WALKING
 };
-var distance = 0;
-var submit_click = false;
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
 var oldDirections = [];
@@ -255,10 +252,9 @@ var currentDirections = null;
 $(document).ready(function(){
 	$("#ddlDichVu option").each(function(){
 		if($(this).val() == <?php echo (isset($_GET['service']))?$_GET['service']:1?>){
-			$(this).attr('selected','selected')
-			if ($(this).val() == 2 || $(this).val() == 5){
-				limit = 2
-			}
+			$(this).attr('selected','selected');
+			service_type = $(this).val();
+			display_price();
 		}
 	});
 	FillBGColor('khungddl');
@@ -320,16 +316,8 @@ $(document).ready(function(){
         }
     });
 	$("#ddlDichVu").change(function(){
-		if ($(this).val() == 2 || $(this).val() == 5){
-			limit = 2;
-			money_value = moexGo; 
-            $('#search-result').html(money_value.formatMoney(0,"",".", ","));
-		}
-		else{
-			limit = 5;
-			money_value = moexDelivery; 
-            $('#search-result').html(money_value.formatMoney(0,"",".", ","));
-		}
+		service_type = $(this).val();
+		display_price();
 	});
 
     google.maps.event.addListener(directionsDisplay, 'directions_changed',
@@ -338,7 +326,7 @@ $(document).ready(function(){
             var rleg = directionsDisplay.directions.routes[0].legs[0];
             distance = rleg.distance.value/1000;
             money_value = countMoney();
-            $('#search-result').html(money_value.formatMoney(0,"",".", ","));
+			display_price();
 			$('#order-distance').html(moex_distance);
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);

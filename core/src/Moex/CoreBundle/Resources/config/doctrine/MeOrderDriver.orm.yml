@@ -6,14 +6,6 @@ Moex\CoreBundle\Entity\MeOrderDriver:
       type: bigint
       generator: { strategy: IDENTITY }
   fields:
-    orderId:
-      type: bigint
-      nullable: false
-      column: order_id 
-    driverId:
-      type: bigint
-      nullable: false
-      column: driver_id 
     money:
       type: string
       length: 250
@@ -25,6 +17,11 @@ Moex\CoreBundle\Entity\MeOrderDriver:
       length: 250
       nullable: true
       column: driver_money
+    moexMoney:
+      type: string
+      length: 250
+      nullable: true
+      column: moex_money
     createdAt:
       type: datetime
       nullable: false
@@ -33,9 +30,19 @@ Moex\CoreBundle\Entity\MeOrderDriver:
       type: datetime
       nullable: false
       column: updated_at
-  relations:
-    MeOrders:
-      foreignAlias: MeOrderDriver 
-    MeDrivers:
-      foreignAlias: MeOrderDriver
-  lifecycleCallbacks: {  }
+  manyToOne:
+    order:
+      targetEntity: MeOrders
+      inversedBy: order_driver 
+      joinColumn:
+        name: order_id 
+        referencedColumnName: id
+    driver:
+      targetEntity: MeDrivers 
+      inversedBy: driver_money
+      joinColumn:
+        name: driver_id 
+        referencedColumnName: id
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

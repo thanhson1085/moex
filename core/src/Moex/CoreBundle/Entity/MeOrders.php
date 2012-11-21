@@ -428,4 +428,53 @@ class MeOrders
     {
         return $this->updatedAt;
     }
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrderDriver
+     */
+    private $order_driver;
+
+    public function __construct()
+    {
+        $this->order_driver = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add order_driver
+     *
+     * @param Moex\CoreBundle\Entity\MeOrderDriver $orderDriver
+     */
+    public function addMeOrderDriver(\Moex\CoreBundle\Entity\MeOrderDriver $orderDriver)
+    {
+        $this->order_driver[] = $orderDriver;
+    }
+
+    /**
+     * Get order_driver
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getOrderDriver()
+    {
+        return $this->order_driver;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
+    }
+
+	public function __toString()
+	{
+		return strval($this->id);
+	}
 }

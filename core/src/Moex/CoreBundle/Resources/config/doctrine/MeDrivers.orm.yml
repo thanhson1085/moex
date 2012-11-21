@@ -37,6 +37,14 @@ Moex\CoreBundle\Entity\MeDrivers:
       type: string
       length: 250
       default: "0"
+    moex_money:
+      type: string
+      length: 250
+      default: "0"
+    d_money:
+      type: string
+      length: 250
+      default: "0"
     lat:
       type: string
       length: 250
@@ -54,6 +62,9 @@ Moex\CoreBundle\Entity\MeDrivers:
   oneToMany:
     driver_money:
       targetEntity: MeMoney 
+      mappedBy: driver 
+    driver_order:
+      targetEntity: MeOrderDriver 
       mappedBy: driver 
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]

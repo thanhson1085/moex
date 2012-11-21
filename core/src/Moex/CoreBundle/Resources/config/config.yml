@@ -2,7 +2,7 @@ parameters:
   moex.version: V1.0
   moex.pagesize.default: 10
   moex.driver.money.max: 1000000 
-  moex.driver.money.rate: 0.35 
+  moex.driver.money.rate: 0.65
   moex.order.status.pending: PENDING 
   moex.order.status.assigned: ASSIGNED
   moex.order.status.done: DONE 

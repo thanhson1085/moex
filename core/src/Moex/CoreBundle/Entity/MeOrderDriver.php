@@ -31,50 +31,6 @@ class MeOrderDriver
     }
 
     /**
-     * Set driverId
-     *
-     * @param bigint $driverId
-     */
-    public function setDriverId($driverId)
-    {
-        $this->driverId = $driverId;
-    }
-
-    /**
-     * Get driverId
-     *
-     * @return bigint 
-     */
-    public function getDriverId()
-    {
-        return $this->driverId;
-    }
-    /**
-     * @var bigint $orderId
-     */
-    private $orderId;
-
-
-    /**
-     * Set orderId
-     *
-     * @param bigint $orderId
-     */
-    public function setOrderId($orderId)
-    {
-        $this->orderId = $orderId;
-    }
-
-    /**
-     * Get orderId
-     *
-     * @return bigint 
-     */
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
-    /**
      * @var string $money
      */
     private $money;
@@ -173,5 +129,95 @@ class MeOrderDriver
     public function getDriverMoney()
     {
         return $this->driverMoney;
+    }
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrders
+     */
+    private $order;
+
+    /**
+     * @var Moex\CoreBundle\Entity\MeDrivers
+     */
+    private $driver;
+
+
+    /**
+     * Set order
+     *
+     * @param Moex\CoreBundle\Entity\MeOrders $order
+     */
+    public function setOrder(\Moex\CoreBundle\Entity\MeOrders $order)
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * Get order
+     *
+     * @return Moex\CoreBundle\Entity\MeOrders 
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * Set driver
+     *
+     * @param Moex\CoreBundle\Entity\MeDrivers $driver
+     */
+    public function setDriver(\Moex\CoreBundle\Entity\MeDrivers $driver)
+    {
+        $this->driver = $driver;
+    }
+
+    /**
+     * Get driver
+     *
+     * @return Moex\CoreBundle\Entity\MeDrivers 
+     */
+    public function getDriver()
+    {
+        return $this->driver;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
+    }
+    /**
+     * @var string $moexMoney
+     */
+    private $moexMoney;
+
+
+    /**
+     * Set moexMoney
+     *
+     * @param string $moexMoney
+     */
+    public function setMoexMoney($moexMoney)
+    {
+        $this->moexMoney = $moexMoney;
+    }
+
+    /**
+     * Get moexMoney
+     *
+     * @return string 
+     */
+    public function getMoexMoney()
+    {
+        return $this->moexMoney;
     }
 }

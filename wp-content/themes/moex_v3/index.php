@@ -25,7 +25,7 @@
                         </script>
                     </div>
 			</div>
-            <div class="fl fwb">Giá: <span id="search-result"></span> VNĐ</div>            
+            <div class="fl fwb">Giá: <span id="search-result"></span></div>            
             <div class="fr">
                 <input id="search-submit" type="submit" value="Go" class="btGo" title="Click để tìm kiếm"/> 
             </div>
@@ -92,14 +92,13 @@
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
 <script type="text/javascript">
-var province = '';
+var province = ',hà nội, việt nam';
 var request = {
     origin: '219 KHÂM THIÊN',
     destination: '99 PHỐ HUẾ',
     travelMode: google.maps.DirectionsTravelMode.WALKING
 };
 var distance = 0;
-var submit_click = false;
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
 var oldDirections = [];
@@ -108,11 +107,18 @@ $(document).ready(function(){
     $('input[type="text"]').live('click', function(){
         $(this).select();
     });
+	$("#ddlDichVu option").each(function(){
+		if($(this).val() == <?php echo (isset($_GET['service']))?$_GET['service']:1?>){
+			$(this).attr('selected','selected');
+			service_type = $(this).val();
+			display_price();
+		}
+	});
     var inputFrom = document.getElementById('input-from');
     var inputTo = document.getElementById('input-to');
     var options = {
-      types: ['geocode'],
-      componentRestrictions: {country: 'vn'}
+      	types: ['geocode'],
+      	componentRestrictions: {country: 'vn'}
     };
     autocomplete = new google.maps.places.Autocomplete(inputFrom, options);
     autocomplete = new google.maps.places.Autocomplete(inputTo, options);
@@ -125,28 +131,39 @@ $(document).ready(function(){
         'draggable': true
     });
               
-   directionsDisplay.setMap(map);
+    directionsDisplay.setMap(map);
     $("#search-from").html(request.origin);
     $("#search-to").html(request.destination)
     if ($('#input-from').val() != ""){
-        request.origin = $('#input-from').val();
+        request.origin = $('#input-from').val() + province;
     }
     if ($('#input-to').val() != ""){
-        request.destination = $('#input-to').val();
+        request.destination = $('#input-to').val() + province;
     }
     getRoute();
-    $("#search-submit").click(function(){
-        submit_click = true;
+	/*
+    $("#using-service").click(function(){
         request.origin = $('#input-from').attr('value');
         request.destination = $('#input-to').attr('value');
 		$(location).attr("href",'<?php echo get_bloginfo("url");?>?page_id=191&service='+$('#ddlDichVu').val()+'&from='+request.origin+'&to='+request.destination);
         getRoute();
     });
+	*/
+
+	$("#ddlDichVu").change(function(){
+		service_type = $(this).val();
+		display_price();
+	});
+
+	$("#search-submit").bind('click',function(){
+		request.origin = $('#input-from').attr('value');
+		request.destination = $('#input-to').attr('value');
+		getRoute();
+	});
 
     $('#input-to').bind('keypress',function(e){
         if(e.keyCode == 13){
             if ($('#input-from').val() != "" && $('#input-to').val() != ""){
-                submit_click = true;
                 request.origin = $('#input-from').attr('value');
                 request.destination = $('#input-to').attr('value');
                 getRoute();
@@ -156,7 +173,6 @@ $(document).ready(function(){
     $('#input-from').bind('keypress',function(e){
         if(e.keyCode == 13){
             if ($('#input-from').val() != "" && $('#input-to').val() != ""){
-                submit_click = true;
                 request.origin = $('#input-from').attr('value');
                 request.destination = $('#input-to').attr('value');
                 getRoute();
@@ -170,7 +186,7 @@ $(document).ready(function(){
             var rleg = directionsDisplay.directions.routes[0].legs[0];
             distance = rleg.distance.value/1000;
             money_value = countMoney();
-            $('#search-result').html(money_value.formatMoney(0,"",".",","));
+			display_price();
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);
         }

@@ -35,11 +35,20 @@ class MeMoneyController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
+		
+        $filter = $this->getRequest()->getSession()->get('driver.filter', new \Moex\CoreBundle\Entity\DriverFilter());
+		
+		$translator = $this->get('translator');
+        $filterForm = $this->createForm(new DriverFilterType($translator), $filter);
+        $filterForm->bindRequest($this->getRequest());
+        $this->getRequest()->getSession()->set('driver.filter', $filter);
+        
+        $query = $em->getRepository('MoexCoreBundle:MeMoney')->findByFilterQuery($filter);
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator->setMaxPerPage($this->container->getParameter('moex.pagesize.default'));
+        $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
 
-        return array(
-            'entity'      => $entity,
-            );
-        return array();
+        return array( 'entity' => $entity, 'filterForm' => $filterForm->createView(), 'paginator' => $paginator);
     }
 
     /**
@@ -71,7 +80,7 @@ class MeMoneyController extends Controller
             $em->persist($entity);
 
 			$driver = $em->getRepository("MoexCoreBundle:MeDrivers")->find($driver_id);
-			$driver->setMoney($driver->getMoney() - $entity->getAmount());
+			$driver->setMoexMoney($driver->getMoexMoney() - $entity->getAmount());
 			$em->persist($driver);
             $em->flush();
 

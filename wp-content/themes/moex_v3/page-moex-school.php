@@ -8,7 +8,7 @@
 				<div class="form-count-container">
                     <div class="count-header ctext sdtext">Tính phí</div>
 					<div class="countprice">
-					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5" min="2"><span> km/lần</span></div>
+					<div class="form-row"><label>Quãng đường</label><input type="number" id="demo-distance" value="5" min="1"><span> km/lần</span></div>
 					<div class="form-row"><label>Số lần đưa đón</label><input type="number" id="demo-time" value="2" min="1"><span> lần/ngày</span></div>
 					<div class="form-row"><label>Số ngày đón</label><input type="number" id="demo-date" value="20" min="1"><span> ngày/tháng</span></div>
 					<div class="form-row"><a class="btn-count" tabindex="5" href="javascript:void(0)" onclick="tinhcuoc()"><span><span>Tính cước</span></span></a></div>
@@ -31,14 +31,7 @@
 						});
 						function tinhcuoc(){
 							demo_distance = $("#demo-distance").val()*$("#demo-time").val()*$("#demo-date").val();
-							if (demo_distance <= 250 && demo_distance > 170){
-								demo_distance =  170 + (demo_distance-170)*((100-7)/100);
-							}
-							if (demo_distance > 250){
-								demo_distance = 
-								demo_distance =  170 + (250-170)*((100-7)/100) + (demo_distance-250)*((100-10)/100);
-							}
-							var rst = Math.max((demo_distance*price_level),20000);
+							var rst = demo_distance*price_level;
 							$("#result").html(rst.formatMoney(0,"",".", ",") + " VNĐ");
 						}
 					</script>

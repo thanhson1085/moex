@@ -5,6 +5,7 @@
 	<div class="left-part">
 		<div class="admin-header">{{ "header_order_edit" | trans }}
 				<div class="contextual"> 
+					<a class="icon icon-show" href="{{ path('order_show', { 'id': entity.id }) }}">{{ "action_show" | trans }}</a>
 					<a class="icon icon-del" href="{{ path('order_delete', { 'id': entity.id }) }}">{{ "action_delete" | trans }}</a>
 					<a href="{{ path('order') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a> 
 				</div>

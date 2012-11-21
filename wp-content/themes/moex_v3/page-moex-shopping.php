@@ -27,7 +27,7 @@ get_header();
 						});
 						function tinhcuoc(){
 							demo_distance = $("#demo-distance").val();
-							var rst = Math.max((demo_distance*price_level), 50000);
+							var rst = demo_distance*price_level;
 							$("#result").html(rst.formatMoney(0,"",".", ",") + " VNĐ <br /> + 3% giá trị hàng hóa");
 						}
 					</script>

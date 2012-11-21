@@ -30,7 +30,6 @@ class MeDriversController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $filter = $this->getRequest()->getSession()->remove('driver.filter');
         $filter = $this->getRequest()->getSession()->get('driver.filter', new \Moex\CoreBundle\Entity\DriverFilter());
 		
 		$translator = $this->get('translator');
@@ -248,13 +247,6 @@ class MeDriversController extends Controller
             'charge_form'   => $editForm->createView(),
         );
 
-		/*
-		$entity->setMoney(0);
-		$em->persist($entity);
-		$em->flush();
-
-        return $this->redirect($this->generateUrl('driver_show', array('id' => $id)));
-		*/
     }
 
     /**

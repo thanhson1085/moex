@@ -38,6 +38,14 @@
 					<th class="label">{{ "driver_money" | trans }}</th>
 					<td class="value">{{ entity.money | number_format(0, '.', ',') }}</td>
 				</tr>
+				<tr class="odd">
+					<th class="label">{{ "driver_moexmoney" | trans }}</th>
+					<td class="value">{{ entity.moexMoney | number_format(0, '.', ',') }}</td>
+				</tr>
+				<tr class="even">
+					<th class="label">{{ "driver_drivermoney" | trans }}</th>
+					<td class="value">{{ entity.dMoney | number_format(0, '.', ',') }}</td>
+				</tr>
 			</tbody>
 		</table>
 		{% endmacro %}

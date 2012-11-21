@@ -2,41 +2,17 @@ $(document).ready(function(){
 	onecall();
 });
 
-//var price_level = [{distance: 0, price: 12}, {distance: 1, price: 10}, { distance: 5, price: 8}, {distance: 10, price: 7}, {distance:20, price: 6}]
 var distance = 0;
 var moex_distance = 0;
-var price_level = 9900;
-var moexDelivery = 0;
-var moexGo = 0;
-var limit = 5;
+var price_level = 8000;
+var service_type = 1;
+var province = ',hà nội, việt nam';
+var money_value = 0; 
+var search_result = "";
 function countMoney(){
-	d = distance;
-	if (d > 5){
-		moexDelivery = Math.ceil(price_level*d/5000)*5000;
-    }   
-	else{
-    	moexDelivery = 5 * Math.ceil(price_level/1000)*1000; 
-	}
-	if (d > 2){
-		moexGo = Math.ceil((price_level*d)/5000)*5000;
-    }   
-	else{
-    	moexGo = 2 * Math.ceil(price_level/1000)*1000; 
-	}
-	if (limit == 5) ret = moexDelivery;
-	if (limit == 2) ret = moexGo;
-	if (d > limit){
-		moex_distance = ret/price_level;
-	}
-	else{
-		if (d > 2 && d < 5){
-			moex_distance = moexGo/price_level;
-		}
-		else{
-			moex_distance = distance; 
-		}
-	}
-	moex_distance = Math.round(moex_distance*1000)/1000;
+	distance = (Math.ceil(Math.ceil(distance*10)/5)*5)/10;
+	moex_distance = distance; 
+	ret = distance*price_level;
 	return ret;
 }
 
@@ -48,7 +24,7 @@ function getRoute(){
     if (status == google.maps.DirectionsStatus.OK) {
         distance = response.routes[0].legs[0].distance.value/1000;
         money_value = countMoney();
-        $('#search-result').html(money_value.formatMoney(0,'','.',','));
+		display_price();
 		$('#order-distance').html(moex_distance);
         directionsDisplay.setDirections(response);
     }
@@ -67,6 +43,13 @@ function email_validation(email){
 		return false;
 	}                                
 	return true;
+}
+function display_price(){
+	search_result = money_value.formatMoney(0,"",".", ",") + " VNĐ";
+	if (service_type == 3 || service_type == 4){
+		search_result = search_result + " + 3% giá trị hàng hóa"; 
+	}
+	$('#search-result').html(search_result);
 }
 function onecall(){
 	window.onscroll = DisalbeRightAdv;
@@ -146,3 +129,4 @@ Number.prototype.formatMoney = function(places, symbol, thousand, decimal) {
 	    j = (j = i.length) > 3 ? j % 3 : 0;
 	return symbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : "");
 };
+
