@@ -65,6 +65,7 @@ function display_price(){
 		search_result = search_result + " + 3% giá trị hàng hóa"; 
 	}
 	$('#search-result').html(search_result);
+	$('#input-price').attr("value", money_value);
 }
 function onecall(){
 	window.onscroll = DisalbeRightAdv;

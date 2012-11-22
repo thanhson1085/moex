@@ -80,3 +80,13 @@ a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; fon
 #MoexShopping a.btn-count{background:#F26522;}
 #MoexGo a.btn-count{background:#C8215D;}
 .form-count-container{padding-left: 20px; padding-top: 10px;}
+.moex-content{position: relative; width: 100%; font-size: 12px;}
+.order-list{width: 250px; float: left; border-right: solid 1px #ccc; margin-bottom: 20px;}
+.order-list > ul {list-style: none; margin: 0; padding: 0;}
+.order-list > ul > li{border-bottom: solid 1px #ccc; padding-left: 10px;}
+.order-list > ul > li:last-child{border: 0;}
+.order-list > ul > li > a {line-height: 25px;}
+#order-info{float: right; width: 720px; padding-top: 35px; padding-bottom: 20px;}
+#order-info table td.label{width: 200px;}
+#order-info table tr{ height: 20px;}
+#order-info table tr td a{ text-decoration: underline }

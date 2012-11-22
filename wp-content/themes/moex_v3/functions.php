@@ -3,7 +3,21 @@
  * Sun Aug 05, 2012 14:17:48 added by Thanh Son 
  * Email: thanhson1085@gmail.com 
  */
+define('THEMELIB', TEMPLATEPATH . '/lib');
+require_once(THEMELIB . '/order-info-ajax.php');
+require_once(THEMELIB . '/driver-info-ajax.php');
 include_once(get_template_directory().'/lib/claviska/simple-php-captcha.php');
+
+global $moex_service_type;
+$moex_service_type = array( 
+						0 => '',
+						1 => 'moEx Delivery',
+						2 => 'moEx Go',
+						3 => 'moEx Food',
+						4 => 'moEx Shopping',
+						5 => 'moEx Shool',
+						);
+								  
 
 $result = add_role('cs', 'CS', array(
     'read' => true,

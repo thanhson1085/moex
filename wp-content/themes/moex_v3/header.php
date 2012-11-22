@@ -13,35 +13,38 @@
     // Add the blog name.
     bloginfo( 'name' );
 
-    // Add the blog description for the home/front page.
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
-        echo " - $site_description";
+// Add the blog description for the home/front page.
+$site_description = get_bloginfo( 'description', 'display' );
+if ( $site_description && ( is_home() || is_front_page() ) )
+	echo " - $site_description";
 ?>
 </title>
-	<link href="<?php echo get_bloginfo("template_url")?>/pic/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link href="<?php echo get_bloginfo("template_url")?>/pic/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
-    <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
-    <script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
-    <script src="<?php echo get_bloginfo("template_url")?>/js/jcarousellite_1.js" type="text/javascript"></script>
-    
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/Default.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/fontface.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/CommonControls.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/Homepage.css" rel="stylesheet" type="text/css" />
+<script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
+<script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
+<script src="<?php echo get_bloginfo("template_url")?>/js/jcarousellite_1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var ajax_link = "<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php";
+</script>
 
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/GioiThieu.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/DangKy.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/QuanLyTaiKhoan.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/MoexGo.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/MoexOffice.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/MoexShopping.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/MoexFood.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/MoexSchool.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/LienHe.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/Blog.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/Default.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/fontface.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/CommonControls.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/Homepage.css" rel="stylesheet" type="text/css" />
+
+<link href="<?php echo get_bloginfo("template_url")?>/cs/GioiThieu.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/DangKy.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/QuanLyTaiKhoan.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexGo.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexOffice.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexShopping.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexFood.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexSchool.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/LienHe.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/Blog.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem2.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />

@@ -10,8 +10,10 @@ get_header();
 			<div id="order-search">
 				<?php
 				if($_SERVER['REQUEST_METHOD'] == 'POST'){	
+					$customer_id = get_current_user_id();
 					$status = $wpdb->insert($wpdb->prefix."orders", array("order_name" => esc_attr($_POST['tbHoTen']), 
 												"phone" => esc_attr($_POST["tbDienThoai"]), "service_type" => esc_attr($_POST['ddlDichVu']),
+												"customer_id" => $customer_id, "price" => esc_attr($_POST['tbPrice']), "order_status" => "PENDING",
 												"order_from" => esc_attr($_POST["tbFrom"]), "order_to" => esc_attr($_POST["tbTo"]),
 												"order_info" => esc_attr($_POST["tbYeuCauChiTiet"]), "updated_at" => current_time('mysql'), 
 												"lat" => esc_attr($_POST["tbLat"]), "lng" => esc_attr($_POST["tbLng"]), 
@@ -35,7 +37,7 @@ get_header();
              <div class="cot2">
 				<form method="POST" id="order-form" name="orderform" action="">
                 <div class="pb10">
-					<span class="order-header" style="color:red; font-size: 28px;">Đăng ký dịch vụ</span>
+					<span class="order-header" style="color:red; font-size: 28px;">Sử dụng dịch vụ</span>
                  </div>
                  <div class="left">Điểm đi</div>
                  <div class="fl">:</div>
@@ -47,6 +49,7 @@ get_header();
                  <div class="fl">:</div>
                  <div class="right">
                 	<input id="input-to" name="tbTo" type="text" class="textbox" value="<?php echo (isset($_GET['to']))?$_GET['to']:""; ?>"/>
+                	<input id="input-price" name="tbPrice" type="hidden"/>
                 	<input id="input-lat" name="tbLat" type="hidden"/>
                 	<input id="input-lng" name="tbLng" type="hidden"/>
 				 </div>
@@ -330,8 +333,8 @@ $(document).ready(function(){
 			$('#order-distance').html(moex_distance);
             $('#input-from').attr('value',rleg.start_address);
             $('#input-to').attr('value',rleg.end_address);
-            $('#input-lat').val(rleg.start_location.lat());
-            $('#input-lng').val(rleg.end_location.lng());
+            $('#input-lat').attr('value', rleg.start_location.lat());
+            $('#input-lng').attr('value',rleg.end_location.lng());
 
         }
         currentDirections = directionsDisplay.getDirections();

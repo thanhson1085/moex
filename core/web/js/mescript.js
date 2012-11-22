@@ -316,6 +316,8 @@ function getRoute(){
     distance = 0;
     request.origin += province;
     request.destination += province;
+	var driving_distance;
+    request.travelMode = google.maps.DirectionsTravelMode.WALKING;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
         distance = response.routes[0].legs[0].distance.value/1000;
@@ -328,41 +330,35 @@ function getRoute(){
         directionsDisplay.setDirections(response);
     }
     });
+    request.travelMode = google.maps.DirectionsTravelMode.DRIVING;
+    directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+        driving_distance = response.routes[0].legs[0].distance.value/1000;
+		if (driving_distance < distance){
+			money_value = countMoney();
+			$('#search-result').html(money_value);
+			if(submit_click == true){
+				submit_click = false;
+				$('#moex_corebundle_meorderstype_price').attr('value',money_value);
+			}
+			directionsDisplay.setDirections(response);
+		}
+    }
+    });
+    request.travelMode = google.maps.DirectionsTravelMode.WALKING;
 }
+
 var distance = 0;
 var moex_distance = 0;
-var price_level = 9900;
-var moexDelivery = 0;
-var moexGo = 0;
-var limit = 5;
+var price_level = 8000;
+var service_type = 1;
+var province = ',hà nội, việt nam';
+var money_value = 0; 
+var search_result = "";
 function countMoney(){
-    d = distance;
-    if (d > 5){
-        moexDelivery = Math.ceil(price_level*d/5000)*5000;
-    }
-    else{
-        moexDelivery = 5 * Math.ceil(price_level/1000)*1000;
-    }
-    if (d > 2){
-        moexGo = Math.ceil((price_level*d)/5000)*5000;
-    }
-    else{
-        moexGo = 2 * Math.ceil(price_level/1000)*1000;
-    }
-    if (limit == 5) ret = moexDelivery;
-    if (limit == 2) ret = moexGo;
-    if (d > limit){
-        moex_distance = ret/price_level;
-    }
-    else{
-        if (d > 2 && d < 5){
-            moex_distance = moexGo/price_level;
-        }
-        else{
-            moex_distance = distance;
-        }
-    }
-    moex_distance = Math.round(moex_distance*1000)/1000;
+    distance = (Math.ceil(Math.ceil(distance*10)/5)*5)/10;
+    moex_distance = distance; 
+    ret = distance*price_level;
     return ret;
 }
 

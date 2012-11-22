@@ -121,27 +121,14 @@ $(document).ready(function(){
 	});
 
 	var service_type = $('#moex_corebundle_meorderstype_serviceType option[selected="selected"]').val()
-	if (service_type == 2 || service_type == 5){
-		limit = 2;
-	}
     $("#moex_corebundle_meorderstype_serviceType").change(function(){
-        if ($(this).val() == 2 || $(this).val() == 5){
-            limit = 2;
-            money_value = moexGo; 
-			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
-        }
-        else{
-            limit = 5;
-            money_value = moexDelivery; 
-			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
-        }
+		service_type = $(this).val();
     });
 
 	google.maps.event.addListener(directionsDisplay, 'directions_changed',
 	function() {
 		if (currentDirections) {
 			var rleg = directionsDisplay.directions.routes[0].legs[0];
-			console.log(rleg);
 			distance = rleg.distance.value/1000;
 			money_value = countMoney();
 			$('#search-result').html(money_value);
