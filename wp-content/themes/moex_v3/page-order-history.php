@@ -28,7 +28,7 @@ foreach ($orders as $order){
 	<li>
 	<a href="<?php echo get_bloginfo("url");?>/order-history?order_id=<?php echo $order->id;?>">
 <?php
-	echo $order->created_at;
+	echo date_i18n(__('H:i:s d/m/Y'),strtotime($order->created_at));
 ?>
 	</a>
 	</li>
@@ -56,7 +56,7 @@ foreach ($orders as $order){
 	<li>
 	<a href="<?php echo get_bloginfo("url");?>/order-history?order_id=<?php echo $order->id;?>">
 <?php
-	echo $order->created_at;
+	echo date_i18n(__('H:i:s d/m/Y'),strtotime($order->created_at));
 ?>
 	</a>
 	</li>

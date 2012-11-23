@@ -3,7 +3,7 @@
 #Header{position:relative;z-index:1;height:75px}
 #Logo{float:left;width:500px;position: relative}
 .promotion{position: absolute; top: 0;left: 196px;}
-#Logo .anhQC{border:0;max-height:68px}
+#Logo .anhQC{border:0;max-height:58px}
 #Phone{position:absolute;z-index:2;bottom:0;right:0}
 #OnCall{position:fixed;z-index:99;right:0;top:50%;display:none}
 #OnCall img{border:0}

@@ -79,6 +79,18 @@ if ( $site_description && ( is_home() || is_front_page() ) )
 							<a class="mnt" href="<?php echo wp_logout_url( home_url() ); ?>"><span>Đăng xuất</span></a>
 						</div>
 						<div class="mntSplit"><!----></div>
+						<?php
+						$user_id = get_current_user_id();
+						$orders = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."orders WHERE customer_id=".$user_id);
+						if($orders):
+						?>
+                    	<div class="fr">
+							<a class="mnt" href="<?php echo get_bloginfo("url"); ?>/order-history"><span>Đơn hàng</span></a>
+						</div>
+						<?php
+						endif;
+						?>
+						<div class="mntSplit"><!----></div>
 					<?php endif;?>
 					<?php
 						$current_user = wp_get_current_user();

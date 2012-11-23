@@ -104,7 +104,7 @@ get_header();
 						}
 						?>
                         <a class="title" href="<?php the_permalink()?>"><?php the_title()?></a>
-                        <div class="date"><?php echo date_i18n( __( 'd/m/Y' ))?> - <?php echo getPostViews($post->ID)?> lượt xem</div>
+                        <div class="date"><?php echo date_i18n( __( 'd/m/Y' ), strtotime( $post->post_date ))?> - <?php echo getPostViews($post->ID)?> lượt xem</div>
                         <div class="lh18">
 							<?php
 								echo get_the_excerpt();
@@ -116,7 +116,7 @@ get_header();
                         <div class="cb h20"><!----></div>
                         <div class="vientren"><!----></div>
 						<?php else:?>
-                       	<a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> <span>(<?php echo date_i18n( __( 'd/m' ))?>)</span></a>
+                       	<a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> <span>(<?php echo date_i18n( __( 'd/m' ), strtotime( $post->post_date ))?>)</span></a>
 						<?php endif;?>
 						<?php endforeach;?>
                     </div>
