@@ -167,8 +167,8 @@
                             }
 							var redirect_to = $('#redirect-to').val();
 							$('#redirect-to').val(redirect_to + '&email='+$('#tbEmail').val());
-							return;
 							document.registerform.submit();
+							return;
                         }
                     </script>
                 </div>
