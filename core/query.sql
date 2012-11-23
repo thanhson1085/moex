@@ -15,3 +15,5 @@ ALTER TABLE  `me_order_driver` ADD  `driver_money` VARCHAR( 250 ) NULL AFTER  `m
 ALTER TABLE me_order_driver ADD moex_money VARCHAR(250) DEFAULT NULL;
 ALTER TABLE me_drivers ADD moex_money VARCHAR(250) NOT NULL, ADD d_money VARCHAR(250) NOT NULL;
 ALTER TABLE me_drivers ADD image VARCHAR(255) AFTER position;
+ALTER TABLE  `me_drivers` CHANGE  `moex_money`  `moex_money` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
+ALTER TABLE  `me_drivers` CHANGE  `d_money`  `d_money` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;

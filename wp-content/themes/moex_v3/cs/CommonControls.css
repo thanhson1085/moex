@@ -91,3 +91,7 @@ a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; fon
 #order-info table tr{ height: 20px;}
 #order-info table tr td a{ text-decoration: underline }
 #order-info img{max-width: 300px; margin: 10px;} 
+#driver-info{float: right; width: 720px; padding-top: 0px; padding-bottom: 20px;}
+#driver-info img{max-width: 300px; margin: 0 10px 10px 10px;} 
+table.driver-content tr { height: 20px;}
+td.align-top{vertical-align: top}

@@ -35,7 +35,7 @@ foreach ($drivers as $driver){
 endif;
 ?>
 </div>
-<div id="order-info"></div>
+<div id="driver-info"></div>
 </div>
 <?php
 	$driver_id = (isset($_GET["driver_id"]))?$_GET["driver_id"]:0;
@@ -44,7 +44,7 @@ endif;
 	$(document).ready(function(){
 		jQuery.post(ajax_link,{ action: "get_ajax_driver_info", driver_id: <?php echo $driver_id?>, modo: "ajaxget" },
 		function(data){
-			$("#order-info").html(data);
+			$("#driver-info").html(data);
 		});
 	});
 </script>

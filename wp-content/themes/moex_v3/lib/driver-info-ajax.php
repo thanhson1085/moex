@@ -8,12 +8,13 @@ function get_ajax_driver_info(){
 						'SELECT d.*'
 						.' FROM '.$wpdb->prefix.'drivers d' 
 						.' WHERE d.id = '.$driver_id);
+		$html .= "<table><tr>";
 		foreach ($drivers as $driver):
 		if ($driver){
 			if ($driver->image):
-				$html .= '<div><img src="'.get_bloginfo("url").'/core/web/uploads/drivers/'.$driver->image.'" /></div>';
+				$html .= '<td><img src="'.get_bloginfo("url").'/core/web/uploads/drivers/'.$driver->image.'" /></td>';
 			endif;
-			$html .= "<div><table>";
+			$html .= '<td class="align-top"><table class="driver-content">';
 			$html .= '<tr><td class="label">Mã lái xe</td>';
 			$html .= "<td>";
 			$html .= $driver->driver_code;
@@ -34,13 +35,14 @@ function get_ajax_driver_info(){
 			$html .= "<td>";
 			$html .= $driver->position;
 			$html .= "</td></tr>";
-			$html .= "</table></div>";
+			$html .= "</table></td>";
 
 		}
 		else{
 			$html .= 'Không tìm thấy thông tin lái xe';
 		}
 		endforeach;
+		$html .= "<table></tr>";
 	}
 	else{
 		$html .= 'Không tìm thấy thông tin lái xe';
