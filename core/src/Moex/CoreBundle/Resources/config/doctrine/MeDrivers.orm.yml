@@ -33,6 +33,9 @@ Moex\CoreBundle\Entity\MeDrivers:
     position:
       type: string
       length: 250
+    image:
+      type: string
+      length: 255
     money:
       type: string
       length: 250

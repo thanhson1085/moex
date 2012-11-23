@@ -90,3 +90,4 @@ a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; fon
 #order-info table td.label{width: 200px;}
 #order-info table tr{ height: 20px;}
 #order-info table tr td a{ text-decoration: underline }
+#order-info img{max-width: 300px; margin: 10px;} 

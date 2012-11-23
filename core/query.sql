@@ -14,3 +14,4 @@ ALTER TABLE  `me_money` ADD INDEX (  `from_id` ,  `to_id` ) ;
 ALTER TABLE  `me_order_driver` ADD  `driver_money` VARCHAR( 250 ) NULL AFTER  `money`
 ALTER TABLE me_order_driver ADD moex_money VARCHAR(250) DEFAULT NULL;
 ALTER TABLE me_drivers ADD moex_money VARCHAR(250) NOT NULL, ADD d_money VARCHAR(250) NOT NULL;
+ALTER TABLE me_drivers ADD image VARCHAR(255) AFTER position;

@@ -193,6 +193,7 @@ class MeDriversController extends Controller
         if ($editForm->isValid()) {
         	$updated_at = new \DateTime();
 			$entity->setUpdatedAt($updated_at);
+			$entity->upload();
             $em->persist($entity);
             $em->flush();
 

@@ -23,6 +23,7 @@ class MeDriversType extends AbstractType
             ->add('phone', 'text', array('label' => $this->translator->trans('driver_phone')))
             ->add('motoNo', 'text', array( 'required' => false, 'label' => $this->translator->trans("driver_motono")))
             ->add('driverAge', 'text', array( 'required' => false, 'label' => $this->translator->trans("driver_driverage")))
+            ->add('file', 'file', array( 'required' => false, 'label' => $this->translator->trans("driver_image")))
             ->add('driverInfo', 'textarea', array('required' => false, 'label' => $this->translator->trans("driver_driverinfo")))
             ->add('position', 'text', array('attr' => array('readonly' => 'readonly', 'tabindex' => '-1'), 'label' => $this->translator->trans("driver_position")))
             ->add('lat', 'text', array('attr' => array('readonly' => 'readonly', 'tabindex' => '-1'), 'label' => $this->translator->trans("driver_lat")))

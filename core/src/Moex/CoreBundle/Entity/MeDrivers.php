@@ -450,4 +450,72 @@ class MeDrivers
     {
         return $this->d_money;
     }
+    /**
+     * @var string $image
+     */
+    private $image;
+
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string 
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        return 'uploads/drivers';
+    }
+    /**
+     * @Assert\File(maxSize="6000000")
+     */
+    public $file;
+	public function upload()
+	{
+		// the file property can be empty if the field is not required
+		if (null === $this->file) {
+			return;
+		}
+
+		// use the original file name here but you should
+		// sanitize it at least to avoid any security issues
+
+		// move takes the target directory and then the target filename to move to
+		$this->file->move($this->getUploadRootDir(), $this->file->getClientOriginalName());
+
+		// set the path property to the filename where you'ved saved the file
+		$this->image = $this->file->getClientOriginalName();
+
+		// clean up the file property as you won't need it anymore
+		$this->file = null;
+	}
 }

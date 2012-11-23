@@ -10,7 +10,10 @@ function get_ajax_driver_info(){
 						.' WHERE d.id = '.$driver_id);
 		foreach ($drivers as $driver):
 		if ($driver){
-			$html .= "<table>";
+			if ($driver->image):
+				$html .= '<div><img src="'.get_bloginfo("url").'/core/web/uploads/drivers/'.$driver->image.'" /></div>';
+			endif;
+			$html .= "<div><table>";
 			$html .= '<tr><td class="label">Mã lái xe</td>';
 			$html .= "<td>";
 			$html .= $driver->driver_code;
@@ -31,7 +34,7 @@ function get_ajax_driver_info(){
 			$html .= "<td>";
 			$html .= $driver->position;
 			$html .= "</td></tr>";
-			$html .= "</table";
+			$html .= "</table></div>";
 
 		}
 		else{
