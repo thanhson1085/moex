@@ -94,4 +94,12 @@ a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; fon
 #driver-info{float: right; width: 720px; padding-top: 0px; padding-bottom: 20px;}
 #driver-info img{max-width: 300px; margin: 0 10px 10px 10px;} 
 table.driver-content tr { height: 20px;}
+table.driver-content tr td.label{ width: 100px;}
 td.align-top{vertical-align: top}
+.order-notify{color: white; padding: 10px; font-size: 12px; border-radius: 10px; width: 700px; float: right;}
+.order-selected a{ font-weight: bold; color: white;}
+.MoexDelivery{background:#6B7B84;}
+.MoexSchool{background:#20409A;}
+.MoexFood{background:#8DC63F;}
+.MoexShopping{background:#F26522;}
+.MoexGo{background:#C8215D;}

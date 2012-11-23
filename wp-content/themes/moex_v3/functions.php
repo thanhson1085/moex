@@ -18,6 +18,14 @@ $moex_service_type = array(
 						5 => 'moEx Shool',
 						);
 								  
+$moex_service_type_class = array( 
+						0 => '',
+						1 => 'MoexDelivery',
+						2 => 'MoexGo',
+						3 => 'MoexFood',
+						4 => 'MoexShopping',
+						5 => 'MoexShool',
+						);
 
 $result = add_role('cs', 'CS', array(
     'read' => true,

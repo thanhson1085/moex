@@ -21,8 +21,8 @@ get_header();
 					if($status):
 					?>
 					<script type="text/javascript">
-						alert("<?php echo _e("Cảm ơn bạn đã sử dụng dịch vụ, moEx sẽ phục vụ theo đúng yêu cầu của bạn. moEx luôn sẵn sàng với 1900 56 56 36!"); ?>");
-						$(location).attr("href","<?php echo get_bloginfo("url");?>");
+						//alert("<?php echo _e("Cảm ơn bạn đã sử dụng dịch vụ, moEx sẽ phục vụ theo đúng yêu cầu của bạn. moEx luôn sẵn sàng với 1900 56 56 36!"); ?>");
+						$(location).attr("href","<?php echo get_bloginfo("url");?>/order-history/?order_id=<?php echo $wpdb->insert_id;?>&status=1");
 					</script>
 					<?php
 					else:
@@ -145,7 +145,8 @@ get_header();
 							$("#order-info").html($("#tbYeuCauChiTiet").attr("value"));
 							$("#order-from").html($("#input-from").attr("value"));
 							$("#order-to").html($("#input-to").attr("value"));
-                            ShowOrderForm();                            
+                            //ShowOrderForm();                            
+							submitform();
                         }
                     </script>
                 </div>
