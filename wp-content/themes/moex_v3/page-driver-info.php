@@ -26,7 +26,7 @@ $drivers = $wpdb->get_results(
 		<?php
 			foreach ($drivers as $driver):
 		?>
-          <div class="person">
+          <div class="person" code="<?php echo $driver->id;?>">
             <a href="<?php echo get_bloginfo("url")?>/driver-info/?driver_id=<?php echo $driver->id?>">
               <img src="<?php echo get_bloginfo("url")?>/core/web/uploads/drivers/<?php echo $driver->image;?>" alt="<?php echo $driver->driver_name;?>">
               <p><?php echo $driver->driver_name;?><br><span><?php echo $driver->driver_code;?></span></p>
@@ -55,6 +55,14 @@ $drivers = $wpdb->get_results(
 		?>
 		<script type="text/javascript">
 			$("#<?php echo $driver_id?>").css("display","block");
+			$(document).ready(function(){
+				$(".person").hover(function(){
+					$(".short-profile").each(function(){
+						$(this).css("display", "none");
+					});
+					$("#" +$(this).attr("code")).css("display","block");
+				});
+			});
 		</script>
 		</div> <!-- /.selected-profile -->
 </div>
@@ -509,8 +517,11 @@ img.lg-photo {
 
 .selected-profile {
 	float: left;
-	padding: 0 32px;
 	width: 196px;
+	padding: 10px 20px 10px 20px;
+	width: 232px;
+	border: solid 1px #ddd;
+	text-align: center;
 }
 
 .person {
