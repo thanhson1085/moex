@@ -27,8 +27,9 @@ $drivers = $wpdb->get_results(
 			foreach ($drivers as $driver):
 		?>
           <div class="person" code="<?php echo $driver->id;?>">
+				<?php $image = ($driver->image)?get_bloginfo("url")."/core/web/uploads/drivers/".$driver->image:get_bloginfo("template_url")."/pic/no-image.jpg";?>
             <a href="<?php echo get_bloginfo("url")?>/driver-info/?driver_id=<?php echo $driver->id?>">
-              <img src="<?php echo get_bloginfo("url")?>/core/web/uploads/drivers/<?php echo $driver->image;?>" alt="<?php echo $driver->driver_name;?>">
+              <img src="<?php echo $image;?>" alt="<?php echo $driver->driver_name;?>">
               <p><?php echo $driver->driver_name;?><br><span><?php echo $driver->driver_code;?></span></p>
             </a>
              <!-- /.short-profile -->
@@ -43,7 +44,8 @@ $drivers = $wpdb->get_results(
 		?>
 			
         	<div id="<?php echo $driver->id;?>" class="short-profile" style="display: none;">
-              <img src="<?php echo get_bloginfo("url")?>/core/web/uploads/drivers/<?php echo $driver->image;?>" alt="<?php echo $driver->driver_name;?>" style="width: 195px; height: 195px;">
+				<?php $image = ($driver->image)?get_bloginfo("url")."/core/web/uploads/drivers/".$driver->image:get_bloginfo("template_url")."/pic/no-image.jpg";?>
+              <img src="<?php echo $image;?>" alt="<?php echo $driver->driver_name;?>" style="width: 195px; height: 195px;">
               <h3><?php echo $driver->driver_name;?><br><span><?php echo $driver->driver_code;?></span></h3>
               <p class="job-title"><?php echo $driver->position;?>
 				<br />
