@@ -92,11 +92,11 @@ money_fromname: Người nộp
 money_toname: Người nhận
 money_createdat: Ngày nộp
 money_updatedat: Ngày cập nhật
-money_header_info: Dach sách tiền lái xe đã nạp vào
-order_driver_header_info: Dach sách tiền lái xe đã thu từ khách hàng
+money_header_intro: Dach sách tiền lái xe đã nạp vào
+order_driver_header_intro: Dach sách tiền lái xe đã thu từ khách hàng
 
-filter_driver_header_info: Tìm kiếm theo thông tin lái xe
-filter_order_header_info: Tìm kiếm theo thông tin hóa đơn
+filter_driver_header_intro: Tìm kiếm theo thông tin lái xe
+filter_order_header_intro: Tìm kiếm theo thông tin hóa đơn
 
 placeholder_position: Vị trí....
 placeholder_from: Từ....
