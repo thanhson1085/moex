@@ -146,6 +146,7 @@ class MeOrdersController extends Controller
 			$entity->setCreatedAt($created_at);
 			$entity->setUpdatedAt($updated_at);
 			$entity->setUserId($user_id);
+			$entity->setCustomerId(0);
 			if ($entity->getOrderInfo() === null) $entity->setOrderInfo("");
 			$validator = $this->get('validator');
 			$errors = $validator->validate($entity);
