@@ -15,6 +15,7 @@ class DriverFilterType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
+            ->add('driverCode', 'text', array('required' => false, 'label' => $this->translator->trans('driver_drivercode')))
             ->add('phone', 'text', array('required' => false, 'label' => $this->translator->trans('driver_phone')))
             ->add('driverName', 'text', array('required' => false, 'label' => $this->translator->trans('driver_drivername')))
             ->add('driverInfo', 'text', array('required' => false, 'label' => $this->translator->trans('driver_driverinfo')))

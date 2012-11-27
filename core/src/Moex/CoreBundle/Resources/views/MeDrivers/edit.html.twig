@@ -6,6 +6,7 @@
 
         <div class="admin-header">{{ "header_driver_edit" | trans }}
                 <div class="contextual">
+					<a class="icon icon-show" href="{{ path('driver_show', { 'id': entity.id }) }}">{{ "action_show" | trans }}</a>
 					<a class="icon icon-del" href="{{ path('driver_delete', { 'id': entity.id }) }}">{{ "action_delete" | trans }}</a>
                     <a href="{{ path('driver') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a>
                 </div>

@@ -35,6 +35,11 @@ class MeMoneyRepository extends EntityRepository
                             ->setParameter('drivername', "%".$filter->getDriverName()."%");
         }
 
+        if ($filter->getDriverInfo() != null) {
+            $query = $query->andWhere('d.driverInfo LIKE :driverinfo')
+                            ->setParameter('driverinfo', "%".$filter->getDriverInfo()."%");
+        }
+
         return $query->getQuery();
     }
 }

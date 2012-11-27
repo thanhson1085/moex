@@ -16,26 +16,26 @@ class MeDriversRepository extends EntityRepository
 {
     public function findByFilterQuery(\Moex\CoreBundle\Entity\DriverFilter $filter)
     {
-        $query = $this->createQueryBuilder('o')
+        $query = $this->createQueryBuilder('d')
                               ->where('1 = 1');
 
         if ($filter->getPhone() != null) {
-            $query = $query->andWhere('o.phone LIKE :phone')
+            $query = $query->andWhere('d.phone LIKE :phone')
                             ->setParameter('phone', "%".$filter->getPhone()."%");
         }
 
         if ($filter->getPosition() != null) {
-            $query = $query->andWhere('o.position LIKE :position')
+            $query = $query->andWhere('d.position LIKE :position')
                             ->setParameter('position', "%".$filter->getPostion()."%");
         }
 
         if ($filter->getDriverName() != null) {
-            $query = $query->andWhere('o.driverName LIKE :drivername')
+            $query = $query->andWhere('d.driverName LIKE :drivername')
                             ->setParameter('drivername', "%".$filter->getDriverName()."%");
         }
 
         if ($filter->getDriverInfo() != null) {
-            $query = $query->andWhere('o.driverInfo LIKE :driverinfo')
+            $query = $query->andWhere('d.driverInfo LIKE :driverinfo')
                             ->setParameter('driverinfo', "%".$filter->getDriverInfo()."%");
         }
 

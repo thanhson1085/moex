@@ -727,6 +727,9 @@ table.records-list{
 span.disable{
 	color: #CCC;
 }
+.icon-money{
+	background-image: url(../images/money.png);
+}
 .icon-quickview{
 	background-image: url(../images/quick_view.png);
 }

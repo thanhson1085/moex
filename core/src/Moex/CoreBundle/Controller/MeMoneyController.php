@@ -10,6 +10,7 @@ use Moex\CoreBundle\Entity\MeMoney;
 use Moex\CoreBundle\Form\MeDriversType;
 use Moex\CoreBundle\Form\ChargeType;
 use Moex\CoreBundle\Form\DriverFilterType;
+use Moex\CoreBundle\Form\OrderFilterType;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 
@@ -20,6 +21,47 @@ use Pagerfanta\Adapter\DoctrineORMAdapter;
  */
 class MeMoneyController extends Controller
 {
+    /**
+     * Finds and displays a MeMoney entity.
+     *
+     * @Route("/", name="money")
+     * @Template()
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $filter = $this->getRequest()->getSession()->get('driver.filter', new \Moex\CoreBundle\Entity\DriverFilter());
+		
+		$translator = $this->get('translator');
+        $filterForm = $this->createForm(new DriverFilterType($translator), $filter);
+        $filterForm->bindRequest($this->getRequest());
+        $this->getRequest()->getSession()->set('driver.filter', $filter);
+
+        $order_filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
+		
+		$translator = $this->get('translator');
+        $order_filterForm = $this->createForm(new OrderFilterType($translator), $order_filter);
+        $order_filterForm->bindRequest($this->getRequest());
+        $this->getRequest()->getSession()->set('order.filter', $order_filter);
+        
+        $query = $em->getRepository('MoexCoreBundle:MeMoney')->findByFilterQuery($filter);
+        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $paginator->setMaxPerPage($this->container->getParameter('moex.pagesize.default'));
+        $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
+
+        $query = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findByFilterQuery($filter, $order_filter);
+        $order_paginator = new Pagerfanta(new DoctrineORMAdapter($query));
+        $order_paginator->setMaxPerPage($this->container->getParameter('moex.pagesize.default'));
+        $order_paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
+
+        return array( 'filterForm' => $filterForm->createView(), 
+					  'order_filterForm' => $order_filterForm->createView(), 
+					  'paginator' => $paginator,
+					  'order_paginator' => $order_paginator,
+					);
+    }
+
     /**
      * Finds and displays a MeMoney entity.
      *

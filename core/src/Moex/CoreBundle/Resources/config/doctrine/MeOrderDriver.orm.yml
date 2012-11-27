@@ -1,5 +1,6 @@
 Moex\CoreBundle\Entity\MeOrderDriver:
   type: entity
+  repositoryClass: Moex\CoreBundle\Repository\MeOrderDriverRepository
   table: me_order_driver
   id:
     id:

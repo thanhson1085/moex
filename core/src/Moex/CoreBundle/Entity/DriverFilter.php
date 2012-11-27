@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 class DriverFilter 
 {
+    private $driverCode;
+
     private $driverName;
 
     private $driverAge;
@@ -15,6 +17,16 @@ class DriverFilter
     private $phone;
 
     private $position;
+
+    public function setDriverCode($driverCode)
+    {
+        $this->driverCode = $driverCode;
+    }
+
+    public function getDriverCode()
+    {
+        return $this->driverCode;
+    }
 
     public function setDriverName($driverName)
     {

@@ -23,13 +23,9 @@ function get_ajax_driver_info(){
 			$html .= "<td>";
 			$html .= $driver->driver_name;
 			$html .= "</td></tr>";
-			$html .= '<tr><td class="label">Tuối</td>';
+			$html .= '<tr><td class="label">Năm sinh</td>';
 			$html .= "<td>";
 			$html .= $driver->driver_age;
-			$html .= "</td></tr>";
-			$html .= '<tr><td class="label">Số điện thoại</td>';
-			$html .= "<td>";
-			$html .= $driver->phone;
 			$html .= "</td></tr>";
 			$html .= '<tr><td class="label">Địa điểm</td>';
 			$html .= "<td>";
