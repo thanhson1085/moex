@@ -12,6 +12,7 @@ menu_order_assigned: Đã giao việc
 menu_order_done: Đã làm xong
 menu_driver_allitem: Tất cả
 menu_driver_manager: Quản lý lái xe
+menu_money_manager: Quản lý tiền
 message_record_not_found: Không tìm thấy bản ghi nào
 action_unassign: Hủy giao 
 action_assign: Giao việc
@@ -27,8 +28,9 @@ action_undone: Chưa xong
 button_edit: Sửa
 button_create: Tạo mới 
 button_search: Tìm kiếm
-button_filter: Lọc
-button_reset: Bỏ lọc
+button_filter: Tìm
+button_reset: Bỏ tìm
+button_charge: Nạp tiền
 table_id: Id
 table_action: Tác vụ
 
@@ -38,12 +40,13 @@ header_order_edit: Sửa đơn hàng
 header_driver_list: Danh sách Lái xe
 header_driver_new: Tạo mới Lái xe
 header_driver_edit: Sửa Lái xe
-header_filter_form: Khung lọc
+header_filter_form: Tìm kiếm thông tin
 header_map: Bản đồ
 header_assign_drivers: Đã giao cho
 header_unassign_drivers: Có thể giao cho
 header_order_assigned: Đơn hàng đang làm
 header_order_done: Đơn hàng đã hoàn thành
+header_charge: Lái xe nộp tiền
 
 intro_assign_drivers: Danh sách lái xe đã được giao việc cho đơn hàng này
 intro_unassign_drivers: Danh sách lái xe có thể giao làm việc cho đơn hàng này
@@ -70,16 +73,30 @@ driver_drivername: Tên lái xe
 driver_drivercode: Mã lái xe
 driver_phone: Điện thoại
 driver_position: Vị trí
-driver_driverage: Tuổi
+driver_driverage: Năm sinh
 driver_lat: Vĩ độ
 driver_lng: Kinh độ
 driver_driverinfo: Mô tả
-driver_money: Số tiền
+driver_money: Tổng tiền(VNĐ)
 driver_motono: Biển số xe
 driver_distance: Khoảng cách
 driver_createdat: Ngày tạo
 driver_updatedat: Ngày cập nhật
 driver_admin_header_intro: Dach sách lái xe
+driver_moexmoney: Nợ moEx(VNĐ)
+driver_drivermoney: Tiền lái xe(VNĐ)
+
+money_amount: Số tiền(VNĐ)
+money_description: Mục đích
+money_fromname: Người nộp
+money_toname: Người nhận
+money_createdat: Ngày nộp
+money_updatedat: Ngày cập nhật
+money_header_info: Dach sách tiền lái xe đã nạp vào
+order_driver_header_info: Dach sách tiền lái xe đã thu từ khách hàng
+
+filter_driver_header_info: Tìm kiếm theo thông tin lái xe
+filter_order_header_info: Tìm kiếm theo thông tin hóa đơn
 
 placeholder_position: Vị trí....
 placeholder_from: Từ....
@@ -89,4 +106,4 @@ status_pending: Chưa giao
 status_assigned: Đã giao
 status_done: Hoàn thành
 
-footer: Developed by Software Team, R&D Center, MoEx JSC., Co.
+footer: Developed by R&D Center, MoEx JSC., Co.
