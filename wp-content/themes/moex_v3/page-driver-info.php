@@ -513,7 +513,7 @@ img.lg-photo {
 
 .people {
 	float: left;
-	margin: 40px 0 29px;
+	margin: 0 0 29px;
 	width: 670px;
 }
 

@@ -3,7 +3,6 @@
  * Sun Aug 05, 2012 14:17:48 added by Thanh Son 
  * Email: thanhson1085@gmail.com 
  */
-include_once(get_template_directory().'/lib/claviska/simple-php-captcha.php');
 
 $result = add_role('cs', 'CS', array(
     'read' => true,
