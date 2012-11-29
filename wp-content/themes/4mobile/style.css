@@ -1,11 +1,13 @@
+body{font-family: verdana, tamaho, arial;}
 .moex-page-container, .header-container{width: 100%;}
 .moex-page, .header{margin: 0 auto; width: 93%;}
 #map{width: 100%; height: 500px;}
 .form-container{width: 100%;}
-.form-container input[type="text"]{width: 100%; height: 25px; font-size: 16px;}
-.form-row{height: 40px;}
-#search-result{float: right;}
+.form-container input[type="text"]{width: 100%; height: 35px; font-size: 18px; padding-left: 3px; border-radius: 8px; border: solid 1px #6399F5; outline: 0}
+.form-row{height: 50px;}
+.form-row button{color: white; background:#6399F5; padding: 5px 15px 5px 15px; border-radius: 8px; border: solid 1px #EEE;}
+#search-result{float: right; color: #FF5E99; padding-top: 8px;}
 #search-submit{}
 .header{overflow: auto; height: 60px; position: relative; }
 .logo img{height: 40px; bottom: 0;}
-.slogan{float: right; position: absolute; right: 0.5em; bottom: 0.3em}
+.slogan{float: right; position: absolute; right: 0.5em; bottom: 0.3em; color: #FF5E99}

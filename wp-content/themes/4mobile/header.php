@@ -11,7 +11,7 @@
 <div class="header-container">
 	<div class="header">
 		<div class="logo"><img src="<?php echo get_bloginfo("template_url")?>/images/logo.jpg"></div>
-		<div class="slogan">gọi 1900565636 để sử dụng dịch vụ</div>
+		<div class="slogan">gọi 1900565636 để sử dụng dịch vụ!</div>
 	</div>
 </div>
 <div class="moex-page-container">
