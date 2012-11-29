@@ -1,6 +1,6 @@
 	</div>
 </div>
-<div class="footer-conatiner">
+<div class="footer-container">
 	<div class="footer"></div>
 </div>
 <div class="menu-container">
