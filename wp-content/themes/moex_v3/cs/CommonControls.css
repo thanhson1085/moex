@@ -105,4 +105,5 @@ td.align-top{vertical-align: top}
 .MoexFood{background:#8DC63F;}
 .MoexShopping{background:#F26522;}
 .MoexGo{background:#C8215D;}
-
+.event{position: relative; width: 460px; text-align: justify; padding-right: 10px; border-right: solid 1px #ccc;}
+.event #formBuilderCSSIDCinema{position: absolute; top: 0;right: -460px; width: 460px;}
