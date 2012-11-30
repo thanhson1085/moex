@@ -10,7 +10,7 @@
 <body>
 <div class="header-container">
 	<div class="header">
-		<div class="logo"><a href="<?php echo get_bloginfo("url");?><img src="<?php echo get_bloginfo("template_url")?>/images/logo.jpg"></div>
+		<div class="logo"><a href="<?php echo get_bloginfo("url");?>"><img src="<?php echo get_bloginfo("template_url")?>/images/logo.jpg"></a></div>
 		<div class="slogan">gọi 1900565636 để sử dụng dịch vụ!</div>
 	</div>
 </div>
