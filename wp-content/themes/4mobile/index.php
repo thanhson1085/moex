@@ -4,7 +4,10 @@ get_header();
 <div class="form-container">
 <div class="form-row"><input id="input-from" type="text"></div>
 <div class="form-row"><input id="input-to" type="text"></div>
-<div class="form-row"><div id="search-result"></div><button id="search-submit" type="button">GO</button></div>
+<div class="form-row"><div class="search-result">Giá trị đơn hàng: <span id="search-result"></span></div>
+<button class="moex-button" id="search-submit" type="button">Go</button>
+<button class="moex-button">Sử dụng moEx</button>
+</div>
 </div>
 <div id="map"></div>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>

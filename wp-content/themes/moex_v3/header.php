@@ -47,15 +47,16 @@ if (isMobile){
 }
 */
 </script>
-
 <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
 <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
 <script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
 <script src="<?php echo get_bloginfo("template_url")?>/js/jcarousellite_1.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo get_bloginfo("template_url")?>/js/jquery.cycle.all.min.js"></script>
 <script type="text/javascript">
 	var ajax_link = "<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php";
 </script>
 
+<link rel="stylesheet" href="<?php echo get_bloginfo("template_url")?>/cs/screen.css" type="text/css" media="screen" />
 <link href="<?php echo get_bloginfo("template_url")?>/cs/Default.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo get_bloginfo("template_url")?>/cs/fontface.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo get_bloginfo("template_url")?>/cs/CommonControls.css" rel="stylesheet" type="text/css" />

@@ -8,6 +8,8 @@
                 <a href="#" class="share5">&nbsp;</a>
             </div>
             <div id="MenuBottom">
+                <div class="fr"><a class="mnb" href="<?php echo WP_MOBILE_THEME?>" title="Lái xe moEx">moEx Mobile</a></div>
+                <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>/driver-info?driver_id=3" title="Lái xe moEx">Lái xe moEx</a></div>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>/career" title="Nghề nghiệp">Nghề nghiệp</a></div>

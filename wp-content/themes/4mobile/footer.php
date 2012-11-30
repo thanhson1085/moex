@@ -10,13 +10,13 @@
 				<a href="#">Tracking</a>
 			</li>
 			<li>
-				<a href="">Events</a>
+				<a href="<?php echo get_bloginfo("url");?>/events">Events</a>
 			</li>
 			<li>
-				<a href="">Services</a>
+				<a href="<?php echo get_bloginfo("url");?>/services">Services</a>
 			</li>
 			<li>
-				<a href="">About Us</a>
+				<a href="<?php echo get_bloginfo("url");?>/about-us">About Us</a>
 			</li>
 		</ul>
 	</div>
