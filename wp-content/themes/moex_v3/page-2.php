@@ -13,11 +13,6 @@ get_header();
 Nếu quý khách có góp ý về công ty, vui lòng gửi thư về địa chỉ sale@moex.vn. Moex sẽ phản hồi lại quý khách sớm nhất. Xin trân trọng cảm ơn!
             </div>         
             <div class="cb h15"><!----></div>
-				<table><tr>
-				<td>
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;source=embed" style="color:#0000FF;text-align:left">moEx JSC</a> in a larger map</small>
-				</td>
-				<td>
             <div class="content">
                 <div class="content2">
 					<?php
@@ -43,8 +38,8 @@ Nếu quý khách có góp ý về công ty, vui lòng gửi thư về địa ch
 					}
 				</script>
             </div>
-				</td>
-				</tr></table>
+            <div class="cb h30"><!----></div>
+<iframe width="960" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cd2afb7b9e9b0c3e0&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cd2afb7b9e9b0c3e0&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;source=embed" style="color:#0000FF;text-align:left">moEx JSC</a> in a larger map</small>
             <div class="cb h12"><!----></div> 
         </div>
     </div>

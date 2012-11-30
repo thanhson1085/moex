@@ -24,7 +24,8 @@ div.formBuilderSuccess h4 {
 
 /* The div class around the error message, in the event that a required field is not filled in*/
 .formBuilderForm .formBuilderError {
-	font-weight: bold;
+	font-weight: normal;
+	color: red;
 }
 
 /* Generic Display Controls */
