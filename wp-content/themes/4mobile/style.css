@@ -1,5 +1,6 @@
 body{font-family: verdana, tamaho, arial; width: 100%;padding: 0; margin: 0;}
 .moex-page-container, .header-container{width: 100%;}
+.moex-page{text-align: justify;}
 .header-container{margin-bottom: 10px;}
 .moex-page, .header{margin: 0 auto; width: 93%;}
 #map{width: 100%; height: 500px;}
