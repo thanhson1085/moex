@@ -8,8 +8,6 @@
                 <a href="#" class="share5">&nbsp;</a>
             </div>
             <div id="MenuBottom">
-                <div class="fr"><a class="mnb" href="<?php echo WP_MOBILE_THEME?>" title="Lái xe moEx">moEx Mobile</a></div>
-                <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>/driver-info?driver_id=3" title="Lái xe moEx">Lái xe moEx</a></div>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>/career" title="Nghề nghiệp">Nghề nghiệp</a></div>
@@ -18,6 +16,8 @@
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>?page_id=36" title="Giới thiệu">Giới thiệu</a></div>
 				<?php if(current_user_can("edit_posts")):?>
+                <div class="mnbSplit"><!----></div>
+                <div class="fr"><a class="mnb" href="<?php echo WP_MOBILE_THEME?>" title="Lái xe moEx">moEx Mobile</a></div>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" target="_blank" href="<?php echo admin_url()?>">Admin</a></div>
                 <div class="mnbSplit"><!----></div>

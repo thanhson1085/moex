@@ -42,7 +42,7 @@ class MeDriversRepository extends EntityRepository
         return $query->getQuery();
     }
 
-	public function findByAssignAndDistance($latitude, $longitude, $order_id, $limit = 10){
+	public function findByAssignAndDistance($latitude, $longitude, $order_id, $limit = 15){
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
@@ -65,7 +65,7 @@ class MeDriversRepository extends EntityRepository
 		return $em->createNativeQuery($sql, $rsm)->getResult();
 	}
 
-	public function findByUnAssignAndDistance($latitude, $longitude, $order_id, $limit = 10){
+	public function findByUnAssignAndDistance($latitude, $longitude, $order_id, $limit = 15){
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
 		$rsm->addEntityResult('Moex\CoreBundle\Entity\MeDrivers', 'd');
@@ -88,7 +88,7 @@ class MeDriversRepository extends EntityRepository
 		return $em->createNativeQuery($sql, $rsm)->getResult();
 	}
 
-    public function findByStatusAndDriverId($status, $driver_id, $limit = 10)
+    public function findByStatusAndDriverId($status, $driver_id, $limit = 15)
     {
 		$em = $this->getEntityManager();
 		$rsm = new ResultSetMapping;
