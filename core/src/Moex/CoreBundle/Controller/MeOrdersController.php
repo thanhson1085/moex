@@ -345,11 +345,15 @@ class MeOrdersController extends Controller
 			$value->setUpdatedAt($updated_at);
 			$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($value->getDriver()->getId());
 			$driver->setMoney($driver->getMoney() - $old_price + $price);
+			$driver->setDriverMoney($driver->getDMoney() - floor($old_price - $price)*$this->container->getParameter("moex.driver.money.rate"));
+			$driver->setMoexMoney($driver->getMoexMoney() - floor($old_price - $price)*(1-$this->container->getParameter("moex.driver.money.rate")));
 			$em->persist($driver);
 			$em->persist($value);
 		}
 		$driver = $em->getRepository('MoexCoreBundle:MeDrivers')->find($driver_id);
 		$driver->setMoney($driver->getMoney() - $old_price);
+		$driver->setDMoney($driver->getDMoney() - floor($old_price*$this->container->getParameter("moex.driver.money.rate")));
+		$driver->setMoexMoney($driver->getMoexMoney() - floor($old_price*(1-$this->container->getParameter("moex.driver.money.rate"))));
 		$em->persist($driver);
 		$em->flush();	
 
