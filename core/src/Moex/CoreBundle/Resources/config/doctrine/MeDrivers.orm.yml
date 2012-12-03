@@ -11,6 +11,10 @@ Moex\CoreBundle\Entity\MeDrivers:
       type: string
       length: 250
       column: driver_code
+    driverType:
+      type: integer 
+      lenght: 1
+      column: driver_type
     driverName:
       type: string
       length: 250

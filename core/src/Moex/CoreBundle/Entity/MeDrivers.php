@@ -518,4 +518,29 @@ class MeDrivers
 		// clean up the file property as you won't need it anymore
 		$this->file = null;
 	}
+    /**
+     * @var integer $driverType
+     */
+    private $driverType;
+
+
+    /**
+     * Set driverType
+     *
+     * @param integer $driverType
+     */
+    public function setDriverType($driverType)
+    {
+        $this->driverType = $driverType;
+    }
+
+    /**
+     * Get driverType
+     *
+     * @return integer 
+     */
+    public function getDriverType()
+    {
+        return $this->driverType;
+    }
 }

@@ -19,6 +19,7 @@ class MeDriversType extends AbstractType
     {
         $builder
             ->add('driverCode', 'text', array( 'label' => $this->translator->trans("driver_drivercode")))
+            ->add('driverType', 'choice', array( 'choices' => array( 1 => 'CTV', 2 => 'NVVC'), 'label' =>  $this->translator->trans('driver_drivertype')))
             ->add('driverName', 'text', array( 'label' => $this->translator->trans("driver_drivername")))
             ->add('phone', 'text', array('label' => $this->translator->trans('driver_phone')))
             ->add('motoNo', 'text', array( 'required' => false, 'label' => $this->translator->trans("driver_motono")))
