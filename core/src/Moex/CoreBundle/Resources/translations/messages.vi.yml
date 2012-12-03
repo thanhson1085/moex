@@ -79,6 +79,8 @@ driver_lng: Kinh độ
 driver_driverinfo: Mô tả
 driver_money: Tổng tiền(VNĐ)
 driver_motono: Biển số xe
+driver_drivertype: Loại lái xe
+driver_image: Ảnh đại diện
 driver_distance: Khoảng cách
 driver_createdat: Ngày tạo
 driver_updatedat: Ngày cập nhật
