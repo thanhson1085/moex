@@ -1,11 +1,13 @@
-body{font-family: verdana, tamaho, arial; width: 100%;padding: 0; margin: 0;}
+body{font-family: verdana, tamaho, arial; width: 100%;padding: 0; margin: 0; font-size: 13px;}
 .moex-page-container, .header-container{width: 100%;}
 .moex-page{text-align: justify;}
 .header-container{margin-bottom: 10px;}
 .moex-page, .header{margin: 0 auto; width: 93%;}
-#map{width: 100%; height: 500px;}
+#map{display: none; width: 100%; height: 500px;}
+#hidden-map{display: none;}
 .form-container{width: 100%;}
-.form-container input[type="text"]{width: 100%; height: 35px; font-size: 16px; padding-left: 3px; padding-right: 3px; border-radius: 8px; border: solid 1px #6399F5; outline: 0; color: #FF5E99;}
+.form-row{position: relative;}
+.form-row input[type="text"], .form-row input[type="password"]{width: 100%; height: 30px; padding-left: 3px; padding-right: 3px; border-radius: 8px; border: solid 1px #6399F5; outline: 0; color: #FF5E99;}
 .form-row{height: 50px;}
 .form-row button{color: white; background:#6399F5; padding: 5px 15px 5px 15px; border-radius: 8px; border: solid 1px #EEE;}
 .search-result{float: right; color: #FF5E99; padding-top: 8px;}
@@ -13,9 +15,10 @@ body{font-family: verdana, tamaho, arial; width: 100%;padding: 0; margin: 0;}
 .logo img{height: 40px; bottom: 0;}
 .slogan{float: right; position: absolute; right: 0.5em; bottom: 0.3em; color: #FF5E99}
 .footer-container{height: 75px;}
-.menu-container{background: #6399F5; color: white; width: 100%; position: fixed; bottom: 0px; left: 0; height: 60px;border-top: solid 1px #CCC;}
+.menu-container{background: #6399F5; color: white; width: 100%; position: fixed; bottom: 0px; left: 0; height: 40px;border-top: solid 1px #CCC;}
 .menu{height: 100%;}
 .menu ul{list-style: none; width: 100%; margin: 0; padding: 0;height: 100%;}
-.menu ul li{float: left; width: 25%; text-align: center;border-left: solid 1px #CCC;height: 100%; box-sizing: border-box; padding-top: 22px;}
+.menu ul li{float: left; width: 25%; text-align: center;border-left: solid 1px #CCC;height: 100%; box-sizing: border-box; padding-top: 12px;}
 .menu ul li:first-child{border-left: 0}
 .menu ul li a{color: white; text-decoration: none;}
+.map-status{position: absolute; left: 60px; top: 0;}

@@ -7,7 +7,7 @@
 	<div class="menu">
 		<ul>
 			<li>
-				<a href="#">Tracking</a>
+				<a href="<?php echo get_bloginfo("url");?>/tracking">Tracking</a>
 			</li>
 			<li>
 				<a href="<?php echo get_bloginfo("url");?>/events">Events</a>
