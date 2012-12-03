@@ -11,8 +11,8 @@ get_header();
 		<a id="show-map"><img width="32px;" src="<?php echo get_bloginfo("template_url")?>/images/map-enable.png"></a>
 		<a id="hidden-map"><img width="32px;" src="<?php echo get_bloginfo("template_url")?>/images/map-disable.png"></a>
 		</div>
+		<div class="order-now"><a href="<?php echo get_bloginfo("url")?>/order"><img src="<?php echo get_bloginfo("template_url")?>/images/buy.png"></a></div>
 	</div>
-	<div class="form-row"><button><a href="<?php echo get_bloginfo("url")?>/order">Sử dụng moEx</a></button></div>
 	<script type="text/javascript">
 		$("#show-map").click(function(){
 			$("#map").css("display", "block");

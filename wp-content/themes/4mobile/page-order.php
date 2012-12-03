@@ -49,7 +49,7 @@ get_header();
 						<option value="5">Moex School</option>
 					</select>
                 </div>
-                <div class="form-row">
+                <div class="form-textarea">
                     <textarea placeholder="Yêu cầu chi tiết" name="tbYeuCauChiTiet" cols="20" rows="2" class="textbox" style="height:55px" ></textarea>
                 </div>
                 <div class="form-row"><label>Khoảng cách</label>
