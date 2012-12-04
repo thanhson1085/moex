@@ -51,6 +51,7 @@ $drivers = $wpdb->get_results(
 				<br />
 				<?php echo $driver->driver_age;?>
 			  </p>
+			<p><?php echo $driver->driver_info;?></p>
             </div>
 		<?php
 			endforeach;
