@@ -5,6 +5,16 @@ get_header();
 	<div class="form-row"><input id="input-from" type="text"></div>
 	<div class="form-row"><input id="input-to" type="text"></div>
 	<div class="form-row">
+		<select id="ddlDichVu" name="ddlDichVu">
+			<option value="0">Dịch vụ đăng ký</option>
+			<option value="1">Moex Delivery</option>
+			<option value="2">Moex Go</option>
+			<option value="3">Moex Food</option>
+			<option value="4">Moex Shopping</option>
+			<option value="5">Moex School</option>
+		</select>
+	</div>
+	<div class="form-row">
 		<div class="search-result">Giá trị đơn hàng: <span id="search-result"></span></div>
 		<button class="moex-button" id="search-submit" type="button">Go</button>
 		<div class="map-status">

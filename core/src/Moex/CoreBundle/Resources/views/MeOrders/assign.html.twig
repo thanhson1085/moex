@@ -1,0 +1,10 @@
+        <div class="admin-header">{{ 'header_assign' | trans }}</div>
+        <form action="{{ path('order_assign', { 'order_id' : order_id, 'driver_id': driver_id }) }}" method="post" {{ form_enctype(assign_form) }}>
+            <div class="moex-form">
+                {{ form_widget(assign_form) }}
+                <p class="alignright">
+                    <button type="submit">{{ "button_assign" | trans }}</button>
+                </p>
+            </div>
+        </form>
+

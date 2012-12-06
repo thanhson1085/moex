@@ -8,8 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Moex\CoreBundle\Entity\MeOrders;
+use Moex\CoreBundle\Entity\MeOrderDriver;
 use Moex\CoreBundle\Form\MeOrdersType;
 use Moex\CoreBundle\Form\OrderFilterType;
+use Moex\CoreBundle\Form\AssignType;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 /**
@@ -258,6 +260,7 @@ class MeOrdersController extends Controller
     /**
      *
      * @Route("/{order_id}/{driver_id}/assign", name="order_assign")
+     * @Template()
      */
     public function assignAction($order_id, $driver_id)
     {
@@ -270,6 +273,19 @@ class MeOrdersController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find MeDrivers entity.');
         }
+
+      	$order_driver = new MeOrderDriver();
+
+        $translator = $this->get('translator');
+        $assignForm = $this->createForm(new AssignType($translator), $order_driver);
+
+        return array(
+			'driver_id' => $driver_id,
+			'order_id' => $order_id,
+            'assign_form'   => $assignForm->createView(),
+        );
+        
+
 		$rate = ($driver->getDriverType() == 1)?$this->container->getParameter("moex.driver.money.rate"):$this->container->getParameter("moex.driver.money.rate2");
 		$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('order' => $entity, 'driver' => $driver)); 
         if (!$order_driver) {
