@@ -1,0 +1,2119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2012-11-07 23:34+0200\n"
+"PO-Revision-Date: 2012-11-07 23:34+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_n;esc_attr__;esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: "
+"\\yop_poll\n"
+
+#: yop_poll/inc/admin.php:46
+#, php-format
+msgid "You need at least Wordpress version %s to use this plugin"
+msgstr ""
+
+#: yop_poll/inc/admin.php:46
+msgid "Error: Wordpress Version Problem"
+msgstr ""
+
+#: yop_poll/inc/admin.php:54
+msgid "You need the  json php extension for this plugin"
+msgstr ""
+
+#: yop_poll/inc/admin.php:54
+msgid "Error: Wordpress Extension Problem"
+msgstr ""
+
+#: yop_poll/inc/admin.php:89
+#: yop_poll/inc/admin.php:742
+#: yop_poll/inc/admin.php:4376
+msgid "Yop Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:93
+#: yop_poll/inc/admin.php:1039
+#: yop_poll/inc/admin.php:1254
+#: yop_poll/inc/yop_poll_model.php:1298
+msgid "All Yop Polls"
+msgstr ""
+
+#: yop_poll/inc/admin.php:95
+#: yop_poll/inc/admin.php:3349
+msgid "Add New Yop Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:97
+#: yop_poll/inc/admin.php:2848
+msgid "Yop Poll Options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:99
+#: yop_poll/inc/admin.php:1405
+msgid "Yop Poll Templates"
+msgstr ""
+
+#: yop_poll/inc/admin.php:101
+#: yop_poll/inc/admin.php:1608
+msgid "Yop Poll Logs"
+msgstr ""
+
+#: yop_poll/inc/admin.php:103
+#: yop_poll/inc/admin.php:1862
+msgid "Yop Poll Bans"
+msgstr ""
+
+#: yop_poll/inc/admin.php:215
+#: yop_poll/inc/admin.php:286
+msgid "Please wait a moment while we process your request..."
+msgstr ""
+
+#: yop_poll/inc/admin.php:216
+#: yop_poll/inc/admin.php:287
+msgid "An error has occured..."
+msgstr ""
+
+#: yop_poll/inc/admin.php:218
+#: yop_poll/inc/admin.php:1048
+#: yop_poll/inc/admin.php:1680
+#: yop_poll/inc/admin.php:1729
+msgid "Answer"
+msgstr ""
+
+#: yop_poll/inc/admin.php:219
+msgid "Custom Text Field"
+msgstr ""
+
+#: yop_poll/inc/admin.php:220
+msgid "Required"
+msgstr ""
+
+#: yop_poll/inc/admin.php:221
+#: yop_poll/inc/admin.php:222
+#: yop_poll/inc/admin.php:2062
+msgid "Remove"
+msgstr ""
+
+#: yop_poll/inc/admin.php:223
+msgid "Customize Toggle"
+msgstr ""
+
+#: yop_poll/inc/admin.php:228
+#: yop_poll/inc/admin.php:2958
+#: yop_poll/inc/admin.php:3580
+msgid "Use Template Result Bar"
+msgstr ""
+
+#: yop_poll/inc/admin.php:229
+#: yop_poll/inc/admin.php:2870
+#: yop_poll/inc/admin.php:2888
+#: yop_poll/inc/admin.php:2962
+#: yop_poll/inc/admin.php:3138
+#: yop_poll/inc/admin.php:3155
+#: yop_poll/inc/admin.php:3172
+#: yop_poll/inc/admin.php:3189
+#: yop_poll/inc/admin.php:3270
+#: yop_poll/inc/admin.php:3295
+#: yop_poll/inc/admin.php:3424
+#: yop_poll/inc/admin.php:3512
+#: yop_poll/inc/admin.php:3530
+#: yop_poll/inc/admin.php:3584
+#: yop_poll/inc/admin.php:3782
+#: yop_poll/inc/admin.php:3799
+#: yop_poll/inc/admin.php:3816
+#: yop_poll/inc/admin.php:3833
+#: yop_poll/inc/admin.php:3934
+#: yop_poll/inc/admin.php:3959
+msgid "Yes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:230
+#: yop_poll/inc/admin.php:2869
+#: yop_poll/inc/admin.php:2887
+#: yop_poll/inc/admin.php:2961
+#: yop_poll/inc/admin.php:3139
+#: yop_poll/inc/admin.php:3156
+#: yop_poll/inc/admin.php:3173
+#: yop_poll/inc/admin.php:3190
+#: yop_poll/inc/admin.php:3271
+#: yop_poll/inc/admin.php:3296
+#: yop_poll/inc/admin.php:3423
+#: yop_poll/inc/admin.php:3511
+#: yop_poll/inc/admin.php:3529
+#: yop_poll/inc/admin.php:3583
+#: yop_poll/inc/admin.php:3783
+#: yop_poll/inc/admin.php:3800
+#: yop_poll/inc/admin.php:3817
+#: yop_poll/inc/admin.php:3834
+#: yop_poll/inc/admin.php:3935
+#: yop_poll/inc/admin.php:3960
+msgid "No"
+msgstr ""
+
+#: yop_poll/inc/admin.php:231
+msgid "Yop Poll Bar Style"
+msgstr ""
+
+#: yop_poll/inc/admin.php:232
+msgid "Yop Poll Bar Preview"
+msgstr ""
+
+#: yop_poll/inc/admin.php:233
+msgid "Background Color"
+msgstr ""
+
+#: yop_poll/inc/admin.php:234
+msgid "Height"
+msgstr ""
+
+#: yop_poll/inc/admin.php:235
+msgid "Border Color"
+msgstr ""
+
+#: yop_poll/inc/admin.php:236
+msgid "Border Width"
+msgstr ""
+
+#: yop_poll/inc/admin.php:237
+msgid "Border Style"
+msgstr ""
+
+#: yop_poll/inc/admin.php:360
+#: yop_poll/inc/admin.php:439
+#: yop_poll/inc/admin.php:1160
+#: yop_poll/inc/admin.php:1310
+msgid "#"
+msgstr ""
+
+#: yop_poll/inc/admin.php:365
+#: yop_poll/inc/admin.php:444
+#: yop_poll/inc/admin.php:1169
+#: yop_poll/inc/admin.php:1319
+#: yop_poll/inc/admin.php:1704
+#: yop_poll/inc/admin.php:1753
+msgid "Vote Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:370
+#: yop_poll/inc/admin.php:449
+msgid "Can't open php://output!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:374
+#: yop_poll/inc/admin.php:453
+msgid "Can't write header!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:393
+#: yop_poll/inc/admin.php:472
+msgid "Can't write record!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:397
+#: yop_poll/inc/admin.php:476
+msgid "Can't close php://output!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:417
+#: yop_poll/inc/admin.php:1144
+#: yop_poll/inc/admin.php:1299
+msgid "Export"
+msgstr ""
+
+#: yop_poll/inc/admin.php:742
+#: yop_poll/inc/admin.php:1405
+#: yop_poll/inc/admin.php:1862
+#: yop_poll/inc/admin.php:3373
+#: yop_poll/inc/admin.php:4022
+msgid "Add New"
+msgstr ""
+
+#: yop_poll/inc/admin.php:747
+#, php-format
+msgid "%s Poll deleted."
+msgstr ""
+
+#: yop_poll/inc/admin.php:756
+#, php-format
+msgid "%s Poll cloned."
+msgstr ""
+
+#: yop_poll/inc/admin.php:765
+#, php-format
+msgid "Vote reseted for %s Poll."
+msgstr ""
+
+#: yop_poll/inc/admin.php:775
+#, php-format
+msgid "Log deleted for %s Poll."
+msgstr ""
+
+#: yop_poll/inc/admin.php:787
+#: yop_poll/inc/admin.php:789
+#: yop_poll/inc/admin.php:1430
+#: yop_poll/inc/admin.php:1432
+msgid "Search Polls"
+msgstr ""
+
+#: yop_poll/inc/admin.php:794
+#: yop_poll/inc/admin.php:1437
+#: yop_poll/inc/admin.php:1631
+#: yop_poll/inc/admin.php:1947
+msgid "Bulk Actions"
+msgstr ""
+
+#: yop_poll/inc/admin.php:795
+#: yop_poll/inc/admin.php:881
+#: yop_poll/inc/admin.php:1438
+#: yop_poll/inc/admin.php:1484
+#: yop_poll/inc/admin.php:1632
+#: yop_poll/inc/admin.php:1774
+#: yop_poll/inc/admin.php:1948
+msgid "Delete"
+msgstr ""
+
+#: yop_poll/inc/admin.php:796
+#: yop_poll/inc/admin.php:882
+#: yop_poll/inc/admin.php:1439
+#: yop_poll/inc/admin.php:1485
+msgid "Clone"
+msgstr ""
+
+#: yop_poll/inc/admin.php:797
+msgid "Reset Votes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:798
+#: yop_poll/inc/admin.php:886
+msgid "Delete Logs"
+msgstr ""
+
+#: yop_poll/inc/admin.php:800
+#: yop_poll/inc/admin.php:1441
+#: yop_poll/inc/admin.php:1634
+#: yop_poll/inc/admin.php:1950
+msgid "Apply"
+msgstr ""
+
+#: yop_poll/inc/admin.php:804
+msgid "View All Polls"
+msgstr ""
+
+#: yop_poll/inc/admin.php:805
+#: yop_poll/inc/admin.php:905
+msgid "Never Expire"
+msgstr ""
+
+#: yop_poll/inc/admin.php:806
+msgid "Expired"
+msgstr ""
+
+#: yop_poll/inc/admin.php:807
+msgid "Started"
+msgstr ""
+
+#: yop_poll/inc/admin.php:808
+msgid "Not Started"
+msgstr ""
+
+#: yop_poll/inc/admin.php:810
+#: yop_poll/inc/admin.php:1149
+#: yop_poll/inc/admin.php:1287
+#: yop_poll/inc/admin.php:1649
+#: yop_poll/inc/admin.php:1973
+msgid "Filter"
+msgstr ""
+
+#: yop_poll/inc/admin.php:822
+#: yop_poll/inc/admin.php:935
+#: yop_poll/inc/admin.php:1453
+#: yop_poll/inc/admin.php:1523
+#: yop_poll/inc/admin.php:1668
+#: yop_poll/inc/admin.php:1717
+#: yop_poll/inc/admin.php:1992
+#: yop_poll/inc/admin.php:2023
+msgid "ID"
+msgstr ""
+
+#: yop_poll/inc/admin.php:828
+#: yop_poll/inc/admin.php:941
+#: yop_poll/inc/admin.php:1459
+#: yop_poll/inc/admin.php:1529
+msgid "Name"
+msgstr ""
+
+#: yop_poll/inc/admin.php:834
+#: yop_poll/inc/admin.php:947
+msgid "Total Votes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:840
+#: yop_poll/inc/admin.php:953
+msgid "Total Voters"
+msgstr ""
+
+#: yop_poll/inc/admin.php:846
+#: yop_poll/inc/admin.php:959
+#: yop_poll/inc/admin.php:3391
+msgid "Question"
+msgstr ""
+
+#: yop_poll/inc/admin.php:852
+#: yop_poll/inc/admin.php:965
+#: yop_poll/inc/admin.php:1145
+#: yop_poll/inc/admin.php:1271
+#: yop_poll/inc/admin.php:3075
+#: yop_poll/inc/admin.php:3719
+msgid "Start Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:858
+#: yop_poll/inc/admin.php:971
+#: yop_poll/inc/admin.php:1147
+#: yop_poll/inc/admin.php:1279
+msgid "End Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:879
+#: yop_poll/inc/admin.php:1483
+msgid "Edit"
+msgstr ""
+
+#: yop_poll/inc/admin.php:880
+msgid "Logs"
+msgstr ""
+
+#: yop_poll/inc/admin.php:881
+msgid "You are about to delete this poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:881
+#: yop_poll/inc/admin.php:882
+#: yop_poll/inc/admin.php:885
+#: yop_poll/inc/admin.php:886
+#: yop_poll/inc/admin.php:1484
+#: yop_poll/inc/admin.php:1485
+#: yop_poll/inc/admin.php:1774
+#: yop_poll/inc/admin.php:2062
+msgid "Cancel"
+msgstr ""
+
+#: yop_poll/inc/admin.php:881
+#: yop_poll/inc/admin.php:882
+#: yop_poll/inc/admin.php:885
+#: yop_poll/inc/admin.php:886
+#: yop_poll/inc/admin.php:1484
+#: yop_poll/inc/admin.php:1485
+#: yop_poll/inc/admin.php:1774
+#: yop_poll/inc/admin.php:2062
+msgid "to stop"
+msgstr ""
+
+#: yop_poll/inc/admin.php:881
+#: yop_poll/inc/admin.php:882
+#: yop_poll/inc/admin.php:885
+#: yop_poll/inc/admin.php:886
+#: yop_poll/inc/admin.php:1484
+#: yop_poll/inc/admin.php:1485
+#: yop_poll/inc/admin.php:1774
+#: yop_poll/inc/admin.php:2062
+msgid "OK"
+msgstr ""
+
+#: yop_poll/inc/admin.php:881
+#: yop_poll/inc/admin.php:1484
+#: yop_poll/inc/admin.php:1774
+msgid "to delete"
+msgstr ""
+
+#: yop_poll/inc/admin.php:882
+msgid "You are about to clone this poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:882
+#: yop_poll/inc/admin.php:1485
+msgid "to clone"
+msgstr ""
+
+#: yop_poll/inc/admin.php:883
+msgid "Results"
+msgstr ""
+
+#: yop_poll/inc/admin.php:884
+#: yop_poll/inc/admin.php:1128
+#: yop_poll/inc/admin.php:1254
+msgid "Custom Fields"
+msgstr ""
+
+#: yop_poll/inc/admin.php:885
+msgid "You are about to reset votes for this poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:885
+msgid "to reset votes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:885
+msgid "Reset Stats"
+msgstr ""
+
+#: yop_poll/inc/admin.php:886
+msgid "You are about to delete logs for this poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:886
+msgid "to delete logs"
+msgstr ""
+
+#: yop_poll/inc/admin.php:920
+msgid "No poll found!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1006
+#: yop_poll/inc/admin.php:1032
+#: yop_poll/inc/admin.php:1247
+#: yop_poll/inc/admin.php:1601
+#: yop_poll/inc/admin.php:1855
+#: yop_poll/inc/public-admin.php:40
+msgid "&laquo; Previous"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1007
+#: yop_poll/inc/admin.php:1033
+#: yop_poll/inc/admin.php:1248
+#: yop_poll/inc/admin.php:1602
+#: yop_poll/inc/admin.php:1856
+#: yop_poll/inc/public-admin.php:41
+msgid "Next &raquo;"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1039
+msgid "Yop Poll Results"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1049
+#: yop_poll/inc/admin.php:1096
+msgid "Votes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1050
+msgid "Percent"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1070
+msgid "No answers defined!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1077
+msgid "Poll Other Answers"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1087
+#: yop_poll/inc/admin.php:1152
+#: yop_poll/inc/admin.php:1302
+#: yop_poll/inc/admin.php:1652
+#: yop_poll/inc/admin.php:1976
+msgid "Items Per Page"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1087
+#: yop_poll/inc/admin.php:1152
+#: yop_poll/inc/admin.php:1302
+#: yop_poll/inc/admin.php:1654
+#: yop_poll/inc/admin.php:1978
+msgid "Set"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1095
+msgid "Other Answers"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1113
+msgid "No other answers defined!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1141
+#: yop_poll/inc/admin.php:1296
+msgid "This Page"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1142
+#: yop_poll/inc/admin.php:1297
+msgid "All Pages"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1218
+msgid "Your poll doesn`t exist!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1295
+msgid "Do Not Export"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1366
+msgid "This poll doesn't have set custom fields!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1372
+msgid "Your Poll doesn`t exist!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1410
+#, php-format
+msgid "%s Poll template deleted."
+msgstr ""
+
+#: yop_poll/inc/admin.php:1419
+#, php-format
+msgid "%s Poll template cloned."
+msgstr ""
+
+#: yop_poll/inc/admin.php:1465
+#: yop_poll/inc/admin.php:1535
+msgid "Last Modified"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1484
+msgid "You are about to delete this poll template"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1485
+msgid "You are about to clone this poll template"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1504
+msgid " You haven't used our template editor to create any yop poll templates!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1505
+msgid "Please create your poll template first."
+msgstr ""
+
+#: yop_poll/inc/admin.php:1506
+msgid "Create a poll template now"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1613
+#, php-format
+msgid "%s Poll Log deleted."
+msgstr ""
+
+#: yop_poll/inc/admin.php:1624
+#: yop_poll/inc/admin.php:1626
+msgid "Search Poll Logs"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1638
+msgid "All Logs"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1674
+#: yop_poll/inc/admin.php:1723
+#: yop_poll/inc/admin.php:1998
+#: yop_poll/inc/admin.php:2029
+#: yop_poll/inc/admin.php:3384
+msgid "Poll Name"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1686
+#: yop_poll/inc/admin.php:1735
+msgid "User"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1692
+#: yop_poll/inc/admin.php:1741
+msgid "User Email"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1698
+#: yop_poll/inc/admin.php:1747
+msgid "Ip"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1774
+msgid "You are about to delete this poll log"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1867
+#, php-format
+msgid "%s Poll Ban deleted!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1876
+#, php-format
+msgid "%s Poll Ban added!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1890
+msgid "Ban IP, Username or Email"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1898
+msgid "Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1901
+msgid "Bans For All Polls"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1915
+msgid "Type"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1918
+msgid "Choose Ban Type"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1919
+#: yop_poll/inc/admin.php:1969
+msgid "IP"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1920
+#: yop_poll/inc/admin.php:1970
+msgid "Username"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1921
+#: yop_poll/inc/admin.php:1971
+msgid "Email"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1925
+msgid "Value"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1925
+msgid "One Value Per Line"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1930
+msgid "Add Ban"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1930
+#: yop_poll/inc/admin.php:4318
+#: yop_poll/inc/admin.php:4356
+msgid "Close"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1940
+#: yop_poll/inc/admin.php:1942
+msgid "earch Poll Bans"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1954
+msgid "All Polls"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1968
+msgid "All Ban Types"
+msgstr ""
+
+#: yop_poll/inc/admin.php:1979
+#: yop_poll/inc/admin.php:2080
+msgid "Bans"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2004
+#: yop_poll/inc/admin.php:2035
+msgid "Ban Type"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2010
+#: yop_poll/inc/admin.php:2041
+msgid "Ban Value"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2062
+msgid "You are about to remove this poll ban"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2062
+msgid "to remove"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2103
+msgid "Option \"Allow Other Answer\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2107
+#: yop_poll/inc/admin.php:2130
+msgid "Option \"Allow Other Answer\" Not Updated! Choose \"yes\" or \"no\"!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2115
+msgid "Option \"Allow Other Answer Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2119
+msgid "Option \"Other Answer Label\" Not Updated! The field must not be empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2124
+msgid ""
+"Option \"Allow Other Answer Label\" Not Updated! The field must not be empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2137
+msgid "Option \"Allow Multiple Answers\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2144
+msgid "Option \"Number of allowed answers\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2148
+msgid ""
+"Option \"Number of allowed answers\" Not Updated! Please fill in a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2153
+msgid ""
+"Option \"Number of allowed answers\" Not Updated! The field must not be "
+"empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2159
+#: yop_poll/inc/admin.php:2164
+msgid ""
+"Option \"Allow Multiple Answers\" Not Updated! Choose \"yes\" or \"no\"!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2171
+msgid "Option \"Display Answers\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2178
+msgid "Option \"Columns for Tabulated Display Answers\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2182
+msgid ""
+"Option \"Columns for Tabulated Display Answers\" Not Updated! Please fill in "
+"a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2187
+msgid "Option \"Columns for Tabulated Display Answers\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2193
+msgid ""
+"Option \"Display Answers\" Not Updated! you must choose between 'vertical', "
+"'orizontal' or 'tabulated'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2198
+msgid "Option \"Display Answers\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2205
+msgid "Option \"Display Results\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2212
+msgid "Option \"Columns for Tabulated Display Results\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2216
+msgid ""
+"Option \"Columns for Tabulated Display Results\" Not Updated! Please fill in "
+"a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2221
+msgid "Option \"Columns for Tabulated Display Results\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2227
+msgid ""
+"Option \"Display Results\" Not Updated! Choose the display layout: "
+"'vertical', 'orizontal' or 'tabulated'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2232
+msgid "Option \"Display Results\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2239
+msgid "Option \"Use Template Result Bar\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2246
+msgid "Option \"Result Bar Background Color\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2250
+msgid ""
+"Option \"Result Bar Background Color\" Not Updated! Fill in an alphanumeric "
+"value!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2255
+msgid "Option \"Result Bar Background Color\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2262
+msgid "Option \"Result Bar Height\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2266
+msgid "Option \"Result Bar Height\" Not Updated! Please fill in a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2271
+msgid "Option \"Result Bar Height\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2278
+msgid "Option \"Result Bar Border Color\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2282
+msgid ""
+"Option \"Result Bar Border Color\" Not Updated! Please fill in a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2287
+msgid "Option \"Result Bar Border Color\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2294
+msgid "Option \"Result Bar Border Width\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2298
+msgid ""
+"Option \"Result Bar Border Width\" Not Updated! Please fill in a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2303
+msgid "Option \"Result Bar Border Width\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2310
+msgid "Option \"Result Bar Border Style\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2314
+msgid ""
+"Option \"Result Bar Border Style\" Not Updated! Fill in an alphanumeric "
+"value!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2319
+msgid "Option \"Result Bar Border Style\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2325
+msgid ""
+"Option \"Use Template Result Bar\" Not Updated! Choose \"yes\" or \"no\"!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2330
+msgid "Option \"Use Template Result Bar\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2337
+msgid "Option \"Sort Answers\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2343
+msgid "Option \"Sort Answers Direction\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2347
+msgid ""
+"Option \"Sort Answers Direction\" Not Updated! Please choose between "
+"'Ascending' or 'Descending'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2352
+msgid "Option \"Sort Answers Direction\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2357
+msgid ""
+"Option \"Sort Answers\" Not Updated! Please choose between: 'exact', "
+"'alphabetical', 'random' or 'votes'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2362
+#: yop_poll/inc/admin.php:2394
+msgid "Option \"Sort Answers\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2369
+msgid "Option \"Sort Results\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2375
+msgid "Option \"Sort Results Direction\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2379
+msgid ""
+"Option \"Sort Results Direction\" Not Updated! Please choose between "
+"'Ascending' or 'Descending'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2384
+msgid "Option \"Sort Results Direction\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2389
+msgid ""
+"Option \"Sort Results\" Not Updated! Please choose between: 'exact', "
+"'alphabetical', 'random' or 'votes'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2401
+msgid "Option \"Poll Start Date\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2405
+msgid "Option \"Poll Start Date\" Not Updated! The field is empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2410
+msgid "Option \"Poll Start Date\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2417
+#: yop_poll/inc/admin.php:2433
+msgid "Option \"Poll End Date\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2421
+#: yop_poll/inc/admin.php:2440
+msgid "Option \"Poll End Date\" Not Updated! "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2436
+msgid "Option \"Poll End Date\" Not Updated! The field is empty! "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2448
+msgid "Option \"View Results\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2454
+msgid "Option \"View Results Custom Date\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2458
+#: yop_poll/inc/admin.php:2469
+msgid "Option \"View Results\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2464
+msgid ""
+"Option \"View Results\" Not Updated! Please choose between: 'Before', "
+"'After', 'After Poll End Date', 'Never' or 'Custom Date'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2476
+msgid "Option \"View Results Type\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2480
+msgid ""
+"Option \"View Results Type\" Not Updated! Please choose between: 'Votes "
+"number', 'Percentages' or 'Votes number and percentages' "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2485
+msgid "Option \"View Results Type\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2493
+#: yop_poll/inc/yop_poll_model.php:147
+msgid ""
+"Option \"Poll Answer Result Label\" Not Updated! You must use %POLL-ANSWER-"
+"RESULT-VOTES%!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2497
+#: yop_poll/inc/admin.php:2508
+#: yop_poll/inc/admin.php:2523
+msgid "Option \"Poll Answer Result Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2504
+#: yop_poll/inc/yop_poll_model.php:154
+msgid ""
+"Option \"Poll Answer Result Label\" Not Updated! You must use %POLL-ANSWER-"
+"RESULT-PERCENTAGES%!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2515
+#: yop_poll/inc/admin.php:2519
+#: yop_poll/inc/yop_poll_model.php:161
+#: yop_poll/inc/yop_poll_model.php:165
+msgid ""
+"Option \"Poll Answer Result Label\" Not Updated! You must use %POLL-ANSWER-"
+"RESULT-VOTES% and %POLL-ANSWER-RESULT-PERCENTAGES%!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2529
+#: yop_poll/inc/yop_poll_model.php:171
+msgid "Option \"Poll Answer Result Label\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2536
+msgid "Option \"View Results Link\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2543
+msgid "Option \"View Results Link Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2547
+msgid "Option \"View Results Link Label\" Not Updated! The field is empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2552
+msgid "Option \"View Results Link Label\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2558
+msgid ""
+"Option \"View Results Link\" Not Updated! Please choose between 'yes' or 'no'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2563
+msgid "Option \"View Results Link\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2570
+msgid "Option \"View Back To Vote Link\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2577
+msgid "Option \"View Back to Vote Link Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2581
+msgid ""
+"Option \"View Back to Vote Link Label\" Not Updated! The field is empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2586
+msgid "Option \"View Back to Vote Link Label\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2592
+msgid ""
+"Option \"View Back to Vote Link\" Not Updated! Please choose between 'yes' "
+"or 'no'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2597
+msgid "Option \"View Back to Vote Link\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2604
+msgid "Option \"View Total Votes\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2611
+#: yop_poll/inc/yop_poll_model.php:236
+msgid "You must use %POLL-TOTAL-VOTES% to define your Total Votes label!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2615
+msgid "Option \"View Total Votes Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2620
+msgid "Option \"Total Votes Label\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2626
+msgid ""
+"Option \"View Total Votes\" Not Updated! Please choose between 'yes' or 'no'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2631
+msgid "Option \"View Total Votes\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2638
+msgid "Option \"View Total Voters\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2645
+#: yop_poll/inc/yop_poll_model.php:263
+msgid "You must use %POLL-TOTAL-VOTERS% to define your Total Voters label!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2649
+msgid "Option \"View Total Voters Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2654
+msgid "Option \"Total Voters Label\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2660
+msgid ""
+"Option \"View Total Voters\" Not Updated! Please choose between 'yes' or 'no'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2665
+msgid "Option \"View Total Voters\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2672
+msgid "Option \"Vote Permisions\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2676
+msgid ""
+"Option \"Vote Permisions\" Not Updated! Please choose between 'Quest Only', "
+"'Registered Only', 'Guest & Registered Users'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2681
+msgid "Option \"Vote Permisions\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2688
+msgid "Option \"Blocking Voters\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2695
+msgid "Option \"Blocking Voters Interval Value\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2699
+msgid ""
+"Option \"Blocking Voters Interval Value\" Not Updated! Please fill in a "
+"number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2704
+msgid "Option \"Blocking Voters Interval Value\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2711
+msgid "Option \"Blocking Voters Interval Unit\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2715
+msgid ""
+"Option \"Blocking Voters Interval Unit\" Not Updated! Please choose between "
+"'Seconds', 'Minutes', 'Hours' or 'Days'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2720
+msgid "Option \"Blocking Voters Interval Unit\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2726
+msgid ""
+"Option \"Blocking Voters\" Not Updated! Please choose between: 'Don`t "
+"Block', 'Cookie', 'Ip', 'Username', 'Cookie and Ip'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2731
+msgid "Option \"Blocking Voters\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2738
+msgid "Option \"View Poll Archive Link\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2745
+msgid "Option \"View Poll Archive Link Label\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2749
+msgid ""
+"Option \"View Poll Archive Link Label\" Not Updated! The field is empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2754
+#: yop_poll/inc/admin.php:2803
+msgid "Option \"View Poll Archive Link Label\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2760
+msgid "Option \"Poll Archive URL\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2764
+msgid "Option \"Poll Archive URL\" Not Updated! The field is empty!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2769
+msgid "Option \"Poll Archive URL\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2775
+msgid ""
+"Option \"View Poll Archive Link\" Not Updated! Please choose between 'yes' "
+"or 'no'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2780
+msgid "Option \"View Poll Archive Link\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2787
+msgid "Option \"Show Poll in Arhive"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2794
+msgid "Option \"Archive Order\" Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2798
+msgid "Option \"Archive Order\" Not Updated! Please fill in a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2809
+msgid ""
+"Option \"Show Poll in Archive\" Not Updated! Please choose between 'yes' or "
+"'no'"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2814
+msgid "Option \"Show Poll in Archive\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2821
+msgid "Option \"Archive Polls Per Page"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2825
+msgid "Option \"Archive Polls Per Page\" Not Updated! Please fill in a number!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2830
+msgid "Option \"Archive Polls Per Page\" Not Updated!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2860
+msgid "Answers options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2866
+#: yop_poll/inc/admin.php:3508
+msgid "Allow other answers "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2875
+#: yop_poll/inc/admin.php:3517
+msgid "Other Answer Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2884
+#: yop_poll/inc/admin.php:3526
+msgid "Allow Multiple Answers "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2894
+#: yop_poll/inc/admin.php:3536
+msgid "Number of allowed answers"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2906
+msgid "Display Options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2912
+#: yop_poll/inc/admin.php:3544
+msgid "Display Answers "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2915
+#: yop_poll/inc/admin.php:2933
+#: yop_poll/inc/admin.php:3547
+#: yop_poll/inc/admin.php:3565
+msgid "Vertical"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2916
+#: yop_poll/inc/admin.php:2934
+#: yop_poll/inc/admin.php:3548
+#: yop_poll/inc/admin.php:3566
+msgid "Orizontal"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2917
+#: yop_poll/inc/admin.php:2935
+#: yop_poll/inc/admin.php:3549
+#: yop_poll/inc/admin.php:3567
+msgid "Tabulated"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2922
+#: yop_poll/inc/admin.php:2940
+#: yop_poll/inc/admin.php:3554
+#: yop_poll/inc/admin.php:3572
+msgid "Columns"
+msgstr ""
+
+#: yop_poll/inc/admin.php:2930
+#: yop_poll/inc/admin.php:3562
+msgid "Display Results "
+msgstr ""
+
+#: yop_poll/inc/admin.php:2952
+msgid "Poll Bar Style"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3023
+msgid "Sorting Answers &amp; Results"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3028
+#: yop_poll/inc/admin.php:3640
+msgid "Sort Answers"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3030
+#: yop_poll/inc/admin.php:3048
+#: yop_poll/inc/admin.php:3642
+#: yop_poll/inc/admin.php:3660
+msgid "Exact Order"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3031
+#: yop_poll/inc/admin.php:3049
+#: yop_poll/inc/admin.php:3643
+#: yop_poll/inc/admin.php:3661
+msgid "Alphabetical Order"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3032
+#: yop_poll/inc/admin.php:3050
+#: yop_poll/inc/admin.php:3644
+#: yop_poll/inc/admin.php:3662
+msgid "Random Order"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3033
+#: yop_poll/inc/admin.php:3051
+#: yop_poll/inc/admin.php:3645
+#: yop_poll/inc/admin.php:3663
+msgid "Number of Votes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3038
+#: yop_poll/inc/admin.php:3650
+msgid "Sort Answers Rule"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3041
+#: yop_poll/inc/admin.php:3059
+#: yop_poll/inc/admin.php:3653
+#: yop_poll/inc/admin.php:3671
+msgid "Ascending"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3042
+#: yop_poll/inc/admin.php:3060
+#: yop_poll/inc/admin.php:3654
+#: yop_poll/inc/admin.php:3672
+msgid "Descending"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3046
+#: yop_poll/inc/admin.php:3658
+msgid "Sorting Results in"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3056
+#: yop_poll/inc/admin.php:3668
+msgid "Sorting Results Rule"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3069
+#: yop_poll/inc/admin.php:3713
+msgid "Poll Start/End Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3083
+#: yop_poll/inc/admin.php:3727
+msgid "End Date "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3096
+#: yop_poll/inc/admin.php:3740
+msgid "View Results Options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3102
+#: yop_poll/inc/admin.php:3746
+msgid "View Results"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3105
+#: yop_poll/inc/admin.php:3749
+msgid "Before Vote"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3106
+#: yop_poll/inc/admin.php:3750
+msgid "After Vote"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3107
+#: yop_poll/inc/admin.php:3751
+msgid "After Poll End Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3108
+#: yop_poll/inc/admin.php:3752
+msgid "Never"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3109
+#: yop_poll/inc/admin.php:3753
+msgid "Custom Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3111
+#: yop_poll/inc/admin.php:3755
+msgid "Results display date (after this date the user can see the results)"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3117
+#: yop_poll/inc/admin.php:3761
+msgid "Results Display"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3120
+#: yop_poll/inc/admin.php:3764
+msgid "By Votes Number"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3121
+#: yop_poll/inc/admin.php:3765
+msgid "Percentages"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3122
+#: yop_poll/inc/admin.php:3766
+msgid "by Votes Number and Percentages"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3127
+#: yop_poll/inc/admin.php:3771
+msgid "Poll Answer Result Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3135
+#: yop_poll/inc/admin.php:3779
+msgid "View Results Link"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3144
+#: yop_poll/inc/admin.php:3788
+msgid "View Results Link Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3152
+#: yop_poll/inc/admin.php:3796
+msgid "View Back To Vote Link "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3161
+#: yop_poll/inc/admin.php:3805
+msgid "View Back To Vote Link Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3169
+#: yop_poll/inc/admin.php:3813
+msgid "View Total Votes "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3178
+#: yop_poll/inc/admin.php:3822
+msgid "View Total Votes Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3186
+#: yop_poll/inc/admin.php:3830
+msgid "View Total Voters "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3195
+#: yop_poll/inc/admin.php:3839
+msgid "View Total Voters Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3203
+#: yop_poll/inc/admin.php:3847
+msgid "Poll Page Url "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3215
+#: yop_poll/inc/admin.php:3859
+msgid "Other Options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3221
+#: yop_poll/inc/admin.php:3865
+msgid "Vote Permisions "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3224
+#: yop_poll/inc/admin.php:3868
+msgid "Guest Only"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3225
+#: yop_poll/inc/admin.php:3869
+msgid "Registered Users Only"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3226
+#: yop_poll/inc/admin.php:3870
+msgid "Guest &amp; Registered Users"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3231
+#: yop_poll/inc/admin.php:3875
+msgid "Blocking Voters "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3234
+#: yop_poll/inc/admin.php:3878
+msgid "Dont`t Block"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3235
+#: yop_poll/inc/admin.php:3879
+msgid "By Cookie"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3236
+#: yop_poll/inc/admin.php:3880
+msgid "By Ip"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3237
+#: yop_poll/inc/admin.php:3881
+msgid "By Username"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3238
+#: yop_poll/inc/admin.php:3882
+msgid "By Cookie &amp; Ip"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3243
+#: yop_poll/inc/admin.php:3887
+msgid "Blocking voters interval"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3248
+#: yop_poll/inc/admin.php:3892
+msgid "Seconds"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3249
+#: yop_poll/inc/admin.php:3893
+msgid "Minutes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3250
+#: yop_poll/inc/admin.php:3894
+msgid "Hours"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3251
+#: yop_poll/inc/admin.php:3895
+msgid "Days"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3261
+#: yop_poll/inc/admin.php:3925
+msgid "Archive Options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3267
+#: yop_poll/inc/admin.php:3931
+msgid "View Poll Archive Link "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3276
+#: yop_poll/inc/admin.php:3940
+msgid "View Poll Archive Link Label"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3284
+#: yop_poll/inc/admin.php:3948
+msgid "Poll Archive Url"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3292
+#: yop_poll/inc/admin.php:3956
+msgid "Show Poll In Archive "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3301
+#: yop_poll/inc/admin.php:3965
+msgid "Archive Order"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3311
+#: yop_poll/inc/admin.php:3320
+#: yop_poll/inc/admin.php:3327
+msgid "Save Changes"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3359
+msgid "Edit Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3387
+msgid "Example: Test Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3394
+msgid "Example: How is my plugin?"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3398
+msgid "Answers"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3500
+msgid "Add New Answer"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3501
+msgid "Answers Advanced Options"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3681
+msgid "Custom Text Fields"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3706
+msgid "Add New Custom Field"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3900
+msgid "Poll Template "
+msgstr ""
+
+#: yop_poll/inc/admin.php:3906
+msgid "--SELECT Template--"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3977
+#: yop_poll/inc/admin.php:3990
+msgid "Save Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:3985
+#: yop_poll/inc/admin.php:4079
+msgid "Save"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4010
+msgid "Add New Poll Template"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4015
+msgid "Edit Poll Template"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4030
+msgid "Template Name"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4033
+msgid "Example: Test Poll Template"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4037
+msgid "Template Before Vote"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4043
+msgid "Template After Vote"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4050
+msgid "Template Before Start Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4057
+msgid "Template After End Date"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4064
+msgid "Css"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4071
+msgid "JavaScript"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4104
+msgid "Poll successfully added!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4114
+msgid "Poll successfully Edited!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4119
+msgid "We're unable to update your poll!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4135
+msgid "Poll template successfully added!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4145
+msgid "Poll Template successfully Edited!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4152
+msgid "We're unable to update your poll template!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4177
+#: yop_poll/inc/admin.php:4203
+#: yop_poll/inc/admin.php:4228
+msgid "Invalid Request! Try later!"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4278
+#: yop_poll/inc/admin.php:4316
+#: yop_poll/inc/admin.php:4353
+#: yop_poll/inc/admin.php:4377
+msgid "Insert Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4283
+msgid "Error: Invalid Yop Poll!\\n\\nPlease choose the poll again:\\n\\n"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4300
+#: yop_poll/inc/admin.php:4335
+msgid "Poll to Display"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4302
+#: yop_poll/inc/admin.php:4337
+#: yop_poll/inc/widget.php:74
+msgid "Display Random Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4303
+#: yop_poll/inc/admin.php:4338
+#: yop_poll/inc/widget.php:75
+msgid "Display Latest Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4304
+#: yop_poll/inc/admin.php:4339
+#: yop_poll/inc/widget.php:76
+msgid "Display Current Active Poll"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4378
+msgid "Please insert the poll ID:\\n\\n"
+msgstr ""
+
+#: yop_poll/inc/admin.php:4379
+msgid ""
+"Error: Poll Id must be numeric!\\n\\nPlease insert the poll ID Again:\\n\\n"
+msgstr ""
+
+#: yop_poll/inc/widget.php:14
+msgid "Yop Poll Widget"
+msgstr ""
+
+#: yop_poll/inc/widget.php:54
+msgid "Yop Polls"
+msgstr ""
+
+#: yop_poll/inc/widget.php:73
+msgid "Do NOT Display Poll (Disable)"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:75
+msgid "Poll name needed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:79
+msgid "Poll question needed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:83
+msgid "At least "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:91
+msgid "Answer "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:98
+msgid "Answers not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:107
+msgid "Custom Field "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:117
+msgid "Start Date needed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:122
+msgid "Start Date not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:129
+msgid "End Date needed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:136
+msgid "Invalid entry! Start Date is after the  End Date! "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:182
+msgid "Option \"View Results Link Label\" is empty!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:187
+msgid "Option \"View Results Link Label\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:193
+msgid ""
+"Option \"View Results Link\" is invalid! You must choose between 'yes' or "
+"'no'"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:198
+msgid "Option \"View Results Link\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:209
+msgid "Option \"View Back to Vote Link Label\" is empty!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:214
+msgid "Option \"View Back to Vote Link Label\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:220
+msgid ""
+"Option \"View Back to Vote Link\" is invalid! You must choose between 'yes' "
+"or 'no'"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:225
+msgid "Option \"View Back to Vote Link\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:241
+msgid "Option \"Total Votes Label\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:247
+msgid ""
+"Option \"View Total Votes\" is invalid! Please choose between 'yes' or 'no'"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:252
+msgid "Option \"View Total Votes\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:268
+msgid "Option \"Total Voters Label\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:274
+msgid ""
+"Option \"View Total Voters\" is invalid! You must choose between 'yes' or "
+"'no'"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:279
+msgid "Option \"View Total Voters\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:290
+msgid "Option \"View Poll Archive Link Label\" is empty!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:295
+msgid "Option \"View Poll Archive Link Label\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:302
+msgid "Option \"Poll Archive URL\" is empty!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:307
+msgid "Option \"Poll Archive URL\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:313
+msgid ""
+"Option \"View Poll Archive Link\" Is Invalid! You must choose between 'yes' "
+"or 'no'"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:318
+msgid "Option \"View Poll Archive Link\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:329
+msgid "Option \"Archive Order\" is empty!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:334
+msgid "Option \"Archive Order\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:340
+msgid ""
+"Option \"Show in Archive\" is invalid! You must choose between 'yes' or 'no'"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:345
+msgid "Option \"Show in Archive\" not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:352
+msgid "Template not found!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:357
+msgid "You must choose a template for your poll!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:368
+msgid "Poll Template name needed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:372
+msgid "Poll template needed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:401
+msgid "This template name allready exist! Please choose another name!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:416
+msgid "You must choose a yop poll! "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:419
+msgid "Invalid Yop Poll! Please try again! "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:422
+msgid "You must choose a ban type!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:425
+msgid "You must choose a ban value!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:476
+msgid "This template name already exists! Please choose another name!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:481
+msgid "This poll template doesn`t exist!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:627
+msgid "This poll already exists! Please choose another name!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:740
+msgid "This poll doesn`t exist!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1197
+msgid "_GUEST"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1791
+#: yop_poll/inc/yop_poll_model.php:1932
+msgid "This poll is closed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1817
+#: yop_poll/inc/yop_poll_model.php:1851
+msgid "Your other answer is empty!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1822
+#: yop_poll/inc/yop_poll_model.php:1856
+msgid "Your other answer is invalid!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1830
+msgid "To many answers! Only "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1830
+msgid " answers allowed!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1870
+#: yop_poll/inc/yop_poll_model.php:1886
+msgid "Custom field "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1870
+msgid " is required! "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1886
+msgid " is missing! "
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1892
+msgid "Custom fields are missing!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1916
+msgid "No vote was registered!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1921
+msgid "No answer selected!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1926
+msgid "You Already voted!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1937
+msgid "You can vote once the poll starts!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:1942
+msgid "You are not allowed to vote!"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:2419
+msgid "vote"
+msgstr ""
+
+#: yop_poll/inc/yop_poll_model.php:2421
+msgid "votes"
+msgstr ""

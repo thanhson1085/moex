@@ -34,5 +34,8 @@
 			</div>
         </div>
 <?php
+	//return_yop_poll(4);
+?>
+<?php
 	get_footer();
 ?>

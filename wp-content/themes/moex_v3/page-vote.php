@@ -20,61 +20,16 @@ if ( $site_description && ( is_home() || is_front_page() ) )
 ?>
 </title>
 <link href="<?php echo get_bloginfo("template_url")?>/pic/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<script type="text/javascript" src="<?php echo get_bloginfo("url")?>/wp-includes/js/jquery/jquery.js?ver=1.7.2"></script>
 <script type="text/javascript">
-/*
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
-if (isMobile){
-	window.location = "<?php echo WP_MOBILE_THEME;?>";
-}
-*/
+/* <![CDATA[ */
+var yop_poll_public_config = {"ajax":{"url":"<?php echo get_bloginfo("url")?>/wp-admin/admin-ajax.php","vote_action":"yop_poll_do_vote","view_results_action":"yop_poll_view_results","back_to_vote_action":"yop_poll_back_to_vote"}};
+/* ]]> */
 </script>
-<script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
-<script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
-<script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
-<script src="<?php echo get_bloginfo("template_url")?>/js/jcarousellite_1.js" type="text/javascript"></script>
-<script src="<?php echo plugins_url()?>/yop-poll/js/yop-poll-public.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo get_bloginfo("template_url")?>/js/jquery.cycle.all.min.js"></script>
-<script type="text/javascript">
-	var ajax_link = "<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php";
-</script>
-<link rel="stylesheet" href="<?php echo get_bloginfo("template_url")?>/cs/screen.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo get_bloginfo("url")?>/wp-content/plugins/yop-poll/js/yop-poll-public.js?ver=1.7"></script>
 <link href="<?php echo get_bloginfo("template_url")?>/cs/Default.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo get_bloginfo("template_url")?>/cs/fontface.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo get_bloginfo("template_url")?>/cs/CommonControls.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Homepage.css" rel="stylesheet" type="text/css" />
-
-<link href="<?php echo get_bloginfo("template_url")?>/cs/GioiThieu.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/DangKy.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/QuanLyTaiKhoan.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexGo.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexOffice.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexShopping.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexFood.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexSchool.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/LienHe.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Blog.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem2.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
 <?php
     wp_head();
@@ -166,3 +121,57 @@ if (isMobile){
             </div>
             <div class="cb h10"><!----></div>
         </div>
+		<div class="content">
+				<?php if(current_user_can("edit_posts")):?>
+				<?php
+             		if ( have_posts() ) while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                ?>
+				<?php else:?>
+				Bạn phải đăng nhập để sử dụng chức năng thành. moEx xin chân thành cảm ơn.
+				<?php endif;?>
+			<div id="loading"><img src="<?php echo get_bloginfo("template_url")?>/pic/loading2.gif"></div>
+		</div>
+
+<style>
+.yop-poll-name{font-weight: bold; line-height: 40px;}
+.yop-poll-forms ul{list-style: none;}
+.content{
+width: 925px;
+margin: auto;
+padding-bottom: 10px;
+min-height: 500px;
+}
+#loading{
+    background-color: transparent;
+    font-size: 28px;
+    color: black;
+    position: fixed;
+    /*bottom: .5em;
+    right: 6%;
+    */
+    left: 48%;
+    top: 48%;
+    z-index: 1003;
+}
+#loading img{
+    height: 30px;
+}
+</style>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+    jQuery('#loading')
+    .hide()  // hide it initially
+    .ajaxStart(function() {
+        jQuery(this).show();
+    })
+    .ajaxStop(function() {
+        jQuery(this).hide();
+    });
+	});
+</script>
+
+<?php
+get_footer();
+?>
