@@ -282,14 +282,13 @@ class MeOrdersController extends Controller
        	$request = $this->getRequest();	
 		if ('POST' === $request->getMethod()){ 
 			//$rate = ($driver->getDriverType() == 1)?$this->container->getParameter("moex.driver.money.rate"):$this->container->getParameter("moex.driver.money.rate2");
-			$order_driver = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('order' => $entity, 'driver' => $driver)); 
-			if (!$order_driver) {
-				$order_driver = new \Moex\CoreBundle\Entity\MeOrderDriver;
+			$od = $em->getRepository('MoexCoreBundle:MeOrderDriver')->findBy(array('order' => $entity, 'driver' => $driver)); 
+			if (!$od) {
 				$assignForm->bindRequest($request);
 				$order_driver->setDriver($driver);
 				$order_driver->setOrder($entity);
                 $order_driver->setMoexMoney($entity->getPrice()-$order_driver->getDriverMoney());
-				$order_driver->getMoney($entity->getPrice());
+				$order_driver->setMoney($entity->getPrice());
 				$created_at = new \DateTime();
 				$updated_at = new \DateTime();
 				$order_driver->setCreatedAt($created_at);
@@ -333,8 +332,8 @@ class MeOrdersController extends Controller
 			return $this->redirect($this->generateUrl('order_show', array( 'id' => $order_id )));
 		}
         return array(
-			'driver_id' => $driver_id,
-			'order_id' => $order_id,
+			'entity' => $entity,
+			'driver' => $driver,
             'assign_form'   => $assignForm->createView(),
         );
 	}

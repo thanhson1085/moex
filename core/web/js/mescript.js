@@ -312,6 +312,21 @@
   });
 
 })(jQuery);
+var distance = 0;
+var moex_distance = 0;
+var price_level = 8000;
+var service_type = 1;
+var province = ',hà nội, việt nam';
+var money_value = 0; 
+var search_result = "";
+var mainColor = "#0066b3";
+function countMoney(){
+    distance = (Math.ceil(Math.ceil(distance*10)/5)*5)/10;
+    moex_distance = distance; 
+    ret = distance*price_level;
+    return ret;
+}
+
 function getRoute(){
     distance = 0;
     request.origin += province;
@@ -348,22 +363,6 @@ function getRoute(){
     request.travelMode = google.maps.DirectionsTravelMode.WALKING;
 }
 
-var distance = 0;
-var moex_distance = 0;
-var price_level = 8000;
-var service_type = 1;
-var province = ',hà nội, việt nam';
-var money_value = 0; 
-var search_result = "";
-function countMoney(){
-    distance = (Math.ceil(Math.ceil(distance*10)/5)*5)/10;
-    moex_distance = distance; 
-    ret = distance*price_level;
-    return ret;
-}
-
-
-var mainColor = "#0066b3";
 $(document).ready(function(){
     $('.filter #btn-clear').live('click', function(){
         $('.filter form input[type="text"]').each(function(){

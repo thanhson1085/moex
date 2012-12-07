@@ -17,7 +17,7 @@ class AssignType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
-            ->add('driver_money', 'number', array( 'label' => $this->translator->trans("orderdriver_drivermoney")))
+            ->add('driverMoney', 'number', array( 'label' => $this->translator->trans("orderdriver_drivermoney")))
         ;
     }
 

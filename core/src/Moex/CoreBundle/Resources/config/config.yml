@@ -2,8 +2,9 @@ parameters:
   moex.version: V1.0
   moex.pagesize.default: 10
   moex.driver.money.max: 1000000 
-  moex.driver.money.rate: 0.80
-  moex.driver.money.rate2: 0.20
+  #moex.driver.money.rate: 0.80
+  #moex.driver.money.rate2: 0.20
+  moex.driver.money.rate: [ 0, 0.80, 0.20 ] 
   moex.order.status.pending: PENDING 
   moex.order.status.assigned: ASSIGNED
   moex.order.status.done: DONE 
@@ -20,6 +21,7 @@ parameters:
     2: 'NVVC'
 twig:
   globals:
+    driver_money_rate: %moex.driver.money.rate%
     status_assigned: %moex.order.status.assigned% 
     status_done: %moex.order.status.done% 
     status_pending: %moex.order.status.pending% 
