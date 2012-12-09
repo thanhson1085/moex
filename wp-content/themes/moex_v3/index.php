@@ -42,8 +42,9 @@ if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); }
 					<!-- The sliderr works with virtually any HTML element (div, span etc) but for the sake of simplicity I have used images in this demo -->
 					<div id="slideContainer">
 						<div id="slideShim">
-							<a href="<?php echo get_bloginfo("template_url");?>/order-search"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_8000.jpg" alt="Slide One" /></a>
-							<a href="<?php echo get_bloginfo("template_url");?>/event/"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_ticket.jpg" alt="Slide Two" /></a>
+							<a href="<?php echo get_bloginfo("url");?>/order-search"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_8000.jpg" alt="Slide One" /></a>
+							<a href="<?php echo get_bloginfo("url");?>/event/"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_ticket.jpg" alt="Slide Two" /></a>
+							<a href="<?php echo get_bloginfo("url");?>/xmas/"><img src="<?php echo get_bloginfo("template_url")?>/pic/home_xmas.jpg" alt="moEx Xmas" /></a>
 						</div>
 					</div>
 					<div id="pager" class="clear"></div>
