@@ -1,4 +1,8 @@
 ﻿/*header*/
+.page-moex-container{background:url(../pic/bg.png); position: relative}
+.page-moex{background:#FFF;position: relative; z-index: 10}
+.img-left{ position: absolute; left:0px; top: 100px; z-index:1 }
+.img-right{ position: absolute; right:0px; top: 200px; z-index: 1}
 #PageContent{width:980px}
 #Header{position:relative;z-index:1;height:75px}
 #Logo{float:left;width:500px;position: relative}

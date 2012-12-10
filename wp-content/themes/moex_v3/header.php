@@ -82,13 +82,39 @@ if (isMobile){
 </head>
 <body class="mo">  
 	<div class="page-moex-container">
+	<div class="img-left"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/santa1.png"></a></div>
+	<div class="img-right"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/santa2.png"></a></div>
 	<div class="page-moex">
     <div id="PageContent">
         <div id="Header">
             <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/phone.jpg" /></div>
             <div id="Logo">
-                <div class="logo"><a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo.jpg" class="anhQC"/></a></div>
-                <div class="promotion"><a href="<?php echo get_bloginfo("url")?>/promotion.html" target="_blank"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/promotion.jpg" class="anhQC"/></a></div>
+                <div class="logo"><a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo_x.jpg" class="anhQC"/></a></div>
+			<div class="promotion">
+				<div id="metaContainer">
+					<!-- The sliderr works with virtually any HTML element (div, span etc) but for the sake of simplicity I have used images in this demo -->
+					<div id="slideContainer2">
+						<div id="slideShim2">
+							<a href="<?php echo get_bloginfo("url");?>/xmas/"><img src="<?php echo get_bloginfo("template_url")?>/pic/Xmas_s.jpg" alt="moEx Xmas" /></a>
+							<a href="<?php echo get_bloginfo("url");?>/xmas/"><img src="<?php echo get_bloginfo("template_url")?>/pic/NewY_s.jpg" alt="Slide Two" /></a>
+						</div>
+					</div>
+				</div>
+
+            </div>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$('#slideShim2').cycle({
+						fx:     'fade',
+						speed:  400,
+						timeout: 2000,
+						prev:   '#back',
+						next:   '#forward',
+						pause:  1,
+						pager:  '#pager2'
+					});
+			});
+			</script>
             </div>                        
             <div class="fr pt10">
                 <div id="Language">
