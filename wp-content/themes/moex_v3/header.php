@@ -172,23 +172,23 @@ if (isMobile){
     
         <div id="MenuMain">
             <div class="fl">
-                <a class="mnm bgmnm0" href="<?php echo get_bloginfo("url")?>?page_id=164" title="Moex Delivery">Moex Delivery</a>            
+                <a class="mnm bgmnm0" href="<?php echo get_bloginfo("url")?>/moex-delivery/" title="Moex Delivery">Moex Delivery</a>            
             </div>
             <div class="mnmSplit"><!----></div>
             <div class="fl">
-                <a class="mnm bgmnm1" href="<?php echo get_bloginfo("url")?>?page_id=161" title="Moex go">Moex go</a>            
+                <a class="mnm bgmnm1" href="<?php echo get_bloginfo("url")?>/moex-go/" title="Moex go">Moex go</a>            
             </div>
             <div class="mnmSplit"><!----></div>
             <div class="fl">
-                <a class="mnm bgmnm2" href="<?php echo get_bloginfo("url")?>?page_id=170" title="Moex food">Moex food</a>            
+                <a class="mnm bgmnm2" href="<?php echo get_bloginfo("url")?>/moex-food/" title="Moex food">Moex food</a>            
             </div>
             <div class="mnmSplit"><!----></div>
             <div class="fl">
-                <a class="mnm bgmnm3" href="<?php echo get_bloginfo("url")?>?page_id=172" title="Moex shopping">Moex shopping</a>            
+                <a class="mnm bgmnm3" href="<?php echo get_bloginfo("url")?>/moex-shopping/" title="Moex shopping">Moex shopping</a>            
             </div>
             <div class="mnmSplit"><!----></div>
             <div class="fl">
-                <a class="mnm bgmnm4" href="<?php echo get_bloginfo("url")?>?page_id=166" title="Moex school">Moex school</a>            
+                <a class="mnm bgmnm4" href="<?php echo get_bloginfo("url")?>/moex-school/" title="Moex school">Moex school</a>            
             </div>
             <div class="cb h10"><!----></div>
         </div>
