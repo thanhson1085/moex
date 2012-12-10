@@ -1,4 +1,5 @@
 ﻿/*header*/
+body{background: url(../pic/bg.png);}
 .page-moex-container{background:url(../pic/bg.png); position: relative}
 .page-moex{background:#FFF;position: relative; z-index: 10}
 .img-left{ position: absolute; left:0px; top: 100px; z-index:1 }
