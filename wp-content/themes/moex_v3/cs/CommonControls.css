@@ -1,7 +1,6 @@
 ﻿/*header*/
-body{background: url(../pic/bg.png);}
 .page-moex-container{background:url(../pic/bg.png); position: relative}
-.page-moex{background:#FFF;position: relative; z-index: 10}
+.page-moex{background:#FFF;position: relative; z-index: 10; border-left: solid 1px #ccc; border-right: solid 1px #ccc; border-bottom: solid 1px #ccc; box-shadow: 0px 0px 8px; -webkit-box-shadow: 0px 0px 8px; -moz-box-shadow: 0px 0px 8px}
 .img-left{ position: absolute; left:0px; top: 100px; z-index:1 }
 .img-right{ position: absolute; right:0px; top: 200px; z-index: 1}
 #PageContent{width:980px}

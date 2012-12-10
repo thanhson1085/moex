@@ -50,7 +50,7 @@
 					$service = 1; break;
 			}
 		?>
-        <a href="<?php echo get_bloginfo("url")?>?page_id=191&service=<?php echo $service;?>"><img src="<?php echo get_bloginfo("template_url")?>/pic/adv/onCall.jpg" /></a>        
+        <a href="<?php echo get_bloginfo("url")?>?page_id=191&service=<?php echo $service;?>"><img src="<?php echo get_bloginfo("template_url")?>/pic/onecall.png" /></a>        
     </div>    
 	</div>
 	</div>
