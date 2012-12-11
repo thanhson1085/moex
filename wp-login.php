@@ -507,11 +507,13 @@ login_footer('user_pass');
 break;
 
 case 'register' :
+	/*
 	if ( is_multisite() ) {
 		// Multisite uses wp-signup.php
 		wp_redirect( apply_filters( 'wp_signup_location', site_url('wp-signup.php') ) );
 		exit;
 	}
+	*/
 
 	if ( !get_option('users_can_register') ) {
 		wp_redirect( site_url('wp-login.php?registration=disabled') );
