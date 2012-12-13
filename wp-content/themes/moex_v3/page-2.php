@@ -39,7 +39,7 @@ Nếu quý khách có góp ý về công ty, vui lòng gửi thư về địa ch
 				</script>
             </div>
             <div class="cb h30"><!----></div>
-<iframe width="960" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cd2afb7b9e9b0c3e0&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cd2afb7b9e9b0c3e0&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;source=embed" style="color:#0000FF;text-align:left">moEx JSC</a> in a larger map</small>
+<iframe width="980" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cd2afb7b9e9b0c3e0&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;output=embed"></iframe><br /><small>View <a href="https://maps.google.com/maps/ms?msid=208699122552042487058.0004cd2af7e5793e734d7&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;iwloc=0004cd2afb7b9e9b0c3e0&amp;ll=21.020038,105.80128&amp;spn=0.011637,0.021136&amp;source=embed" style="color:#0000FF;text-align:left">moEx JSC</a> in a larger map</small>
             <div class="cb h12"><!----></div> 
         </div>
     </div>
