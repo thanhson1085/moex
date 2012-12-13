@@ -47,17 +47,22 @@ header_unassign_drivers: Có thể giao cho
 header_order_assigned: Đơn hàng đang làm
 header_order_done: Đơn hàng đã hoàn thành
 header_charge: Lái xe nộp tiền
+header_assign: Giao việc cho lái xe
 
 intro_assign_drivers: Danh sách lái xe đã được giao việc cho đơn hàng này
 intro_unassign_drivers: Danh sách lái xe có thể giao làm việc cho đơn hàng này
 intro_order_assigned: Danh sách đơn hàng mà lái xe đang làm
 intro_order_done: Danh sách đơn hàng mà lái xe đã hoàn thành
 
-
+user_phone: Điện thoại
+orderdriver_drivermoney: Tiền của lái xe
+orderdriver_money: Tiền thu khách hàng
 order_phone: Điện thoại 
 order_orderfrom: Từ(A)
 order_orderto: Đến(B)
 order_price: Giá(VNĐ)
+order_ordercode: Mã đơn hàng
+order_customerid: ID Khách hàng
 order_lat: Vĩ độ
 order_lng: Kinh độ
 order_ordername: Tên đơn hàng
