@@ -18,7 +18,7 @@ class MeOrdersType extends AbstractType
         $builder
             ->add('phone', 'text', array( 'label' => $this->translator->trans('order_phone')))
             ->add('customerId', 'text', array( 'label' => $this->translator->trans('order_customerid'), 'attr' => array('readonly' => 'readonly')))
-            ->add('serviceType', 'choice', array( 'choices' => array( 1 => 'Moex Delivery', 2 => 'Moex Go', 3 => 'Moex Food', 4 => 'Moex Shopping', 5 => 'Moex School'), 'label' =>  $this->translator->trans('order_servicetype')))
+            ->add('serviceType', 'choice', array( 'choices' => array( 1 => 'Moex Delivery', 2 => 'Moex Go', 3 => 'Moex Food', 4 => 'Moex Shopping', 5 => 'Moex School', 6 => 'Moex Others'), 'label' =>  $this->translator->trans('order_servicetype')))
             ->add('orderCode', 'text', array( 'label' => $this->translator->trans('order_ordercode'), 'required' => false ))
             ->add('orderName', 'text', array( 'label' => $this->translator->trans('order_ordername')))
             ->add('startTime', 'datetime', array('widget' => 'single_text', 'required' => false, 'attr' => array('class' => 'txt-time', 'readonly' => 'readonly') , 'label' => $this->translator->trans('order_starttime')))
