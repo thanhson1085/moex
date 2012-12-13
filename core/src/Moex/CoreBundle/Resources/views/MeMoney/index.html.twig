@@ -47,6 +47,7 @@
 					<th></th>
 					<th></th>
 					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -55,6 +56,7 @@
 					<td class="spec">{{ entity.id }}</td>
 					<td class="spec"><a href="{{ path('driver_show', { 'id': entity.driver.id }) }}">{{ entity.driver.driverName }}</a></td>
 					<td class="spec"><a href="{{ path('order_show', { 'id': entity.order.id }) }}">{{ entity.order.orderName }}</a></td>
+					<td class="">{{ entity.driver.dMoney | number_format(0,'.',',') }}</td>
 					<td class="">{{ entity.money | number_format(0,'.',',') }}</td>
 					<td class="">{{ entity.createdAt|date('H:i:s d-m-Y') }}</td>
 				</tr>
