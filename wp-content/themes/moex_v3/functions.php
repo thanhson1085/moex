@@ -46,6 +46,14 @@ $result = add_role('cs_router', 'CS + ROUTER', array(
     'edit_pages' => true,
     'delete_posts' => false,
 ));
+
+$result = add_role('accountant', 'ACCOUNTANT', array(
+    'read' => true,
+    'edit_posts' => true,
+    'edit_pages' => true,
+    'delete_posts' => false,
+));
+
 $role = get_role('cs_router');
 $role->add_cap('edit_pages');
 $role->add_cap('edit_others_pages');

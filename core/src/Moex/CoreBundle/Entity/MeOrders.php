@@ -16,14 +16,14 @@ class MeOrders
     private $id;
 
     /**
-     * @var bigint $userId
-     */
-    private $userId;
-
-    /**
      * @var bigint $customerId
      */
     private $customerId;
+
+    /**
+     * @var string $orderCode
+     */
+    private $orderCode;
 
     /**
      * @var smallint $serviceType
@@ -110,26 +110,6 @@ class MeOrders
     }
 
     /**
-     * Set userId
-     *
-     * @param bigint $userId
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-    }
-
-    /**
-     * Get userId
-     *
-     * @return bigint 
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
      * Set customerId
      *
      * @param bigint $customerId
@@ -147,6 +127,26 @@ class MeOrders
     public function getCustomerId()
     {
         return $this->customerId;
+    }
+
+    /**
+     * Set orderCode
+     *
+     * @param string $orderCode
+     */
+    public function setOrderCode($orderCode)
+    {
+        $this->orderCode = $orderCode;
+    }
+
+    /**
+     * Get orderCode
+     *
+     * @return string 
+     */
+    public function getOrderCode()
+    {
+        return $this->orderCode;
     }
 
     /**
@@ -477,4 +477,29 @@ class MeOrders
 	{
 		return strval($this->id);
 	}
+    /**
+     * @var Moex\CoreBundle\Entity\MeUsers
+     */
+    private $user;
+
+
+    /**
+     * Set user
+     *
+     * @param Moex\CoreBundle\Entity\MeUsers $user
+     */
+    public function setUser(\Moex\CoreBundle\Entity\MeUsers $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return Moex\CoreBundle\Entity\MeUsers 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }

@@ -2,6 +2,7 @@
 get_header();
 $user_id = get_current_user_id();
 ?>
+<div class="moex-container">
 <div class="pb10">
 	<span class="order-header" style="color:red; font-size: 28px;">
 		Thông tin đơn hàng
@@ -127,6 +128,7 @@ endif;
 		});
 	});
 </script>
+</div>
 <?php
 get_footer();
 ?>

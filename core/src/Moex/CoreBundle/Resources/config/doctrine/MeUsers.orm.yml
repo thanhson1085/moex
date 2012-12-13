@@ -1,5 +1,6 @@
 Moex\CoreBundle\Entity\MeUsers:
   type: entity
+  repositoryClass: Moex\CoreBundle\Repository\MeUsersRepository
   table: me_users
   id:
     id:
@@ -60,6 +61,9 @@ Moex\CoreBundle\Entity\MeUsers:
   oneToMany:
     money:
       targetEntity: MeMoney 
+      mappedBy: user 
+    order:
+      targetEntity: MeOrders 
       mappedBy: user 
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]

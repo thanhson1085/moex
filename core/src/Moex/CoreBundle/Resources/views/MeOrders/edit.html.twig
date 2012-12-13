@@ -23,6 +23,7 @@
 </div>
 <div class="right-part-container rate50">
 	<div class="right-part">
+		<div id="extra-info-container"><img src="{{ asset('images/close.png') }}"><div id="extra-info"></div></div>
 		<h3>{{ "header_map" | trans }}</h3>
 		<div class="search-form-container">
 			<div class="search-form">
@@ -140,6 +141,30 @@ $(document).ready(function(){
 			$('#moex_corebundle_meorderstype_lng').val(rleg.end_location.lng());
 		}
 		currentDirections = directionsDisplay.getDirections();
+	});
+	$("#moex_corebundle_meorderstype_customerId").click(function(){
+        jQuery.post('{{ path('user') }}',
+        function(data){
+            $('#extra-info').slimScroll({
+                    wheelStep : 10,
+                    opacity : .6,
+                    color: mainColor,
+                    width: '100%',
+                    height: '350px',
+                    railVisible: true,
+                    alwaysVisible : true,
+                    railColor : mainColor,
+
+            });
+            jQuery("#extra-info").html(data);
+			$("#extra-info-container").fadeIn(300);
+        });
+	});
+	$("a.icon-choose").live('click',function(e){
+		e.preventDefault();
+		var s = $(this).attr('id');
+		var subs = s.split('-');
+		$("#moex_corebundle_meorderstype_customerId").attr('value',subs[2]);
 	});
 });
 </script>

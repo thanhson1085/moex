@@ -17,8 +17,9 @@ $drivers = $wpdb->get_results(
 		});
 	});
 </script>
+<div class="driver-info-container">
 <div class="pb10">
-	<span class="order-header" style="color:red; font-size: 28px;">Thông tin lái xe</span>
+	<span class="order-header" style="color:red; font-size: 28px;">Lái xe moEx</span>
  </div>
 <div class="center-col">
         <div class="people clearfix">
@@ -51,7 +52,7 @@ $drivers = $wpdb->get_results(
 				<br />
 				<?php echo $driver->driver_age;?>
 			  </p>
-			<p>"<?php echo $driver->driver_info;?>"</p>
+			<p><?php echo ($driver->driver_info)?'"'.$driver->driver_info.'"':'';?></p>
             </div>
 		<?php
 			endforeach;
@@ -247,7 +248,7 @@ code {
 
 .center-col {
 	float: left;
-	margin: 0 35px 0 0;
+	margin: 0 15px 0 0;
 	position: relative;
 }
 
@@ -522,7 +523,7 @@ img.lg-photo {
 	float: left;
 	width: 196px;
 	padding: 10px 20px 10px 20px;
-	width: 232px;
+	width: 202px;
 	border: solid 1px #ddd;
 	text-align: center;
 }
@@ -532,7 +533,7 @@ img.lg-photo {
 	float: left;
 	height: 191px;
 	overflow: hidden;
-	width: 155px;
+	width: 167px;
 }
 
 .person a:hover {
@@ -868,7 +869,9 @@ img.lg-photo {
 	float: right;
 	margin: 0 0 7px 7px;
 }
+.driver-info-container{ padding: 0 10px 0 30px; }
 </style>
+</div>
 <?php
 get_footer();
 ?>

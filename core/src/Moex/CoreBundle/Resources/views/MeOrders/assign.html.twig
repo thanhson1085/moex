@@ -125,7 +125,7 @@ $(document).ready(function(){
 			var rleg = directionsDisplay.directions.routes[0].legs[0];
 			distance = rleg.distance.value/1000;
 			money_value = countMoney();
-			$('#search-result').html(money_value);
+			$('#moex_corebundle_assigntype_money').attr('value', money_value);
 			$("#moex_corebundle_assigntype_driverMoney").attr('value',money_value*driver_money_rate[{{ driver.driverType }}]);
 		}
 		currentDirections = directionsDisplay.getDirections();

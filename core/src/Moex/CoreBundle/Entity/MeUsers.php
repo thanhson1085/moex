@@ -293,4 +293,29 @@ class MeUsers
     {
         // Add your code here
     }
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrders
+     */
+    private $order;
+
+
+    /**
+     * Add order
+     *
+     * @param Moex\CoreBundle\Entity\MeOrders $order
+     */
+    public function addMeOrders(\Moex\CoreBundle\Entity\MeOrders $order)
+    {
+        $this->order[] = $order;
+    }
+
+    /**
+     * Get order
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
 }

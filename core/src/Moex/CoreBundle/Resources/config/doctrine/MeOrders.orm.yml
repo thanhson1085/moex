@@ -7,14 +7,19 @@ Moex\CoreBundle\Entity\MeOrders:
       type: bigint
       generator: { strategy: AUTO }
   fields:
-    userId:
-      type: bigint
-      nullable: false
-      column: user_id
+#    userId:
+#      type: bigint
+#      nullable: false
+#      column: user_id
     customerId:
       type: bigint
       nullable: false
       column: customer_id
+    orderCode:
+      type: string
+      length: 250
+      nullable: true 
+      column: order_code
     serviceType:
       type: smallint
       nullable: false
@@ -87,6 +92,13 @@ Moex\CoreBundle\Entity\MeOrders:
     order_driver:
       targetEntity: MeOrderDriver 
       mappedBy: order 
+  manyToOne:
+    user:
+      targetEntity: MeUsers 
+      inversedBy: order 
+      joinColumn:
+        name: user_id 
+        referencedColumnName: id
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]
     preUpdate: [ setUpdatedAtValue ]

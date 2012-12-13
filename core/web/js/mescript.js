@@ -427,6 +427,10 @@ $(document).ready(function(){
 		});
 	});
 
+	$("#extra-info-container > img").click(function(){
+		$('#extra-info-container').fadeOut(300);
+	});
+
 	$("a.icon-quickview").click(function(e){
 		e.preventDefault();
     	$.post($(this).attr("href"),

@@ -41,7 +41,7 @@
 #MenuMain .mnmSplit{float:left;width:1px;height:31px;background:#fff}
 
 /*Footer*/
-#Footer{border-top:solid 1px #e7e7e7;padding:10px;clear:both}
+#Footer{border-top:solid 1px #e7e7e7;padding:10px;clear:both; min-height: 23px;}
 
 /*MenuBottom*/
 #MenuBottom{float:right;padding-right:5px}
@@ -90,7 +90,7 @@ a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; fon
 .order-list > ul > li{border-bottom: solid 1px #ccc; padding-left: 10px;}
 .order-list > ul > li:last-child{border: 0;}
 .order-list > ul > li > a {line-height: 25px;}
-#order-info{float: right; width: 720px; padding-top: 35px; padding-bottom: 20px;}
+#order-info{float: right; width: 670px; padding-top: 35px; padding-bottom: 20px;}
 #order-info table td.label{width: 200px;}
 #order-info table tr{ height: 20px;}
 #order-info table tr td a{ text-decoration: underline }
@@ -100,7 +100,7 @@ a.btn-count{outline: 0; border-radius: 12px;padding: 6px 18px; color: white; fon
 table.driver-content tr { height: 20px;}
 table.driver-content tr td.label{ width: 100px;}
 td.align-top{vertical-align: top}
-.order-notify{color: white; padding: 10px; font-size: 12px; border-radius: 10px; width: 700px; float: right;}
+.order-notify{color: white; padding: 10px; font-size: 12px; border-radius: 10px; width: 670px; float: right;}
 .order-selected a{ font-weight: bold; color: white;}
 .driver-selected{background: #F26522;}
 .driver-selected a{ font-weight: bold; color: white;}
@@ -111,3 +111,4 @@ td.align-top{vertical-align: top}
 .MoexGo{background:#C8215D;}
 .event{position: relative; width: 460px; text-align: justify; padding-right: 10px; border-right: solid 1px #ccc;}
 .event #formBuilderCSSIDCinema{position: absolute; top: 0;right: -460px; width: 460px;}
+.moex-container{ padding: 0 10px 0 10px; }

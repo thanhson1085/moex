@@ -22,7 +22,11 @@ class MeOrdersRepository extends EntityRepository
     public function findByFilterQuery(\Moex\CoreBundle\Entity\OrderFilter $filter)
     {
         $query = $this->createQueryBuilder('o')
+							  ->select('o.id, o.phone, o.orderFrom, o.orderTo, o.orderStatus, o.price, u.userLogin')
                               ->where('1 = 1');
+
+        $query = $query->leftJoin('o.user', 'u');
+        $query = $query->groupBy('o.id');
 
         if ($filter->getPhone() != null) {
             $query = $query->andWhere('o.phone LIKE :phone')

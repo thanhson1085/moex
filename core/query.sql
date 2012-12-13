@@ -18,3 +18,4 @@ ALTER TABLE me_drivers ADD image VARCHAR(255) AFTER position;
 ALTER TABLE  `me_drivers` CHANGE  `moex_money`  `moex_money` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
 ALTER TABLE  `me_drivers` CHANGE  `d_money`  `d_money` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
 ALTER TABLE  `me_drivers` ADD  `driver_type` TINYINT NOT NULL AFTER  `driver_code`;
+ALTER TABLE  `me_orders` ADD  `order_code` VARCHAR( 250 ) NULL AFTER  `customer_id`;

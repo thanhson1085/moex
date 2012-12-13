@@ -12,10 +12,14 @@
 <table class="record-properties" cellspacing="0">
 	<tbody>
 		<tr class="odd">
+			<th class="label">{{ "order_ordercode" | trans }}</th>
+			<td class="value">{{ entity.orderCode }}</td>
+		</tr>
+		<tr class="even">
 			<th class="label">{{ "order_ordername" | trans }}</th>
 			<td class="value">{{ entity.orderName }}</td>
 		</tr>
-		<tr class="even">
+		<tr class="odd">
 			<th class="label">{{ "order_starttime" | trans }}</th>
 			<td class="value">{{ entity.startTime | date('H:i:s d-m-Y') }}</td>
 		</tr>

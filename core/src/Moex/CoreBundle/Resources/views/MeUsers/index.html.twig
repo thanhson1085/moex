@@ -1,0 +1,32 @@
+        <table class="list records-list" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="spec">{{ "table_id" | trans }}</th>
+                    <th>{{ "user_phone" | trans }}</th>
+                    <th></th>
+                    <th>{{ "table_action" | trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for entity in paginator %}
+                <tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+                    <td class="id">{{ entity.id }}</td>
+                    <td class="phone">{{ entity.userLogin }}</td>
+                    <td>{{ entity.userEmail }}</td>
+                    <td class="action">
+                        <ul>
+                            <li>
+                                <a class="icon icon-choose" href="#" id="user-id-{{ entity.id }}">{{ "action_choose" | trans }}</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% else %}
+                <tr><td>no record found.</td></tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="pagination-container">
+            {{ pagerfanta(paginator, 'default') }}
+        </div>
+

@@ -1017,5 +1017,7 @@ ul.leftmenu li a:hover{
 	margin: 0 auto;
 }
 .slimScrollDiv {padding-right: 10px;}
+#extra-info-container { display: none;}
+#extra-info-container > img{ float: right; }
 ::selection{background:#FF5E99;color:#fff;text-shadow:none;}
 

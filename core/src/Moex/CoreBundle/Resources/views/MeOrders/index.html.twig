@@ -15,6 +15,7 @@
 					<th class="spec">{{ "table_id" | trans }}</th>
 					<th>{{ "order_phone" | trans }}</th>
 					<th></th>
+					<th></th>
 					<th>{{ "order_orderfrom" | trans }}</th>
 					<th>{{ "order_orderto" | trans }}</th>
 					<th>{{ "order_price" | trans }}</th>
@@ -27,6 +28,7 @@
 					<td class="id">{{ entity.id }}</td>
 					<td class="phone"><a href="{{ path('order_show', { 'id':entity.id }) }}">{{ entity.phone }}</a></td>
 					<td class="status {{ entity.orderStatus | lower }}">{{ entity.orderStatus }}</td>
+					<td>{{ entity.userLogin }}</td>
 					<td class="from">{{ entity.orderFrom | cut(20) }}</td>
 					<td class="to">{{ entity.orderTo | cut(20) }}</td>
 					<td class="price">{{ entity.price }}</td>

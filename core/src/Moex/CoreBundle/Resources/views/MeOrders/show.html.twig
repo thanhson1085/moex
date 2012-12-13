@@ -81,7 +81,7 @@
 					<td class="action">
                         <ul>
                             <li>
-                                {% if( entity.orderStatus == status_pending ) %}<a class="icon icon-assign" href="{{ path('order_assign', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_assign" | trans }}</a>
+                                {% if( entity.orderStatus != status_done ) %}<a class="icon icon-assign" href="{{ path('order_assign', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_assign" | trans }}</a>
                                 {% else %}<span class="icon icon-assign disable">{{ "action_assign" | trans }}</span>{% endif %}
 								<li>
 									<a class="icon icon-quickview" href="{{ path('driver_quickview', { 'order_id': entity.id, 'driver_id': en.id }) }}">{{ "action_quickview" | trans }}</a>
