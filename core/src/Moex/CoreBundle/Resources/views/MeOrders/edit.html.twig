@@ -160,7 +160,7 @@ $(document).ready(function(){
 			$("#extra-info-container").fadeIn(300);
         });
 	});
-	$("#extra-info .pagination-container a").click(function(e){
+	$("#extra-info .pagination-container a").live("click",function(e){
 		e.preventDefault();
 	    jQuery.post($(this).attr("href"),	
         function(data){
