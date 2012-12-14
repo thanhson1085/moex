@@ -25,12 +25,14 @@ action_quickview: Xem
 action_backtolist: Trở lại
 action_charge: Nạp tiền
 action_undone: Chưa xong
+action_choose: Lựa chọn
 button_edit: Sửa
 button_create: Tạo mới 
 button_search: Tìm kiếm
 button_filter: Tìm
 button_reset: Bỏ tìm
 button_charge: Nạp tiền
+button_assign: Giao việc
 table_id: Id
 table_action: Tác vụ
 
