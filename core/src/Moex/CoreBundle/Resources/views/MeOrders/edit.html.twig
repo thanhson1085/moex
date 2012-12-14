@@ -160,6 +160,23 @@ $(document).ready(function(){
 			$("#extra-info-container").fadeIn(300);
         });
 	});
+	$("#extra-info .pagination-container a").click(function(){
+	    jQuery.post($(this).attr("href"),	
+        function(data){
+            $('#extra-info').slimScroll({
+                    wheelStep : 10,
+                    opacity : .6,
+                    color: mainColor,
+                    width: '100%',
+                    height: '350px',
+                    railVisible: true,
+                    alwaysVisible : true,
+                    railColor : mainColor,
+            });
+            jQuery("#extra-info").html(data);
+        }); 
+	});
+
 	$("a.icon-choose").live('click',function(e){
 		e.preventDefault();
 		var s = $(this).attr('id');
