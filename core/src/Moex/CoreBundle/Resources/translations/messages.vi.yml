@@ -75,6 +75,24 @@ order_createdat: Ngày tạo
 order_updatedat: Ngày cập nhật
 order_starttime: Bắt đầu từ
 order_admin_header_intro: Danh sách đơn hàng
+order_ordertime: Hóa đơn ngày
+order_intro_sender: Thông tin người gửi hàng
+order_senderaddress: Địa chỉ người gửi
+order_intro_receiver: Thông tin người nhận
+order_receiverphone: Số điện thoại
+order_receivername: Tên người nhận
+order_receiveraddress: Địa chỉ
+order_thereturn: Chuyển hoàn
+order_surcharge: Phụ phí
+order_promotion: Khuyến mãi
+order_intro_ordermoney: Thông tin giá trị hóa đơn
+button_countsurcharge: Tính phụ phí
+order_roadprice: Tiền quãng đường
+order_extraprice: Tiền hàng hóa
+button_countmoney: Tính tiền
+add_order_position: Thêm điểm chuyển tiếp
+order_intro_map: Thông tin trên bản đồ
+order_intro_orderinfo: Thông tin đơn hàng
 
 driver_drivername: Tên lái xe
 driver_drivercode: Mã lái xe
