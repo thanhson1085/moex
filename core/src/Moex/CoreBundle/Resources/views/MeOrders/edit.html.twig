@@ -13,6 +13,11 @@
 		</div>
 	{% import "MoexCoreBundle:MeOrders:form.html.twig" as macro %}
 	{{ macro.order_form(form)}}
+	<div class="moex-form">
+		<p class="alignright">
+			<button type="submit">{{ "button_edit" | trans }}</button>
+		</p>
+	</div>
 	</div>
 </div>
 <div class="right-part-container rate50">

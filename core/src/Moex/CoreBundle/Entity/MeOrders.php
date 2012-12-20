@@ -38,13 +38,11 @@ class MeOrders
 
     /**
      * @var string $orderFrom
-     * @Assert\NotBlank()
      */
     private $orderFrom;
 
     /**
      * @var string $orderTo
-     * @Assert\NotBlank()
      */
     private $orderTo;
 

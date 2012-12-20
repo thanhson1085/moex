@@ -1,6 +1,5 @@
 {% macro order_form(form) %}
 		<div class="moex-form">
-			{{ form_errors(form) }}
 
 			<div class="form-row">
 				{{ form_label(form.orderTime) }}
@@ -96,9 +95,6 @@
 				{{ form_errors(form.orderInfo) }}
 			</div>
 
-			<p class="alignright">
-				<button type="submit">{{ "button_create" | trans }}</button>
-			</p>
 		</div>
 
 {% endmacro %}

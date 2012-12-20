@@ -117,23 +117,23 @@ $(document).ready(function(){
 						<td>
 							<img src="<?php echo get_bloginfo("template_url")?>/img/Partner_01.png" width="101" height="56" alt=""></td>
 						<td>
-							<a href="http://www.goimon.vn/" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/Goimon.png" width="95" height="56" border="0" alt=""></a></td>
+							<a href="http://www.goimon.vn/" target="_blank" title="goimon.vn">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/Goimon.png" width="95" height="56" border="0" title="goimon.vn"></a></td>
 						<td>
 							<a href="http://www.orabuy.com/#" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/Orabuy.png" width="74" height="56" border="0" alt=""></a></td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/Orabuy.png" width="74" height="56" border="0" title="Orabuy"></a></td>
 						<td>
 							<a href="http://www.facebook.com/pages/B%C3%A1nh-Cu%E1%BB%91n-Gia-An/121140331304301" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/banh_cuon_Gia_An.png" width="87" height="56" border="0" alt=""></a></td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/banh_cuon_Gia_An.png" width="87" height="56" border="0" title="Bánh cuốn Gia An"></a></td>
 						<td>
 							<a href="http://kitchenart.vn/vi/" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/kitchenart.png" width="58" height="56" border="0" alt=""></a></td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/kitchenart.png" width="58" height="56" border="0" title="Kitchen Art"></a></td>
 						<td>
 							<a href="http://tiectainha.vn/?aspxerrorpath=/" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/tiectainha.png" width="70" height="56" border="0" alt=""></a></td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/tiectainha.png" width="70" height="56" border="0" title="Tiệc tại nhà"></a></td>
 						<td>
 							<a href="http://www.facebook.com/7CUA.banhdacua" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/7cua.jpg" width="103" height="56" border="0" alt=""></a></td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/7cua.jpg" width="103" height="56" border="0" title="7CUA - Bánh đa cua"></a></td>
 					</tr>
 				</table>
             </div>

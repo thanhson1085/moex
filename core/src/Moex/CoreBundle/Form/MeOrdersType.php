@@ -47,6 +47,7 @@ class MeOrdersType extends AbstractType
 				'by_reference' => false,
 				))
 			->add('thereturn', 'collection', array(
+				'label' => $this->translator->trans('order_thereturn'),
 				'type' => new TheReturnType(), 
 				'allow_add' => true,
 				'prototype' => true,

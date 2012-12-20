@@ -11,7 +11,7 @@ class MeOrdermetaType extends AbstractType
     {
         $builder
             ->add('metaKey','hidden', array('attr' => array('class' => 'order-metakey-position')))
-            ->add('metaValue', 'text', array('attr' => array('class' => 'order-position')))
+            ->add('metaValue', 'text', array('required' => false, 'attr' => array('class' => 'order-position')))
         ;
     }
  

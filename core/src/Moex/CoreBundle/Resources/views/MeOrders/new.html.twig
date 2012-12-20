@@ -9,8 +9,15 @@
 			<a href="{{ path('order') }}" class="icon icon-back">{{ "action_backtolist" | trans }}</a> 
 		</div>
 	</div>
+			{{ form_errors(form) }}
 	{% import "MoexCoreBundle:MeOrders:form.html.twig" as macro %}
 	{{ macro.order_form(form)}}
+	<div class="moex-form">
+		<p class="alignright">
+			<button type="submit">{{ "button_create" | trans }}</button>
+		</p>
+	</div>
+
 	</div>
 </div>
 <div class="right-part-container rate50">
@@ -117,8 +124,8 @@
 		<div id="map"></div>
 	</div>
 </div>
-{{ form_rest(form) }}
 </div>
+{{ form_rest(form) }}
 </form>
 {% include "MoexCoreBundle:MeOrders:js.html.twig" %}
 {% endblock moex_content %}
