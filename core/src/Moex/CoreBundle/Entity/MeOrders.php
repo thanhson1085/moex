@@ -521,12 +521,6 @@ class MeOrders
     private $ordermeta;
 
     /**
-     * @var Moex\CoreBundle\Entity\MeOrdermeta
-     */
-    private $thereturn;
-
-
-    /**
      * Set receiverName
      *
      * @param string $receiverName
@@ -610,34 +604,6 @@ class MeOrders
     public function setOrdermeta($ordermeta){
         $this->ordermeta = $ordermeta;
         foreach ($ordermeta as $value){
-            $value->setOrder($this);
-        }
-    }
-
-    /**
-     * Add thereturn 
-     *
-     * @param Moex\CoreBundle\Entity\MeOrdermeta $thereturn
-     */
-    public function addThereturn(\Moex\CoreBundle\Entity\MeOrdermeta $thereturn)
-    {
-        $this->thereturn[] = $thereturn;
-		$thereturn->setOrder($this);
-    }
-
-    /**
-     * Get thereturn 
-     *
-     * @return Doctrine\Common\Collections\Collection 
-     */
-    public function getThereturn()
-    {
-        return $this->thereturn;
-    }
-
-    public function setThereturn($thereturn){
-        $this->thereturn = $thereturn;
-        foreach ($thereturn as $value){
             $value->setOrder($this);
         }
     }
@@ -790,5 +756,30 @@ class MeOrders
     public function getRoadPrice()
     {
         return $this->roadPrice;
+    }
+    /**
+     * @var smallint $thereturn
+     */
+    private $thereturn;
+
+
+    /**
+     * Set thereturn
+     *
+     * @param smallint $thereturn
+     */
+    public function setThereturn($thereturn)
+    {
+        $this->thereturn = $thereturn;
+    }
+
+    /**
+     * Get thereturn
+     *
+     * @return smallint 
+     */
+    public function getThereturn()
+    {
+        return $this->thereturn;
     }
 }

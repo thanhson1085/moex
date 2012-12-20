@@ -20,6 +20,10 @@ Moex\CoreBundle\Entity\MeOrders:
       type: smallint
       nullable: false
       column: service_type
+    thereturn:
+      type: smallint
+      nullable: false
+      column: thereturn 
     orderName:
       type: string
       length: 250

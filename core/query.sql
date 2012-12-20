@@ -32,10 +32,11 @@ ALTER TABLE  `me_orders` ADD  `receiver_name` VARCHAR( 250 ) NULL AFTER  `servic
 ADD  `receiver_phone` VARCHAR( 250 ) NULL AFTER  `receiver_name` ,
 ADD  `receiver_address` VARCHAR( 250 ) NULL AFTER  `recieved_phone`;
 ALTER TABLE  `me_orders` ADD  `surcharge` VARCHAR( 250 ) NULL AFTER  `price` ,
-ADD  `promotion` VARCHAR( 250 ) NULL AFTER  `surcharge`
-ALTER TABLE  `me_orders` ADD  `extra_price` VARCHAR( 250 ) NULL DEFAULT  '0' AFTER  `price`
-ALTER TABLE  `me_orders` ADD  `order_time` DATETIME NULL AFTER  `order_code`
-ALTER TABLE  `me_orders` ADD  `sender_address` VARCHAR( 255 ) NULL AFTER  `receiver_address`
-ALTER TABLE  `me_orders` ADD  `road_price` VARCHAR( 250 ) NOT NULL DEFAULT  '0' AFTER  `price`
-ALTER TABLE  `me_orders` CHANGE  `order_from`  `order_from` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
-ALTER TABLE  `me_orders` CHANGE  `order_to`  `order_to` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ADD  `promotion` VARCHAR( 250 ) NULL AFTER  `surcharge`;
+ALTER TABLE  `me_orders` ADD  `extra_price` VARCHAR( 250 ) NULL AFTER  `price`;
+ALTER TABLE  `me_orders` ADD  `order_time` DATETIME NULL AFTER  `order_code`;
+ALTER TABLE  `me_orders` ADD  `sender_address` VARCHAR( 255 ) NULL AFTER  `receiver_address`;
+ALTER TABLE  `me_orders` ADD  `road_price` VARCHAR( 250 ) NOT NULL DEFAULT  '0' AFTER  `price`;
+ALTER TABLE  `me_orders` CHANGE  `order_from`  `order_from` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
+ALTER TABLE  `me_orders` CHANGE  `order_to`  `order_to` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
+ALTER TABLE  `me_orders` ADD  `thereturn` TINYINT NULL AFTER  `sender_address`;

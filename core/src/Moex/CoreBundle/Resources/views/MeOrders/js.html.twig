@@ -44,7 +44,6 @@ $(document).ready(function(){
 		add('#moex_corebundle_meorderstype_ordermeta');
 		$('.order-metakey-position').attr('value', '{{ order_position }}')
 	});
-	add('#moex_corebundle_meorderstype_thereturn');
     $('.txt-main').live('click', function(){
         $(this).select();
     });
@@ -162,7 +161,7 @@ $(document).ready(function(){
 		var moex_extraprice = Number($("#moex_corebundle_meorderstype_extraPrice").attr("value"));
 		var moex_roadprice = Number($("#moex_corebundle_meorderstype_roadPrice").attr("value"));
 
-		if ($("#moex_corebundle_meorderstype_thereturn_0_metaValue").attr("checked") == "checked"){
+		if ($("#moex_corebundle_meorderstype_thereturn").attr("checked") == "checked"){
 			moex_surcharge = moex_surcharge + moex_roadprice*{{ thereturn_rate }}
 		}
 

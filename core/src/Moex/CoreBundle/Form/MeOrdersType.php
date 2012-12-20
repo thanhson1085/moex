@@ -25,8 +25,9 @@ class MeOrdersType extends AbstractType
             ->add('startTime', 'datetime', array('widget' => 'single_text', 'required' => false, 'attr' => array('class' => 'txt-time', 'readonly' => 'readonly') , 'label' => $this->translator->trans('order_starttime')))
             ->add('orderTime', 'datetime', array('widget' => 'single_text', 'required' => false, 'attr' => array('class' => 'txt-time', 'readonly' => 'readonly') , 'label' => $this->translator->trans('order_ordertime')))
             ->add('orderInfo', 'textarea', array('required' => false, 'label' => $this->translator->trans('order_orderinfo')))
-            ->add('orderFrom', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_orderfrom')))
-            ->add('orderTo', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_orderto')))
+            ->add('orderFrom', 'text', array( 'required' => true, 'label' => $this->translator->trans('order_orderfrom')))
+            ->add('orderTo', 'text', array( 'required' => true, 'label' => $this->translator->trans('order_orderto')))
+            ->add('thereturn', 'checkbox', array( 'required' => false, 'label' => $this->translator->trans('order_thereturn')))
             ->add('receiverName', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_receivername')))
             ->add('receiverPhone', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_receiverphone')))
             ->add('receiverAddress', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_receiveraddress')))
@@ -42,13 +43,6 @@ class MeOrdersType extends AbstractType
 			->add('ordermeta', 'collection', array(
 				'label' => $this->translator->trans('order_position'),
 				'type' => $ordermeta, 
-				'allow_add' => true,
-				'prototype' => true,
-				'by_reference' => false,
-				))
-			->add('thereturn', 'collection', array(
-				'label' => $this->translator->trans('order_thereturn'),
-				'type' => new TheReturnType(), 
 				'allow_add' => true,
 				'prototype' => true,
 				'by_reference' => false,
