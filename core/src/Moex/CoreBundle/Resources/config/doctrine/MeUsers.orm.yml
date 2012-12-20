@@ -65,6 +65,9 @@ Moex\CoreBundle\Entity\MeUsers:
     order:
       targetEntity: MeOrders 
       mappedBy: user 
+    usermeta:
+      targetEntity: MeUsermeta
+      mappedBy: user 
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]
     preUpdate: [ setUpdatedAtValue ]

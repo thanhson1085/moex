@@ -502,4 +502,295 @@ class MeOrders
     {
         return $this->user;
     }
+    /**
+     * @var string $receiverName
+     */
+    private $receiverName;
+
+    /**
+     * @var string $receiverPhone
+     */
+    private $receiverPhone;
+
+    /**
+     * @var string $receiverAddress
+     */
+    private $receiverAddress;
+
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrdermeta
+     */
+    private $ordermeta;
+
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrdermeta
+     */
+    private $thereturn;
+
+
+    /**
+     * Set receiverName
+     *
+     * @param string $receiverName
+     */
+    public function setReceiverName($receiverName)
+    {
+        $this->receiverName = $receiverName;
+    }
+
+    /**
+     * Get receiverName
+     *
+     * @return string 
+     */
+    public function getReceiverName()
+    {
+        return $this->receiverName;
+    }
+
+    /**
+     * Set receiverPhone
+     *
+     * @param string $receiverPhone
+     */
+    public function setReceiverPhone($receiverPhone)
+    {
+        $this->receiverPhone = $receiverPhone;
+    }
+
+    /**
+     * Get receiverPhone
+     *
+     * @return string 
+     */
+    public function getReceiverPhone()
+    {
+        return $this->receiverPhone;
+    }
+
+    /**
+     * Set receiverAddress
+     *
+     * @param string $receiverAddress
+     */
+    public function setReceiverAddress($receiverAddress)
+    {
+        $this->receiverAddress = $receiverAddress;
+    }
+
+    /**
+     * Get receiverAddress
+     *
+     * @return string 
+     */
+    public function getReceiverAddress()
+    {
+        return $this->receiverAddress;
+    }
+
+    /**
+     * Add ordermeta
+     *
+     * @param Moex\CoreBundle\Entity\MeOrdermeta $ordermeta
+     */
+    public function addMeOrdermeta(\Moex\CoreBundle\Entity\MeOrdermeta $ordermeta)
+    {
+        $this->ordermeta[] = $ordermeta;
+		$ordermeta->setOrder($this);
+    }
+
+    /**
+     * Get ordermeta
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getOrdermeta()
+    {
+        return $this->ordermeta;
+    }
+
+    public function setOrdermeta($ordermeta){
+        $this->ordermeta = $ordermeta;
+        foreach ($ordermeta as $value){
+            $value->setOrder($this);
+        }
+    }
+
+    /**
+     * Add thereturn 
+     *
+     * @param Moex\CoreBundle\Entity\MeOrdermeta $thereturn
+     */
+    public function addThereturn(\Moex\CoreBundle\Entity\MeOrdermeta $thereturn)
+    {
+        $this->thereturn[] = $thereturn;
+		$thereturn->setOrder($this);
+    }
+
+    /**
+     * Get thereturn 
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getThereturn()
+    {
+        return $this->thereturn;
+    }
+
+    public function setThereturn($thereturn){
+        $this->thereturn = $thereturn;
+        foreach ($thereturn as $value){
+            $value->setOrder($this);
+        }
+    }
+
+    /**
+     * @var string $surcharge
+     */
+    private $surcharge;
+
+    /**
+     * Set surcharge
+     *
+     * @param string $surcharge
+     */
+    public function setSurcharge($surcharge)
+    {
+        $this->surcharge = $surcharge;
+    }
+
+    /**
+     * Get surcharge
+     *
+     * @return string 
+     */
+    public function getSurcharge()
+    {
+        return $this->surcharge;
+    }
+    /**
+     * @var string $promotion
+     */
+    private $promotion;
+
+
+    /**
+     * Set promotion
+     *
+     * @param string $promotion
+     */
+    public function setPromotion($promotion)
+    {
+        $this->promotion = $promotion;
+    }
+
+    /**
+     * Get promotion
+     *
+     * @return string 
+     */
+    public function getPromotion()
+    {
+        return $this->promotion;
+    }
+    /**
+     * @var datetime $orderTime
+     */
+    private $orderTime;
+
+
+    /**
+     * Set orderTime
+     *
+     * @param datetime $orderTime
+     */
+    public function setOrderTime($orderTime)
+    {
+        $this->orderTime = $orderTime;
+    }
+
+    /**
+     * Get orderTime
+     *
+     * @return datetime 
+     */
+    public function getOrderTime()
+    {
+        return $this->orderTime;
+    }
+    /**
+     * @var string $extraPrice
+     */
+    private $extraPrice;
+
+    /**
+     * @var string $senderAddress
+     */
+    private $senderAddress;
+
+
+    /**
+     * Set extraPrice
+     *
+     * @param string $extraPrice
+     */
+    public function setExtraPrice($extraPrice)
+    {
+        $this->extraPrice = $extraPrice;
+    }
+
+    /**
+     * Get extraPrice
+     *
+     * @return string 
+     */
+    public function getExtraPrice()
+    {
+        return $this->extraPrice;
+    }
+
+    /**
+     * Set senderAddress
+     *
+     * @param string $senderAddress
+     */
+    public function setSenderAddress($senderAddress)
+    {
+        $this->senderAddress = $senderAddress;
+    }
+
+    /**
+     * Get senderAddress
+     *
+     * @return string 
+     */
+    public function getSenderAddress()
+    {
+        return $this->senderAddress;
+    }
+    /**
+     * @var string $roadPrice
+     */
+    private $roadPrice;
+
+
+    /**
+     * Set roadPrice
+     *
+     * @param string $roadPrice
+     */
+    public function setRoadPrice($roadPrice)
+    {
+        $this->roadPrice = $roadPrice;
+    }
+
+    /**
+     * Get roadPrice
+     *
+     * @return string 
+     */
+    public function getRoadPrice()
+    {
+        return $this->roadPrice;
+    }
 }

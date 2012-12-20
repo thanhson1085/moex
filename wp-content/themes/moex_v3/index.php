@@ -112,7 +112,30 @@ $(document).ready(function(){
             </div>
 
             <div id="footerAdv">
-                <a href="<?php echo get_bloginfo("url")?>?page_id=2"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/adv2.jpg" class="anhQC"/></a>                
+				<table id="Table_01" width="588" height="56" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>
+							<img src="<?php echo get_bloginfo("template_url")?>/img/Partner_01.png" width="101" height="56" alt=""></td>
+						<td>
+							<a href="http://www.goimon.vn/" target="_blank">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/Goimon.png" width="95" height="56" border="0" alt=""></a></td>
+						<td>
+							<a href="http://www.orabuy.com/#" target="_blank">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/Orabuy.png" width="74" height="56" border="0" alt=""></a></td>
+						<td>
+							<a href="http://www.facebook.com/pages/B%C3%A1nh-Cu%E1%BB%91n-Gia-An/121140331304301" target="_blank">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/banh_cuon_Gia_An.png" width="87" height="56" border="0" alt=""></a></td>
+						<td>
+							<a href="http://kitchenart.vn/vi/" target="_blank">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/kitchenart.png" width="58" height="56" border="0" alt=""></a></td>
+						<td>
+							<a href="http://tiectainha.vn/?aspxerrorpath=/" target="_blank">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/tiectainha.png" width="70" height="56" border="0" alt=""></a></td>
+						<td>
+							<a href="http://www.facebook.com/7CUA.banhdacua" target="_blank">
+								<img src="<?php echo get_bloginfo("template_url")?>/img/7cua.jpg" width="103" height="56" border="0" alt=""></a></td>
+					</tr>
+				</table>
             </div>
         </div>
 

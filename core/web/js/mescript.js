@@ -338,10 +338,7 @@ function getRoute(){
         distance = response.routes[0].legs[0].distance.value/1000;
 		money_value = countMoney();
         $('#search-result').html(money_value);
-		if(submit_click == true){
-			submit_click = false;
-			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
-		}
+		$('#moex_corebundle_meorderstype_roadPrice').attr('value',money_value);
         directionsDisplay.setDirections(response);
     }
     });
@@ -352,10 +349,7 @@ function getRoute(){
 		if (driving_distance < distance){
 			money_value = countMoney();
 			$('#search-result').html(money_value);
-			if(submit_click == true){
-				submit_click = false;
-				$('#moex_corebundle_meorderstype_price').attr('value',money_value);
-			}
+			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
 			directionsDisplay.setDirections(response);
 		}
     }

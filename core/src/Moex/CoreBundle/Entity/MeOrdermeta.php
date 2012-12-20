@@ -5,19 +5,14 @@ namespace Moex\CoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Moex\CoreBundle\Entity\MeUsermeta
+ * Moex\CoreBundle\Entity\MeOrdermeta
  */
-class MeUsermeta
+class MeOrdermeta
 {
     /**
-     * @var bigint $umetaId
+     * @var bigint $id
      */
-    private $umetaId;
-
-    /**
-     * @var bigint $userId
-     */
-    private $userId;
+    private $id;
 
     /**
      * @var string $metaKey
@@ -29,35 +24,20 @@ class MeUsermeta
      */
     private $metaValue;
 
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrders
+     */
+    private $order;
+
 
     /**
-     * Get umetaId
+     * Get id
      *
      * @return bigint 
      */
-    public function getUmetaId()
+    public function getId()
     {
-        return $this->umetaId;
-    }
-
-    /**
-     * Set userId
-     *
-     * @param bigint $userId
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-    }
-
-    /**
-     * Get userId
-     *
-     * @return bigint 
-     */
-    public function getUserId()
-    {
-        return $this->userId;
+        return $this->id;
     }
 
     /**
@@ -99,29 +79,39 @@ class MeUsermeta
     {
         return $this->metaValue;
     }
-    /**
-     * @var Moex\CoreBundle\Entity\MeUsers
-     */
-    private $user;
-
 
     /**
-     * Set user
+     * Set order
      *
-     * @param Moex\CoreBundle\Entity\MeUsers $user
+     * @param Moex\CoreBundle\Entity\MeOrders $order
      */
-    public function setUser(\Moex\CoreBundle\Entity\MeUsers $user)
+    public function setOrder(\Moex\CoreBundle\Entity\MeOrders $order)
     {
-        $this->user = $user;
+        $this->order = $order;
     }
 
     /**
-     * Get user
+     * Get order
      *
-     * @return Moex\CoreBundle\Entity\MeUsers 
+     * @return Moex\CoreBundle\Entity\MeOrders 
      */
-    public function getUser()
+    public function getOrder()
     {
-        return $this->user;
+        return $this->order;
+    }
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
     }
 }

@@ -318,4 +318,29 @@ class MeUsers
     {
         return $this->order;
     }
+    /**
+     * @var Moex\CoreBundle\Entity\MeUsermeta
+     */
+    private $usermeta;
+
+
+    /**
+     * Add usermeta
+     *
+     * @param Moex\CoreBundle\Entity\MeUsermeta $usermeta
+     */
+    public function addMeUsermeta(\Moex\CoreBundle\Entity\MeUsermeta $usermeta)
+    {
+        $this->usermeta[] = $usermeta;
+    }
+
+    /**
+     * Get usermeta
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getUsermeta()
+    {
+        return $this->usermeta;
+    }
 }

@@ -1,14 +1,12 @@
 Moex\CoreBundle\Entity\MeUsermeta:
   type: entity
   table: me_usermeta
-  fields:
+  id:
     umetaId:
-      id: true
       type: bigint
-      nullable: false
       column: umeta_id
-      generator:
-        strategy: IDENTITY
+      generator: { strategy: AUTO }
+  fields:
     userId:
       type: bigint
       nullable: false
@@ -23,4 +21,11 @@ Moex\CoreBundle\Entity\MeUsermeta:
       type: text
       nullable: true
       column: meta_value
+  manyToOne:
+    user:
+      targetEntity: MeUsers
+      inversedBy: usermeta 
+      joinColumn:
+        name: user_id 
+        referencedColumnName: id
   lifecycleCallbacks: {  }

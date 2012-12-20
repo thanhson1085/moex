@@ -1,0 +1,104 @@
+{% macro order_form(form) %}
+		<div class="moex-form">
+			{{ form_errors(form) }}
+
+			<div class="form-row">
+				{{ form_label(form.orderTime) }}
+				{{ form_widget(form.orderTime) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.orderTime) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.customerId) }}
+				{{ form_widget(form.customerId) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.customerId) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.orderCode) }}
+				{{ form_widget(form.orderCode) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.orderCode) }}
+			</div>
+			
+			<div class="form-split">{{ 'order_intro_sender' | trans }}</div>
+
+			<div class="form-row">
+				{{ form_label(form.phone) }}
+				{{ form_widget(form.phone) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.phone) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.orderName) }}
+				{{ form_widget(form.orderName) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.orderName) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.senderAddress) }}
+				{{ form_widget(form.senderAddress) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.senderAddress) }}
+			</div>
+
+			<div class="form-split">{{ 'order_intro_receiver' | trans }}</div>
+
+			<div class="form-row">
+				{{ form_label(form.receiverPhone) }}
+				{{ form_widget(form.receiverPhone) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.receiverPhone) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.receiverName) }}
+				{{ form_widget(form.receiverName) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.receiverName) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.receiverAddress) }}
+				{{ form_widget(form.receiverAddress) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.receiverAddress) }}
+			</div>
+
+			<div class="form-split">{{ 'order_intro_orderinfo' | trans }}</div>
+
+			<div class="form-row">
+				{{ form_label(form.startTime) }}
+				{{ form_widget(form.startTime) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.startTime) }}
+			</div>
+
+			<div class="form-row">
+				{{ form_label(form.orderInfo) }}
+				{{ form_widget(form.orderInfo) }}
+			</div>
+			<div class="form-row">
+				{{ form_errors(form.orderInfo) }}
+			</div>
+
+			<p class="alignright">
+				<button type="submit">{{ "button_create" | trans }}</button>
+			</p>
+		</div>
+
+{% endmacro %}

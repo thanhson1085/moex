@@ -2,12 +2,13 @@ parameters:
   moex.version: V1.0
   moex.pagesize.default: 10
   moex.driver.money.max: 1000000 
-  #moex.driver.money.rate: 0.80
-  #moex.driver.money.rate2: 0.20
   moex.driver.money.rate: [ 0, 0.80, 0.20 ] 
+  moex.thereturn.rate: 0.3
+  moex.goods.rate: 0.03
   moex.order.status.pending: PENDING 
   moex.order.status.assigned: ASSIGNED
   moex.order.status.done: DONE 
+  moex.metakey.order.position: ORDER_POSITION
   moex.order.servicetype:
     0: ''   
     1: 'moEx Delivery'   
@@ -28,3 +29,6 @@ twig:
     status_pending: %moex.order.status.pending% 
     service_type: %moex.order.servicetype% 
     driver_type: %moex.driver.drivertype% 
+    order_position: %moex.metakey.order.position%
+    thereturn_rate: %moex.thereturn.rate%
+    goods_rate: %moex.goods.rate%

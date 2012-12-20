@@ -7,10 +7,6 @@ Moex\CoreBundle\Entity\MeOrders:
       type: bigint
       generator: { strategy: AUTO }
   fields:
-#    userId:
-#      type: bigint
-#      nullable: false
-#      column: user_id
     customerId:
       type: bigint
       nullable: false
@@ -56,16 +52,53 @@ Moex\CoreBundle\Entity\MeOrders:
       length: 250
       fixed: false
       nullable: true 
+    extraPrice:
+      type: string
+      length: 250
+      nullable: false
+      column: extra_price 
+    roadPrice:
+      type: string
+      length: 250
+      column: road_price 
     price:
       type: string
       length: 250
       fixed: false
+      nullable: false
+    surcharge:
+      type: string
+      length: 250
+      nullable: false
+    promotion:
+      type: string
+      length: 250
       nullable: false
     orderStatus:
       type: string 
       length: 250
       nullable: false
       column: order_status 
+    receiverName:
+      type: string 
+      length: 250
+      nullable: true 
+      column: receiver_name
+    receiverPhone:
+      type: string 
+      length: 250
+      nullable: true 
+      column: receiver_phone
+    receiverAddress:
+      type: string 
+      length: 250
+      nullable: true 
+      column: receiver_address 
+    senderAddress:
+      type: string 
+      length: 250
+      nullable: true 
+      column: sender_address 
     lat:
       type: string
       length: 250
@@ -80,6 +113,10 @@ Moex\CoreBundle\Entity\MeOrders:
       type: datetime
       nullable: true 
       column: start_time 
+    orderTime:
+      type: datetime
+      nullable: true 
+      column: order_time 
     createdAt:
       type: datetime
       nullable: false
@@ -92,6 +129,10 @@ Moex\CoreBundle\Entity\MeOrders:
     order_driver:
       targetEntity: MeOrderDriver 
       mappedBy: order 
+    ordermeta:
+      targetEntity: MeOrdermeta
+      mappedBy: order 
+      cascade: [ persist ]
   manyToOne:
     user:
       targetEntity: MeUsers 

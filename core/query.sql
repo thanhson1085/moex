@@ -19,3 +19,21 @@ ALTER TABLE  `me_drivers` CHANGE  `moex_money`  `moex_money` VARCHAR( 250 ) CHAR
 ALTER TABLE  `me_drivers` CHANGE  `d_money`  `d_money` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL;
 ALTER TABLE  `me_drivers` ADD  `driver_type` TINYINT NOT NULL AFTER  `driver_code`;
 ALTER TABLE  `me_orders` ADD  `order_code` VARCHAR( 250 ) NULL AFTER  `customer_id`;
+CREATE TABLE IF NOT EXISTS `me_ordermeta` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `meta_key` varchar(255) DEFAULT NULL,
+  `meta_value` longtext,
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`),
+  KEY `meta_key` (`meta_key`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=193;
+ALTER TABLE  `me_orders` ADD  `receiver_name` VARCHAR( 250 ) NULL AFTER  `service_type` ,
+ADD  `receiver_phone` VARCHAR( 250 ) NULL AFTER  `receiver_name` ,
+ADD  `receiver_address` VARCHAR( 250 ) NOT NULL AFTER  `recieved_phone`;
+ALTER TABLE  `me_orders` ADD  `surcharge` VARCHAR( 250 ) NOT NULL DEFAULT '0' AFTER  `price` ,
+ADD  `promotion` VARCHAR( 250 ) NOT NULL DEFAULT '0' AFTER  `surcharge`
+ALTER TABLE  `me_orders` ADD  `extra_price` VARCHAR( 250 ) NULL DEFAULT  '0' AFTER  `price`
+ALTER TABLE  `me_orders` ADD  `order_time` DATETIME NULL AFTER  `order_code`
+ALTER TABLE  `me_orders` ADD  `sender_address` VARCHAR( 255 ) NULL AFTER  `receiver_address`
+ALTER TABLE  `me_orders` ADD  `road_price` VARCHAR( 250 ) NOT NULL DEFAULT  '0' AFTER  `price`
