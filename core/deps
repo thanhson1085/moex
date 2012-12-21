@@ -89,6 +89,7 @@
 [JMSSerializerBundle]
     git=git://github.com/schmittjoh/JMSSerializerBundle.git
     target=bundles/JMS/SerializerBundle
+    version=0.9.0
 
 [JMSDiExtraBundle]
     git=https://github.com/schmittjoh/JMSDiExtraBundle.git

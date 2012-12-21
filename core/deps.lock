@@ -1,4 +1,4 @@
-symfony bc09ac9eb0231496e261a5fac2bfd6935ea9f5fe
+symfony v2.0.21
 twig v1.8.2
 monolog 1.0.2
 doctrine-common 2.1.4
@@ -20,7 +20,7 @@ GravatarBundle 994424a846f30f64e324e1b95a21c9f3b4ad237a
 WhiteOctoberPagerFanta 12f71d99457b018fb80746f84514dd5b495c5789
 WhiteOctoberPagerFantaBundle 40209ef994fa2f342660d96bf6bea3f88171cd2d
 JMSSerializerBundle 0.9.0
-JMSDiExtraBundle 1.0.0
+JMSDiExtraBundle aff6f3da3c866ef06d13e7c9043e1253f11932a0
 JMSAopBundle 70ee8edbcf840b20445e3e42e57a249be4373a34
 CGLibrary 8f3441497215434c95512200fa56f168d1972e47
 FOSRest b48857315c39715245303fb5bbc1bab98026209e
