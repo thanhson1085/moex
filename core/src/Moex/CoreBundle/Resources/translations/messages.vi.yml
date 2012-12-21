@@ -60,14 +60,14 @@ user_phone: Điện thoại
 orderdriver_drivermoney: Tiền của lái xe
 orderdriver_money: Tiền thu khách hàng
 order_phone: Điện thoại 
-order_orderfrom: Từ(A)
-order_orderto: Đến(B)
+order_orderfrom: Điểm đầu
+order_orderto: Điểm cuối
 order_price: Giá(VNĐ)
 order_ordercode: Mã đơn hàng
 order_customerid: ID Khách hàng
 order_lat: Vĩ độ
 order_lng: Kinh độ
-order_ordername: Tên đơn hàng
+order_ordername: Tên người gửi
 order_servicetype: Dịch vụ
 order_orderinfo: Mô tả
 order_distance: Khoảng cách(Km)
