@@ -758,7 +758,7 @@ class MeOrders
         return $this->roadPrice;
     }
     /**
-     * @var smallint $thereturn
+     * @var boolean $thereturn
      */
     private $thereturn;
 
@@ -766,7 +766,7 @@ class MeOrders
     /**
      * Set thereturn
      *
-     * @param smallint $thereturn
+     * @param boolean $thereturn
      */
     public function setThereturn($thereturn)
     {
@@ -776,7 +776,7 @@ class MeOrders
     /**
      * Get thereturn
      *
-     * @return smallint 
+     * @return boolean 
      */
     public function getThereturn()
     {

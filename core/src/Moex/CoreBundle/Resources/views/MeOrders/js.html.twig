@@ -112,10 +112,16 @@ $(document).ready(function(){
 	function() {
 		if (currentDirections) {
 			var rleg = directionsDisplay.directions.routes[0].legs[0];
-			distance = rleg.distance.value/1000;
+			distance = 0;
+			//distance = rleg.distance.value/1000;
+			routes = directionsDisplay.directions.routes[0].legs;
+			for (var i = 0; i < routes.length; i++) {
+				distance = distance + routes[i].distance.value/1000;
+			}
+
 			money_value = countMoney();
 			$('#search-result').html(money_value);
-			$('#moex_corebundle_meorderstype_distance').attr('value',distance);
+			$('#moex_corebundle_meorderstype_distance').attr('value',moex_distance);
 			$('#moex_corebundle_meorderstype_roadPrice').attr('value',money_value);
 			$('#moex_corebundle_meorderstype_lat').val(rleg.start_location.lat());
 			$('#moex_corebundle_meorderstype_lng').val(rleg.end_location.lng());

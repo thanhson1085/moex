@@ -21,7 +21,7 @@ Moex\CoreBundle\Entity\MeOrders:
       nullable: false
       column: service_type
     thereturn:
-      type: smallint
+      type: boolean 
       nullable: false
       column: thereturn 
     orderName:

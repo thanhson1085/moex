@@ -323,6 +323,7 @@ var mainColor = "#0066b3";
 function countMoney(){
     distance = (Math.ceil(Math.ceil(distance*10)/5)*5)/10;
     moex_distance = distance; 
+	$('#moex_corebundle_meorderstype_distance').attr('value',moex_distance);
     ret = distance*price_level;
     return ret;
 }
@@ -331,11 +332,16 @@ function getRoute(){
     distance = 0;
     request.origin += province;
     request.destination += province;
-	var driving_distance;
+	var driving_distance = 0;
     request.travelMode = google.maps.DirectionsTravelMode.WALKING;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-        distance = response.routes[0].legs[0].distance.value/1000;
+		
+        //distance = response.routes[0].legs[0].distance.value/1000;
+        var routes = response.routes[0].legs;
+		for (var i = 0; i < routes.length; i++) {
+			distance = distance + routes[i].distance.value/1000; 
+		}
 		money_value = countMoney();
         $('#search-result').html(money_value);
 		$('#moex_corebundle_meorderstype_roadPrice').attr('value',money_value);
@@ -345,11 +351,16 @@ function getRoute(){
     request.travelMode = google.maps.DirectionsTravelMode.DRIVING;
     directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-        driving_distance = response.routes[0].legs[0].distance.value/1000;
+        //driving_distance = response.routes[0].legs[0].distance.value/1000;
+        var routes = response.routes[0].legs;
+
+		for (var i = 0; i < routes.length; i++) {
+			driving_distance = driving_distance + routes[i].distance.value/1000; 
+		}
 		if (driving_distance < distance){
 			money_value = countMoney();
 			$('#search-result').html(money_value);
-			$('#moex_corebundle_meorderstype_price').attr('value',money_value);
+			$('#moex_corebundle_meorderstype_roadPrice').attr('value',money_value);
 			directionsDisplay.setDirections(response);
 		}
     }

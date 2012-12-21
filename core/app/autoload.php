@@ -19,6 +19,11 @@ $loader->registerNamespaces(array(
     'Gedmo' 		   => __DIR__ .'/../vendor/gedmo-doctrine-extensions/lib',
     'WhiteOctober\\PagerfantaBundle' => __DIR__.'/../vendor/bundles',
     'Pagerfanta'       => __DIR__.'/../vendor/WhiteOctoberPagerFanta/src',
+    'JMS'              => __DIR__.'/../vendor/bundles',
+    'FOS\\Rest'        => __DIR__.'/../vendor/fos',
+    'FOS'              => __DIR__.'/../vendor/bundles',
+    'CG'               => __DIR__.'/../vendor/cg-library/src',
+
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',

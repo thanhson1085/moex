@@ -27,6 +27,11 @@ class AppKernel extends Kernel
 			new Hypebeast\WordpressBundle\HypebeastWordpressBundle(),
         	new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         	new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            #new JMS\AopBundle\JMSAopBundle(),
+            #new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
+
+            new FOS\RestBundle\FOSRestBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

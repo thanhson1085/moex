@@ -35,7 +35,7 @@
 
 [metadata]
     git=http://github.com/schmittjoh/metadata.git
-    version=1.0.0
+    version=1.1.0
 
 [SensioFrameworkExtraBundle]
     git=http://github.com/sensio/SensioFrameworkExtraBundle.git
@@ -85,3 +85,30 @@
     git=http://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git
     target=/bundles/WhiteOctober/PagerfantaBundle
 	version=origin/symfony2.0
+
+[JMSSerializerBundle]
+    git=git://github.com/schmittjoh/JMSSerializerBundle.git
+    target=bundles/JMS/SerializerBundle
+    version=0.9.0
+
+[JMSDiExtraBundle]
+    git=https://github.com/schmittjoh/JMSDiExtraBundle.git
+    target=/bundles/JMS/DiExtraBundle
+    version=1.0.0
+
+[JMSAopBundle]
+    git=https://github.com/schmittjoh/JMSAopBundle.git
+    target=/bundles/JMS/AopBundle
+
+[CGLibrary]
+    git=http://github.com/schmittjoh/cg-library.git
+    target=/cg-library
+
+[FOSRest]
+    git=git://github.com/FriendsOfSymfony/FOSRest.git
+    target=fos/FOS/Rest
+
+[FOSRestBundle]
+    git=git://github.com/FriendsOfSymfony/FOSRestBundle.git
+    target=bundles/FOS/RestBundle
+
