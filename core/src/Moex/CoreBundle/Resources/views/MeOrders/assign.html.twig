@@ -6,7 +6,22 @@
         <div class="admin-header">{{ 'header_assign' | trans }}</div>
         <form action="{{ path('order_assign', { 'order_id' : entity.id, 'driver_id': driver.id }) }}" method="post" {{ form_enctype(assign_form) }}>
             <div class="moex-form">
-                {{ form_widget(assign_form) }}
+                {{ form_errors(assign_form) }}
+				<div class="form-row">
+					{{ form_label(assign_form.driverMoney) }}
+					{{ form_widget(assign_form.driverMoney) }}
+				</div>
+				<div class="form-row">
+					{{ form_errors(assign_form.driverMoney) }}
+				</div>
+				<div class="form-row">
+					{{ form_label(assign_form.money) }}
+					{{ form_widget(assign_form.money) }}
+				</div>
+				<div class="form-row">
+					{{ form_errors(assign_form.money) }}
+				</div>
+				{{ form_rest(assign_form) }}
                 <p class="alignright">
                     <button type="submit">{{ "button_assign" | trans }}</button>
                 </p>
