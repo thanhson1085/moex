@@ -18,6 +18,11 @@ Moex\CoreBundle\Entity\MeOrderDriver:
       length: 250
       nullable: true
       column: driver_money
+    roadMoney:
+      type: string
+      length: 250
+      nullable: true
+      column: road_money
     moexMoney:
       type: string
       length: 250

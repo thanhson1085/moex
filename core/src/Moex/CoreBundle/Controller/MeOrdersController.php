@@ -278,7 +278,8 @@ class MeOrdersController extends Controller
         $translator = $this->get('translator');
 		$order_driver->setMoney($entity->getPrice());
 		$driver_money_rate = $this->container->getParameter("moex.driver.money.rate");
-		$order_driver->setDriverMoney($entity->getPrice()*$driver_money_rate[$driver->getDriverType()]);
+		$order_driver->setDriverMoney($entity->getRoadPrice()*$driver_money_rate[$driver->getDriverType()]);
+		$order_driver->setRoadMoney($entity->getRoadPrice());
         $assignForm = $this->createForm(new AssignType($translator), $order_driver);
 
        	$request = $this->getRequest();	

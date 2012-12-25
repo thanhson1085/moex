@@ -85,7 +85,7 @@ fos_rest:
     view:
         view_response_listener: false
         failed_validation: HTTP_BAD_REQUEST
-        default_engine: php
+        default_engine: twig 
         formats:
             json: true
     format_listener:

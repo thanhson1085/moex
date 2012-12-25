@@ -18,6 +18,7 @@ class AssignType extends AbstractType
     {
         $builder
             ->add('driverMoney', 'number', array( 'label' => $this->translator->trans("orderdriver_drivermoney")))
+            ->add('roadMoney', 'number', array( 'label' => $this->translator->trans("order_roadprice")))
             ->add('money', 'number', array( 'label' => $this->translator->trans("orderdriver_money")))
         ;
     }

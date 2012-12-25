@@ -220,4 +220,29 @@ class MeOrderDriver
     {
         return $this->moexMoney;
     }
+    /**
+     * @var string $roadMoney
+     */
+    private $roadMoney;
+
+
+    /**
+     * Set roadMoney
+     *
+     * @param string $roadMoney
+     */
+    public function setRoadMoney($roadMoney)
+    {
+        $this->roadMoney = $roadMoney;
+    }
+
+    /**
+     * Get roadMoney
+     *
+     * @return string 
+     */
+    public function getRoadMoney()
+    {
+        return $this->roadMoney;
+    }
 }

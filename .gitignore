@@ -6,3 +6,5 @@
 *.tmp
 .htaccess
 /.htaccess
+core/web/.htaccess
+/core/web/.htaccess

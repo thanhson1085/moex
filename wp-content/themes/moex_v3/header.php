@@ -89,7 +89,9 @@ if (isMobile){
         <div id="Header">
             <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/phone.jpg" /></div>
             <div id="Logo">
-                <div class="logo"><a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo_x.jpg" class="anhQC"/></a></div>
+                <div class="logo">
+					<a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo_x.jpg" class="anhQC"/></a>
+				</div>
 			<div class="promotion">
 				<div id="metaContainer">
 					<!-- The sliderr works with virtually any HTML element (div, span etc) but for the sake of simplicity I have used images in this demo -->

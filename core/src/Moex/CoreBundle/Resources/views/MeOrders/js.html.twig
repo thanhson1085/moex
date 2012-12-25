@@ -68,7 +68,7 @@ $(document).ready(function(){
 	if ($('#moex_corebundle_meorderstype_orderTo').val() != ""){
 		request.destination = $('#moex_corebundle_meorderstype_orderTo').val();
 	}
-	getRoute();
+	//getRoute();
 	$("#search-submit").click(function(){
 		items = $('input.order-position');
 		waypoints = [];
@@ -92,8 +92,22 @@ $(document).ready(function(){
 	$('#moex_corebundle_meorderstype_orderTo').bind('keypress',function(e){
 		if(e.keyCode == 13){
 			if ($('#moex_corebundle_meorderstype_orderFrom').val() != "" && $('#moex_corebundle_meorderstype_orderTo').val() != ""){
+				items = $('input.order-position');
+				waypoints = [];
+				i = 0;
+				items.each(function(){
+					var address = $(this).attr('value');
+					if (address !== "") {
+						waypoints.push({
+							location: address + province,
+							stopover: true
+						});
+					}
+				})
+			
 				request.origin = $('#moex_corebundle_meorderstype_orderFrom').attr('value');
 				request.destination = $('#moex_corebundle_meorderstype_orderTo').attr('value');
+				request.waypoints = waypoints;
 				getRoute();
 			}
 		}
@@ -101,8 +115,22 @@ $(document).ready(function(){
 	$('#moex_corebundle_meorderstype_orderFrom').bind('keypress',function(e){
 		if(e.keyCode == 13){
 			if ($('#moex_corebundle_meorderstype_orderFrom').val() != "" && $('#moex_corebundle_meorderstype_orderTo').val() != ""){
+				items = $('input.order-position');
+				waypoints = [];
+				i = 0;
+				items.each(function(){
+					var address = $(this).attr('value');
+					if (address !== "") {
+						waypoints.push({
+							location: address + province,
+							stopover: true
+						});
+					}
+				})
+			
 				request.origin = $('#moex_corebundle_meorderstype_orderFrom').attr('value');
 				request.destination = $('#moex_corebundle_meorderstype_orderTo').attr('value');
+				request.waypoints = waypoints;
 				getRoute();
 			}
 		}
