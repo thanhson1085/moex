@@ -66,9 +66,9 @@ class ApiController extends Controller
 		$order->setReceiverName($arr_order->NguoiNhan);
 		$order->setReceiverPhone($arr_order->SDTNguoiNhan);
 		$order->setReceiverPhone($arr_order->SDTNguoiNhan);
-		$order->setRoadPrice($arr_order->PhiGiaoHang);
-		$order->setPrice($arr_order->PhiGiaoHang);
-		$order->setExtraPrice($arr_order->TongThanhToan);
+		$order->setRoadPrice(str_replace(',','',$arr_order->PhiGiaoHang));
+		$order->setPrice(str_replace(',','',$arr_order->PhiGiaoHang));
+		$order->setExtraPrice(str_replace(',','',$arr_order->TongThanhToan));
 		$order->setPromotion($arr_order->KhuyenMai);
 		$order->setOrderInfo($arr_order->GhiChu);
 		$order->setOrderStatus($this->container->getParameter("moex.order.status.pending"));
