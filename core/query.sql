@@ -43,3 +43,13 @@ ALTER TABLE  `me_orders` ADD  `thereturn` TINYINT NULL AFTER  `sender_address`;
 ALTER TABLE  `me_order_driver` ADD  `road_money` VARCHAR( 250 ) NULL AFTER  `driver_money`
 ALTER TABLE  `me_orders` CHANGE  `lat`  `lat` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
 ALTER TABLE  `me_orders` CHANGE  `lng`  `lng` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ALTER TABLE  `me_orders` ADD  `total_price` VARCHAR( 250 ) NULL AFTER  `extra_price`
+CREATE TABLE IF NOT EXISTS `me_order_goimon` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `order_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `meta_key` varchar(255) DEFAULT NULL,
+  `meta_value` longtext,
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`),
+  KEY `meta_key` (`meta_key`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;

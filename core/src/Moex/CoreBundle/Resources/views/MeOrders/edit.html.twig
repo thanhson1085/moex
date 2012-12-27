@@ -14,6 +14,26 @@
 	{% import "MoexCoreBundle:MeOrders:form.html.twig" as macro %}
 	{{ macro.order_form(form)}}
 	<div class="moex-form">
+		{% for value in ordergoimon %}
+		<div class="form-split">{{ 'order_intro_goimon_order' | trans }}</div>
+		{% set v = value.metaValue %}
+			<div class="form-row"><label>{{ 'goimon_madonhang' | trans }}</label><input type="text" readonly="readonly" value="{{ v.MaDonHang }}"></div>
+			<div class="form-row"><label>{{ 'goimon_ngay' | trans }}</label><input type="text" readonly="readonly" value="{{ v.Ngay }}"></div>
+			<div class="form-row"><label>{{ 'goimon_pickup' | trans }}</label><input type="text" readonly="readonly" value="{{ v.Pickup }}"></div>
+			<div class="form-row"><label>{{ 'goimon_thoigiangiaohang' | trans }}</label><input type="text" readonly="readonly" value="{{ v.ThoiGianGiaoHang }}"></div>
+		{% endfor %}
+		{% for value in ordermeta %}
+			<div class="form-split">{{ 'order_intro_goimon_noidung' | trans }}</div>
+			{% for v in value.metaValue %}
+				<div class="form-split">{{ v.STT }}</div>
+				<div class="form-row"><label>{{ 'goimon_mon' | trans }}</label><input type="text" readonly="readonly" value="{{ v.Mon }}"></div>
+				<div class="form-row"><label>{{ 'goimon_luachonthem' | trans }}</label><input type="text" readonly="readonly" value="{{ v.LuaChonThem }}"></div>
+				<div class="form-row"><label>{{ 'goimon_soluong' | trans }}</label><input type="text" readonly="readonly" value="{{ v.SoLuong }}"></div>
+				<div class="form-row"><label>{{ 'goimon_gia' | trans }}</label><input type="text" readonly="readonly" value="{{ v.Gia }}"></div>
+			{% endfor %}
+		{% endfor %}
+	</div>
+	<div class="moex-form">
 		<p class="alignright">
 			<button type="submit">{{ "button_edit" | trans }}</button>
 		</p>
@@ -82,12 +102,22 @@
 					{{ form_errors(form.extraPrice) }}
 				</div>
 
+
 				<div class="form-row">
 					{{ form_label(form.price) }}
 					{{ form_widget(form.price) }}
 				</div>
 				<div class="form-row">
 					{{ form_errors(form.price) }}
+				</div>
+
+				<div class="form-row">
+					{{ form_label(form.totalPrice) }}
+					{{ form_widget(form.totalPrice) }}
+
+				</div>
+				<div class="form-row">
+					{{ form_errors(form.totalPrice) }}
 				</div>
 				<div class="form-row">
 					<div class="btn-container" id="count-money"><span class="btn-main page">{{ "button_countmoney" | trans }}</span></div>

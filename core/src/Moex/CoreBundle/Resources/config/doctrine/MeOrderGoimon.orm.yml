@@ -1,0 +1,29 @@
+Moex\CoreBundle\Entity\MeOrderGoimon:
+  type: entity
+  repositoryClass: Moex\CoreBundle\Repository\MeOrderGoimonRepository
+  table: me_order_goimon
+  id:
+    id:
+      type: bigint
+      generator: { strategy: IDENTITY }
+  fields:
+    metaKey:
+      type: string
+      length: 255
+      fixed: false
+      nullable: true
+      column: meta_key
+    metaValue:
+      type: object 
+      nullable: true
+      column: meta_value
+  manyToOne:
+    order:
+      targetEntity: MeOrders 
+      inversedBy: ordergoimon
+      joinColumn:
+        name: order_id 
+        referencedColumnName: id
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

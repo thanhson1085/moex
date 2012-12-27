@@ -61,6 +61,11 @@ Moex\CoreBundle\Entity\MeOrders:
       length: 250
       nullable: false
       column: extra_price 
+    totalPrice:
+      type: string
+      length: 250
+      nullable: false
+      column: total_price 
     roadPrice:
       type: string
       length: 250
@@ -135,6 +140,9 @@ Moex\CoreBundle\Entity\MeOrders:
       mappedBy: order 
     ordermeta:
       targetEntity: MeOrdermeta
+      mappedBy: order 
+    ordergoimon:
+      targetEntity: MeOrderGoimon
       mappedBy: order 
   manyToOne:
     user:

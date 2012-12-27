@@ -37,6 +37,7 @@ class MeOrdersType extends AbstractType
             ->add('promotion', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_promotion')))
             ->add('price', 'text', array( 'label' => $this->translator->trans('order_price')))
             ->add('extraPrice', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_extraprice')))
+            ->add('totalPrice', 'text', array( 'required' => false, 'label' => $this->translator->trans('order_totalprice')))
             ->add('roadPrice', 'text', array( 'label' => $this->translator->trans('order_roadprice')))
             ->add('lat', 'hidden', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_lat')))
             ->add('lng', 'hidden', array('attr' => array('readonly' => 'readonly'), 'label' => $this->translator->trans('order_lng')))

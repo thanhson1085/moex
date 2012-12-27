@@ -87,7 +87,7 @@ if (isMobile){
 	<div class="page-moex">
     <div id="PageContent">
         <div id="Header">
-            <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/adv/phone.jpg" /></div>
+            <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/hotline.jpg" /></div>
             <div id="Logo">
                 <div class="logo">
 					<a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo_x.jpg" class="anhQC"/></a>

@@ -185,8 +185,13 @@ class MeOrdersController extends Controller
 		$translator = $this->get('translator');
         $editForm = $this->createForm(new MeOrdersType($translator), $entity);
 
+		$ordermeta = $em->getRepository('MoexCoreBundle:MeOrderGoimon')->findBy(array('order' => $entity, 'metaKey' => 'GOIMON_NOIDUNG'));
+		$ordergoimon = $em->getRepository('MoexCoreBundle:MeOrderGoimon')->findBy(array('order' => $entity, 'metaKey' => 'GOIMON_ORDER'));
+
         return array(
             'entity'      => $entity,
+            'ordermeta'      => $ordermeta,
+            'ordergoimon'      => $ordergoimon,
             'form'   => $editForm->createView(),
         );
     }

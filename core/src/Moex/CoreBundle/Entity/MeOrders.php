@@ -782,4 +782,54 @@ class MeOrders
     {
         return $this->thereturn;
     }
+    /**
+     * @var string $totalPrice
+     */
+    private $totalPrice;
+
+
+    /**
+     * Set totalPrice
+     *
+     * @param string $totalPrice
+     */
+    public function setTotalPrice($totalPrice)
+    {
+        $this->totalPrice = $totalPrice;
+    }
+
+    /**
+     * Get totalPrice
+     *
+     * @return string 
+     */
+    public function getTotalPrice()
+    {
+        return $this->totalPrice;
+    }
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrderGoimon
+     */
+    private $ordergoimon;
+
+
+    /**
+     * Add ordergoimon
+     *
+     * @param Moex\CoreBundle\Entity\MeOrderGoimon $ordergoimon
+     */
+    public function addMeOrderGoimon(\Moex\CoreBundle\Entity\MeOrderGoimon $ordergoimon)
+    {
+        $this->ordergoimon[] = $ordergoimon;
+    }
+
+    /**
+     * Get ordergoimon
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getOrdergoimon()
+    {
+        return $this->ordergoimon;
+    }
 }
