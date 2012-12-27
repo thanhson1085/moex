@@ -136,7 +136,6 @@ Moex\CoreBundle\Entity\MeOrders:
     ordermeta:
       targetEntity: MeOrdermeta
       mappedBy: order 
-      cascade: [ persist ]
   manyToOne:
     user:
       targetEntity: MeUsers 
