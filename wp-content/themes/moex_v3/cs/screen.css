@@ -46,7 +46,7 @@ html[xmlns] .clear { display: block;}
 #slideContainer { margin: 0 auto; width: 730px; height: 350px; background: transparent; padding: 0; z-index: 1;}
 
 /* The Pager */
-#pager {text-align: center; margin: 0; z-index: 100; width: 45px; position: absolute; top: 180px; right: 1em;}
+#pager {text-align: center; margin: 0; z-index: 100; position: absolute; top: 180px; right: 1em;}
 #pager a {display: block;text-indent: -5000px;width: 10px;height: 10px;background-image:url(../img/pager-sprite.png);background-repeat: no-repeat; float: left; margin-right: 5px;}
 #pager a {background-position: 0 0;}
 #pager a:hover {background-position: 0 -11px;}
