@@ -101,7 +101,7 @@ goimon_ngay: Ngày đơn hàng
 goimon_pickup: Giờ Pickup
 goimon_thoigiangiaohang: Thời gian giao hàng
 order_intro_goimon_noidung: Bao gồm các món ăn
-goi_mon: Tên món
+goimon_mon: Tên món
 goimon_luachonthem: Chi tiết thêm
 goimon_soluong: Số lượng
 goimon_gia: Tổng giá
