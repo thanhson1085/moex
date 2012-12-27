@@ -79,6 +79,8 @@ order_ordertime: Hóa đơn ngày
 order_intro_sender: Thông tin người gửi hàng
 order_senderaddress: Địa chỉ người gửi
 order_intro_receiver: Thông tin người nhận
+order_intro_goimon_order: Thông tin đơn hàng goimon.vn
+
 order_receiverphone: Số điện thoại
 order_receivername: Tên người nhận
 order_receiveraddress: Địa chỉ
@@ -93,6 +95,18 @@ button_countmoney: Tính tiền
 add_order_position: Thêm điểm chuyển tiếp
 order_intro_map: Thông tin trên bản đồ
 order_intro_orderinfo: Thông tin đơn hàng
+
+goimon_madonhang: Mã đơn hàng
+goimon_ngay: Ngày đơn hàng
+goimon_pickup: Giờ Pickup
+goimon_thoigiangiaohang: Thời gian giao hàng
+order_intro_goimon_noidung: Bao gồm các món ăn
+goi_mon: Tên món
+goimon_luachonthem: Chi tiết thêm
+goimon_soluong: Số lượng
+goimon_gia: Tổng giá
+
+order_totalprice: Tổng giao dịch
 
 driver_drivername: Tên lái xe
 driver_drivercode: Mã lái xe
