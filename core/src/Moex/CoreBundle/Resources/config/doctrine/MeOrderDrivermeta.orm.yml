@@ -1,7 +1,7 @@
-Moex\CoreBundle\Entity\MeOrdermeta:
+Moex\CoreBundle\Entity\MeOrderDrivermeta:
   type: entity
-  repositoryClass: Moex\CoreBundle\Repository\MeOrdermetaRepository
-  table: me_ordermeta
+  repositoryClass: Moex\CoreBundle\Repository\MeOrderDrivermetaRepository
+  table: me_order_drivermeta
   id:
     id:
       type: bigint
@@ -14,15 +14,15 @@ Moex\CoreBundle\Entity\MeOrdermeta:
       nullable: true
       column: meta_key
     metaValue:
-      type: object 
+      type: text
       nullable: true
       column: meta_value
   manyToOne:
     order:
-      targetEntity: MeOrders 
+      targetEntity: MeOrderDriver
       inversedBy: ordermeta 
       joinColumn:
-        name: order_id 
+        name: order_driver_id 
         referencedColumnName: id
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]

@@ -9,6 +9,7 @@ use Symfony\Component\Request\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Moex\CoreBundle\Entity\MeOrders;
+use Moex\CoreBundle\Entity\MeOrdermeta;
 use Moex\CoreBundle\Form\MeOrdersType;
 use Moex\CoreBundle\Form\OrderFilterType;
 use Moex\CoreBundle\Entity\MeDrivers;
@@ -72,7 +73,14 @@ class ApiController extends Controller
 		$order->setPromotion($arr_order->KhuyenMai);
 		$order->setOrderInfo($arr_order->GhiChu);
 		$order->setOrderStatus($this->container->getParameter("moex.order.status.pending"));
+		
 		$em->persist($order);
+		$em->flush();
+		$ordermeta = new MeOrdermeta();
+		$ordermeta->setMetaKey('GOIMON_NOIDUNG');
+		$ordermeta->setMetaValue($arr_order->NoiDung);
+		$ordermeta->setOrder($order);
+		$em->persist($ordermeta);
 		$em->flush();
 		$response = new Response(json_encode(array('orderId' => $order->getId(), 'orderStatus' => $order->getOrderStatus())));
 		$response->headers->set('Content-Type', 'application/json');

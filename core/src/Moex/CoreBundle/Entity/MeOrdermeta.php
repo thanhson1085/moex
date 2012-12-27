@@ -20,7 +20,7 @@ class MeOrdermeta
     private $metaKey;
 
     /**
-     * @var text $metaValue
+     * @var object $metaValue
      */
     private $metaValue;
 
@@ -63,7 +63,7 @@ class MeOrdermeta
     /**
      * Set metaValue
      *
-     * @param text $metaValue
+     * @param object $metaValue
      */
     public function setMetaValue($metaValue)
     {
@@ -73,7 +73,7 @@ class MeOrdermeta
     /**
      * Get metaValue
      *
-     * @return text 
+     * @return object 
      */
     public function getMetaValue()
     {

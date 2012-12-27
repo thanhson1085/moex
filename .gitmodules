@@ -1,0 +1,3 @@
+[submodule "core/vendor/bundles/Liip/HelloBundle"]
+	path = core/vendor/bundles/Liip/HelloBundle
+	url = git://github.com/liip/LiipHelloBundle.git
