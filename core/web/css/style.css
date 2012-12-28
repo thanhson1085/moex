@@ -1025,6 +1025,17 @@ ul.leftmenu li a:hover{
 .middle-part{
 	margin: 0 auto;
 }
+.shotcut{
+	font-size: 13px;
+	color: white;
+	background: #0066b3;
+	display: inline;
+	padding: 5px 10px 5px 10px;;
+	border-radius: 5px;
+	font-weight: normal;
+	text-transform: none;
+	cursor: pointer;
+}
 .slimScrollDiv {padding-right: 10px;}
 #extra-info-container { display: none; width: 98%; }
 #extra-info-container > img{ float: right; }

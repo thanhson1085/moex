@@ -477,3 +477,10 @@ function confirm_delete()
 	else
 		return false ;
 }
+$(function() {
+        $('.txt-time').datetimepicker({
+            timeFormat: "hh:mm:ss",
+            dateFormat: "yy-mm-dd",
+        });  
+    });
+

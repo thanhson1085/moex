@@ -18,6 +18,10 @@ class OrderFilter
 
     private $price;
 
+    private $orderTimeFrom;
+
+    private $orderTimeTo;
+
     private $createdAt;
 
     private $updatedAt;
@@ -90,5 +94,25 @@ class OrderFilter
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function setOrderTimeFrom($orderTimeFrom)
+    {
+        $this->orderTimeFrom = $orderTimeFrom;
+    }
+
+    public function getOrderTimeFrom()
+    {
+        return $this->orderTimeFrom;
+    }
+
+    public function setOrderTimeTo($orderTimeTo)
+    {
+        $this->orderTimeTo = $orderTimeTo;
+    }
+
+    public function getOrderTimeTo()
+    {
+        return $this->orderTimeTo;
     }
 }

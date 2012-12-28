@@ -22,7 +22,7 @@ class MeOrdersRepository extends EntityRepository
     public function findByFilterQuery(\Moex\CoreBundle\Entity\OrderFilter $filter)
     {
         $query = $this->createQueryBuilder('o')
-							  ->select('o.id, o.phone, o.orderFrom, o.orderTo, o.orderStatus, o.price, u.userLogin')
+							  ->select('o.id, o.phone, o.orderFrom, o.orderTo, o.orderStatus, o.price, u.userLogin, o.orderTime')
                               ->where('1 = 1');
 
         $query = $query->leftJoin('o.user', 'u');
@@ -52,6 +52,44 @@ class MeOrdersRepository extends EntityRepository
             $query = $query->andWhere('o.orderInfo LIKE :orderinfo')
                             ->setParameter('orderinfo', $filter->getOrderInfo()."%");
         }
+
+        if ($filter->getOrderTimeFrom() != null) {
+			$datetime = $filter->getOrderTimeFrom();
+            $query = $query->andWhere('o.orderTime >= :datetime')
+                            ->setParameter('datetime', $datetime);
+        }
+        if ($filter->getOrderTimeTo() != null) {
+			$datetime = $filter->getOrderTimeTo();
+            $query = $query->andWhere('o.orderTime <= :datetime')
+                            ->setParameter('datetime', $datetime);
+        }
+/*
+        if ($filter->getOrderTimeFrom() != null) {
+			$datetime = $filter->getOrderTimeFrom();
+			$year = $datetime->format('y');	
+			$month = $datetime->format('m');	
+			$day = $datetime->format('d');	
+            $query = $query->andWhere('YEAR(o.orderTime) >= :year')
+            				->andWhere('MONTH(o.orderTime) >= :month')
+            				->andWhere('DAY(o.orderTime) >= :day')
+                            ->setParameter('year', $year)
+                            ->setParameter('month', $month)
+                            ->setParameter('day', $day);
+        }
+
+        if ($filter->getOrderTimeTo() != null) {
+			$datetime = $filter->getOrderTimeTo();
+			$year = $datetime->format('y');	
+			$month = $datetime->format('m');	
+			$day = $datetime->format('d');	
+            $query = $query->andWhere('YEAR(o.orderTime) <= :year')
+            				->andWhere('MONTH(o.orderTime) <= :month')
+            				->andWhere('DAY(o.orderTime) <= :day')
+                            ->setParameter('year', $year)
+                            ->setParameter('month', $month)
+                            ->setParameter('day', $day);
+        }
+*/
 		/*
         if ($filter->getGroup() != null) {
             $group = $filter->getGroup();

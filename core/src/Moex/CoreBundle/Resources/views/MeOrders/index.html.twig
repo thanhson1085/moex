@@ -3,7 +3,9 @@
 <div class="content-container">
 <div class="left-part-container rate70">
 	<div class="left-part">
-		<div class="admin-header">{{ "header_order_list" | trans }}
+		<div class="admin-header">
+			<div id="ordertime-today" class="shotcut enable" data-prototype="{{ "now" | date('Y-m-d') }}" >{{ 'ordertime_today' | trans }}</div>
+			<div id="ordertime-thismonth" class="shotcut enable" data-prototype="{{ "now" | date('Y-m-01') }}" >{{ 'ordertime_month' | trans }}</div>
 			<div class="contextual"> 
 				<a href="{{ path('order_new') }}" class="icon icon-add">{{ "action_new" | trans }}</a> 
 			</div>
@@ -19,6 +21,7 @@
 					<th>{{ "order_orderfrom" | trans }}</th>
 					<th>{{ "order_orderto" | trans }}</th>
 					<th>{{ "order_price" | trans }}</th>
+					<th>{{ "order_ordertime" | trans }}</th>
 					<th>{{ "table_action" | trans }}</th>
 				</tr>
 			</thead>
@@ -32,6 +35,8 @@
 					<td class="from">{{ entity.orderFrom | cut(20) }}</td>
 					<td class="to">{{ entity.orderTo | cut(20) }}</td>
 					<td class="price">{{ entity.price }}</td>
+                    <td class="">{{ entity.orderTime | date('H:i d-m-Y') }}</td>
+
 					<td class="action">
 						<ul>
 							<li>
@@ -58,6 +63,8 @@
 		<h3>{{ "header_filter_form" | trans }}</h3>
 		<div class="filter">
 			<form action="{{ path('order') }}" id="filter-form" method="POST">
+				{{ form_row(filterForm.orderTimeFrom) }}
+				{{ form_row(filterForm.orderTimeTo) }}
 				{{ form_row(filterForm.phone) }}
 				{{ form_row(filterForm.orderFrom) }}
 				{{ form_row(filterForm.orderTo) }}
@@ -72,5 +79,18 @@
 </div>
 </div>
 <script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui-sliderAccess.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui-timepicker-addon.js') }}"></script>
 <script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
+<script type="text/javascript">
+	$('#ordertime-today').click(function(){
+	$('#moex_corebundle_orderfiltertype_orderTimeFrom').attr('value',$(this).attr('data-prototype') + ' 00:00:00');
+	$('#filter-form').submit();
+	});
+	$('#ordertime-thismonth').click(function(){
+	$('#moex_corebundle_orderfiltertype_orderTimeFrom').attr('value',$(this).attr('data-prototype') + ' 00:00:00');
+	$('#filter-form').submit();
+	});
+</script>
 {% endblock moex_content %}

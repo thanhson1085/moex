@@ -15,6 +15,8 @@ class OrderFilterType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
+            ->add('orderTimeFrom', 'datetime', array('widget' => 'single_text', 'required' => false, 'attr' => array('class' => 'txt-time', 'readonly' => 'readonly') , 'label' => $this->translator->trans('order_ordertimefrom')))
+            ->add('orderTimeTo', 'datetime', array('widget' => 'single_text', 'required' => false, 'attr' => array('class' => 'txt-time', 'readonly' => 'readonly') , 'label' => $this->translator->trans('order_ordertimeto')))
             ->add('phone', 'text', array('required' => false, 'label' => $this->translator->trans('order_phone')))
             ->add('orderName', 'text', array('required' => false, 'label' => $this->translator->trans('order_ordername')))
             ->add('orderInfo', 'text', array('required' => false, 'label' => $this->translator->trans('order_orderinfo')))
