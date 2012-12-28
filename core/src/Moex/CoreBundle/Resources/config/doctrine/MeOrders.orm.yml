@@ -138,12 +138,15 @@ Moex\CoreBundle\Entity\MeOrders:
     order_driver:
       targetEntity: MeOrderDriver 
       mappedBy: order 
+      cascade: [ persist ]
     ordermeta:
       targetEntity: MeOrdermeta
       mappedBy: order 
+      cascade: [ persist ]
     ordergoimon:
       targetEntity: MeOrderGoimon
       mappedBy: order 
+      cascade: [ persist ]
   manyToOne:
     user:
       targetEntity: MeUsers 
