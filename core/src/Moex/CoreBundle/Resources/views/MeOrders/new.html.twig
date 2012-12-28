@@ -88,6 +88,15 @@
 				<div class="form-row">
 					{{ form_errors(form.price) }}
 				</div>
+
+				<div class="form-row">
+					{{ form_label(form.totalPrice) }}
+					{{ form_widget(form.totalPrice) }}
+				</div>
+				<div class="form-row">
+					{{ form_errors(form.totalPrice) }}
+				</div>
+
 				<div class="form-row">
 					<div class="btn-container" id="count-money"><span class="btn-main page">{{ "button_countmoney" | trans }}</span></div>
 				</div>

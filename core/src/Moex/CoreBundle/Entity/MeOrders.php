@@ -659,6 +659,7 @@ class MeOrders
     }
     /**
      * @var datetime $orderTime
+     * @Assert\NotBlank()
      */
     private $orderTime;
 

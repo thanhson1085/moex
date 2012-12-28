@@ -813,6 +813,9 @@ td.name{
 .moex-form div.form-row{
 	margin: 3px 0;
 }
+.moex-form div.form-row ul li{
+	color: red;
+}
 .moex-form .form-split{
 	border-bottom: solid 1px #ccc;
 	line-height: 30px;
