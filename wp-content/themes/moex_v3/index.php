@@ -139,7 +139,151 @@ $(document).ready(function(){
 				</table>
             </div>
         </div>
+		<div>
+			<a href="<?php echo get_bloginfo("url")?>/shop-online/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Shop-Online-F.gif"></a>
+		</div>
+        <div class="cb h10"><!----></div>
+		<div>
+			<a href="<?php echo get_bloginfo("url")?>/order-search/"><img src="<?php echo get_bloginfo("template_url");?>/pic/banner_8000_980.jpg"></a>
+		</div>
+        <div class="cb h10"><!----></div>
+		<div>
+			<a href="<?php echo get_bloginfo("url")?>/cinema/"><img src="<?php echo get_bloginfo("template_url");?>/pic/ticket_980.jpg" title="tang qua noel, tặng quà noel"></a>
+		</div>
+        <div class="cb h10"><!----></div>
+		<div>
+			<a href="<?php echo get_bloginfo("url")?>/xmas/"><img src="<?php echo get_bloginfo("template_url");?>/pic/xmas.jpg"></a>
+		</div>
+        <div class="cb h10"><!----></div>
+		<div style="position: relative">
+			<div style="padding-left: 10px;font: normal 15px UTMAvoBold; text-transform: uppercase; padding-bottom: 10px;">moEx Online</div>
+			<div style="width: 400px; float: left;">
+				<ul class="moex-online">
+				<li><ul>
+				<li><a href="ymsgr:sendIM?cskhmoex"><img border="0" src="http://mail.opi.yahoo.com/online?u=cskhmoex&amp;m=g&amp;t=0"> CSKH moEx 1</a></li>
+				<li><a href="ymsgr:sendIM?chamnguyen0990"><img border="0" src="http://mail.opi.yahoo.com/online?u=chamnguyen0990&amp;m=g&amp;t=0"> CSKH moEx 2</a></li>
+				</ul></li>
+				<li><ul>
+				<li><a href="ymsgr:sendIM?cskh_moex"><img border="0" src="http://mail.opi.yahoo.com/online?u=cskh_moex&amp;m=g&amp;t=0"> CSKH moEx 3</a></li>
+				<li><a href="ymsgr:sendIM?cskh_moex_4"><img border="0" src="http://mail.opi.yahoo.com/online?u=cskh_moex_4&amp;m=g&amp;t=0"> CSKH moEx 4</a></li>
+				</ul></li>
+				</ul>
+			</div>
+			<div style="width: 500px; float: right;">
+			<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=139426099515734";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="http://www.facebook.com/MoexJsc" data-send="true" data-width="500" data-show-faces="false"></div>
+			</div>
+		</div>
+        <div class="cb h10"><!----></div>
+<style>
+	.list-news{width: 100%;}
+	.list-news tr td{
+		width: 25%;
+	}
+	.list-news tr td ul{
+		margin: 0;
+		padding-left: 25px;
+	}
+	.list-news h3{
+		padding-left: 10px;
+		font: normal 15px UTMAvoBold;
+		text-transform: uppercase;
+		padding-bottom: 10px;
+	}
+</style>
+<div class="news">
+		<table class="list-news">
+			<tbody><tr>
+				<td>
+					<div class="block-news">
+						<h3>Cuộc sống moEx </h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot1'
+													  ));
 
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+				<td>
+					<div class="block-news">
+						<h3>Cam kết của moEx</h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot2'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+
+				<td>
+					<div class="block-news">
+						<h3>Giới thiệu về moEx</h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot3'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+
+				<td>
+					<div class="block-news">
+						<h3>Đối tác nói về moEx</h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot4'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+
+			</tr>
+		</tbody></table>
+	</div>
+        <div class="cb h30"><!----></div>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
