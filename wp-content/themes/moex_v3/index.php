@@ -156,7 +156,7 @@ $(document).ready(function(){
 		</div>
         <div class="cb h10"><!----></div>
 		<div style="position: relative">
-			<div style="padding-left: 10px;font: normal 15px UTMAvoBold; text-transform: uppercase; padding-bottom: 10px;">moEx Online</div>
+			<div style="padding-left: 10px;font: normal 15px UTMAvoBold; text-transform: uppercase; padding-bottom: 10px;color:#20409A;">moEx Online</div>
 			<div style="width: 400px; float: left;">
 				<ul class="moex-online">
 				<li><ul>

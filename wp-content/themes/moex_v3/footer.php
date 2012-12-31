@@ -14,6 +14,7 @@
 		font: normal 15px UTMAvoBold;
 		text-transform: uppercase;
 		padding-bottom: 10px;
+		color: #20409A;
 	}
 	.news{
 		border-top: solid 1px #CCC;
@@ -83,7 +84,7 @@
 
 				<td>
 					<div class="block-news">
-						<h3>Đối tác nói về moEx</h3>
+						<h3>moEx tuyển dụng</h3>
 						<ul class="latestnews">
 							<?php
 							$bookmarks = get_bookmarks( array(
