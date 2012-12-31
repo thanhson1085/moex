@@ -1,4 +1,111 @@
-        <div id="Footer">
+<style>
+	.list-news{width: 100%;}
+	.list-news tr td{
+		width: 25%;
+		vertical-align: text-top;
+		font-size: 12px;
+	}
+	.list-news tr td ul{
+		margin: 0;
+		padding-left: 25px;
+	}
+	.list-news h3{
+		padding-left: 10px;
+		font: normal 15px UTMAvoBold;
+		text-transform: uppercase;
+		padding-bottom: 10px;
+	}
+	.news{
+		border-top: solid 1px #CCC;
+	}
+</style>
+<div class="news">
+		<table class="list-news">
+			<tbody><tr>
+				<td>
+					<div class="block-news">
+						<h3>Cuộc sống moEx </h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot1'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+				<td>
+					<div class="block-news">
+						<h3>Cam kết của moEx</h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot2'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+
+				<td>
+					<div class="block-news">
+						<h3>Giới thiệu về moEx</h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot3'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+
+				<td>
+					<div class="block-news">
+						<h3>Đối tác nói về moEx</h3>
+						<ul class="latestnews">
+							<?php
+							$bookmarks = get_bookmarks( array(
+											'orderby'        => 'name',
+											'order'          => 'ASC',
+											'category_name'  => 'Cot4'
+													  ));
+
+									// Loop through each bookmark and print formatted output
+									foreach ( $bookmarks as $bm ) { 
+										printf( '<li><a class="relatedlink" href="%s">%s</a></li>', $bm->link_url, __($bm->link_name) );
+									}
+									?>
+						</ul>		
+					</div>
+				</td>
+
+			</tr>
+		</tbody></table>
+	</div>
+        <div class="cb h20"><!----></div>
+<div id="Footer">
             <div class="fl">Bản quyền website thuộc về moEx.</div>
             <div id="Share">
                 <a target="_blank" href="http://www.facebook.com/MoexJsc" class="share1">&nbsp;</a>
