@@ -16,6 +16,9 @@
 		padding-bottom: 10px;
 		color: #20409A;
 	}
+	.list-news ul{
+		list-style: circle;
+	}
 	.news{
 		border-top: solid 1px #CCC;
 	}
@@ -110,10 +113,10 @@
             <div class="fl">Bản quyền website thuộc về moEx.</div>
             <div id="Share">
                 <a target="_blank" href="http://www.facebook.com/MoexJsc" class="share1">&nbsp;</a>
-                <a href="#" class="share2">&nbsp;</a>
+                <!--a href="#" class="share2">&nbsp;</a>
                 <a href="#" class="share3">&nbsp;</a>
                 <a href="#" class="share4">&nbsp;</a>
-                <a href="#" class="share5">&nbsp;</a>
+                <a href="#" class="share5">&nbsp;</a-->
             </div>
             <div id="MenuBottom">
                 <div class="fr"><a class="mnb" href="<?php echo get_bloginfo("url")?>/career" title="Nghề nghiệp">Nghề nghiệp</a></div>

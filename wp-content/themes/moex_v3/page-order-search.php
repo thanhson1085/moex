@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-    <div id="PageContent">
+    <div id="PageContent" style="overflow: auto;">
         <div id="KetQuaTimKiem2">
             <div class="cb h10"><!----></div>
              <div class="cot1">
@@ -45,6 +45,17 @@ get_header();
                 	<input id="input-from" name="tbFrom" type="text" class="textbox" value="<?php echo (isset($_GET['from']))?$_GET['from']:""; ?>"/>
 				 </div>
                  <div class="cb h12"><!----></div>
+                 <div class="left">&nbsp</div>
+                 <div class="fl"></div>
+                 <div class="right">
+<div id="moex_corebundle_meorderstype_ordermeta" data-prototype="&lt;div&gt;&lt;div id=&quot;moex_corebundle_meorderstype_ordermeta_$$name$$&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;moex_corebundle_meorderstype_ordermeta_$$name$$_metaValue&quot; name=&quot;moex_corebundle_meorderstype[ordermeta][$$name$$][metaValue]&quot;    class=&quot; textbox order-position&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"></div>
+					<div class="order-meta">
+					<a href="#" class="jslink" style="font-weight: normal;text-decoration: underline; color: #20409A">
+						Thêm điểm chuyển tiếp
+					</a>
+				</div>
+				</div>
+                 <div class="cb h12"><!----></div>
                  <div class="left">Điểm đến</div>
                  <div class="fl">:</div>
                  <div class="right">
@@ -53,6 +64,7 @@ get_header();
                 	<input id="input-lat" name="tbLat" type="hidden"/>
                 	<input id="input-lng" name="tbLng" type="hidden"/>
 				 </div>
+                    <a class="btOK" id="search-submit" href="javascript:void(0)"><span><span>GO</span></span></a>
                  <div class="cb h12"><!----></div>
                 <div class="left">Dịch vụ đăng ký <span>*</span></div>
                 <div class="fl">:</div>
@@ -158,46 +170,6 @@ get_header();
                     <b>Xin trân trọng cảm ơn!</b>
                  </div-->
 			</form>
-             <div class="cb h15"><!----></div>
-            <div id="fadePopupOrder" onclick="HideOrderForm()"><!----></div>
-            <div id="lightPopupOrder">
-                <a id="btClose" href="javascript:HideOrderForm()">&nbsp;</a>
-                <div class="header textColor">CÁM ƠN BẠN ĐÃ ĐĂNG KÝ DỊCH VỤ CỦA MOEX</div>
-                <div class="header1">Bạn vui lòng xác nhận lại các thông tin bên dưới và gửi về cho chúng tôi</div>
-                <div class="header2"><!----></div>
-                <div class="left">Dịch vụ đăng ký</div>
-                <div class="fl">:</div>
-                <div class="right textColor" id="service-type">Moex Food</div>
-                <div class="cb h16"><!----></div>
-                <div class="left">Họ và tên</div>
-                <div class="fl">:</div>
-                <div class="right" id="order-name">Nguyễn Đình Phương Chi</div>
-                <div class="cb h16"><!----></div>
-                <div class="left">Điện thoại</div>
-                <div class="fl">:</div>
-                <div class="right" id="order-phone">0972.184.222</div>
-                <div class="cb h16"><!----></div>
-                <div class="left">Điểm đi</div>
-                <div class="fl">:</div>
-				<div class="right" id="order-from"></div>
-                <div class="cb h16"><!----></div>
-                <div class="left">Điểm đến</div>
-                <div class="fl">:</div>
-				<div class="right" id="order-to"></div>
-                <div class="cb h16"><!----></div>
-                <div class="left">Yêu cầu chi tiết</div>
-                <div class="fl">:</div>
-                <div class="right" id="order-info">Số 123 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội.</div>
-                <div class="cb h16"><!----></div>
-                <div class="cb h16"><!----></div>
-                <div class="cb h16"><!----></div>
-                <div class="cb h16"><!----></div>
-                <div class="cb h16"><!----></div>
-                <div class="tac">
-                    <a class="btOrder" href="javascript:void(0)" onclick="submitform()">Đăng ký</a>&nbsp;&nbsp;
-                    <a class="btOrder" href="javascript:void(0)" onclick="HideOrderForm()">Quay lại</a>
-                </div>
-            </div>
 				</div>
              </div>
 
@@ -240,20 +212,31 @@ get_header();
                 }
             </script>
         </div>
+</div>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
 <script type="text/javascript">
+waypoints = [];
 var request = {
     origin: '219 KHÂM THIÊN',
     destination: '99 PHỐ HUẾ',
+    waypoints: waypoints,
+    optimizeWaypoints: true,
     travelMode: google.maps.DirectionsTravelMode.WALKING
-};
+};  
+
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
 var oldDirections = [];
 var currentDirections = null;
 $(document).ready(function(){
+   $(".order-meta").delegate("a.jslink", "click", function(event){
+        event.preventDefault();
+        add('#moex_corebundle_meorderstype_ordermeta');
+        $('.order-metakey-position').attr('value', '{{ order_position }}')
+    });
+
 	$("#ddlDichVu option").each(function(){
 		if($(this).val() == <?php echo (isset($_GET['service']))?$_GET['service']:1?>){
 			$(this).attr('selected','selected');
@@ -294,6 +277,21 @@ $(document).ready(function(){
     getRoute();
     $("#search-submit").click(function(){
         submit_click = true;
+        items = $('input.order-position');
+        waypoints = [];
+        i = 0;
+        items.each(function(){
+            var address = $(this).attr('value');
+            if (address !== "") {
+                waypoints.push({
+                    location: address + province,
+                    stopover: true
+                });
+            }
+        })
+
+        request.waypoints = waypoints;
+
         request.origin = $('#input-from').attr('value');
         request.destination = $('#input-to').attr('value');
         getRoute();
@@ -303,6 +301,21 @@ $(document).ready(function(){
         if(e.keyCode == 13){
             if ($('#input-from').val() != "" && $('#input-to').val() != ""){
                 submit_click = true;
+				items = $('input.order-position');
+				waypoints = [];
+				i = 0;
+				items.each(function(){
+					var address = $(this).attr('value');
+					if (address !== "") {
+						waypoints.push({
+							location: address + province,
+							stopover: true
+						});
+					}
+				})
+
+				request.waypoints = waypoints;
+
                 request.origin = $('#input-from').attr('value');
                 request.destination = $('#input-to').attr('value');
                 getRoute();
@@ -313,6 +326,21 @@ $(document).ready(function(){
         if(e.keyCode == 13){
             if ($('#input-from').val() != "" && $('#input-to').val() != ""){
                 submit_click = true;
+				items = $('input.order-position');
+				waypoints = [];
+				i = 0;
+				items.each(function(){
+					var address = $(this).attr('value');
+					if (address !== "") {
+						waypoints.push({
+							location: address + province,
+							stopover: true
+						});
+					}
+				})
+
+				request.waypoints = waypoints;
+
                 request.origin = $('#input-from').attr('value');
                 request.destination = $('#input-to').attr('value');
                 getRoute();
@@ -328,12 +356,17 @@ $(document).ready(function(){
     function() {
         if (currentDirections) {
             var rleg = directionsDisplay.directions.routes[0].legs[0];
-            distance = rleg.distance.value/1000;
+            distance = 0;
+            routes = directionsDisplay.directions.routes[0].legs;
+            for (var i = 0; i < routes.length; i++) {
+                distance = distance + routes[i].distance.value/1000;
+            }
+
             money_value = countMoney();
 			display_price();
 			$('#order-distance').html(moex_distance);
-            $('#input-from').attr('value',rleg.start_address);
-            $('#input-to').attr('value',rleg.end_address);
+            //$('#input-from').attr('value',rleg.start_address);
+            //$('#input-to').attr('value',rleg.end_address);
             $('#input-lat').attr('value', rleg.start_location.lat());
             $('#input-lng').attr('value',rleg.end_location.lng());
 

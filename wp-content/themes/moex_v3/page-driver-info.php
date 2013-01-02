@@ -17,7 +17,7 @@ $drivers = $wpdb->get_results(
 		});
 	});
 </script>
-<div class="driver-info-container">
+<div class="driver-info-container" style="overflow: auto">
 <div class="pb10">
 	<span class="order-header" style="color:red; font-size: 28px;">Lái xe moEx</span>
  </div>

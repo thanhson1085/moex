@@ -45,6 +45,12 @@ function getRoute(){
     });
     request.travelMode = google.maps.DirectionsTravelMode.WALKING;
 }
+function add(s) {
+    var collectionHolder = $(s);
+    var prototype = collectionHolder.attr('data-prototype');
+    form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length);
+    collectionHolder.append(form);
+}
 function phone_validation(phonenumber){
 	var phoneNumberPattern = /^\+?\(?(\d{2,3})\)?[- ]?(\d{3,4})[- ]?(\d{4})$/;
 	if(!phoneNumberPattern.test(phonenumber)){
