@@ -27,7 +27,7 @@ class MeOrderDrivermeta
     /**
      * @var Moex\CoreBundle\Entity\MeOrderDriver
      */
-    private $order;
+    private $orderdriver;
 
 
     /**
@@ -81,23 +81,23 @@ class MeOrderDrivermeta
     }
 
     /**
-     * Set order
+     * Set orderdriver
      *
-     * @param Moex\CoreBundle\Entity\MeOrderDriver $order
+     * @param Moex\CoreBundle\Entity\MeOrderDriver $orderdriver
      */
-    public function setOrder(\Moex\CoreBundle\Entity\MeOrderDriver $order)
+    public function setOrderdriver(\Moex\CoreBundle\Entity\MeOrderDriver $orderdriver)
     {
-        $this->order = $order;
+        $this->orderdriver = $orderdriver;
     }
 
     /**
-     * Get order
+     * Get orderdriver
      *
      * @return Moex\CoreBundle\Entity\MeOrderDriver 
      */
-    public function getOrder()
+    public function getOrderdriver()
     {
-        return $this->order;
+        return $this->orderdriver;
     }
     /**
      * @ORM\PrePersist

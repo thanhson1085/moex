@@ -16,10 +16,18 @@ class AssignType extends AbstractType
 
     public function buildForm(FormBuilder $builder, array $options)
     {
+		$orderdrivermeta = new MeOrderDrivermetaType();
         $builder
             ->add('driverMoney', 'number', array( 'label' => $this->translator->trans("orderdriver_drivermoney")))
             ->add('roadMoney', 'number', array( 'label' => $this->translator->trans("order_roadprice")))
             ->add('money', 'number', array( 'label' => $this->translator->trans("orderdriver_money")))
+			->add('orderdrivermeta', 'collection', array(
+				'label' => $this->translator->trans('order_position'),
+				'type' => $orderdrivermeta, 
+				'allow_add' => true,
+				'prototype' => true,
+				'by_reference' => false,
+				))
         ;
     }
 

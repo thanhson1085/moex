@@ -58,6 +58,39 @@ $role = get_role('cs_router');
 $role->add_cap('edit_pages');
 $role->add_cap('edit_others_pages');
 
+add_action( 'init', 'quatet_init' );
+function quatet_init() {
+  $labels = array(
+    'menu_name' => 'Quà tết'
+
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => true,
+    'menu_position' => null,
+    'supports' => array( 'title','editor')
+  );
+  register_post_type('quatet',$args);
+
+}
+add_filter( 'post_updated_messages', 'quatet_updated_messages' );
+function announcement_updated_messages( $messages ) {
+  global $post, $post_ID;
+
+  $messages['announcement'] = array(
+  );
+
+  return $messages;
+}
+
 add_filter('excerpt_length', 'my_excerpt_length');
 function my_excerpt_length($length) {
 	return 20; 

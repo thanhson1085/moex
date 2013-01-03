@@ -245,4 +245,40 @@ class MeOrderDriver
     {
         return $this->roadMoney;
     }
+    /**
+     * @var Moex\CoreBundle\Entity\MeOrderDrivermeta
+     */
+    private $orderdrivermeta;
+
+    public function __construct()
+    {
+        $this->orderdrivermeta = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add orderdrivermeta
+     *
+     * @param Moex\CoreBundle\Entity\MeOrderDrivermeta $orderdrivermeta
+     */
+    public function addMeOrderDrivermeta(\Moex\CoreBundle\Entity\MeOrderDrivermeta $orderdrivermeta)
+    {
+        $this->orderdrivermeta[] = $orderdrivermeta;
+		$orderdrivermeta->setOrderdrivermeta($this);
+    }
+
+    /**
+     * Get orderdrivermeta
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getOrderdrivermeta()
+    {
+        return $this->orderdrivermeta;
+    }
+    public function setOrderdrvermeta($orderdrivermeta){
+        $this->orderdrivermeta = $orderdrivermeta;
+        foreach ($orderdrivermeta as $value){
+            $value->setOrderDriver($this);
+        }
+    }
 }

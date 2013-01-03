@@ -82,15 +82,15 @@ if (isMobile){
 </head>
 <body class="mo">  
 	<div class="page-moex-container">
-	<div class="img-left"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/santa1.png"></a></div>
-	<div class="img-right"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/santa2.png"></a></div>
+	<div class="img-left"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/ran.png"></a></div>
+	<div class="img-right"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/ruou.png"></a></div>
 	<div class="page-moex">
     <div id="PageContent">
         <div id="Header">
             <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/hotline.jpg" /></div>
             <div id="Logo">
                 <div class="logo">
-					<a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo_x.jpg" class="anhQC"/></a>
+					<a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo.jpg" class="anhQC"/></a>
 				</div>
 			<div class="promotion">
 				<div id="metaContainer">

@@ -18,9 +18,9 @@ Moex\CoreBundle\Entity\MeOrderDrivermeta:
       nullable: true
       column: meta_value
   manyToOne:
-    order:
+    orderdriver:
       targetEntity: MeOrderDriver
-      inversedBy: ordermeta 
+      inversedBy: orderdrivermeta 
       joinColumn:
         name: order_driver_id 
         referencedColumnName: id

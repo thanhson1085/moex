@@ -36,6 +36,11 @@ Moex\CoreBundle\Entity\MeOrderDriver:
       type: datetime
       nullable: false
       column: updated_at
+  oneToMany:
+    orderdrivermeta:
+      targetEntity: MeOrderDrivermeta
+      mappedBy: ordermeta 
+      cascade: [ persist ]
   manyToOne:
     order:
       targetEntity: MeOrders
