@@ -1,15 +1,6 @@
 <?php
 get_header();
 $user_id = get_current_user_id();
-$driver_id = (isset($_GET["driver_id"]))?$_GET["driver_id"]:0;
-$drivers = $wpdb->get_results(
-				"
-				SELECT * 
-				FROM ".$wpdb->prefix."drivers
-				"
-			);
-?>
-<?php
 global $post;
 $args = array( 'numberposts' => 100, 'post_type'=> 'quatet' );
 $myposts = get_posts( $args );
@@ -30,7 +21,9 @@ $myposts = get_posts( $args );
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
             <a href="#">
               <img src="<?php echo $image;?>" alt="<?php the_title();?>">
-              <p><?php the_title();?><br><span><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
+              <p><?php the_title();?>
+				<br><span>Mã: </span><span><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span>
+				<br><span>Giá: </span><span style="color: red;font-size: 14px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
             </a>
              <!-- /.short-profile -->
           </div> <!-- /.person -->
@@ -48,18 +41,18 @@ $myposts = get_posts( $args );
 					$img_url = wp_get_attachment_url( $img_id); 
 				?>
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-              <img src="<?php echo $image;?>" alt="<?php echo $driver->driver_name;?>" style="width: 195px; height: 195px;">
-              <h3><?php the_title();?><br><span><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></h3>
+              <img src="<?php echo $image;?>" alt="<?php echo $driver->driver_name;?>" style="max-width: 350px;">
+              <h3><?php the_title();?></h3>
+				<p style="color: #1e1e1e"><span>Mã: </span><span style="font-weight: bold;"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
+				<p style="color: #1e1e1e;"><span>Giá: </span><span style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
               <p class="job-title"><?php the_content()?> 
 				<br />
-				<?php echo get_post_meta($post->ID, 'gia_quatet', true);?>
 			  </p>
             </div>
 		<?php
 			endforeach;
 		?>
 		<script type="text/javascript">
-			$("#<?php echo $driver_id?>").css("display","block");
 			$(document).ready(function(){
 				$(".person").hover(function(){
 					$(".short-profile").each(function(){
@@ -81,9 +74,15 @@ body {
 	line-height: 1;
 }
 
-table {/* tables still need 'cellspacing="0"' in the markup */
+.selected-profile table {
 	border-collapse: separate;
 	border-spacing: 0;
+	border: 0;
+	color: #1e1e1e;
+}
+.selected-profile table tr td{
+	border: 0;
+	height: 20px;
 }
 
 caption,
@@ -467,24 +466,26 @@ img.lg-photo {
 .people {
 	float: left;
 	margin: 0 0 29px;
-	width: 670px;
+	width: 505px;
 }
 
 .selected-profile {
 	float: left;
 	width: 196px;
 	padding: 10px 20px 10px 20px;
-	width: 202px;
+	width: 371px;
 	border: solid 1px #ddd;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 .person {
 	display: inline;
 	float: left;
-	height: 191px;
+	height: 200px;
 	overflow: hidden;
 	width: 167px;
+	color: #1e1e1e;
 }
 
 .person a:hover {
@@ -507,9 +508,9 @@ img.lg-photo {
 }
 
 .person p {
-	color: #636363;
 	font: bold 11px/13px verdana;
 	margin: 0;
+	line-height: 1.5em;
 }
 
 .person p span {
@@ -526,16 +527,17 @@ img.lg-photo {
 
 .selected-profile h3,
 .profile-box h3 {
-	color: #636363;
 	font: bold 12px/11px Verdana;
+	line-height: 1.5em;
 }
 
 .selected-profile p,
 .profile-box p {
-	color: #7d7d7d;
 	font-size: 11px;
-	line-height: 13px;
+	line-height: 1.5em;
 	margin: 15px 0 0;
+	text-align: left;
+	
 }
 
 .profile-box p {
