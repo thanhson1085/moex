@@ -2,7 +2,7 @@
 get_header();
 $user_id = get_current_user_id();
 global $post;
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet' );
+$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'orderby' => 'post_title', 'order' => 'ASC' );
 $myposts = get_posts( $args );
 ?>
 <div class="driver-info-container" style="overflow: auto">
@@ -824,6 +824,11 @@ img.lg-photo {
 }
 .driver-info-container{ padding: 0 10px 0 30px; }
 </style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+</script>
 </div>
 <?php
 get_footer();
