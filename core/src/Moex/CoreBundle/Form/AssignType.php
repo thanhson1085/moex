@@ -21,6 +21,7 @@ class AssignType extends AbstractType
             ->add('driverMoney', 'number', array( 'label' => $this->translator->trans("orderdriver_drivermoney")))
             ->add('roadMoney', 'number', array( 'label' => $this->translator->trans("order_roadprice")))
             ->add('money', 'number', array( 'label' => $this->translator->trans("orderdriver_money")))
+/*
 			->add('orderdrivermeta', 'collection', array(
 				'label' => $this->translator->trans('order_position'),
 				'type' => $orderdrivermeta, 
@@ -28,6 +29,7 @@ class AssignType extends AbstractType
 				'prototype' => true,
 				'by_reference' => false,
 				))
+*/
         ;
     }
 

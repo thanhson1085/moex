@@ -30,14 +30,6 @@
 				<div class="form-row">
 					{{ form_errors(assign_form.money) }}
 				</div>
-				<div class="form-row">
-				{{ form_widget(assign_form.orderdrivermeta)}}
-				</div>
-				<div class="order-meta">
-					<a href="#" class="jslink">
-						{{ 'add_order_position' | trans }}
-					</a>
-				</div>
 				{{ form_rest(assign_form) }}
                 <p class="alignright">
                     <button type="submit">{{ "button_assign" | trans }}</button>
