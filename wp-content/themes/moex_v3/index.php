@@ -40,7 +40,7 @@ if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); }
             <div id="mainAdv">
 				<div id="metaContainer">
 					<!-- The sliderr works with virtually any HTML element (div, span etc) but for the sake of simplicity I have used images in this demo -->
-					<div id="slideContainer">
+					<div id="slideContainer" style="height: 100px;">
 						<div id="slideShim">
 							<a href="<?php echo get_bloginfo("url");?>/shop-online/"><img src="<?php echo get_bloginfo("template_url")?>/pic/shop-online-home.jpg" alt="moEx Shop Online" /></a>
 							<a href="<?php echo get_bloginfo("url");?>/xmas/"><img src="<?php echo get_bloginfo("template_url")?>/pic/home_xmas.jpg" alt="moEx Xmas" /></a>
@@ -65,8 +65,11 @@ $(document).ready(function(){
         });
 });
 </script>
-
+	<a href="<?php echo get_bloginfo("url")?>/quatet/" style="display: block; width: 588px; height: 230px;z-index: 1000;">
             <div id="ListService">
+			<img src="<?php echo get_bloginfo("template_url");?>/pic/banner_qua_tet.jpg"/>
+
+				<?php /* ?>
                 <div class="service bdt0">
                     <a class="svname cname0" href="<?php echo get_bloginfo("url");?>?page_id=36" title="An toàn">&nbsp;</a>
                     <a href="<?php echo get_bloginfo("url")?>?page_id=36">
@@ -91,7 +94,7 @@ $(document).ready(function(){
 						$tienloi_id = 7; 
 						$post_intro = get_post($tienloi_id);?>
 						<?php echo $post_intro->post_content;?>
-                    </div>
+                    </div></a>
                     <div class="sbottomleft"><!----></div>
                     
                 </div>
@@ -108,7 +111,7 @@ $(document).ready(function(){
                     </div>
                     <div class="sbottomleft"><!----></div>
                     
-                </div>
+                </div><?php */?>
                 <div class="cb h10"><!----></div>
             </div>
 
