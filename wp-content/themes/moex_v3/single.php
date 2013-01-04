@@ -108,6 +108,11 @@ get_header();
             </div>
         </div>
     </div>    
+	<div id="MoexSchool" style="width: 510px; padding-left: 20px;">
+
+					<?php comments_template('', true);?>
+                    <div class="cb h25"><!----></div>
+	</div>
 <?php
 get_footer();
 ?>
