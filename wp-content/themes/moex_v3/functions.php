@@ -76,9 +76,14 @@ function quatet_init() {
     'has_archive' => true,
     'hierarchical' => true,
     'menu_position' => null,
-    'supports' => array( 'title','editor', 'comments', 'Discussion', 'Author')
+    'supports' => array( 'title','editor', 'comments', 'Discussion', 'Author'),
+    'rewrite' => array(
+		'slug' => 'quatet',
+		'with_front' => FALSE,
+	),
   );
   register_post_type('quatet',$args);
+  flush_rewrite_rules( false );
 
 }
 add_filter( 'post_updated_messages', 'quatet_updated_messages' );
