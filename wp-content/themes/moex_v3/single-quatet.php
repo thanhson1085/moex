@@ -7,7 +7,7 @@ get_header();
 				$post_id = $post->ID;
 			?>
 				<div id="mainAdv">
-					<a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
+					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
 				</div>
 			<?php
 			?>
