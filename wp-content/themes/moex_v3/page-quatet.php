@@ -64,6 +64,8 @@ $myposts = get_posts( $args );
 		</script>
 		</div> <!-- /.selected-profile -->
 </div>
+	<div id="moexFood">
+                    <div class="cb h15"><!----></div>
                     <div class="">
                         <div class="fl">
                             <!-- AddThis Button BEGIN -->
@@ -78,9 +80,12 @@ $myposts = get_posts( $args );
                             <!-- AddThis Button END -->
                         </div>
                     </div>
-                    <div class="cb h5"><!----></div>
+                    <div class="cb h15"><!----></div>
+<?php wp_reset_postdata(); ?>
+
 					<?php comments_template('', true);?>
                     <div class="cb h25"><!----></div>
+	</div>
 <style>
 
 :focus {/* remember to define focus styles! */

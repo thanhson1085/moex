@@ -26,6 +26,8 @@
                     <div class="cb h15"><!----></div>
 
 
+					<?php comments_template('', true);?>
+                    <div class="cb h25"><!----></div>
 			</div>
         </div>
 <?php

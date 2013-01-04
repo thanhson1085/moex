@@ -76,7 +76,7 @@ function quatet_init() {
     'has_archive' => true,
     'hierarchical' => true,
     'menu_position' => null,
-    'supports' => array( 'title','editor')
+    'supports' => array( 'title','editor', 'comments', 'Discussion', 'Author')
   );
   register_post_type('quatet',$args);
 
