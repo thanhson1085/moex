@@ -64,7 +64,7 @@ $myposts = get_posts( $args );
 		</script>
 		</div> <!-- /.selected-profile -->
 </div>
-	<div id="MoexFood">
+	<div id="MoexFood" style="width: 460px;">
                     <div class="cb h15"><!----></div>
                     <div class="">
                         <div class="fl">
@@ -94,6 +94,10 @@ $myposts = get_posts( $args );
 
 body {
 	line-height: 1;
+}
+.selected-profile{
+	z-index: 1000;
+	background: white;
 }
 
 .selected-profile table {

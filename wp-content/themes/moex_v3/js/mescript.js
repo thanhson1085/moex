@@ -1,5 +1,24 @@
 $(document).ready(function(){
 	onecall();
+   if ($('.selected-profile').length > 0){
+        var mapwidth = $('.selected-profile').width();
+        var mapoffsetleft = $('.selected-profile').offset().left;
+        $(document).scroll(function(){
+            if ($(document).scrollTop() > 124){
+                $('.selected-profile').css('position', 'fixed');
+                $('.selected-profile').css('top', '0.5em');
+                $('.selected-profile').css('left', mapoffsetleft);
+                //$('.selected-profile').css('width', mapwidth);
+            }
+            if ($(document).scrollTop() < 124){
+                $('.selected-profile').css('position', 'relative');
+                $('.selected-profile').css('top', 'auto');
+                $('.selected-profile').css('left', 'auto');
+                //$('.selected-profile').css('width', '98%');
+            }
+        });
+    }
+
 });
 
 var distance = 0;
