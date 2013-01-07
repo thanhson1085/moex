@@ -1,8 +1,8 @@
 ﻿/*header*/
 .page-moex-container{background:url(../pic/background_tet.jpg); position: relative}
 .page-moex{background:#FFF;position: relative; z-index: 10; border-left: solid 1px #ccc; border-right: solid 1px #ccc; border-bottom: solid 1px #ccc; box-shadow: 0px 0px 8px; -webkit-box-shadow: 0px 0px 8px; -moz-box-shadow: 0px 0px 8px}
-.img-left{ position: fixed; left:1em; top: 0em; z-index:1 }
-.img-right{ position: fixed; right:1em; top: 0em; z-index: 1}
+.img-left{ position: absolute; left:18px; top: 0em; z-index:1 }
+.img-right{ position: absolute; right:8px; top: 0em; z-index: 1}
 #PageContent{width:980px}
 #Header{position:relative;z-index:1;height:75px}
 #Logo{float:left;width:500px;position: relative}

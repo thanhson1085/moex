@@ -82,8 +82,10 @@ if (isMobile){
 </head>
 <body class="mo">  
 	<div class="page-moex-container">
-	<div class="img-left"><a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/left-banner.jpg"></a></div>
-	<div class="img-right"><a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/right-banner.jpg"></a></div>
+	<div id="float-banner" style="top: 0;width: 1350px;position: fixed;left: 50%;margin-left: -680px;">
+		<div class="img-left"><a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/left-banner.jpg"></a></div>
+		<div class="img-right"><a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/right-banner.jpg"></a></div>
+	</div>
 	<div class="page-moex">
     <div id="PageContent">
         <div id="Header">
