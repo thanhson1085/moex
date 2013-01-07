@@ -4,7 +4,7 @@ $user_id = get_current_user_id();
 global $post;
 $order = (isset($_GET['order']))?$_GET['order']:0;
 $order = ($order)?'DESC':'ASC';
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value', 'order' => $order );
+$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
 $myposts = get_posts( $args );
 ?>
 					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
@@ -36,7 +36,7 @@ $myposts = get_posts( $args );
               <img src="<?php echo $image;?>" alt="<?php the_title();?>">
               <p><?php the_title();?>
 				<br><span>Mã: </span><span><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span>
-				<br><span>Giá: </span><span style="color: red;font-size: 14px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
+				<br><span>Giá: </span><span class="quatet-price" style="color: red;font-size: 14px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
             </a>
              <!-- /.short-profile -->
           </div> <!-- /.person -->
@@ -54,10 +54,10 @@ $myposts = get_posts( $args );
 					$img_url = wp_get_attachment_url( $img_id); 
 				?>
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-              <img src="<?php echo $image;?>" alt="<?php echo $driver->driver_name;?>" style="max-width: 350px;">
+              <img src="<?php echo $image;?>" alt="" style="max-width: 350px;">
               <h3><?php the_title();?></h3>
 				<p style="color: #1e1e1e"><span>Mã: </span><span style="font-weight: bold;"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
-				<p style="color: #1e1e1e;"><span>Giá: </span><span style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
+				<p style="color: #1e1e1e;"><span>Giá: </span><span class="quatet-price" style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
               <p class="job-title"><?php the_content()?> 
 				<br />
 			  </p>

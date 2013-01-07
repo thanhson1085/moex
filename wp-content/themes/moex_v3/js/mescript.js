@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	onecall();
+				$(".quatet-price").each(function(){
+					var quatet_price = parseInt($(this).html());
+					$(this).html(quatet_price.formatMoney(0,"",".", ",") + " VNĐ");
+				});
    if ($('.selected-profile').length > 0){
         var mapwidth = $('.selected-profile').width();
         var mapoffsetleft = $('.selected-profile').offset().left;

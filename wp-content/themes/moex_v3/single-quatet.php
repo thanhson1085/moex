@@ -29,7 +29,7 @@ get_header();
 						<div class="quatet">
 							<span style="display: inline-block; width: 80px;">Mã: </span><span style="font-weight: bold; font-size: 13px; color: #1e1e1e"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span>
                 		<div class="cb h10"><!----></div>
-							<span style="display: inline-block; width: 80px;">Giá: </span><span style="color: red;font-size: 16px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span>
+							<span style="display: inline-block; width: 80px;">Giá: </span><span class="quatet-price" style="color: red;font-size: 16px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span>
                 		<div class="cb h20"><!----></div>
 						<span style="font-weight: bold">Bao gồm các sản phẩm:</span>
 						<?php the_content();?>
@@ -91,7 +91,7 @@ get_header();
 						foreach( $myposts as $post ) :	setup_postdata($post);
 							if ($post->ID == $post_id) continue;
 					?>
-                    <a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> <span style="color: red">(<?php echo get_post_meta($post->ID, 'gia_quatet', true)?>)</span></a>
+                    <a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> (<span class="quatet-price" style="color: red"><?php echo get_post_meta($post->ID, 'gia_quatet', true)?></span>)</a>
 					<?php endforeach;?>
                 </div>
                 <div class="cb h15"><!----></div>
