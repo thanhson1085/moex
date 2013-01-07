@@ -2,10 +2,24 @@
 get_header();
 $user_id = get_current_user_id();
 global $post;
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'orderby' => 'post_title', 'order' => 'ASC' );
+$order = (isset($_GET['order']))?$_GET['order']:0;
+$order = ($order)?'DESC':'ASC';
+$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
 $myposts = get_posts( $args );
 ?>
-					<a href="#"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
+					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
+	<div class="cb h15"></div>
+<div style="border-bottom: solid 1px #CCC;height: 30px; padding-left: 20px; font-size: 12px;">
+<ul class="quatet-order">
+<li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
+<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
+<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
+</ul>
+<style>
+	.quatet-order{padding: 0;margin:0;display: block-inline;list-style: none;}
+	.quatet-order li{font-weight: bold; float:left; padding-right: 10px;}
+</style>
+</div>
 	<div class="cb h15"></div>
 <div class="driver-info-container" style="overflow: auto">
 <div class="center-col">
