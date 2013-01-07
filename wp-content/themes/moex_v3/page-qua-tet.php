@@ -4,7 +4,7 @@ $user_id = get_current_user_id();
 global $post;
 $order = (isset($_GET['order']))?$_GET['order']:0;
 $order = ($order)?'DESC':'ASC';
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
+$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value', 'order' => $order );
 $myposts = get_posts( $args );
 ?>
 					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
