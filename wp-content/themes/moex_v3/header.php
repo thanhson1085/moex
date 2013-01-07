@@ -82,23 +82,23 @@ if (isMobile){
 </head>
 <body class="mo">  
 	<div class="page-moex-container">
-	<div class="img-left"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/ran.png"></a></div>
-	<div class="img-right"><a href="#"><img src="<?php echo get_bloginfo("template_url")?>/pic/ruou.png"></a></div>
+	<div class="img-left"><a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/left-banner.jpg"></a></div>
+	<div class="img-right"><a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/right-banner.jpg"></a></div>
 	<div class="page-moex">
     <div id="PageContent">
         <div id="Header">
             <div id="Phone"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/hotline.jpg" /></div>
             <div id="Logo">
                 <div class="logo">
-					<a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo.jpg" class="anhQC"/></a>
+					<a href="<? echo get_bloginfo("url") ?>"><img alt="" alt="" src="<?php echo get_bloginfo("template_url")?>/pic/logo_NY.jpg" class="anhQC"/></a>
 				</div>
 			<div class="promotion">
 				<div id="metaContainer">
 					<!-- The sliderr works with virtually any HTML element (div, span etc) but for the sake of simplicity I have used images in this demo -->
 					<div id="slideContainer2">
-						<div id="slideShim2">
-							<a href="<?php echo get_bloginfo("url");?>/xmas/"><img src="<?php echo get_bloginfo("template_url")?>/pic/Xmas_s.jpg" alt="moEx Xmas" /></a>
-							<a href="<?php echo get_bloginfo("url");?>/xmas/"><img src="<?php echo get_bloginfo("template_url")?>/pic/NewY_s.jpg" alt="Slide Two" /></a>
+						<div id="slideShim2" style="left: -1px;">
+							<a href="<?php echo get_bloginfo("url");?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_NY_01.jpg" alt="" /></a>
+							<a href="<?php echo get_bloginfo("url");?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_NY_02.jpg" alt="" /></a>
 						</div>
 					</div>
 				</div>

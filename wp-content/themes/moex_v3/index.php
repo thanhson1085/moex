@@ -44,7 +44,6 @@ if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); }
 						<div id="slideShim">
 							<a href="<?php echo get_bloginfo("url");?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url")?>/pic/home_banner_quatet.jpg" alt="moEx Quat tet" /></a>
 							<a href="<?php echo get_bloginfo("url");?>/shop-online/"><img src="<?php echo get_bloginfo("template_url")?>/pic/shop-online-home.jpg" alt="moEx Shop Online" /></a>
-							<a href="<?php echo get_bloginfo("url");?>/cinema/"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_ticket.jpg" alt="Slide Two" /></a>
 							<a href="<?php echo get_bloginfo("url");?>/order-search"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner_8000.jpg" alt="Slide One" /></a>
 						</div>
 					</div>
@@ -143,7 +142,7 @@ $(document).ready(function(){
             </div>
         </div>
 		<div>
-			<a href="<?php echo get_bloginfo("url")?>/shop-online/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Shop-Online-F.gif"></a>
+			<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Event_Banner_quatet.gif"></a>
 		</div>
         <div class="cb h10"><!----></div>
 		<div>
@@ -151,11 +150,7 @@ $(document).ready(function(){
 		</div>
         <div class="cb h10"><!----></div>
 		<div>
-			<a href="<?php echo get_bloginfo("url")?>/cinema/"><img src="<?php echo get_bloginfo("template_url");?>/pic/ticket_980.jpg" title="tang qua noel, tặng quà noel"></a>
-		</div>
-        <div class="cb h10"><!----></div>
-		<div>
-			<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Event_Banner_quatet.gif"></a>
+			<a href="<?php echo get_bloginfo("url")?>/shop-online/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Shop-Online-F.gif"></a>
 		</div>
         <div class="cb h10"><!----></div>
 		<div style="position: relative">

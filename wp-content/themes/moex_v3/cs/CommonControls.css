@@ -1,13 +1,13 @@
 ﻿/*header*/
 .page-moex-container{background:url(../pic/background_tet.jpg); position: relative}
 .page-moex{background:#FFF;position: relative; z-index: 10; border-left: solid 1px #ccc; border-right: solid 1px #ccc; border-bottom: solid 1px #ccc; box-shadow: 0px 0px 8px; -webkit-box-shadow: 0px 0px 8px; -moz-box-shadow: 0px 0px 8px}
-.img-left{ position: absolute; left:0px; top: 100px; z-index:1 }
-.img-right{ position: absolute; right:0px; top: 200px; z-index: 1}
+.img-left{ position: fixed; left:1em; top: 0em; z-index:1 }
+.img-right{ position: fixed; right:1em; top: 0em; z-index: 1}
 #PageContent{width:980px}
 #Header{position:relative;z-index:1;height:75px}
 #Logo{float:left;width:500px;position: relative}
 .promotion{position: absolute; top: 0;left: 196px;}
-#Logo .anhQC{border:0;max-height:58px}
+#Logo .anhQC{border:0;}
 #Phone{position:absolute;z-index:2;bottom:0;right:0}
 #OnCall{position:fixed;z-index:99;right:0;top:50%;display:none}
 #OnCall img{border:0}
