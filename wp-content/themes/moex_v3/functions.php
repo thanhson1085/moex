@@ -5,7 +5,6 @@
  */
 define('THEMELIB', TEMPLATEPATH . '/lib');
 require_once(THEMELIB . '/order-info-ajax.php');
-require_once(THEMELIB . '/driver-info-ajax.php');
 include_once(get_template_directory().'/lib/claviska/simple-php-captcha.php');
 
 global $moex_service_type;
@@ -85,6 +84,26 @@ function quatet_init() {
   register_post_type('quatet',$args);
   flush_rewrite_rules( false );
 
+}
+
+add_action( 'init', 'create_quatet_taxonomies', 0 );
+
+//create two taxonomies, genres and subjects for the post type "question"
+function create_quatet_taxonomies()
+{
+
+  $labels = array(
+    'menu_name' => __( 'Loại' ),
+  );
+
+  register_taxonomy('quatet_cat',array('quatet'),array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'class' ),
+  ));
 }
 add_filter( 'post_updated_messages', 'quatet_updated_messages' );
 function announcement_updated_messages( $messages ) {

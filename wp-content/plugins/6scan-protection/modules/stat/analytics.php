@@ -1,0 +1,3 @@
+<?php
+/*	Legacy placeholder */
+?>

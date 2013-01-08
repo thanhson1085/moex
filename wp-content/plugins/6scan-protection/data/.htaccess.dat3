@@ -1,0 +1,19 @@
+# Created by 6Scan plugin
+#don't show directory listing and apache information
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#avoid direct access to the 6scan-gate.php file
+RewriteCond %{ENV:REDIRECT_sixscaninternal} !^accessgranted$
+RewriteCond %{ENV:sixscaninternal} !^accessgranted$
+RewriteCond %{REQUEST_URI} 6scan-gate\.php$
+RewriteRule ^(.*)$ - [F]
+
+RewriteRule ^6scan-gate\.php$ - [L]
+
+RewriteCond %{REQUEST_URI} ^/just/a/random/dir/to/avoid/htaccess/mixups\.php$
+RewriteRule ^(.*)$ 6scan-gate.php [E=sixscaninternal:accessgranted,L]
+</IfModule>
+# End of 6Scan plugin

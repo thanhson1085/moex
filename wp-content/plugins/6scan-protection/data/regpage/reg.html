@@ -1,0 +1,344 @@
+<style>
+*
+{
+	padding:0px;
+	/* margin:0px; */
+}
+
+html
+{
+	background:-webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) no-repeat scroll 0 0 #E8EBEF;
+    background: -ms-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+
+    background: rgb(232, 235, 239);
+    font-family: Arial,sans-serif;
+    height: 100%;
+}
+
+body
+{
+	height: 100%;
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+form p
+{
+	margin-bottom:14px;
+}
+
+input, button
+{
+	font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.clear
+{
+	clear:both;
+}
+
+h2
+{
+	font-family: "proxima-nova",arial,sans-serif;
+}
+
+#container
+{
+	padding-top:80px;
+	width: 355px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#logo
+{
+	width:178px;
+	height:42px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:50px;
+}
+
+#register_box
+{
+	background: -webkit-linear-gradient(white, #F2F6F9);
+	background: linear-gradient(#FFFFFF, #F2F6F9) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient(white, #F2F6F9);
+	background: -o-linear-gradient(white, #F2F6F9);
+    border-radius: 6px 6px 6px 6px;
+    -ms-border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(14, 41, 57, 0.12), 0 2px 5px rgba(14, 41, 57, 0.44), 0 -1px 2px rgba(14, 41, 57, 0.15) inset;
+    width: 355px;
+}
+
+#register_box form
+{
+	padding: 14px;
+	margin:0px;
+}
+
+
+.text
+{
+	margin-bottom: 14px;
+	padding:0px;
+}
+
+.text span
+{
+	box-shadow: 0 1px 0 #FFFFFF;
+	-ms-box-shadow: 0 1px 0 #fff;
+    display: block;
+}
+
+.text label
+{
+	display:none;
+	user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+}
+
+.text input
+{
+	-webkit-font-smoothing: antialiased;
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #999999 #BBBBBB #BBBBBB;
+    border-image: none;
+    -ms-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-right: 1px solid #BBBBBB;
+    border-style: solid;
+    border-width: 1px;
+    -ms-box-shadow: inset 0 1px 2px rgba(0,0,0,0.18);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18) inset;
+    font-size: 18px;
+    padding: 10px 12px;
+    width: 326px;
+    color: #999999;
+}
+
+
+.text input:focus
+{
+	border: 1px solid #F38F1E;
+    box-shadow: 0 1px 2px #DDDDDD inset, 0 0 5px #F38F1E;
+    outline: medium none;
+}
+
+.title
+{
+	height: auto;
+	min-height: 55px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.title h2
+{
+	color: #1E2B32;
+    font-family: "proxima-nova",arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 17px 24px;
+    text-align: center;
+    margin: 0;
+}
+
+
+.sixbutton
+{
+	-moz-border-radius: 6px;
+	border-radius: 6px 6px 6px 6px;
+	-ms-border-radius: 6px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+    -ms-box-shadow: 0 1px 1px rgba(0,0,0,0.16);
+    height: 44px;
+    width: 326px;
+    border: 0 none;
+    display: inline-block;
+    padding: 1px;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+sixbutton::-moz-focus-inner
+{
+    border: 0 none;
+    padding: 0;
+}
+
+.blue
+{
+	background: #B35F00;
+	background:-webkit-linear-gradient(#F38F1E, #B35F00);
+	background: linear-gradient(#F38F1E, #B35F00) repeat scroll 0 0 transparent;
+	background:-webkit-linear-gradient(#F38F1E, #B35F00);
+	background:-ms-linear-gradient(#F38F1E, #B35F00);
+	background:-o-linear-gradient(#F38F1E, #B35F00);
+	background:linear-gradient(#F38F1E, #B35F00);
+}
+
+
+.sixbutton span
+{
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px 5px 5px 5px;
+    font-size: 18px;
+    padding: 13px 0 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.53);
+    display: block;
+    background: linear-gradient(#F7B972, #F07F00 85%, #F38F1E) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(#F7B972,#F07F00 85%,#F38F1E);
+    background: -ms-linear-gradient(#F7B972,#F07F00 85%,#F38F1E);
+    background: -o-linear-gradient(#F7B972,#F07F00 85%,#F38F1E);
+    background: -moz-linear-gradient(#F7B972,#F07F00 85%,#F38F1E);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7B972', endColorstr='#F38F1E');
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 29px;
+    line-height: 17px;
+}
+
+#myfooter
+{
+	bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+#register_box li, #myfooter li
+{
+    list-style: none outside none;
+    display: inline;
+}
+
+#myfooter a
+{
+	color: #696F77;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#wrap
+{
+	min-height: 100%;
+    position: relative;
+    padding-top: 0px;
+}
+
+#loading_gif
+{
+	margin-top:15px;
+	margin-bottom:18px;
+	width:128px;
+	height:40px;
+	margin-left:auto;
+	margin-right:auto;
+	display:none;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>	
+<![endif]-->
+<script>
+	function check_submit()
+	{
+		data_fields = Array("email");
+		
+		emptyField = false;
+		for ( one_field in data_fields )
+		{
+			field_name = data_fields[one_field];
+			if ($("#" + field_name).val() == '')
+			{	// if empty field
+				$("#" + field_name).css('color','#CB1A1A');
+				emptyField = true;
+			}
+			else
+			{
+				$("#" + field_name).css('color','#000000');
+			}		
+		}
+
+		if (emptyField){ 
+ 			$("#register_status_inf").css('color','#CB1A1A');
+	  		$("#register_status_inf").css('font-size','13px');
+			$("#register_status_inf").text('Error occured, please enter correct email');
+			return false;
+		}
+
+		return true;
+	}	
+</script>
+
+
+<div id="wrap">
+<!-- Container -->
+<div id="container">
+    <!-- Header -->
+    <div id='logo'>
+		<img src="_reg_logo_link_sixscan" alt="6scan logo" style='margin-top:10px;' />
+    </div>
+    <!-- END Header -->
+	<div id='register_box'>
+		<div class="title">			
+			<h2 id='register_status_inf'>Create 6Scan Account.</h2>            
+        </div>
+		<form method='post' action="" onsubmit="return check_submit();">					
+			<input type=hidden name="page" value="_page_value_sixscan">
+			<input type=hidden name='_sixscannonce' value="_nonce_value_sixscan">
+			<input type=hidden name="agree" value="yes">
+
+			<p class="text">
+		        <span>
+		            <label for="email">Email</label>
+		            <input type="text"  value="_email_value_sixscan" name="email" id="email" placeholder="Email" />
+		        </span>
+            </p>
+			<div style="font-size: 12px;padding-bottom: 10px;padding-left:5px;">
+					By clicking Scan Now, you agree to 6Scan's <a href="http://6scan.com/terms" style="color:black" target="_blank">Terms of use</a>.
+					<br/>
+					Your email and site URL will be sent to 6Scan to initiate your security scan.
+			</div>
+			<div id='submit_button_div'>
+                  <p>
+                      <button type="submit" class="sixbutton blue medium"><span>Scan Now</span></button>
+                  </p>
+            </div>
+			<div class='clear'></div>
+		</form>
+	</div>
+    <!-- END Content -->
+</div>
+<div id="spacer" style='height: 60px;'></div>
+<div id="myfooter">
+	<ul>
+		<li><a href="http://6scan.com/privacy" target='_blank'>Privacy Policy</a></li> |
+		<li><a href="http://6scan.com/contact" target='_blank'>Contact</a></li> |
+		<li><a href="http://6scan.com" target='_blank'>&copy; 2012 Six Scan, Ltd.</a></li>
+    </ul>
+</div>
+</div>

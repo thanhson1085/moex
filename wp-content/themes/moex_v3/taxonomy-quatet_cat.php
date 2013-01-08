@@ -1,16 +1,14 @@
 <?php
 get_header();
+?>
+<?php
 $user_id = get_current_user_id();
 $code_display = 0;
-global $post;
-$order = (isset($_GET['order']))?$_GET['order']:0;
-$order = ($order)?'DESC':'ASC';
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
-$myposts = get_posts( $args );
 ?>
 					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
 	<div class="cb h15"></div>
 <div style="border-bottom: solid 1px #CCC;height: 30px; padding-left: 20px; font-size: 12px;">
+<ul class="quatet-order">
 <?php
 $taxonomy     = 'quatet_cat';
 $orderby      = 'name'; 
@@ -28,7 +26,7 @@ $args = array(
   'title_li'     => $title
 );
 ?>
-<ul class="quatet-order">
+
 <li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
 <li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
 <li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
@@ -45,7 +43,8 @@ $args = array(
         <div class="people clearfix">
 
 		<?php
-		foreach( $myposts as $post ) :	setup_postdata($post); ?>
+		//foreach( $myposts as $post ) :	setup_postdata($post); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="person" code="<?php echo $post->ID;?>">
 				<?php $code_display = $post->ID?>
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
@@ -61,13 +60,13 @@ $args = array(
              <!-- /.short-profile -->
           </div> <!-- /.person -->
 		<?php 
-			endforeach;
+			//endforeach;
 		?>
+<?php endwhile; ?>
+<?php endif; ?>
         </div> <!-- /.people -->
         <div class="selected-profile">
-		<?php
-		foreach( $myposts as $post ) :	setup_postdata($post);
-		?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
         	<div id="<?php echo $post->ID;?>" class="short-profile" style="display: none;">
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
@@ -82,9 +81,8 @@ $args = array(
 				<br />
 			  </p>
             </div>
-		<?php
-			endforeach;
-		?>
+		<?php endwhile;?>
+		<?php endif; ?>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#<?php echo $code_display?>").css("display", "block");
@@ -115,7 +113,6 @@ $args = array(
                         </div>
                     </div>
                     <div class="cb h15"><!----></div>
-<?php wp_reset_postdata(); ?>
 
 					<?php comments_template('', true);?>
                     <div class="cb h25"><!----></div>

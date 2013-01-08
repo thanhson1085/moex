@@ -1,7 +1,6 @@
 <?php
 get_header();
 $user_id = get_current_user_id();
-$driver_id = (isset($_GET["driver_id"]))?$_GET["driver_id"]:0;
 $drivers = $wpdb->get_results(
 				"
 				SELECT * 
@@ -9,14 +8,6 @@ $drivers = $wpdb->get_results(
 				"
 			);
 ?>
-<script type="text/javascript">
-	$(document).ready(function(){
-		jQuery.post(ajax_link,{ action: "get_ajax_driver_info", driver_id: <?php echo $driver_id?>, modo: "ajaxget" },
-		function(data){
-			$("#driver-info").html(data);
-		});
-	});
-</script>
 <div class="driver-info-container" style="overflow: auto">
 <div class="pb10">
 	<span class="order-header" style="color:red; font-size: 28px;">Lái xe moEx</span>
@@ -28,6 +19,7 @@ $drivers = $wpdb->get_results(
 			foreach ($drivers as $driver):
 		?>
           <div class="person" code="<?php echo $driver->id;?>">
+				<?php $driver_id = $driver->id;?> 
 				<?php $image = ($driver->image)?get_bloginfo("url")."/core/web/uploads/drivers/".$driver->image:get_bloginfo("template_url")."/pic/no-image.jpg";?>
             <a href="<?php echo get_bloginfo("url")?>/driver-info/?driver_id=<?php echo $driver->id?>">
               <img src="<?php echo $image;?>" alt="<?php echo $driver->driver_name;?>">
@@ -58,7 +50,7 @@ $drivers = $wpdb->get_results(
 			endforeach;
 		?>
 		<script type="text/javascript">
-			$("#<?php echo $driver_id?>").css("display","block");
+			$("#<?php echo $driver_id;?>").css("display","block");
 			$(document).ready(function(){
 				$(".person").hover(function(){
 					$(".short-profile").each(function(){

@@ -1,0 +1,72 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body style="background-color:#e3e4e4;">
+	<style type="text/css">
+	</style>
+	<table width="700" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color:#fff; border:3px solid #f08c1e;">
+	<tr>
+		<td>
+			<table width="100%" height="141" cellspacing="0" cellpadding="0" border="0" style="float:left;" style="padding-top: 20px; padding-bottom: 20px;">
+			<tr>
+				<td style="padding-left: 29px;">
+				 <a style="margin: -41px 0pt 0pt;" href="6scan.com">
+				 <img title="logo" alt="Logo" src="http://static.6scan.com/media/images/logo.png" style="float: left; border: 0pt none; margin: -25px 0pt 0pt 0px;">
+				 </a>
+				</td>
+				<td>
+					<p style="color:#010101; font-size:24px; font-family:Calibri; margin:-14px 0 -21px 0;"></p>
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div style="margin-left: 15px; margin-right: 15px;">
+				<div id="content" style="padding-left: 20px; width: 650px; font-family: Calibri;"><br>
+					Dear Webmaster,<br><br>
+					<b>The 6Scan Security plugin on your site at <a href="{{site.root_url}}">{{site.root_url}}</a> has locked out one or more IP addresses</b> based on your lockout preferences:
+					<br/>
+					<br/>
+					<ul>
+						<li><b>{{locked.ip}} is locked out for {{locked.minutes}} minutes</b> due to {{locked.failed_count}} failed login attempts within {{locked.failed_minutes}} minutes.  The following usernames were tried: {{locked.usernames}}.</li>
+						</li>
+					</ul>
+
+					<br/>
+					<br/>
+					<center><a href="{{dashboard_link}}"><img src="http://www.6scan.com/media/images/gotodashboard.png"/></a></center>
+					<br/>
+					<br/>		
+					Safe browsing!<br/>
+					The 6Scan Team<br/>
+					<br/>		
+				</div>
+			</div>
+		</td>
+	</tr>
+	</table>	
+	<center>	
+	<table border="0" cellpadding="20" cellspacing="0" width="700" style="background:#EEEEEE  !important; border-top:1px solid #DDDDDD; clear:both;" id="canspamBarWrapper">
+	<tr>
+		<td align="center" valign="top" style="padding-bottom:0;">			
+			<hr>
+			<div style="width=700; font-size: 0.8em; text-align: left;">
+				<!-- comment %}
+					Read more about the CAN-SPAM Act at http://business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business .
+					This email should fall under the category of "transactional or relationship content," and hence is exempt from
+					most of the provisions of the act.
+				-->
+				You are receiving this email because your site, {{site.root_url}}, is protected with
+				6Scan's website security plugin.  To customize your email notifications, please
+				use the Settings area on your <a href="{{dashboard_link}}">dashboard</a>
+				or send an email to <a href="mailto:support@6scan.com">support@6scan.com</a>.<br/>
+				Please quote your site's URL when contacting support.<br/>
+				<b>Six Scan Ltd.</b>, 2964 Columbia St. Suite # 38088, Torrance, CA 90503.<br/>
+			</div>
+			<font size="0.5em">
+			</font>
+		</td>
+	</tr>
+	</table>
+	</center>
+</body>
