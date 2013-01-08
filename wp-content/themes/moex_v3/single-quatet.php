@@ -49,12 +49,6 @@ get_header();
 	.quatet table tr td:first-child{
 		width: 5%;
 	}
-	.quatet table tr td:last-child{
-		width: 25%;
-		color: red;
-		font-weight: bold;
-	
-	}
 	
 </style>
                     <div class="cb h20"><!----></div>
