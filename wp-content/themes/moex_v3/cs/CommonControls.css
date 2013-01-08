@@ -112,3 +112,9 @@ td.align-top{vertical-align: top}
 .event{position: relative; width: 460px; text-align: justify; padding-right: 10px; border-right: solid 1px #ccc;}
 .event #formBuilderCSSIDCinema{position: absolute; top: 0;right: -460px; width: 460px;}
 .moex-container{ padding: 0 10px 0 10px; }
+.comment-body{border-bottom: solid 1px #CCC; margin-bottom: 10px}
+ol.commentlist{list-style: none;margin: 0; padding: 0;}
+ol.commentlist .reply {text-align: right;}
+ol.commentlist .reply a{color: orange;}
+ol.commentlist .commentmetadata a{color: #ccc; font-size: 11px;}
+ol.commentlist .commentmetadata p{line-height: 25px;color: #1e1e1e; font-size: 12px;}
