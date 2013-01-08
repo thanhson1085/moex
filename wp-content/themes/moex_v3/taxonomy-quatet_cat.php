@@ -42,9 +42,7 @@ $args = array(
 <div class="center-col">
         <div class="people clearfix">
 
-		<?php
-		//foreach( $myposts as $post ) :	setup_postdata($post); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="person" code="<?php echo $post->ID;?>">
 				<?php $code_display = $post->ID?>
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
@@ -59,11 +57,8 @@ $args = array(
             </a>
              <!-- /.short-profile -->
           </div> <!-- /.person -->
-		<?php 
-			//endforeach;
-		?>
-<?php endwhile; ?>
-<?php endif; ?>
+			<?php endwhile; ?>
+			<?php endif; ?>
         </div> <!-- /.people -->
         <div class="selected-profile">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -97,6 +92,18 @@ $args = array(
 		</div> <!-- /.selected-profile -->
 </div>
 	<div id="MoexFood" style="width: 460px;">
+<?php
+global $wp_query;
+
+$big = 999999999; // need an unlikely integer
+
+echo paginate_links( array(
+	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	'format' => '?paged=%#%',
+	'current' => max( 1, get_query_var('paged') ),
+	'total' => $wp_query->max_num_pages
+) );
+?>
                     <div class="cb h15"><!----></div>
                     <div class="">
                         <div class="fl">
