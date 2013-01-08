@@ -67,6 +67,10 @@ $myposts = get_posts( $args );
 		?>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				$(".short-profile").each(function(){
+					$(this).css("display", "block");
+					exit();
+				});
 				$(".person").hover(function(){
 					$(".short-profile").each(function(){
 						$(this).css("display", "none");
@@ -863,11 +867,6 @@ img.lg-photo {
 }
 .driver-info-container{ padding: 0 10px 0 30px; }
 </style>
-<script type="text/javascript">
-	$(document).ready(function(){
-		
-	});
-</script>
 </div>
 <?php
 get_footer();

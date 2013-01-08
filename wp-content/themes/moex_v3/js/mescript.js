@@ -8,13 +8,13 @@ $(document).ready(function(){
         var mapwidth = $('.selected-profile').width();
         var mapoffsetleft = $('.selected-profile').offset().left;
         $(document).scroll(function(){
-            if ($(document).scrollTop() > 124){
+            if ($(document).scrollTop() > 254){
                 $('.selected-profile').css('position', 'fixed');
                 $('.selected-profile').css('top', '0.5em');
                 $('.selected-profile').css('left', mapoffsetleft);
                 //$('.selected-profile').css('width', mapwidth);
             }
-            if ($(document).scrollTop() < 124){
+            if ($(document).scrollTop() < 254){
                 $('.selected-profile').css('position', 'relative');
                 $('.selected-profile').css('top', 'auto');
                 $('.selected-profile').css('left', 'auto');
