@@ -1,6 +1,7 @@
 <?php
 get_header();
 $user_id = get_current_user_id();
+$code_display = 0;
 global $post;
 $order = (isset($_GET['order']))?$_GET['order']:0;
 $order = ($order)?'DESC':'ASC';
@@ -28,6 +29,7 @@ $myposts = get_posts( $args );
 		<?php
 		foreach( $myposts as $post ) :	setup_postdata($post); ?>
           <div class="person" code="<?php echo $post->ID;?>">
+				<?php $code_display = $post->ID?>
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
 					$img_url = wp_get_attachment_url( $img_id); 
 				?>
@@ -67,10 +69,7 @@ $myposts = get_posts( $args );
 		?>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$(".short-profile").each(function(){
-					$(this).css("display", "block");
-					exit();
-				});
+				$("#<?php echo $code_display?>").css("display", "block");
 				$(".person").hover(function(){
 					$(".short-profile").each(function(){
 						$(this).css("display", "none");
