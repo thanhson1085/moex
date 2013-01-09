@@ -8,11 +8,14 @@
      */
     global $page, $paged;
 
-    wp_title( '-', true, 'right' );
+    wp_title( '', true, 'right' );
 
     // Add the blog name.
+	if (!is_home()){
 	echo " | ";
     bloginfo( 'name' );
+	}
+		
 
 // Add the blog description for the home/front page.
 /*
