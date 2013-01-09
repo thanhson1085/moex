@@ -1,59 +1,8 @@
-<?php
-get_header();
-$user_id = get_current_user_id();
-$code_display = 0;
-global $post;
-$order = (isset($_GET['order']))?$_GET['order']:0;
-$order = ($order)?'DESC':'ASC';
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
-$myposts = get_posts( $args );
-?>
-					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
-	<div class="cb h15"></div>
-<div style="border-bottom: solid 1px #CCC;height: 30px; padding-left: 20px; font-size: 12px;">
-<?php
-$taxonomy     = 'quatet_cat';
-$orderby      = 'name'; 
-$show_count   = 0;      // 1 for yes, 0 for no
-$pad_counts   = 0;      // 1 for yes, 0 for no
-$hierarchical = 1;      // 1 for yes, 0 for no
-$title        = '';
-
-$args = array(
-  'taxonomy'     => $taxonomy,
-  'orderby'      => $orderby,
-  'show_count'   => $show_count,
-  'pad_counts'   => $pad_counts,
-  'hierarchical' => $hierarchical,
-  'title_li'     => $title
-);
-?>
-<ul class="quatet-order">
-<?php wp_list_categories( $args ); ?>
-</ul>
-<style>
-	.quatet-order, .quatet-order2{padding: 0;margin:0;display: block-inline;list-style: none;}
-	.quatet-order li, .quatet-order2 li{font-weight: bold; float:left; padding-right: 10px;
-		border-right: solid 1px #CCC;
-		margin-right: 10px;
-		line-height: 20px;
-	}
-	.quatet-order2{float:right;}
-	.quatet-order2 li{ font-weight: normal;}
-</style>
-<ul class="quatet-order2">
-<li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
-<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
-<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
-</ul>
-</div>
-	<div class="cb h15"></div>
 <div class="driver-info-container" style="overflow: auto">
 <div class="center-col">
         <div class="people clearfix">
 
-		<?php
-		foreach( $myposts as $post ) :	setup_postdata($post); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="person" code="<?php echo $post->ID;?>">
 				<?php $code_display = $post->ID?>
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
@@ -68,17 +17,14 @@ $args = array(
             </a>
              <!-- /.short-profile -->
           </div> <!-- /.person -->
-		<?php 
-			endforeach;
-		?>
+			<?php endwhile; ?>
+			<?php endif; ?>
         </div> <!-- /.people -->
         <div class="selected-profile">
 		<p style="text-align: right; height: 20px;padding:0;margin:0;">
 		<img src="<?php echo get_bloginfo("template_url");?>/pic/close.png" id="quatet-close">
 		</p>
-		<?php
-		foreach( $myposts as $post ) :	setup_postdata($post);
-		?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			
         	<div id="<?php echo $post->ID;?>" class="short-profile" style="display: none;">
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
@@ -93,9 +39,8 @@ $args = array(
 				<br />
 			  </p>
             </div>
-		<?php
-			endforeach;
-		?>
+		<?php endwhile;?>
+		<?php endif; ?>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#<?php echo $code_display?>").css("display", "block");
@@ -115,6 +60,18 @@ $args = array(
 		</div> <!-- /.selected-profile -->
 </div>
 	<div id="MoexFood" style="width: 460px;">
+<?php
+global $wp_query;
+
+$big = 999999999; // need an unlikely integer
+
+echo paginate_links( array(
+	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	'format' => '?paged=%#%',
+	'current' => max( 1, get_query_var('paged') ),
+	'total' => $wp_query->max_num_pages
+) );
+?>
                     <div class="cb h15"><!----></div>
                     <div class="">
                         <div class="fl">
@@ -131,7 +88,6 @@ $args = array(
                         </div>
                     </div>
                     <div class="cb h15"><!----></div>
-<?php wp_reset_postdata(); ?>
 
 					<?php comments_template('', true);?>
                     <div class="cb h25"><!----></div>
@@ -901,6 +857,3 @@ img.lg-photo {
 .driver-info-container{ padding: 0 10px 0 30px; }
 </style>
 </div>
-<?php
-get_footer();
-?>

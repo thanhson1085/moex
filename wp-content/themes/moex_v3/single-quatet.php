@@ -17,6 +17,9 @@ get_header();
 				if ( have_posts() ) while ( have_posts() ) : the_post();
 				?>
                 <div class="cot1">                                  
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+					} ?>
                     <div class="titledetail" style="font-size: 18px;"><?php the_title()?></div>
 					<?php setPostViews($post->ID); ?>
                     <div class="date"><?php echo date_i18n( __( 'd/m/Y' ), strtotime( $post->post_date ) )?> - <?php echo getPostViews($post->ID);?> lượt xem</div>
