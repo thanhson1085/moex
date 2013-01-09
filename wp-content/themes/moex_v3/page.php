@@ -25,8 +25,8 @@
                     </div>
                     <div class="cb h15"><!----></div>
 
-
-					<?php comments_template('', true);?>
+					<div id="MoexSchool">
+					<?php comments_template('', true);?></div>
                     <div class="cb h25"><!----></div>
 			</div>
         </div>
