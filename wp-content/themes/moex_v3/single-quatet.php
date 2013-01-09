@@ -17,7 +17,7 @@ get_header();
 				if ( have_posts() ) while ( have_posts() ) : the_post();
 				?>
                 <div class="cot1">                                  
-                    <div class="titledetail"><?php the_title()?></div>
+                    <div class="titledetail" style="font-size: 18px;"><?php the_title()?></div>
 					<?php setPostViews($post->ID); ?>
                     <div class="date"><?php echo date_i18n( __( 'd/m/Y' ), strtotime( $post->post_date ) )?> - <?php echo getPostViews($post->ID);?> lượt xem</div>
                     <div class="lh18 fwb">
@@ -78,15 +78,12 @@ get_header();
 				<?php endwhile;?>
                 </div>    
                 <div class="cot2">
-                    <div class="otitle">Các sản phẩm cùng danh mục</div>
-					<?php
-						$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'orderby' => 'post_title', 'order' => 'ASC' );
-						$myposts = get_posts( $args );
-						foreach( $myposts as $post ) :	setup_postdata($post);
-							if ($post->ID == $post_id) continue;
-					?>
-                    <a href="<?php the_permalink()?>" class="tinkhac"><?php the_title()?> (<span class="quatet-price" style="color: red"><?php echo get_post_meta($post->ID, 'gia_quatet', true)?></span>)</a>
-					<?php endforeach;?>
+                    <div class="otitle">Tìm thêm sản phẩm khác</div>
+					<?php get_sidebar();?>
+					<style>
+						.quatet-order{list-style: none;padding:0; margin: 0;}
+						.taxonomy-drilldown-reset{display: none;}
+					</style>
                 </div>
                 <div class="cb h15"><!----></div>
             </div>

@@ -60,6 +60,7 @@ $role->add_cap('edit_others_pages');
 add_action( 'init', 'quatet_init' );
 function quatet_init() {
   $labels = array(
+    'name' => 'Loại quà tết',
     'menu_name' => 'Quà tết'
 
   );
@@ -93,6 +94,7 @@ function create_quatet_taxonomies()
 {
 
   $labels = array(
+    'name' => 'Quà tết',
     'menu_name' => __( 'Loại' ),
   );
 
@@ -102,7 +104,20 @@ function create_quatet_taxonomies()
     'show_ui' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'class' ),
+    'rewrite' => array( 'slug' => 'quatet-loai' ),
+  ));
+  $labels = array(
+    'name' => 'Khoảng giá',
+    'menu_name' => __( 'Khoảng giá' ),
+  );
+
+  register_taxonomy('quatet_gia',array('quatet'),array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'quatet-gia' ),
   ));
 }
 add_filter( 'post_updated_messages', 'quatet_updated_messages' );
@@ -114,7 +129,26 @@ function announcement_updated_messages( $messages ) {
 
   return $messages;
 }
+if ( function_exists('register_sidebar') ) {
+register_sidebar(array(
+'before_widget' => '<li id="%1$s" class="widget %2$s">',
+'after_widget' => '</li>',
+'before_title' => '<h2 class="widgettitle">',
+'after_title' => '</h2>',
+));
+}
 
+if ( function_exists('register_sidebar') ) {
+register_sidebar(array(
+'name' => 'Homepage Sidebar',
+'id' => 'quatet-sidebar',
+'description' => 'Appears as the sidebar on the custom homepage',
+'before_widget' => '<li id="%1$s" class="widget %2$s">',
+'after_widget' => '</li>',
+'before_title' => '<h2 class="widgettitle">',
+'after_title' => '</h2>',
+));
+}
 add_filter('excerpt_length', 'my_excerpt_length');
 function my_excerpt_length($length) {
 	return 20; 

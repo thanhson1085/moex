@@ -29,15 +29,23 @@ $args = array(
 );
 ?>
 <ul class="quatet-order">
-<li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
-<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
-<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
 <?php wp_list_categories( $args ); ?>
 </ul>
 <style>
-	.quatet-order{padding: 0;margin:0;display: block-inline;list-style: none;}
-	.quatet-order li{font-weight: bold; float:left; padding-right: 10px;}
+	.quatet-order, .quatet-order2{padding: 0;margin:0;display: block-inline;list-style: none;}
+	.quatet-order li, .quatet-order2 li{font-weight: bold; float:left; padding-right: 10px;
+		border-right: solid 1px #CCC;
+		margin-right: 10px;
+		line-height: 20px;
+	}
+	.quatet-order2{float:right;}
+	.quatet-order2 li{ font-weight: normal;}
 </style>
+<ul class="quatet-order2">
+<li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
+<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
+<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
+</ul>
 </div>
 	<div class="cb h15"></div>
 <div class="driver-info-container" style="overflow: auto">
