@@ -1,3 +1,36 @@
+<div style="border-bottom: solid 1px #CCC;height: 30px; padding-left: 20px; font-size: 12px;">
+<?php
+$taxonomy     = 'quatet_cat';
+$orderby      = 'name'; 
+$show_count   = 0;      // 1 for yes, 0 for no
+$pad_counts   = 0;      // 1 for yes, 0 for no
+$hierarchical = 1;      // 1 for yes, 0 for no
+$title        = '';
+
+$args = array(
+  'taxonomy'     => $taxonomy,
+  'orderby'      => $orderby,
+  'show_count'   => $show_count,
+  'pad_counts'   => $pad_counts,
+  'hierarchical' => $hierarchical,
+  'title_li'     => $title
+);
+?>
+<ul class="quatet-order">
+<?php wp_list_categories( $args ); ?>
+</ul>
+<style>
+	.quatet-order, .quatet-order2{padding: 0;margin:0;display: block-inline;list-style: none;}
+	.quatet-order li, .quatet-order2 li{font-weight: bold; float:left; padding-right: 10px;
+		border-right: solid 1px #CCC;
+		margin-right: 10px;
+		line-height: 20px;
+	}
+	.quatet-order2{float:right;}
+	.quatet-order2 li{ font-weight: normal;}
+</style>
+</div>
+	<div class="cb h15"></div>
 <div class="driver-info-container" style="overflow: auto">
 <div class="center-col">
         <div class="people clearfix">
@@ -31,7 +64,7 @@
 					$img_url = wp_get_attachment_url( $img_id); 
 				?>
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-              <img src="<?php echo $image;?>" alt="" style="max-width: 350px;">
+              <a href="<?php the_permalink()?>" title="<?php the_title()?>"><img src="<?php echo $image;?>" alt="" style="max-width: 350px;"></a>
               <h3><?php the_title();?></h3>
 				<p style="color: #1e1e1e"><span>Mã: </span><span style="font-weight: bold;"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
 				<p style="color: #1e1e1e;"><span>Giá: </span><span class="quatet-price" style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>

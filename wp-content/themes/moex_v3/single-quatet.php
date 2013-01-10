@@ -34,7 +34,6 @@ get_header();
                 		<div class="cb h10"><!----></div>
 							<span style="display: inline-block; width: 80px;">Giá: </span><span class="quatet-price" style="color: red;font-size: 16px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span>
                 		<div class="cb h20"><!----></div>
-						<span style="font-weight: bold">Bao gồm các sản phẩm:</span>
 						<?php the_content();?>
 						</div>
 <style>

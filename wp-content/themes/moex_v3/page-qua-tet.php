@@ -85,7 +85,7 @@ $args = array(
 					$img_url = wp_get_attachment_url( $img_id); 
 				?>
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-              <img src="<?php echo $image;?>" alt="" style="max-width: 350px;">
+              <a href="<?php the_permalink()?>" title="<?php the_title()?>"><img src="<?php echo $image;?>" alt="" style="max-width: 350px;"></a>
               <h3><?php the_title();?></h3>
 				<p style="color: #1e1e1e"><span>Mã: </span><span style="font-weight: bold;"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
 				<p style="color: #1e1e1e;"><span>Giá: </span><span class="quatet-price" style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
