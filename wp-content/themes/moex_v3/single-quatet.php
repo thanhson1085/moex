@@ -91,7 +91,7 @@ get_header();
             </div>
         </div>
     </div>    
-	<div id="MoexSchool" style="width: 500px; padding-left: 20px;">
+	<div id="MoexSchool" style="width: 450px; padding-left: 20px;">
 					<?php wp_reset_postdata(); ?>
 
 					<?php comments_template('', true);?>
