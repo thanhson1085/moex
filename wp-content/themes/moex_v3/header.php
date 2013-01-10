@@ -53,38 +53,19 @@ if (isMobile){
 }
 */
 </script>
+<script type="text/javascript">
+	var ajax_link = "<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php";
+</script>
+    <link rel="stylesheet" href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
+<?php
+    wp_head();
+?>
 <script src="<?php echo get_bloginfo("template_url")?>/js/jquery.min.js" type="text/javascript"></script>
 <script src="<?php echo get_bloginfo("template_url")?>/js/display.js" type="text/javascript"></script>
 <script src="<?php echo get_bloginfo("template_url")?>/js/mescript.js" type="text/javascript"></script>
 <script src="<?php echo get_bloginfo("template_url")?>/js/jcarousellite_1.js" type="text/javascript"></script>
 <script src="<?php echo plugins_url()?>/yop-poll/js/yop-poll-public.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo get_bloginfo("template_url")?>/js/jquery.cycle.all.min.js"></script>
-<script type="text/javascript">
-	var ajax_link = "<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php";
-</script>
-<link rel="stylesheet" href="<?php echo get_bloginfo("template_url")?>/cs/screen.css" type="text/css" media="screen" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Default.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/fontface.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/CommonControls.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Homepage.css" rel="stylesheet" type="text/css" />
-
-<link href="<?php echo get_bloginfo("template_url")?>/cs/GioiThieu.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/DangKy.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/QuanLyTaiKhoan.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexGo.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexOffice.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexShopping.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexFood.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/MoexSchool.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/LienHe.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Blog.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo get_bloginfo("template_url")?>/cs/Order.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem2.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/cs/KetQuaTimKiem.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo get_bloginfo("template_url")?>/style.css" rel="stylesheet" type="text/css" />
-<?php
-    wp_head();
-?>
 </head>
 <body class="mo">  
 	<div class="page-moex-container">
