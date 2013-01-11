@@ -36,8 +36,8 @@ get_header();
 				?>
              <div class="cot2">
 				<form method="POST" id="order-form" name="orderform" action="">
-                <div class="pb10">
-					<span class="order-header" style="color:red; font-size: 28px;">Sử dụng dịch vụ</span>
+                <div class="pb10" id="MoexSchool">
+					<span class="header ctext sdtext" style="">Sử dụng dịch vụ</span>
                  </div>
                  <div class="left">Điểm đi</div>
                  <div class="fl">:</div>
@@ -146,6 +146,16 @@ get_header();
                                 tbHoTen.focus();
                                 return false;
                             }                            
+                            if (document.getElementById("input-from").value.length < 1) {
+                                alert("Vui lòng nhập điểm đi");
+                                tbDienThoai.focus();
+                                return false;
+                            }
+                            if (document.getElementById("input-to").value.length < 1) {
+                                alert("Vui lòng nhập điểm đến");
+                                tbDienThoai.focus();
+                                return false;
+                            }
                             if (document.getElementById("tbDienThoai").value.length < 1) {
                                 alert("Vui lòng nhập Điện thoại");
                                 tbDienThoai.focus();
@@ -172,6 +182,29 @@ get_header();
 			</form>
 				</div>
              </div>
+                    <div class="cb h15"><!----></div>
+				<div style="width: 980px; postion: relative; border-top: solid 1px #ccc;">
+                    <div class="cb h15"><!----></div>
+					<div id="MoexSchool" style="width: 450px;margin: 0 auto;">
+                    <div class="">
+                        <div class="fl">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style ">
+                            <!--<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>-->
+                            <a class="addthis_button_facebook_like"></a>
+                            <a class="addthis_button_tweet"></a>
+                            <a class="addthis_button_google_plusone" g:plusone:size="normal"></a>
+                            <!--<a class="addthis_counter addthis_pill_style"></a>-->
+                            </div>
+                            <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e70275244deb51b"></script>
+                            <!-- AddThis Button END -->
+                        </div>
+                    </div>
+                    <div class="cb h15"><!----></div>
+					<?php comments_template('', true);?>
+                    <div class="cb h25"><!----></div>
+					</div>
+				</div>
 
             <script type="text/javascript">                
                 function rgb2hex(rgb) {

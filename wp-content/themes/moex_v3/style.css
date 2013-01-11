@@ -818,4 +818,4 @@ it's always appreciated!) and can be used commercially and modified in any way y
 
 /* The whats hot ribbon */
 .whatsHot {position: absolute; width: 107px; height: 108px; background: url(img/whats-hot-bg.png) no-repeat; left: 62px; z-index: 100;}
-
+.edit-link{font-size: 12px; padding-left: 10px;color: #ccc; font-weight: normal}

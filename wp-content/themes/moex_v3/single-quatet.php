@@ -20,7 +20,13 @@ get_header();
 					<?php if ( function_exists('yoast_breadcrumb') ) {
 					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 					} ?>
-                    <div class="titledetail" style="font-size: 18px;"><?php the_title()?></div>
+                    <div class="titledetail" style="font-size: 18px;"><?php the_title()?><span class="edit-link">(
+					<?php 
+						if (current_user_can("edit_post")){
+							echo '<a href="'.get_admin_url().'post.php?post='.$post->ID.'&action=edit" target="_blank">edit</a>';
+						}
+					?>
+					)</span></div>
 					<?php setPostViews($post->ID); ?>
                     <div class="date"><?php echo date_i18n( __( 'd/m/Y' ), strtotime( $post->post_date ) )?> - <?php echo getPostViews($post->ID);?> lượt xem</div>
                     <div class="lh18 fwb">
