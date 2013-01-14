@@ -25,6 +25,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+		var_dump($this->get('security.context')->getToken()->getRoles());die;
         $em = $this->getDoctrine()->getEntityManager();
         $filter = $this->getRequest()->getSession()->get('order.filter', new \Moex\CoreBundle\Entity\OrderFilter());
     
