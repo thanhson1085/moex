@@ -106,7 +106,7 @@ echo paginate_links( array(
 ) );
 ?>
                     <div class="cb h15"><!----></div>
-					<a href="http://vietcaring.vn/"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner-vietcaring.jpg"/></a>
+					<a href="http://vietcaring.vn/" target="_blank"><img src="<?php echo get_bloginfo("template_url")?>/pic/banner-vietcaring.jpg"/></a>
                     <div class="cb h15"><!----></div>
                     <div class="">
                         <div class="fl">

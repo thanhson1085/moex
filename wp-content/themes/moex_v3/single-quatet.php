@@ -64,7 +64,7 @@ get_header();
 								$img_url = wp_get_attachment_url( $img_id); 
 							?>
 							<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-						  	<img style="max-width: 600px" src="<?php echo $image;?>" alt="<?php the_title();?>">
+						  	<a href="<?php echo $image;?>" target="_blank"><img style="max-width: 600px" src="<?php echo $image;?>" alt="<?php the_title();?>"></a>
                     </div>
                     <div class="cb h20"><!----></div>
                     <div class="vientren"><!----></div>
