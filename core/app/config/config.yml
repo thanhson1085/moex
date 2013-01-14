@@ -12,15 +12,15 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
+    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     session:
         default_locale: %locale%
         auto_start:     true
 
 # Twig Configuration
-#twig:
-#    debug:            %kernel.debug%
-#    strict_variables: ~ #%kernel.debug%
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
 
 # Assetic Configuration
 assetic:
@@ -80,6 +80,13 @@ hypebeast_wordpress:
     # this will make your application run faster by loading less Wordpress classes. It is 
     # false by default.
     short_init: false
+
+    # Set WordPress table prefix, default value is "wp_"
+    table_prefix: %table_prefix% 
+
+    # Your WordPress site's domain, it is requried to fix the redirection bug
+    # when you have WordPpress multisite enabled. Optional in normal case.
+    domain: %domain%
 
 fos_rest:
     view:

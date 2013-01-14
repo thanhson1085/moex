@@ -17,3 +17,6 @@
     locale            = en
 
     secret            = ThisTokenIsNotSoSecretChangeIt
+
+    domain            = 192.168.159.128
+    table_prefix      = me_
