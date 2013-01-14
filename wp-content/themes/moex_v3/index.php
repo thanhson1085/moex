@@ -67,7 +67,7 @@ $(document).ready(function(){
 </script>
 	<a href="<?php echo get_bloginfo("url")?>/qua-tet/" style="display: block; width: 588px; height: 230px;z-index: 1000;">
             <div id="ListService">
-			<img src="<?php echo get_bloginfo("template_url");?>/pic/banner_qua_tet.jpg"/>
+			<img src="<?php echo get_bloginfo("template_url");?>/pic/cho_tet.jpg"/>
 
 				<?php /* ?>
                 <div class="service bdt0">

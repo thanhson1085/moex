@@ -14,9 +14,9 @@ security:
     role_hierarchy:
         ROLE_CS_ROUTER: [ROLE_ME_CS, ROLE_ME_ROUTER]
     access_control:
-        - { path: ^/order/.*/delete, roles: ROLE_ME_ADMINISTRATOR }
-        - { path: ^/order/.*/.*/assign, roles: [ROLE_ME_CS_ROUTER, ROLE_ME_CS, ROLE_ME_ADMINISTRATOR] }
-        - { path: ^/order/.*/.*/unassign, roles: [ROLE_ME_CS_ROUTER, ROLE_ME_CS, ROLE_ME_ADMINISTRATOR] }
+        - { path: ^/order/.*/delete, roles: ROLE_WP_ADMINISTRATOR }
+        - { path: ^/order/.*/.*/assign, roles: [ROLE_WP_CS_ROUTER, ROLE_WP_CS, ROLE_WP_ADMINISTRATOR] }
+        - { path: ^/order/.*/.*/unassign, roles: [ROLE_WP_CS_ROUTER, ROLE_WP_CS, ROLE_WP_ADMINISTRATOR] }
     access_denied_url: /unauthorized
     firewalls:
         api:
