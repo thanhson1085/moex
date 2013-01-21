@@ -87,6 +87,35 @@ function quatet_init() {
 
 }
 
+add_action( 'init', 'doitac_init' );
+function doitac_init() {
+  $labels = array(
+    'menu_name' => 'Đối tác'
+
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => true,
+    'menu_position' => null,
+    'supports' => array( 'title','editor', 'comments', 'Discussion', 'Author'),
+    'rewrite' => array(
+		'slug' => 'doitac',
+		'with_front' => FALSE,
+	),
+  );
+  register_post_type('doitac',$args);
+  flush_rewrite_rules( false );
+
+}
+
 add_action( 'init', 'create_quatet_taxonomies', 0 );
 
 //create two taxonomies, genres and subjects for the post type "question"

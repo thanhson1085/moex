@@ -115,29 +115,62 @@ $(document).ready(function(){
                 <div class="cb h10"><!----></div>
             </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#slideJ").jCarouselLite({
+		auto: 800,
+		speed: 5000,
+	});
+});
+</script>
+<style>
+	#slideJ ul li{
+		width: 160px;
+	}
+</style>
+<?php
+$args = array( 'numberposts' => 100, 'post_type'=> 'doitac');
+$myposts = get_posts( $args );
+?>
             <div id="footerAdv">
-				<table id="Table_01" width="588" height="56" border="0" cellpadding="0" cellspacing="0">
+				<table id="slideShim4" width="588" height="56" border="0" cellpadding="0" cellspacing="0">
 					<tr>
-						<td>
+						<td width="101">
 							<img src="<?php echo get_bloginfo("template_url")?>/img/Partner_01.png" width="101" height="56" alt=""></td>
-						<td>
+						<td style="text-align:left">
+            <div id="slideJ">
+					<ul>
+		<?php
+		foreach( $myposts as $post ) :	setup_postdata($post); ?>
+				<?php $img_id = get_post_meta($post->ID, 'anh_doitac', true);
+					$img_url = wp_get_attachment_url( $img_id); 
+				?>
+				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
+						<li>
+							<a href="<?php echo get_post_meta($post->ID, 'link_doitac', true);?>" target="_blank" title="<?php the_title()?>">
+								<img src="<?php echo $image;?>" height="56" border="0" title="<?php the_title() ?>"></a></li>
+		
+		<?php endforeach;?>
+						<li>
 							<a href="http://www.goimon.vn/" target="_blank" title="goimon.vn">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/Goimon.png" width="95" height="56" border="0" title="goimon.vn"></a></td>
-						<td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/Goimon.png" width="95" height="56" border="0" title="goimon.vn"></a></li>
+						<li>
 							<a href="http://www.orabuy.com/#" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/Orabuy.png" width="74" height="56" border="0" title="Orabuy"></a></td>
-						<td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/Orabuy.png" width="74" height="56" border="0" title="Orabuy"></a></li>
+						<li>
 							<a href="http://www.facebook.com/pages/B%C3%A1nh-Cu%E1%BB%91n-Gia-An/121140331304301" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/banh_cuon_Gia_An.png" width="87" height="56" border="0" title="Bánh cuốn Gia An"></a></td>
-						<td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/banh_cuon_Gia_An.png" width="87" height="56" border="0" title="Bánh cuốn Gia An"></a></li>
+						<li>
 							<a href="http://kitchenart.vn/vi/" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/kitchenart.png" width="58" height="56" border="0" title="Kitchen Art"></a></td>
-						<td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/kitchenart.png" width="58" height="56" border="0" title="Kitchen Art"></a></li>
+						<li>
 							<a href="http://tiectainha.vn/?aspxerrorpath=/" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/tiectainha.png" width="70" height="56" border="0" title="Tiệc tại nhà"></a></td>
-						<td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/tiectainha.png" width="70" height="56" border="0" title="Tiệc tại nhà"></a></li>
+						<li>
 							<a href="http://www.facebook.com/7CUA.banhdacua" target="_blank">
-								<img src="<?php echo get_bloginfo("template_url")?>/img/7cua.jpg" width="103" height="56" border="0" title="7CUA - Bánh đa cua"></a></td>
+								<img src="<?php echo get_bloginfo("template_url")?>/img/7cua.jpg" width="103" height="56" border="0" title="7CUA - Bánh đa cua"></a></li>
+					</ul>
+			</div></td>
 					</tr>
 				</table>
             </div>

@@ -130,7 +130,7 @@
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" target="_blank" href="<?php echo admin_url()?>">Admin</a></div>
                 <div class="mnbSplit"><!----></div>
-                <div class="fr"><a class="mnb" target="_blank" href="http://local.moex.vn/erp/app.php/index">ERP</a></div>
+                <div class="fr"><a class="mnb" target="_blank" href="http://local.moex.vn">ERP</a></div>
                 <div class="mnbSplit"><!----></div>
                 <div class="fr"><a class="mnb" target="_blank" href="<?php echo get_bloginfo("url")?>/monitor">Ghi âm 1900565636</a></div>
 				<?php endif;?>

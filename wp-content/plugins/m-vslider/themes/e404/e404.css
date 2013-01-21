@@ -1,0 +1,109 @@
+.theme-e404.slider-wrapper  {
+    position: relative;
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+    
+}
+
+.theme-e404 .nivo-caption {
+	background-image: url("hover_dark_bg.png");
+	color: #fff;
+	bottom: -30px;
+	font-size: 20px;
+	line-height: 24px;
+	width: auto;
+	z-index:89;
+}
+.theme-e404 .nivo-caption {
+	bottom: 20px;
+}
+.theme-e404 .nivo-caption p {
+	padding: 0 30px;
+	margin:0;
+}
+.theme-e404 .nivo-caption p {
+	padding: 12px 30px;
+}
+
+
+.theme-e404 .nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+.theme-e404  img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-e404  a {
+	border:0;
+	display:block;
+}
+
+.theme-e404 .nivo-controlNav {
+	position:absolute;
+	right: 30px;
+	bottom: -30px;
+}
+
+.theme-e404 .nivo-controlNav {
+	top: 20px;
+}
+
+.theme-e404 .nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+	position:relative;
+	z-index:990;
+	cursor:pointer;        
+}
+
+.theme-e404 .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+.theme-e404 .nivo-directionNav {
+	top: 130px;
+}
+.theme-e404 .nivo-directionNav a {
+	display:block;
+	width:43px;
+	height:43px;
+	background:url(arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-e404 a.nivo-nextNav {
+	background-position: -43px 0;
+	right:-61px;
+}
+.theme-e404 a.nivo-prevNav {
+	left:-61px;
+}
+.theme-e404 a.nivo-nextNav {
+	background-position: -43px 0;
+	right:15px;
+}
+
+.theme-e404 a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-e404 a.nivo-nextNav:hover {
+	background-position: -43px -43px;
+}
+.theme-e404 a.nivo-prevNav:hover {
+	background-position: 0 -43px;
+}
+.theme-e404 .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-e404 .nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}

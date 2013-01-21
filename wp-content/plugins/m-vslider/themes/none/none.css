@@ -1,0 +1,7 @@
+.theme-none .nivoSlider img {
+    display:none;
+}
+
+.theme-none .nivoSlider {
+    background:#fff url(loading.gif) no-repeat 50% 50%;
+}

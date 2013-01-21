@@ -1,0 +1,18 @@
+/* 
+    Document   : rslider-admin
+    Created on : Jun 25, 2012, 2:05:40 PM
+    Author     : mamirulamin
+    Description: rSlider's Admin CSS
+*/
+
+#rslider-panel .metabox-holder {float: left;width: 48%;margin: 0px; padding:0px 10px 0px 0px;}
+#rslider-panel .metabox-holder .postbox .inside {padding: 0 10px;background-color: #E6EDE0;}
+#rslider-panel .metabox-holder .postbox .inside p{margin: 0px;padding: 1em 0;}
+.red {font-weight: normal;color: #B80028;}
+#css_rs_main, #css_rs_main div {border: 0;margin-top:15px}
+#css_rs_main #screen-meta-links, #css_rs_main #screen-meta-links div {border: 0;margin-top:0px}
+#css_rs_table {border-collapse:collapse;width:98%;font-size:11px;font-family:Arial;}
+#css_rs_table th, #css_rs_table td{text-align:center;border: 1px solid #DDD;padding: 2px 2px 2px 5px;font-size:11px;font-family:Arial;vertical-align:middle;}
+#css_rs_table td pre{font-size:10px;background-color:#FFB;color:#F00;}
+#css_rs_table td {background-color: #FFF;}
+#css_rs_table th {background-color: #EEE;}        
