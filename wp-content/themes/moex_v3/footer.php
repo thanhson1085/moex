@@ -1,28 +1,3 @@
-<style>
-	.list-news{width: 100%;}
-	.list-news tr td{
-		width: 25%;
-		vertical-align: text-top;
-		font-size: 12px;
-	}
-	.list-news tr td ul{
-		margin: 0;
-		padding-left: 25px;
-	}
-	.list-news h3{
-		padding-left: 10px;
-		font: normal 15px UTMAvoBold;
-		text-transform: uppercase;
-		padding-bottom: 10px;
-		color: #20409A;
-	}
-	.list-news ul{
-		list-style: circle;
-	}
-	.news{
-		border-top: solid 1px #CCC;
-	}
-</style>
 <div class="news">
 		<table class="list-news">
 			<tbody><tr>

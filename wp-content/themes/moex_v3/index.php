@@ -65,9 +65,9 @@ $(document).ready(function(){
         });
 });
 </script>
-	<a href="<?php echo get_bloginfo("url")?>/qua-tet/" style="display: block; width: 588px; height: 230px;z-index: 1000;">
             <div id="ListService">
-			<img src="<?php echo get_bloginfo("template_url");?>/pic/cho_tet.jpg"/>
+	<a href="<?php echo get_bloginfo("url")?>/qua-tet/" style="display: block; width: 588px; height: 230px;z-index: 1000;">
+			<img src="<?php echo get_bloginfo("template_url");?>/pic/cho_tet.jpg"/></a>
 
 				<?php /* ?>
                 <div class="service bdt0">
@@ -112,8 +112,8 @@ $(document).ready(function(){
                     <div class="sbottomleft"><!----></div>
                     
                 </div><?php */?>
-                <div class="cb h10"><!----></div>
             </div>
+                <div class="cb h10"><!----></div>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -137,7 +137,7 @@ $myposts = get_posts( $args );
 					<tr>
 						<td width="101">
 							<img src="<?php echo get_bloginfo("template_url")?>/img/Partner_01.png" width="101" height="56" alt=""></td>
-						<td style="text-align:left">
+						<td style="text-align:left;vertical-align: top;">
             <div id="slideJ">
 					<ul>
 		<?php
@@ -175,19 +175,8 @@ $myposts = get_posts( $args );
 				</table>
             </div>
         </div>
-		<div>
-			<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Event_Banner_quatet.gif"></a>
-		</div>
         <div class="cb h10"><!----></div>
-		<div>
-			<a href="<?php echo get_bloginfo("url")?>/order-search/"><img src="<?php echo get_bloginfo("template_url");?>/pic/banner_8000_980.jpg"></a>
-		</div>
-        <div class="cb h10"><!----></div>
-		<div>
-			<a href="<?php echo get_bloginfo("url")?>/shop-online/"><img src="<?php echo get_bloginfo("template_url");?>/pic/Shop-Online-F.gif"></a>
-		</div>
-        <div class="cb h10"><!----></div>
-		<div style="position: relative">
+		<div style="position: relative;">
 			<div style="padding-left: 10px;font: normal 15px UTMAvoBold; text-transform: uppercase; padding-bottom: 10px;color:#20409A;">moEx Online</div>
 			<div style="width: 400px; float: left;">
 				<ul class="moex-online">

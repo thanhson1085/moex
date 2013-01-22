@@ -4,7 +4,7 @@
  */
 /***** Global Elements *****/
 html, body { border:0; margin:0; padding:0; height: 100%; }
-body { font:12px "Helvetiva Neue", Helvetica, Arial, sans serif; background: url(img/page-background.jpg) repeat;}
+body { font:12px "Helvetiva Neue", Helvetica, Arial, sans serif;}
 
 img { border:0;} 
 a img { border:0 } /* This stops link bordering on images */
@@ -109,8 +109,7 @@ a img.aligncenter {
 
 
 /*header*/
-body{background:url(pic/background_tet.jpg);}
-.page-moex-container{background:url(pic/background_tet.jpg); position: relative}
+.page-moex-container{position: relative}
 .page-moex{background:#FFF;position: relative; z-index: 10; border-left: solid 1px #ccc; border-right: solid 1px #ccc; border-bottom: solid 1px #ccc; box-shadow: 0px 0px 8px; -webkit-box-shadow: 0px 0px 8px; -moz-box-shadow: 0px 0px 8px}
 .img-left{ position: absolute; left:18px; top: 0em; z-index:1 }
 .img-right{ position: absolute; right:8px; top: 0em; z-index: 1}
@@ -819,3 +818,30 @@ it's always appreciated!) and can be used commercially and modified in any way y
 /* The whats hot ribbon */
 .whatsHot {position: absolute; width: 107px; height: 108px; background: url(img/whats-hot-bg.png) no-repeat; left: 62px; z-index: 100;}
 .edit-link{font-size: 12px; padding-left: 10px;color: #ccc; font-weight: normal}
+
+
+.latestnews li{
+	line-height: 20px;
+}
+	.list-news{width: 100%;}
+	.list-news tr td{
+		width: 25%;
+		vertical-align: text-top;
+		font-size: 12px;
+	}
+	.list-news tr td ul{
+		margin: 0;
+		padding-left: 25px;
+	}
+	.list-news h3{
+		padding-left: 10px;
+		font: normal 15px UTMAvoBold;
+		text-transform: uppercase;
+		color: #20409A;
+	}
+	.list-news ul{
+		list-style: circle;
+	}
+	.news{
+		border-top: solid 1px #CCC;
+	}
