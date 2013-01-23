@@ -39,7 +39,8 @@ $args = array(
           <div class="person" code="<?php echo $post->ID;?>">
 				<?php $code_display = $post->ID?>
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
-					$img_url = wp_get_attachment_url( $img_id); 
+					$img_url = wp_get_attachment_image_src( $img_id, array( 140, 140)); 
+					$img_url = $img_url[0];
 				?>
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
             <a href="<?php the_permalink();?>">
@@ -61,7 +62,8 @@ $args = array(
 			
         	<div id="<?php echo $post->ID;?>" class="short-profile" style="display: none;">
 				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
-					$img_url = wp_get_attachment_url( $img_id); 
+					$img_url = wp_get_attachment_image_src( $img_id, array( 350, 350)); 
+					$img_url = $img_url[0];
 				?>
 				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
               <a href="<?php the_permalink()?>" title="<?php the_title()?>"><img src="<?php echo $image;?>" alt="" style="max-width: 350px;"></a>

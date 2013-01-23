@@ -5,146 +5,11 @@ $code_display = 0;
 global $post;
 $order = (isset($_GET['order']))?$_GET['order']:0;
 $order = ($order)?'DESC':'ASC';
-$args = array( 'numberposts' => 100, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
+$args = array( 'numberposts' => 20, 'post_type'=> 'quatet', 'meta_key' => 'gia_quatet', 'orderby' => 'meta_value_num', 'order' => $order );
 $myposts = get_posts( $args );
 ?>
-					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
-	<div class="cb h15"></div>
-<div style="border-bottom: solid 1px #CCC;height: 30px; padding-left: 20px; font-size: 12px;">
-<?php
-$taxonomy     = 'quatet_cat';
-$orderby      = 'name'; 
-$show_count   = 0;      // 1 for yes, 0 for no
-$pad_counts   = 0;      // 1 for yes, 0 for no
-$hierarchical = 1;      // 1 for yes, 0 for no
-$title        = '';
-
-$args = array(
-  'taxonomy'     => $taxonomy,
-  'orderby'      => $orderby,
-  'show_count'   => $show_count,
-  'pad_counts'   => $pad_counts,
-  'hierarchical' => $hierarchical,
-  'title_li'     => $title
-);
-?>
-<ul class="quatet-order">
-<?php wp_list_categories( $args ); ?>
-</ul>
-<style>
-	.quatet-order, .quatet-order2{padding: 0;margin:0;display: block-inline;list-style: none;}
-	.quatet-order li, .quatet-order2 li{font-weight: bold; float:left; padding-right: 10px;
-		border-right: solid 1px #CCC;
-		margin-right: 10px;
-		line-height: 20px;
-	}
-	.quatet-order2{float:right;}
-	.quatet-order2 li{ font-weight: normal;}
-</style>
-<ul class="quatet-order2">
-<li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
-<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
-<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
-</ul>
-</div>
-	<div class="cb h15"></div>
-<div class="driver-info-container" style="overflow: auto">
-<div class="center-col">
-        <div class="people clearfix">
-
-		<?php
-		foreach( $myposts as $post ) :	setup_postdata($post); ?>
-          <div class="person" code="<?php echo $post->ID;?>">
-				<?php $code_display = $post->ID?>
-				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
-					$img_url = wp_get_attachment_url( $img_id); 
-				?>
-				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-            <a href="<?php the_permalink();?>">
-              <img src="<?php echo $image;?>" alt="<?php the_title();?>">
-              <p><?php the_title();?>
-				<br><span>Mã: </span><span><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span>
-				<br><span>Giá: </span><span class="quatet-price" style="color: red;font-size: 14px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
-            </a>
-             <!-- /.short-profile -->
-          </div> <!-- /.person -->
-		<?php 
-			endforeach;
-		?>
-        </div> <!-- /.people -->
-        <div class="selected-profile">
-		<p style="text-align: right; height: 20px;padding:0;margin:0;">
-		<img src="<?php echo get_bloginfo("template_url");?>/pic/close.png" id="quatet-close">
-		</p>
-		<?php
-		foreach( $myposts as $post ) :	setup_postdata($post);
-		?>
-			
-        	<div id="<?php echo $post->ID;?>" class="short-profile" style="display: none;">
-				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
-					$img_url = wp_get_attachment_url( $img_id); 
-				?>
-				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
-              <a href="<?php the_permalink()?>" title="<?php the_title()?>"><img src="<?php echo $image;?>" alt="" style="max-width: 350px;"></a>
-              <h3><?php the_title();?></h3>
-				<p style="color: #1e1e1e"><span>Mã: </span><span style="font-weight: bold;"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
-				<p style="color: #1e1e1e;"><span>Giá: </span><span class="quatet-price" style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
-              <p class="job-title"><?php the_content()?> 
-				<br />
-			  </p>
-            </div>
-		<?php
-			endforeach;
-		?>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#<?php echo $code_display?>").css("display", "block");
-				$(".selected-profile").css('display','block');
-				$(".person").hover(function(){
-					$(".short-profile").each(function(){
-						$(this).css("display", "none");
-					});
-					$(".selected-profile").css('display','block');
-					$("#" +$(this).attr("code")).css("display","block");
-				});
-				$("#quatet-close").click(function(){
-					$(".selected-profile").css('display','none');
-				});
-			});
-		</script>
-		</div> <!-- /.selected-profile -->
-</div>
-	<div id="MoexFood" style="width: 460px;">
-                    <div class="cb h15"><!----></div>
-                    <div class="">
-                        <div class="fl">
-                            <!-- AddThis Button BEGIN -->
-                            <div class="addthis_toolbox addthis_default_style ">
-                            <!--<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>-->
-                            <a class="addthis_button_facebook_like"></a>
-                            <a class="addthis_button_tweet"></a>
-                            <a class="addthis_button_google_plusone" g:plusone:size="normal"></a>
-                            <!--<a class="addthis_counter addthis_pill_style"></a>-->
-                            </div>
-                            <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e70275244deb51b"></script>
-                            <!-- AddThis Button END -->
-                        </div>
-                    </div>
-                    <div class="cb h15"><!----></div>
-<?php wp_reset_postdata(); ?>
-
-					<?php comments_template('', true);?>
-                    <div class="cb h25"><!----></div>
-	</div>
 <style>
 
-:focus {/* remember to define focus styles! */
-	outline: 0;
-}
-
-body {
-	line-height: 1;
-}
 .selected-profile{
 	z-index: 1000;
 	background: white;
@@ -179,20 +44,7 @@ q {
 	quotes: "" "";
 }
 
-a img {
-	border: 0;
-}
 
-
-
-
-/*----------------------------------------------------------------------- 
-    Basic Elements
- ------------------------------------------------------------------------ */
-html, 
-.center-col {
-	height: 100%; /* needed so overlay covers the entire page */
-}
 
 .center-col {
 	color: #636363;
@@ -200,25 +52,6 @@ html,
 }
 
 
-
-h2 {
-	color: #505050;
-	font: bold 12px/15px Verdana;
-}
-
-h3 {
-	color: #3d79b5;
-	font: bold 11px/14px Verdana;	
-}
-
-h4 {
-	color: #505050;
-	font: bold 11px/14px Verdana;	
-}
-
-strong {
-	font-weight: bold;
-}
 
 em {
 	font-style: italic;
@@ -900,6 +733,136 @@ img.lg-photo {
 }
 .driver-info-container{ padding: 0 10px 0 30px; }
 </style>
+					<a href="<?php echo get_bloginfo("url")?>/qua-tet/"><img alt="" src="<?php echo get_bloginfo("template_url")?>/pic/Event_Banner_quatet.gif" class="anhQC"/></a>                
+	<div class="cb h15"></div>
+<div style="border-bottom: solid 1px #CCC;height: 30px; padding-left: 20px; font-size: 12px;">
+<?php
+$taxonomy     = 'quatet_cat';
+$orderby      = 'name'; 
+$show_count   = 0;      // 1 for yes, 0 for no
+$pad_counts   = 0;      // 1 for yes, 0 for no
+$hierarchical = 1;      // 1 for yes, 0 for no
+$title        = '';
+
+$args = array(
+  'taxonomy'     => $taxonomy,
+  'orderby'      => $orderby,
+  'show_count'   => $show_count,
+  'pad_counts'   => $pad_counts,
+  'hierarchical' => $hierarchical,
+  'title_li'     => $title
+);
+?>
+<ul class="quatet-order">
+<?php wp_list_categories( $args ); ?>
+</ul>
+<style>
+	.quatet-order, .quatet-order2{padding: 0;margin:0;display: block-inline;list-style: none;}
+	.quatet-order li, .quatet-order2 li{font-weight: bold; float:left; padding-right: 10px;
+		border-right: solid 1px #CCC;
+		margin-right: 10px;
+		line-height: 20px;
+	}
+	.quatet-order2{float:right;}
+	.quatet-order2 li{ font-weight: normal;}
+</style>
+<ul class="quatet-order2">
+<li style="color: red; font-weight: normal;"><span>Sắp xếp: </span></li>
+<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=0">Giá tăng dần</a></li>
+<li><a href="<?php echo get_bloginfo("url")?>/qua-tet/?order=1">Giá giảm dần</a></li>
+</ul>
+</div>
+	<div class="cb h15"></div>
+<div class="driver-info-container" style="overflow: auto">
+<div class="center-col">
+        <div class="people clearfix">
+
+		<?php
+		foreach( $myposts as $post ) :	setup_postdata($post); ?>
+          <div class="person" code="<?php echo $post->ID;?>">
+				<?php $code_display = $post->ID?>
+				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
+					$img_url = wp_get_attachment_image_src( $img_id, array( 140, 140)); 
+					$img_url = $img_url[0];
+				?>
+				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
+            <a href="<?php the_permalink();?>">
+              <img src="<?php echo $image;?>" alt="<?php the_title();?>">
+              <p><?php the_title();?>
+				<br><span>Mã: </span><span><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span>
+				<br><span>Giá: </span><span class="quatet-price" style="color: red;font-size: 14px;font-weight: bold"><?php echo get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
+            </a>
+             <!-- /.short-profile -->
+          </div> <!-- /.person -->
+		<?php 
+			endforeach;
+		?>
+        </div> <!-- /.people -->
+        <div class="selected-profile">
+		<p style="text-align: right; height: 20px;padding:0;margin:0;">
+		<img src="<?php echo get_bloginfo("template_url");?>/pic/close.png" id="quatet-close">
+		</p>
+		<?php
+		foreach( $myposts as $post ) :	setup_postdata($post);
+		?>
+			
+        	<div id="<?php echo $post->ID;?>" class="short-profile" style="display: none;">
+				<?php $img_id = get_post_meta($post->ID, 'anh_quatet', true);
+					$img_url = wp_get_attachment_image_src( $img_id, array( 350, 350)); 
+					$img_url = $img_url[0];
+				?>
+				<?php $image = ($img_url)?$img_url:get_bloginfo("template_url")."/pic/no-image.jpg";?>
+              <a href="<?php the_permalink()?>" title="<?php the_title()?>"><img src="<?php echo $image;?>" alt="" style="max-width: 350px;"></a>
+              <h3><?php the_title();?></h3>
+				<p style="color: #1e1e1e"><span>Mã: </span><span style="font-weight: bold;"><?php echo get_post_meta($post->ID, 'ma_quatet', true);?></span></p>
+				<p style="color: #1e1e1e;"><span>Giá: </span><span class="quatet-price" style="color: red; font-size: 13px; font-weight:bold;"><?php echo ''.get_post_meta($post->ID, 'gia_quatet', true);?></span></p>
+              <p class="job-title"><?php the_content()?> 
+				<br />
+			  </p>
+            </div>
+		<?php
+			endforeach;
+		?>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#<?php echo $code_display?>").css("display", "block");
+				$(".selected-profile").css('display','block');
+				$(".person").hover(function(){
+					$(".short-profile").each(function(){
+						$(this).css("display", "none");
+					});
+					$(".selected-profile").css('display','block');
+					$("#" +$(this).attr("code")).css("display","block");
+				});
+				$("#quatet-close").click(function(){
+					$(".selected-profile").css('display','none');
+				});
+			});
+		</script>
+		</div> <!-- /.selected-profile -->
+</div>
+	<div id="MoexFood" style="width: 460px;">
+                    <div class="cb h15"><!----></div>
+                    <div class="">
+                        <div class="fl">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style ">
+                            <!--<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>-->
+                            <a class="addthis_button_facebook_like"></a>
+                            <a class="addthis_button_tweet"></a>
+                            <a class="addthis_button_google_plusone" g:plusone:size="normal"></a>
+                            <!--<a class="addthis_counter addthis_pill_style"></a>-->
+                            </div>
+                            <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e70275244deb51b"></script>
+                            <!-- AddThis Button END -->
+                        </div>
+                    </div>
+                    <div class="cb h15"><!----></div>
+<?php wp_reset_postdata(); ?>
+
+					<?php comments_template('', true);?>
+                    <div class="cb h25"><!----></div>
+	</div>
 </div>
 <?php
 get_footer();
