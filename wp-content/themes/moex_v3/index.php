@@ -113,7 +113,6 @@ $(document).ready(function(){
                     
                 </div><?php */?>
             </div>
-                <div class="cb h10"><!----></div>
 
 <script type="text/javascript">
 $(document).ready(function(){
