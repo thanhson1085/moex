@@ -140,5 +140,15 @@
     </div>    
 	</div>
 	</div>
+	<script type='text/javascript'>
+	   var ox_u = 'http://open.osmedia.vn/www/delivery/al.php?zoneid=7522&layerstyle=simple&align=right&valign=bottom&padding=0&padding=0&shifth=0&shiftv=4&closebutton=f&nobg=t&noborder=t';
+	   if (document.context) ox_u += '&context=' + escape(document.context);
+	   document.write("<scr"+"ipt type='text/javascript' src='" + ox_u + "'></scr"+"ipt>");
+	</script>
+	<script type='text/javascript'>
+	   var ox_u = 'http://open.osmedia.vn/www/delivery/al.php?zoneid=7521&layerstyle=simple&align=left&valign=bottom&padding=0&padding=0&shifth=0&shiftv=4&closebutton=f&nobg=t&noborder=t';
+	   if (document.context) ox_u += '&context=' + escape(document.context);
+	   document.write("<scr"+"ipt type='text/javascript' src='" + ox_u + "'></scr"+"ipt>");
+	</script>
 </body>
 </html>
