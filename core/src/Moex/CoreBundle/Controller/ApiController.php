@@ -39,6 +39,41 @@ class ApiController extends Controller
 		return array();
     }
     /**
+     * @Route("/embedded/create", name="api_embbed_create")
+     */
+    public function embeddedCreateAction()
+	{
+		//$request = $this->getRequest();
+		$request = $this->get('request')->request->all();
+		//var_dump($request['orderfrom']);die;
+		$em = $this->getDoctrine()->getEntityManager();
+		$order = new MeOrders();
+		$order->setCustomerId(0);
+		$order->setServiceType(0);
+		$order->setLat('21.0267');
+		$order->setLng('105.83659');
+		$created_at = new \DateTime();
+		$updated_at = new \DateTime();
+		$user = $em->getRepository("MoexCoreBundle:MeUsers")->find(1);
+		$order->setUser($user);
+		$order->setCreatedAt($created_at);
+		$order->setUpdatedAt($updated_at);
+		$order->setOrderFrom($request['orderfrom']);
+		$order->setOrderTo($request['orderto']);
+		$order->setRoadPrice(str_replace(',','',$request['orderprice']));
+		$order->setSenderAddress($request['orderemail']);
+		$order->setPrice(str_replace(',','',$request['orderprice']));
+		$order->setTotalPrice(str_replace(',','',$request['orderprice']));
+		$order->setPhone($request['orderphone']);
+		$order->setOrderInfo($request['orderurl']);
+		$order->setOrderStatus($this->container->getParameter("moex.order.status.pending"));
+		$order->setOrderName($request['ordername']);
+		$em->persist($order);
+		$em->flush();
+		$response = new Response(json_encode($request));
+		return $response;
+	}
+    /**
      * @Route("/goimon/create", name="api_goimon_create")
      */
     public function goimonCreateAction()

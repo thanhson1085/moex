@@ -1,4 +1,4 @@
-symfony v2.0.21
+symfony dc2cc6b13c8664ed2ae97611d448f98d1cfae2b8
 twig v1.8.2
 monolog 1.0.2
 doctrine-common 2.1.4
@@ -6,12 +6,12 @@ doctrine-dbal 2.1.7
 doctrine 2.1.7
 swiftmailer v4.2.0
 assetic v1.0.3
-twig-extensions d1990ffaca93302709d1306d50ae153adb169f49
+twig-extensions 5c2d515d4624bdd588226d688173cf0399a4d8cf
 metadata 1.1.0
-SensioFrameworkExtraBundle v2.0.20
+SensioFrameworkExtraBundle d81d9607753de458f55947d206b9e39ac7b17078
 JMSSecurityExtraBundle e752f888c51425f71382c056961f10f2be642102
-SensioDistributionBundle v2.0.17
-SensioGeneratorBundle v2.0.19
+SensioDistributionBundle v2.2.0-BETA1^2^2
+SensioGeneratorBundle 71c9937e254ba7d254fb28f8137684200bf072bc
 AsseticBundle 6f15728c1aefa5246caa83730e3dbf70b0d46052
 gedmo-doctrine-extensions v2.3.1
 Stof-DoctrineExtensionsBundle 4a17550d8b101c5aafc56c9950149aa189b8402d
@@ -20,8 +20,8 @@ GravatarBundle 994424a846f30f64e324e1b95a21c9f3b4ad237a
 WhiteOctoberPagerFanta 12f71d99457b018fb80746f84514dd5b495c5789
 WhiteOctoberPagerFantaBundle 40209ef994fa2f342660d96bf6bea3f88171cd2d
 JMSSerializerBundle 0.9.0
-JMSDiExtraBundle aff6f3da3c866ef06d13e7c9043e1253f11932a0
-JMSAopBundle 70ee8edbcf840b20445e3e42e57a249be4373a34
+JMSDiExtraBundle 1d17b6cabd914b84a7a386458ff82f6f8a5e7142
+JMSAopBundle 7018357f5bedf204979a88867a9da05973744422
 CGLibrary 8f3441497215434c95512200fa56f168d1972e47
 FOSRest b48857315c39715245303fb5bbc1bab98026209e
-FOSRestBundle 9991dbc36d16dcf5bf79f0c2decc2435d753008e
+FOSRestBundle a8cd874cf364af9a86cf459011dbcd054c720aad

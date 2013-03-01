@@ -5,6 +5,11 @@ var service_type = 1;
 var province = ',hà nội, việt nam';
 var money_value = 0; 
 var search_result = "";
+var request = {
+	origin: '219 KHÂM THIÊN',
+	destination: '99 PHỐ HUẾ',
+	travelMode: google.maps.DirectionsTravelMode.WALKING
+};
 function countMoney(){
 	distance = (Math.ceil(Math.ceil(distance*10)/5)*5)/10;
 	moex_distance = distance; 
@@ -22,7 +27,7 @@ function getRoute(){
         distance = response.routes[0].legs[0].distance.value/1000;
         money_value = countMoney();
 		display_price();
-		$('#order-distance').html(moex_distance);
+		//$('#order-distance').html(moex_distance);
         directionsDisplay.setDirections(response);
     }
     });
@@ -34,12 +39,18 @@ function getRoute(){
 			distance = driving_distance;
 			money_value = countMoney();
 			display_price();
-			$('#order-distance').html(moex_distance);
+			//$('#order-distance').html(moex_distance);
 			directionsDisplay.setDirections(response);
 		}
     }
     });
     request.travelMode = google.maps.DirectionsTravelMode.WALKING;
+}
+function add(s) {
+    var collectionHolder = $(s);
+    var prototype = collectionHolder.attr('data-prototype');
+    form = prototype.replace(/\$\$name\$\$/g, collectionHolder.children().length);
+    collectionHolder.append(form);
 }
 function phone_validation(phonenumber){
 	var phoneNumberPattern = /^\+?\(?(\d{2,3})\)?[- ]?(\d{3,4})[- ]?(\d{4})$/;
@@ -57,13 +68,12 @@ function email_validation(email){
 }
 function display_price(){
 	search_result = money_value.formatMoney(0,"",".", ",") + " VNĐ";
-	if (service_type == 3 || service_type == 4){
-		search_result = search_result + " + 3% giá trị hàng hóa"; 
-	}
 	$('#search-result').html(search_result);
-	$('#input-price').attr("value", money_value);
+	$('#order-price').attr("value", money_value);
 }
-
+// Extend the default Number object with a formatMoney() method:
+// usage: someVar.formatMoney(decimalPlaces, symbol, thousandsSeparator, decimalSeparator)
+// defaults: (2, "$", ",", ".")
 Number.prototype.formatMoney = function(places, symbol, thousand, decimal) {
 	places = !isNaN(places = Math.abs(places)) ? places : 2;
 	symbol = symbol !== undefined ? symbol : "$";
