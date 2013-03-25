@@ -1,0 +1,80 @@
+{% macro driver_form(form) %}
+	<div class="form-row">
+		{{ form_label(form.driverCode) }}
+		{{ form_widget(form.driverCode) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.driverCode) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.driverName) }}
+		{{ form_widget(form.driverName) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.driverName) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.driverType) }}
+		{{ form_widget(form.driverType) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.driverType) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.phone) }}
+		{{ form_widget(form.phone) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.phone) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.motoNo) }}
+		{{ form_widget(form.motoNo) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.motoNo) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.driverAge) }}
+		{{ form_widget(form.driverAge) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.driverAge) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.file) }}
+		{{ form_widget(form.file) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.file) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.driverInfo) }}
+		{{ form_widget(form.driverInfo) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.driverInfo) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.position) }}
+		{{ form_widget(form.position) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.position) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.lng) }}
+		{{ form_widget(form.lng) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.lng) }}
+	</div>
+	<div class="form-row">
+		{{ form_label(form.lat) }}
+		{{ form_widget(form.lat) }}
+	</div>
+	<div class="form-row">
+		{{ form_errors(form.lat) }}
+	</div>
+	{{ form_rest(form) }}
+{% endmacro %}

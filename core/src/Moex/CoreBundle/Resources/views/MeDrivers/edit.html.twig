@@ -14,7 +14,9 @@
 
 		<form action="{{ path('driver_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
 			<div class="moex-form">
-				{{ form_widget(edit_form) }}
+				{{ form_errors(edit_form) }}
+				{% import "MoexCoreBundle:MeDrivers:form.html.twig" as macro %}
+				{{ macro.driver_form(edit_form)}}
 				<p class="alignright">
 					<button type="submit">{{ "button_edit" | trans }}</button>
 				</p>
@@ -36,6 +38,8 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&dirflg=r"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 <script type="text/javascript" src="{{ asset ('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui.js') }}"></script>
+<script type="text/javascript" src="{{ asset ('js/jquery-ui-timepicker-addon.js') }}"></script>
 <script type="text/javascript" src="{{ asset ('js/mescript.js') }}"></script>
 <script type="text/javascript">
 var submit_click = false;

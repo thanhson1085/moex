@@ -80,9 +80,12 @@ class ApiController extends Controller
     {
 		$request = $this->getRequest();
 		$j = $this->getRequest()->query->get('order');
-		$j = str_replace('\"','"',$j);
-		$j = str_replace('\/','/',$j);
+		$j = stripslashes($j);
+    
+		$j = str_replace("\n", "\\n", $j);
+		$j = str_replace("\r", "\\r", $j);
 		$arr_order = json_decode($j);
+
         $em = $this->getDoctrine()->getEntityManager();
 		$order = new MeOrders();
 		$order->setCustomerId(0);
